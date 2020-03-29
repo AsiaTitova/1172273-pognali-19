@@ -15,7 +15,7 @@
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list site-list">
             <li class="site-list__item"><a href="#" aria-label="О сервисе">О сервисе</a></li>
-            <li class="site-list__item"><a href="form.html" aria-label="Направления">Направления</a></li>
+            <li class="site-list__item"><a href="traveler-search.html" aria-label="Направления">Направления</a></li>
             <li class="site-list__item site-list__item--current"><a href="#" aria-label="Попутчики">Попутчики</a></li>
           </ul>
           <ul class="main-navigation__list user-list">
@@ -28,6 +28,124 @@
     </header>
     <main class="page-main">
       <h1 class="page-main__title visually-hidden">Выбор попутчика</h1>
+      <section class="country-filters">
+        <h2 class="country-filters__title visually-hidden">Фильтр по странам</h2>
+        <div class="country-filters__menu-filters menu-filters">
+          <button class="menu-filters__open" type="button">Фильтр по странам</button>
+          <button class="menu-filters__close" type="button"><!--тут будет крестик--></button>
+        </div>
+        <div class="country-filters__wrapper">
+          <ul class="country-filters__part-world part-world">
+            <li><button class="part-world__item" type="button">Европа</button></li>
+            <li><button class="part-world__item" type="button">Азия</button></li>
+            <li><button class="part-world__item" type="button">Америка</button></li>
+            <li><button class="part-world__item" type="button">Острова</button></li>
+          </ul>
+          <ul class="country-filters__alphabet alphabet">
+              <li class="alphabet__item"><button class="alphabet__button" type="button">а</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">б</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">в</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">г</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">д</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">е</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">з</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">и</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">к</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">л</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">м</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">н</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">о</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">п</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">р</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">с</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">т</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">у</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">ф</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">х</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">ч</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">ш</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">э</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">ю</button></li>
+              <li class="alphabet__item"><button class="alphabet__button" type="button">я</button></li>
+          </ul>
+          <ul class="country-filters__country-choice country-choice">
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Австрия</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Азербайджан</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Албания</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Алжир</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Ангора</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Андорра</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Антигуа и Барбуда</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Аргентина</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Армения</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="#">Анганистан</a></li>
+          </ul>
+          <button class="country-filters__hide" type="button">Свернуть</button>
+        </div>
+      </section>
+      <section class="form-search">
+        <form class="form-search__form traveler-search">
+          <h2 class="traveler-search__title">Подберите идеального попутчика</h2>
+          <fieldset class="traveler-search__fieldset">
+              <legend class="traveler-search__legend">Хобби</legend>
+          </fieldset>
+          <fieldset class="traveler-search__fieldset">
+              <legend class="traveler-search__legend">Музыка</legend>
+              <div class="traveler-search__row">
+                  <input class="traveler-search__control" type="checkbox" name="hardrock" id="hardrock">
+                  <label class="traveler-search__label" for="hardrock">Тяжелый рок</label>
+              </div>
+              <div class="traveler-search__row">
+                  <input class="traveler-search__control" type="checkbox" name="rap" id="rap">
+                  <label class="traveler-search__label" for="rap">Русский рэп</label>
+              </div>
+              <div class="traveler-search__row">
+                  <input class="traveler-search__control" type="checkbox" name="eurodens" id="eurodens">
+                  <label class="traveler-search__label" for="eurodens">Евроденс</label>
+              </div>
+          </fieldset>
+          <fieldset class="traveler-search__fieldset">
+              <legend class="traveler-search__legend">Еда</legend>
+          </fieldset>
+          <fieldset class="traveler-search__fieldset">
+              <legend class="traveler-search__legend">Транспорт</legend>
+              <div class="traveler-search__row">
+                  <input class="traveler-search__control" type="checkbox" name="plane" id="plane">
+                  <label class="traveler-search__label" for="plane">Самолет</label>
+              </div>
+              <div class="traveler-search__row">
+                  <input class="traveler-search__control" type="checkbox" name="train" id="train"">
+                  <label class="traveler-search__label" for="train"">Поезд</label>
+              </div>
+              <div class="traveler-search__row">
+                  <input class="traveler-search__control" type="checkbox" name="bike" id="bike">
+                  <label class="traveler-search__label" for="bike">Велосипед</label>
+              </div>
+              <div class="traveler-search__row">
+                  <input class="traveler-search__control" type="checkbox" name="walking" id="walking">
+                  <label class="traveler-search__label" for="walking">Пешие прогулки</label>
+              </div>
+          </fieldset>
+          <fieldset class="traveler-search__fieldset">
+              <legend class="traveler-search__legend">Левел</legend>
+              <!--Пока не знаю как сделать эту часть без css(теряюсь, какие блоки нужны, а какие нет), сделала как мы на первом интенсиве делали-->
+                  <div class="range-filter">
+                      <div class="range-controls">
+                        <div class="scale">
+                          <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                        </div>
+                        <div class="toggle toggle-min"></div>
+                        <div class="toggle toggle-max"></div>
+                      </div>
+                      <div class="price-controls">
+                        <label class="min-price"><input name="min-price" type="number" value="30"></label>
+                        <label class="max-price"><input name="max-price" type="number" value="100"></label>
+                      </div>
+                  </div>
+          </fieldset>
+          <button class="traveler-search__submit" type="submit">Показать</button>
+        </form>
+      </section>
       <section class="results">
         <h2 class="visually-hidden">Результаты поиска</h2>
         <div class="results__wrapper">
@@ -188,12 +306,9 @@
       </ul>
       <div class="page-footer__copyright copyright">
         <p class="copyright__by">Разработано</p>
-        <div class="copyright__logo htmlacademy">
-          <p class="htmlacademy__by">Разработано</p>
-          <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
-            <!--svg-картинка-->
-          </a>
-        </div>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
+            <img class="copyright__img" src="htmlacademy-logo.svg">
+        </a>
       </div>
     </footer>
   </body>
