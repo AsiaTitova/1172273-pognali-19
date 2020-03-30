@@ -69,25 +69,36 @@
               <li class="alphabet__item"><button class="alphabet__button" type="button">я</button></li>
           </ul>
           <ul class="country-filters__country-choice country-choice">
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Австрия</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Азербайджан</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Албания</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Алжир</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Ангора</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Андорра</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Антигуа и Барбуда</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Аргентина</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Армения</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="#">Анганистан</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="europe/austria.html">Австрия</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="asia/azerbaijan.html">Азербайджан</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="europe/albania.html">Албания</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="africa/algeria.html">Алжир</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="asia/angora.html">Ангора</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="europa/andorra.html">Андорра</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="islands/antiguaandbarbuda.html">Антигуа и Барбуда</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="america/argentina.html">Аргентина</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="asia/armenia.html">Армения</a></li>
+              <li class="country-choice__item"><a class="country-choice__name" href="asia/afghanistan.html">Анганистан</a></li>
           </ul>
           <button class="country-filters__hide" type="button">Свернуть</button>
         </div>
       </section>
       <section class="form-search">
-        <form class="form-search__form traveler-search">
+        <form class="form-search__form traveler-search" method="post" action="https://echo.htmlacademy.ru">
           <h2 class="traveler-search__title">Подберите идеального попутчика</h2>
           <fieldset class="traveler-search__fieldset">
               <legend class="traveler-search__legend">Хобби</legend>
+              <div class="traveler-search__row">
+                <input class="traveler-search__control" type="checkbox" name="sport" id="sport">
+                <label class="traveler-search__label" for="sport">Спортзал</label>
+            </div>
+            <div class="traveler-search__row">
+                <input class="traveler-search__control" type="checkbox" name="hookah" id="hookah">
+                <label class="traveler-search__label" for="hookah">Кальян</label>
+            </div>
+            <div class="traveler-search__row">
+                <input class="traveler-search__control" type="checkbox" name="sofa" id="sofa">
+                <label class="traveler-search__label" for="sofa">Диван</label>
           </fieldset>
           <fieldset class="traveler-search__fieldset">
               <legend class="traveler-search__legend">Музыка</legend>
@@ -106,6 +117,18 @@
           </fieldset>
           <fieldset class="traveler-search__fieldset">
               <legend class="traveler-search__legend">Еда</legend>
+              <div class="traveler-search__row">
+                <input class="traveler-search__control" type="checkbox" name="meat" id="meat">
+                <label class="traveler-search__label" for="meat">Мясоед</label>
+            </div>
+            <div class="traveler-search__row">
+                <input class="traveler-search__control" type="checkbox" name="nutrition" id="nutrition"">
+                <label class="traveler-search__label" for="nutrition"">Сидит на ПП</label>
+            </div>
+            <div class="traveler-search__row">
+                <input class="traveler-search__control" type="checkbox" name="vegan" id="vegan">
+                <label class="traveler-search__label" for="vegan">Веган-сыроед</label>
+            </div>
           </fieldset>
           <fieldset class="traveler-search__fieldset">
               <legend class="traveler-search__legend">Транспорт</legend>
@@ -132,7 +155,7 @@
                   <div class="range-filter">
                       <div class="range-controls">
                         <div class="scale">
-                          <div class="bar" style="margin-left: 20%; width: 30%"></div>
+                          <div class="bar"></div>
                         </div>
                         <div class="toggle toggle-min"></div>
                         <div class="toggle toggle-max"></div>
