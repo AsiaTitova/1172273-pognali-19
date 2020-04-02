@@ -1,0 +1,40 @@
+.page-footer {
+  @include wrapper (320px, $margin-center, $padding-center);
+  @include border-top-radius (20px, 20px);
+  @include vertical-center (38px, 14px);
+  background-color: $white;
+}
+
+.page-footer__logo {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-footer__logo-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.page-footer .socials-list__item {
+  @include round (45px, 45px, 50%, $light-gold);
+}
+
+.copyright {
+  display: flex;
+  margin-top: 60px;
+  align-items: center;
+}
+
+.copyright__by {
+  line-height: 1.38;
+  text-align: center;
+  color: $greyish-brown;
+}
+
+.copyright__link {
+  margin-left: auto;
+}
+
+.copyright__img {
+  display: block;
+}

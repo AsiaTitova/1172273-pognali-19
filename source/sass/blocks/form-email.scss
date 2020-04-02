@@ -1,0 +1,22 @@
+.form-email {
+  position: relative;
+  margin: 32px 0;
+}
+
+.form-email__email {
+  width: 270px;
+  height: 62px;
+  border-radius: 10px;
+  border: none;
+  background-color: $white;
+}
+
+.form-email__button {
+  position: absolute;
+  right: 0;
+  width: 60px;
+  height: 62px;
+  border-radius: 10px;
+  border: none;
+  background-color: $light-gold;
+}

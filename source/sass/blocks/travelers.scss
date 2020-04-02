@@ -1,0 +1,96 @@
+.travelers__wrapper {
+  @include wrapper(320px, $margin-center, $padding-center);
+  @include border-bottom-radius (20px, 20px);
+  @include vertical-center (72px, 30px);
+  background-color: $dark-blue-grey;
+}
+
+.travelers__title {
+  @include title($size-title, $bold, $mango);
+  padding: 0 25px;
+  line-height: 1;
+}
+
+.travelers__text {
+  @include text ($light, $white);
+  padding: 0 25px;
+  margin-top: 25px;
+}
+
+.travelers__text--bold {
+  font-weight: $bold;
+}
+
+.travelers__list {
+  margin-top: 60px;
+}
+
+.travelers__item:not(:first-child) {
+  margin-top: 10px;
+}
+
+.profile-card-index {
+  position: relative;
+}
+
+.profile-card-index__photo-img {
+  @include border-top-radius (20px, 20px);
+  display: block;
+}
+
+.profile-card-index__info {
+  @include border-bottom-radius (20px, 20px);
+  width: 270px;
+  padding: 0 45px;
+  padding-top: 27px;
+  padding-bottom: 60px;
+  background-color: $white;
+}
+
+.profile-card-index__name {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: $dark-slate-blue;
+}
+
+.profile-card-index__interests {
+  margin-top: 16px;
+  line-height: 1.13;
+  text-align: center;
+  color: $greyish-brown;
+}
+
+.profile-card-index__transport {
+  margin-top: 17px;
+}
+
+.profile-card-index__transport .transport__item:not(:first-child) {
+  margin-left: 14px;
+}
+
+.profile-card-index__flags {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.profile-card-index__level {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.travelers__link {
+  display: block;
+  margin-top: 20px;
+  padding: 24px;
+  padding-right: 132px;
+  background-color: $light-gold;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  color: $dark-slate-blue;
+  border-radius: 10px;
+}

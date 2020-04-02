@@ -1,0 +1,7 @@
+.transport__list {
+  display: flex;
+}
+
+.transport__item {
+  @include round (33px, 33px, 50%, $pale-grey);
+}

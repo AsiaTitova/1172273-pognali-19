@@ -1,0 +1,45 @@
+.map__wrap {
+  width: 320px;
+  margin: 0 auto;
+  min-height: 280px;
+}
+
+.map__adress-wrapper {
+  @include wrapper (320px, $margin-center, $padding-center);
+  position: relative;
+  padding-bottom: 35px;
+  padding-top: 37px;
+  background-color: $light-gold;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: $dark-blue-grey;
+    border-radius: 50%;
+  }
+}
+
+.map__adress {
+  padding-left: 61px;
+  font-weight: $bold;
+  line-height: 1.38;
+  color: $dark-blue-grey;
+}
+
+.map__link {
+  display: block;
+  margin-top: 36px;
+  padding: 24px;
+  padding-right: 70px;
+  background-color: transparent;
+  border: 3px solid $dark-blue-grey;
+  border-radius: 10px;
+  color: $dark-blue-grey;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+}

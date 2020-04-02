@@ -1,0 +1,111 @@
+.profile-card-catalog {
+  @include wrapper(270px, $margin-center, $padding-cards);
+  @include vertical-center (16px, 22px);
+  @include border-top-radius (20px, 20px);
+  @include border-bottom-radius (20px, 20px);
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $white;
+}
+
+.profile-card-catalog:not(:first-child) {
+  margin-top: 10px;
+}
+
+.profile-card-catalog__photo {
+  position: relative;
+
+  &::before {
+    @include psevdo ("", absolute);
+    @include round (31px, 31px, 15.5px, $pale-grey);
+    right: -5px;
+    bottom: 0;
+  }
+}
+
+.like {
+  &::before {
+    background-color: $beige;
+  }
+}
+
+.profile-card-catalog__photo-img {
+  border-radius: 50%;
+}
+
+.profile-card-catalog__name-wrap {
+  margin-left: 16px;
+}
+
+.profile-card-catalog__name {
+  width: 78px;
+  font-size: 20px;
+  font-weight: $bold;
+  line-height: 1;
+  color: $dark-slate-blue;
+}
+
+.profile-card-catalog__distance {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: $bold;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+.profile-card-catalog__interests {
+  margin-top: 16px;
+  padding-right: 58px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: $greyish-brown;
+}
+
+.place {
+  @include vertical-center (20px, 0);
+  padding-right: 100px;
+  font-size: 15px;
+  line-height: 1.2;
+  color: $dark-slate-blue;
+}
+
+.place__title {
+  color: $greyish-brown;
+}
+
+.place__list {
+  margin-top: 27px;
+}
+
+.place__item:not(:first-child) {
+  margin-top: 16px;
+}
+
+.country__name {
+  margin-left: 14px;
+  font-weight: $medium;
+  text-transform: uppercase;
+}
+
+.transport,
+.profile-card-catalog__level {
+  margin-top: 21px;
+}
+
+.profile-card-catalog__level {
+  margin-left: auto;
+  text-align: right;
+}
+
+.profile-card-catalog__link {
+  @include link ($padding-link, 20px, $light-gold);
+  display: block;
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: $bold;
+  line-height: 1.76;
+  text-align: center;
+  text-transform: uppercase;
+  color: $dark-grey;
+}

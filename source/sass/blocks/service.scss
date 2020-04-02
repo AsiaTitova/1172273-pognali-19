@@ -1,0 +1,24 @@
+.service__wrapper {
+  @include wrapper(320px, $margin-center, $padding-text);
+  @include border-bottom-radius (20px, 20px);
+  @include vertical-center (72px, 84px);
+  background-color: $darker-blue-grey;
+}
+
+.service__title {
+  @include title($size-title, $bold, $mango);
+  line-height: 1;
+}
+
+.service__text {
+  @include text ($light, $white);
+  margin-top: 25px;
+}
+
+.service__text--bold {
+  font-weight: $bold;
+}
+
+.service__link {
+  display: none;
+}

@@ -1,0 +1,8 @@
+.results__wrapper {
+  @include wrapper(320px, $margin-center, $padding-center);
+  @include vertical-center (28px, 46px);
+}
+
+.results__show {
+  margin-top: 26px;
+}

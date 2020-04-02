@@ -1,0 +1,69 @@
+/**контейнер-центровщик**/
+
+@mixin wrapper ($width, $margin, $padding) {
+  width: $width;
+  margin: $margin;
+  padding: $padding;
+}
+
+/**оформление текста**/
+
+@mixin title ($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text ($weight, $color) {
+  font-weight: $weight;
+  color: $color;
+}
+
+/**оформление блока - мобильная версия**/
+
+@mixin border-bottom-radius ($border-bottom-left-radius, $border-bottom-right-radius) {
+  border-bottom-left-radius: $border-bottom-left-radius;
+  border-bottom-right-radius: $border-bottom-right-radius;
+}
+
+@mixin border-top-radius ($border-top-left-radius, $border-top-right-radius) {
+  border-top-left-radius: $border-top-left-radius;
+  border-top-right-radius: $border-top-right-radius;
+}
+
+@mixin vertical-center ($padding-top, $padding-bottom) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
+
+/**псевдоэлементы**/
+
+@mixin psevdo ($content, $position) {
+  content: $content;
+  position: $position;
+}
+
+@mixin round ($width, $height, $border-radius, $background-color) {
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  background-color: $background-color;
+}
+
+/** ссылки и кнопки**/
+
+@mixin link ($padding, $border-radius, $background-color) {
+  padding: $padding;
+  border-radius: $border-radius;
+  background-color: $background-color;
+}
+
+@mixin border-left-radius ($border-top-left-radius, $border-bottom-left-radius) {
+  border-top-left-radius: $border-top-left-radius;
+  border-bottom-left-radius: $border-bottom-left-radius;
+}
+
+@mixin border-right-radius ($border-top-right-radius, $border-bottom-right-radius) {
+  border-top-right-radius: $border-top-right-radius;
+  border-bottom-right-radius: $border-bottom-right-radius;
+}

@@ -1,0 +1,121 @@
+.steps__wrapper {
+  @include wrapper(320px, $margin-center, $padding-center);
+  @include border-bottom-radius (20px, 20px);
+  @include vertical-center (51px, 84px);
+  position: relative;
+}
+
+.steps__slogan {
+  @include title(36px, $bold, $white);
+  line-height: 1.11;
+  text-align: center;
+}
+
+.menu-list {
+  display: flex;
+  padding-top: 247px;
+}
+
+.menu-list__item {
+  position: relative;
+}
+
+.menu-list__link {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.76;
+  text-align: center;
+  color: $dark-grey;
+}
+
+.menu-list__tel {
+  width: 40px;
+  height: 40px;
+  background-color: $mango;
+  border-radius: 50%;
+  background-image: url("../../img/topmenu-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 18px 18px;
+}
+
+.menu-list__email {
+  width: 40px;
+  height: 40px;
+  background-color: $lighter-mango;
+  border-radius: 50%;
+  background-image: url("../../img/topmenu-mail.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 18px 18px;
+}
+
+.menu-list__login {
+  border-radius: 20px;
+  background-color: $light-gold;
+  padding: 5px 35px;
+}
+
+.steps__quote {
+  margin-top: 30px;
+  padding-right: 100px;
+}
+
+.steps__author {
+  margin-top: 25px;
+  padding-right: 122px;
+  padding-bottom: 390px;
+}
+
+.steps__list {
+  position: absolute;
+  bottom: 370px;
+  width: 270px;
+  margin-top: 33px;
+}
+
+.steps__item {
+  height: 160px;
+  padding-top: 23px;
+  padding-left: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+  color: $dark-grey;
+  border-radius: 10px;
+}
+
+.steps__item--one {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding-right: 140px;
+  background-color: $mango;
+}
+
+.steps__item--two {
+  position: absolute;
+  top: 80px;
+  z-index: 2;
+  padding-right: 96px;
+  background-color: $light-mango;
+}
+
+.steps__item--three {
+  position: absolute;
+  top: 160px;
+  z-index: 3;
+  padding-right: 105px;
+  background-color: $lighter-mango;
+}
+
+.steps__item--four {
+  position: absolute;
+  top: 240px;
+  z-index: 4;
+  padding-right: 125px;
+  height: 80px;
+  background-color: $light-gold;
+}
