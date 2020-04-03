@@ -31,7 +31,7 @@
   border-top-right-radius: $border-top-right-radius;
 }
 
-@mixin vertical-center ($padding-top, $padding-bottom) {
+@mixin vertical-paddings ($padding-top, $padding-bottom) {
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
 }
@@ -43,10 +43,10 @@
   position: $position;
 }
 
-@mixin round ($width, $height, $border-radius, $background-color) {
+@mixin round ($width, $height, $background-color) {
   width: $width;
   height: $height;
-  border-radius: $border-radius;
+  border-radius: 50%;
   background-color: $background-color;
 }
 

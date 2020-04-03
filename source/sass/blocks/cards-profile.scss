@@ -1,6 +1,6 @@
 .profile-card-catalog {
   @include wrapper(270px, $margin-center, $padding-cards);
-  @include vertical-center (16px, 22px);
+  @include vertical-paddings (16px, 22px);
   @include border-top-radius (20px, 20px);
   @include border-bottom-radius (20px, 20px);
   display: flex;
@@ -63,7 +63,7 @@
 }
 
 .place {
-  @include vertical-center (20px, 0);
+  @include vertical-paddings (20px, 0);
   padding-right: 100px;
   font-size: 15px;
   line-height: 1.2;

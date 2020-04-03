@@ -1,6 +1,5 @@
-.results__wrapper {
-  @include wrapper(320px, $margin-center, $padding-center);
-  @include vertical-center (28px, 46px);
+.results__container {
+  @include vertical-paddings (28px, 46px);
 }
 
 .results__show {
