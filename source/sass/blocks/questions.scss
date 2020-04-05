@@ -1,7 +1,6 @@
-.questions__wrapper {
-  @include wrapper (320px, $margin-center, $padding-center);
+.questions__container {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-center (72px, 38px);
+  @include vertical-paddings (72px, 38px);
   background-color: $dark-blue-grey;
 }
 
@@ -24,7 +23,10 @@
 }
 
 .contacts {
+  margin: 0;
   margin-top: 36px;
+  padding: 0;
+  list-style-type: none;
   position: relative;
 }
 
@@ -50,7 +52,7 @@
     height: 45px;
     border-radius: 50%;
     background-color: $dark-grey;
-    background-image: url("../../img/contacts-phone.svg");
+    background-image: url("../img/contacts-phone.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 18px 18px;
@@ -76,7 +78,7 @@
     height: 45px;
     border-radius: 50%;
     background-color: $dark-grey;
-    background-image: url("../../img/contacts-mail.svg");
+    background-image: url("../img/contacts-mail.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 18px 18px;

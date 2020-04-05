@@ -1,7 +1,6 @@
-.steps__wrapper {
-  @include wrapper(320px, $margin-center, $padding-center);
+.steps__container {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-center (51px, 84px);
+  @include vertical-paddings (51px, 84px);
   position: relative;
 }
 
@@ -13,7 +12,10 @@
 
 .menu-list {
   display: flex;
+  margin: 0;
+  padding: 0;
   padding-top: 247px;
+  list-style-type: none;
 }
 
 .menu-list__item {
@@ -34,7 +36,7 @@
   height: 40px;
   background-color: $mango;
   border-radius: 50%;
-  background-image: url("../../img/topmenu-phone.svg");
+  background-image: url("../img/topmenu-phone.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 18px 18px;
@@ -45,7 +47,7 @@
   height: 40px;
   background-color: $lighter-mango;
   border-radius: 50%;
-  background-image: url("../../img/topmenu-mail.svg");
+  background-image: url("../img/topmenu-mail.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 18px 18px;
@@ -72,6 +74,9 @@
   position: absolute;
   bottom: 370px;
   width: 270px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   margin-top: 33px;
 }
 

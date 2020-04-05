@@ -15,25 +15,9 @@
 }
 
 .page-footer .socials-list__item {
-  @include round (45px, 45px, $light-gold);
+  @include round (45px, 45px, 50%, $light-gold);
 }
 
-.copyright {
-  display: flex;
+.page-footer__copyright {
   margin-top: 60px;
-  align-items: center;
-}
-
-.copyright__by {
-  line-height: 1.38;
-  text-align: center;
-  color: $greyish-brown;
-}
-
-.copyright__link {
-  margin-left: auto;
-}
-
-.copyright__img {
-  display: block;
 }

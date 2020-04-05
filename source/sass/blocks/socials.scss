@@ -1,4 +1,7 @@
 .socials-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -12,21 +15,21 @@
 }
 
 .socials-list__item--fb {
-  background-image: url("../../img/facebook.svg");
+  background-image: url("../img/facebook.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 11px 21px;
 }
 
 .socials-list__item--vk {
-  background-image: url("../../img/vk.svg");
+  background-image: url("../img/vk.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 23px 12px;
 }
 
 .socials-list__item--instagram {
-  background-image: url("../../img/instagram.svg");
+  background-image: url("../img/instagram.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 18px 18px;

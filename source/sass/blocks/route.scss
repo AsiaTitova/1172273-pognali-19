@@ -1,7 +1,6 @@
-.route__wrapper {
-  @include wrapper(320px, $margin-center, $padding-center);
+.route__container {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-center (72px, 30px);
+  @include vertical-paddings (72px, 30px);
   background-color: $pale-grey;
 }
 
@@ -23,6 +22,9 @@
 }
 
 .country-list {
+  list-style-type: none;
+  padding: 0;
+  margin: none;
   margin-top: 66px;
   margin-bottom: 25px;
 }
@@ -84,13 +86,12 @@
 }
 
 .route__link {
-  display: block;
   padding: 24px;
-  padding-right: 132px;
   background-color: $light-gold;
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
+  text-align: left;
   color: $dark-slate-blue;
   border-radius: 10px;
 }

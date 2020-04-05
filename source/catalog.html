@@ -10,7 +10,7 @@
 <body>
 
   <header class="page-header">
-    <div class="page-header__menu-wrapper">
+    <div class="page-header__container container">
       <div class="page-header__menu">
         <a class="page-header__logo" href="#">
           <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" wigth="100" height="19" alt="Логотип 'Погнали'">
@@ -28,10 +28,10 @@
           <li class="site-list__item site-list__item--current"><a class="site-list__link" href="#" aria-label="Попутчики">Попутчики</a></li>
         </ul>
         <ul class="main-navigation__list user-list">
-          <li class="user-list__item"><a class="user-list__login" href="#" aria-label="Авторизация">Авторизация</a></li>
-          <li class="user-list__item"><a class="user-list__tel" href="tel:+78005558628" aria-label="Позвонить">8 800
+          <li class="user-list__item"><a class="user-list__login button" href="#" aria-label="Авторизация">Авторизация</a></li>
+          <li class="user-list__item"><a class="user-list__tel button" href="tel:+78005558628" aria-label="Позвонить">8 800
               555-86-28</a></li>
-          <li class="user-list__item"><a class="user-list__email" href="#" aria-label="Написать">mail@htmlacademy.ru</a>
+          <li class="user-list__item"><a class="user-list__email button" href="#" aria-label="Написать">mail@htmlacademy.ru</a>
           </li>
         </ul>
       </div>
@@ -40,45 +40,46 @@
   <main class="page-main-catalog">
     <h1 class="page-main-catalog__title visually-hidden">Выбор попутчика</h1>
     <section class="country-filters">
+      <div class="country-filters__container container">
       <h2 class="country-filters__title visually-hidden">Фильтр по странам</h2>
-      <div class="country-filters__menu-filters menu-filters">
-        <button class="menu-filters__open" type="button">Фильтр по странам</button>
-        <button class="menu-filters__close" type="button">
+      <div class="country-filters__toggle-filters toggle-filters">
+        <button class="toggle-filters__open button" type="button">Фильтрация по странам</button>
+        <button class="toggle-filters__close toggle-filters__close--show button" type="button">
           <!--тут будет крестик--></button>
       </div>
       <div class="country-filters__wrapper">
         <ul class="country-filters__part-world part-world">
-          <li><button class="part-world__item" type="button">Европа</button></li>
-          <li><button class="part-world__item" type="button">Азия</button></li>
-          <li><button class="part-world__item" type="button">Америка</button></li>
-          <li><button class="part-world__item" type="button">Острова</button></li>
+          <li><button class="part-world__item part-world__item--current button" type="button">Европа</button></li>
+          <li><button class="part-world__item button" type="button">Азия</button></li>
+          <li><button class="part-world__item button" type="button">Америка</button></li>
+          <li><button class="part-world__item button" type="button">Острова</button></li>
         </ul>
         <ul class="country-filters__alphabet alphabet">
-          <li class="alphabet__item"><button class="alphabet__button" type="button">а</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">б</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">в</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">г</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">д</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">е</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">з</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">и</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">к</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">л</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">м</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">н</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">о</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">п</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">р</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">с</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">т</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">у</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">ф</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">х</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">ч</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">ш</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">э</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">ю</button></li>
-          <li class="alphabet__item"><button class="alphabet__button" type="button">я</button></li>
+          <li class="alphabet__item"><button class="alphabet__button alphabet__button--top alphabet__button--left alphabet__button--current button" type="button">а</button></li>
+          <li class="alphabet__item"><button class="alphabet__button alphabet__button--top button" type="button">б</button></li>
+          <li class="alphabet__item"><button class="alphabet__button alphabet__button--top button" type="button">в</button></li>
+          <li class="alphabet__item"><button class="alphabet__button alphabet__button--top button" type="button">г</button></li>
+          <li class="alphabet__item"><button class="alphabet__button alphabet__button--top button" type="button">д</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button alphabet__button--left" type="button">е</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">з</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">и</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">к</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">л</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button alphabet__button--left" type="button">м</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">н</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">о</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">п</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">р</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button alphabet__button--left" type="button">с</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">т</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">у</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">ф</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">х</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button alphabet__button--left" type="button">ч</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">ш</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">э</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">ю</button></li>
+          <li class="alphabet__item"><button class="alphabet__button button" type="button">я</button></li>
         </ul>
         <ul class="country-filters__country-choice country-choice">
           <li class="country-choice__item"><a class="country-choice__name" href="europe/austria.html">Австрия</a></li>
@@ -93,102 +94,109 @@
           <li class="country-choice__item"><a class="country-choice__name" href="america/argentina.html">Аргентина</a>
           </li>
           <li class="country-choice__item"><a class="country-choice__name" href="asia/armenia.html">Армения</a></li>
-          <li class="country-choice__item"><a class="country-choice__name" href="asia/afghanistan.html">Анганистан</a>
+          <li class="country-choice__item"><a class="country-choice__name" href="asia/afghanistan.html">Афганистан</a>
           </li>
         </ul>
-        <button class="country-filters__hide" type="button">Свернуть</button>
+        <button class="country-filters__hide button" type="button">Свернуть</button>
+      </div>
       </div>
     </section>
-    <section class="form-search">
-      <form class="form-search__form traveler-search" method="post" action="https://echo.htmlacademy.ru">
-        <h2 class="traveler-search__title">Подберите идеального попутчика</h2>
-        <fieldset class="traveler-search__fieldset">
-          <legend class="traveler-search__legend">Хобби</legend>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="sport" id="sport">
-            <label class="traveler-search__label" for="sport">Спортзал</label>
-          </div>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="hookah" id="hookah">
-            <label class="traveler-search__label" for="hookah">Кальян</label>
-          </div>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="sofa" id="sofa">
-            <label class="traveler-search__label" for="sofa">Диван</label>
-          </div>
-        </fieldset>
-        <fieldset class="traveler-search__fieldset">
-          <legend class="traveler-search__legend">Музыка</legend>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="hardrock" id="hardrock">
-            <label class="traveler-search__label" for="hardrock">Тяжелый рок</label>
-          </div>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="rap" id="rap">
-            <label class="traveler-search__label" for="rap">Русский рэп</label>
-          </div>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="eurodens" id="eurodens">
-            <label class="traveler-search__label" for="eurodens">Евроденс</label>
-          </div>
-        </fieldset>
-        <fieldset class="traveler-search__fieldset">
-          <legend class="traveler-search__legend">Еда</legend>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="meat" id="meat">
-            <label class="traveler-search__label" for="meat">Мясоед</label>
-          </div>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="nutrition" id="nutrition"">
-                <label class=" traveler-search__label" for="nutrition"">Сидит на ПП</label>
+    <aside class="form-search">
+      <div class="form-search__container container">
+        <form class="form-search__form traveler-search" method="post" action="https://echo.htmlacademy.ru">
+          <h2 class="traveler-search__title">Подберите идеального попутчика</h2>
+          <fieldset class="traveler-search__fieldset">
+            <legend class="traveler-search__legend">Хобби</legend>
+            <div class="traveler-search__wrapper traveler-search__wrapper--hobby">
+              <div class="traveler-search__row">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="sport" id="sport">
+                <label class="traveler-search__label" for="sport">Спортзал</label>
+              </div>
+              <div class="traveler-search__row">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="hookah" id="hookah">
+                <label class="traveler-search__label" for="hookah">Кальян</label>
+              </div>
+              <div class="traveler-search__row">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="sofa" id="sofa">
+                <label class="traveler-search__label" for="sofa">Диван</label>
+              </div>
             </div>
-            <div class=" traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="vegan" id="vegan">
-            <label class="traveler-search__label" for="vegan">Веган-сыроед</label>
-          </div>
-        </fieldset>
-        <fieldset class="traveler-search__fieldset">
-          <legend class="traveler-search__legend">Транспорт</legend>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="plane" id="plane">
-            <label class="traveler-search__label" for="plane">Самолет</label>
-          </div>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="train" id="train"">
-                  <label class=" traveler-search__label" for="train"">Поезд</label>
+          </fieldset>
+          <fieldset class="traveler-search__fieldset">
+            <legend class="traveler-search__legend">Музыка</legend>
+            <div class="traveler-search__row">
+              <input class="traveler-search__control visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
+              <label class="traveler-search__label" for="hardrock">Тяжелый рок</label>
+            </div>
+            <div class="traveler-search__row">
+              <input class="traveler-search__control visually-hidden" type="checkbox" name="rap" id="rap">
+              <label class="traveler-search__label" for="rap">Русский рэп</label>
+            </div>
+            <div class="traveler-search__row">
+              <input class="traveler-search__control visually-hidden" type="checkbox" name="eurodens" id="eurodens">
+              <label class="traveler-search__label" for="eurodens">Евроденс</label>
+            </div>
+          </fieldset>
+          <fieldset class="traveler-search__fieldset">
+            <legend class="traveler-search__legend">Еда</legend>
+            <div class="traveler-search__row">
+              <input class="traveler-search__control visually-hidden" type="checkbox" name="meat" id="meat">
+              <label class="traveler-search__label" for="meat">Мясоед</label>
+            </div>
+            <div class="traveler-search__row">
+              <input class="traveler-search__control visually-hidden" type="checkbox" name="nutrition" id="nutrition"">
+                  <label class=" traveler-search__label" for="nutrition"">Сидит на ПП</label>
               </div>
               <div class=" traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="bike" id="bike">
-            <label class="traveler-search__label" for="bike">Велосипед</label>
-          </div>
-          <div class="traveler-search__row">
-            <input class="traveler-search__control" type="checkbox" name="walking" id="walking">
-            <label class="traveler-search__label" for="walking">Пешие прогулки</label>
-          </div>
-        </fieldset>
-        <fieldset class="traveler-search__fieldset">
-          <legend class="traveler-search__legend">Левел</legend>
-          <!--Пока не знаю как сделать эту часть без css(теряюсь, какие блоки нужны, а какие нет), сделала как мы на первом интенсиве делали-->
-          <div class="range-filter">
-            <div class="range-controls">
-              <div class="scale">
-                <div class="bar"></div>
+              <input class="traveler-search__control visually-hidden" type="checkbox" name="vegan" id="vegan">
+              <label class="traveler-search__label" for="vegan">Веган-сыроед</label>
+            </div>
+          </fieldset>
+          <fieldset class="traveler-search__fieldset">
+            <legend class="traveler-search__legend traveler-search__legend--transport">Транспорт</legend>
+            <div class="traveler-search__wrapper traveler-search__wrapper--transport">
+              <div class="traveler-search__row traveler-search__row--transport">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="plane" id="plane">
+                <label class="traveler-search__label traveler-search__label--transport traveler-search__label--plane" for="plane"></label>
               </div>
-              <div class="toggle toggle-min"></div>
-              <div class="toggle toggle-max"></div>
+              <div class="traveler-search__row traveler-search__row--transport">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="train" id="train"">
+                <label class="traveler-search__label traveler-search__label--transport traveler-search__label--train" for="train""></label>
+              </div>
+              <div class=" traveler-search__row traveler-search__row--transport">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="bike" id="bike">
+                <label class="traveler-search__label traveler-search__label--transport traveler-search__label--bike" for="bike"></label>
+              </div>
+              <div class="traveler-search__row traveler-search__row--transport">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="walking" id="walking">
+                <label class="traveler-search__label traveler-search__label--transport traveler-search__label--walk" for="walking"></label>
+              </div>
             </div>
-            <div class="price-controls">
-              <label class="min-price"><input name="min-price" type="number" value="30"></label>
-              <label class="max-price"><input name="max-price" type="number" value="100"></label>
+          </fieldset>
+          <fieldset class="traveler-search__fieldset">
+            <legend class="traveler-search__legend">Левел</legend>
+            <!--Пока не знаю как сделать эту часть без css(теряюсь, какие блоки нужны, а какие нет), сделала как мы на первом интенсиве делали-->
+            <div class="traveler-search__level-range level-range">
+              <div class="level-range__price-controls">
+                <label class="level-range__min-price"><input class="level-range__min-control" name="min-price" type="number" value="30"></label>
+                <label class="level-range__max-price"><input class="level-range__max-control" name="max-price" type="number" value="100"></label>
+              </div>
+              <div class="level-range__range-controls">
+                <div class="level-range__scale">
+                  <div class="level-range__bar"></div>
+                </div>
+                <div class="level-range__toggle level-range__toggle--min"></div>
+                <div class="level-range__toggle level-range__toggle--max"></div>
+              </div>
             </div>
-          </div>
-        </fieldset>
-        <button class="traveler-search__submit" type="submit">Показать</button>
-      </form>
-    </section>
+          </fieldset>
+          <button class="traveler-search__submit button" type="submit">Показать</button>
+        </form>
+      </div>
+    </aside>
     <section class="results">
       <h2 class="visually-hidden">Результаты поиска</h2>
-      <div class="results__wrapper">
+      <div class="results__container container">
         <ul class="results__list">
           <li class="results__item profile-card-catalog">
             <div class="profile-card-catalog__photo like">
@@ -227,7 +235,7 @@
               </ul>
             </div>
             <div class="profile-card-catalog__level">99 level</div>
-            <a class="profile-card-catalog__link" href="#" aria-label="Позвать">Позвать!</a>
+            <a class="profile-card-catalog__link button" href="#" aria-label="Позвать">Позвать!</a>
           </li>
           <li class="results__item profile-card-catalog">
             <div class="profile-card-catalog__photo">
@@ -261,7 +269,7 @@
               </ul>
             </div>
             <div class="profile-card-catalog__level">80 level</div>
-            <a class="profile-card-catalog__link" href="#" aria-label="Позвать!">Позвать</a>
+            <a class="profile-card-catalog__link button" href="#" aria-label="Позвать!">Позвать</a>
           </li>
           <li class="results__item profile-card-catalog">
             <div class="profile-card-catalog__photo">
@@ -300,7 +308,7 @@
               </ul>
             </div>
             <div class="profile-card-catalog__level">25 level</div>
-            <a class="profile-card-catalog__link" href="#" aria-label="Позвать">Позвать!</a>
+            <a class="profile-card-catalog__link button" href="#" aria-label="Позвать">Позвать!</a>
           </li>
           <li class="results__item profile-card-catalog">
             <div class="profile-card-catalog__photo">
@@ -334,20 +342,21 @@
               </ul>
             </div>
             <div class="profile-card-catalog__level">50 level</div>
-            <a class="profile-card-catalog__link" href="#" aria-label="Позвать">Позвать!</a>
+            <a class="profile-card-catalog__link button" href="#" aria-label="Позвать">Позвать!</a>
           </li>
         </ul>
         <div class="results__show show">
-          <button class="show__button" type="bytton">Показать ещё</button>
+          <button class="show__button button" type="bytton">Показать ещё</button>
           <div class="show__link show-link">
-            <a class="show-link__item show-link__item--previous" href="#"></a>
-            <a class="show-link__item show-link__item--next" href="#"></a>
+            <a class="show-link__item show-link__item--previous button" href="#"></a>
+            <a class="show-link__item show-link__item--next button" href="#"></a>
           </div>
         </div>
       </div>
     </section>
   </main>
   <footer class="page-footer">
+    <div class="page-footer__container container">
     <div class="page-footer__logo">
       <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" weigth="96" height="15"
         alt="Логотип компании">
@@ -363,6 +372,7 @@
           <img class="copyright__img" src="img/htmlacademy.svg" wight="27" height="34" alt="логотип академии">
       </a>
     </div>
+  </div>
   </footer>
 </body>
 

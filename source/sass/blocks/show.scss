@@ -1,10 +1,10 @@
 .show {
-  @include wrapper(270px, $margin-center, $padding-cards);
   margin-top: 26px;
 }
 
 .show__button {
   padding-left: 93px;
+  font-family: inherit;
   font-size: 17px;
   font-weight: $bold;
   line-height: 1.76;

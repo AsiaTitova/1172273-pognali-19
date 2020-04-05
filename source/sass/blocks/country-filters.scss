@@ -1,0 +1,47 @@
+.country-filters {
+  @include border-bottom-radius (20px, 20px);
+  background-color: $pale-grey-blue;
+}
+
+.country-filters__container {
+  @include vertical-paddings (0, 27px);
+}
+
+.country-filters__alphabet {
+  margin-top: 25px;
+}
+
+.country-filters__hide {
+  @include border-left-radius (20px, 20px);
+  @include border-right-radius (20px, 20px);
+  position: relative;
+  width: 270px;
+  height: 40px;
+  margin-top: 41px;
+  font-family: inherit;
+  font-size: 16.5px;
+  font-weight: bold;
+  line-height: 1.79;
+  text-align: center;
+  text-transform: uppercase;
+  color: $dark-grey;
+  background-color: $light-blue-grey;
+  border: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 70px;
+    width: 16px;
+    height: 2px;
+    background-color: $dark-blue-grey;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

@@ -4,8 +4,7 @@
   min-height: 280px;
 }
 
-.map__adress-wrapper {
-  @include wrapper (320px, $margin-center, $padding-center);
+.map__container {
   position: relative;
   padding-bottom: 35px;
   padding-top: 37px;
@@ -32,10 +31,8 @@
 }
 
 .map__link {
-  display: block;
   margin-top: 36px;
   padding: 24px;
-  padding-right: 70px;
   background-color: transparent;
   border: 3px solid $dark-blue-grey;
   border-radius: 10px;
@@ -43,4 +40,5 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
+  text-align: left;
 }

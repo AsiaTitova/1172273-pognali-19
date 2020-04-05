@@ -43,7 +43,7 @@
   position: $position;
 }
 
-@mixin round ($width, $height, $background-color) {
+@mixin round ($width, $height, $border-radius, $background-color) {
   width: $width;
   height: $height;
   border-radius: 50%;

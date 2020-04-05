@@ -38,52 +38,11 @@ a {
   padding: 0;
 }
 
-.main-navigation__list,
-.menu-list,
-.steps__list,
-.route__list,
-.travelers__list,
-.transport__list,
-.price-list,
-.contacts,
-.socials-list,
-.results__list,
-.place__list,
-.flags__list {
-  margin: 0;
-  padding: 0;
-}
-
-.user-list__item,
-.site-list,
-.social-icon,
-.menu-list__item,
-.steps__item,
-.country-list__item,
-.travelers__list,
-.transport__list,
-.price-list,
-.contacts,
-.socials-list,
-.results__list,
-.place__list,
-.flags__list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.user-list__login,
-.user-list__tel,
-.user-list__email,
-.site-list__link,
-.social-list__link,
-.menu-list__link,
-.travelers__link,
-.route__link,
-.tariffs__link,
-.contacts__tel,
-.contacts__email,
-.map__link,
-.profile-card-catalog__link {
+.button {
+  display: block;
+  font-family: inherit;
+  text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+  cursor: pointer;
 }

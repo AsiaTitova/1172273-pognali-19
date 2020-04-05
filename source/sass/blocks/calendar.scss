@@ -1,0 +1,85 @@
+.calendar__title {
+  @include title (20px, bold, $dark-slate-blue);
+  @include vertical-paddings (12px, 10px);
+  position: relative;
+  margin-bottom: 25px;
+  line-height: 1;
+  text-align: center;
+  border: 1px solid $grey-opacity;
+  border-left: none;
+  border-right: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 9px;
+    height: 18px;
+    background-image: url("../img/month-arrow-left.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 9px;
+    height: 18px;
+    background-image: url("../img/month-arrow-right.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+  }
+}
+
+.calendar__table {
+  border-collapse: collapse;
+}
+
+.week__cell {
+  font-size: 14px;
+  line-height: 1.29;
+  text-align: center;
+  font-weight: normal;
+  color: $greyish-brown;
+
+  &--output {
+    color: $orange-red;
+  }
+}
+
+.days__cell {
+  width: 33px;
+  height: 33px;
+  background-color: #ffffff;
+  border: 1px solid $grey-opacity;
+  text-align: center;
+}
+
+.days__link {
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $grey-opacity;
+}
+
+.days__cell--active {
+  background-color: $dark-slate-blue;
+}
+
+.days__cell--focus {
+  border: solid 2px $orange-red;
+}
+
+.days__link--active {
+  color: $white;
+}
+
+.days__cell--free {
+  background-color: $pale-grey;
+}
+
+.days__link--free {
+  color: $greyish-brown;
+}

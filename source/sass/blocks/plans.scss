@@ -1,0 +1,19 @@
+.plans__title {
+  @include title (24px, $bold, $dark-slate-blue);
+  line-height: 1;
+  margin-bottom: 34px;
+}
+
+.plans__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plans__item {
+  list-style-type: none;
+}
+
+.plans__item:not(:last-child) {
+  margin-bottom: 10px;
+}

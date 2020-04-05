@@ -1,7 +1,6 @@
-.travelers__wrapper {
-  @include wrapper(320px, $margin-center, $padding-center);
+.travelers__container {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-center (72px, 30px);
+  @include vertical-paddings (72px, 30px);
   background-color: $dark-blue-grey;
 }
 
@@ -22,6 +21,9 @@
 }
 
 .travelers__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   margin-top: 60px;
 }
 
@@ -83,14 +85,13 @@
 }
 
 .travelers__link {
-  display: block;
   margin-top: 20px;
   padding: 24px;
-  padding-right: 132px;
   background-color: $light-gold;
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
   color: $dark-slate-blue;
   border-radius: 10px;
+  text-align-last: left;
 }

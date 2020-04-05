@@ -1,0 +1,212 @@
+.plan-steps {
+  @include wrapper (270px, 0 auto, 0 25px);
+  @include vertical-paddings (24px, 22px);
+  border-radius: 10px;
+  background-color: $white;
+  border: none;
+}
+
+.plan-steps__title {
+  @include title (20px, bold, $dark-slate-blue);
+  line-height: 1;
+}
+
+.plan-steps__text {
+  margin-top: 18px;
+  line-height: 1.38;
+  color: $greyish-brown;
+}
+
+.plan-steps__row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.plan-steps__label {
+  position: relative;
+  width: 220px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: $dark-slate-blue;
+
+  &--people::before {
+    content: "чел.";
+    position: absolute;
+    width: 35px;
+    height: 13px;
+    right: 0;
+    color: rgba(29, 46, 91, 0.3);
+  }
+
+  &--days::before {
+    content: "дн.";
+    position: absolute;
+    width: 35px;
+    height: 13px;
+    right: 0;
+    color: rgba(29, 46, 91, 0.3);
+  }
+}
+
+.plan-steps__number {
+  display: flex;
+  margin-top: 9px;
+}
+
+.plan-steps__minus,
+.plan-steps__plus {
+  width: 43px;
+  height: 43px;
+  background-color: $white;
+  border: solid 1px $cloudy-blue;
+}
+
+.plan-steps__minus {
+  @include border-left-radius (4px, 4px);
+  border-right: none;
+}
+
+.plan-steps__plus {
+  @include border-right-radius (4px, 4px);
+  border-left: none;
+}
+
+.plan-steps__control {
+  height: 43px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: $dark-slate-blue;
+  border: solid 1px $cloudy-blue;
+}
+
+.control-number {
+  border-left: none;
+  border-right: none;
+}
+
+.control-select,
+.control-text {
+  padding-left: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  text-align: left;
+  color: $dark-slate-blue;
+  text-transform: uppercase;
+}
+
+.control-select {
+  width: 168px;
+}
+
+.control-text {
+  width: 220px;
+}
+
+.control-add {
+  border: none;
+  background-color: $pale-grey;
+}
+
+.plan-steps__select,
+.plan-steps__add {
+  position: absolute;
+  right: 0;
+  width: 43px;
+  height: 43px;
+  border-radius: 4px;
+  border: none;
+  background-color: transparent;
+}
+
+.plan-steps__label--children {
+  position: relative;
+  padding-left: 39px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: normal;
+  text-transform: none;
+  color: $greyish-brown;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -5px;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    border: solid 1px $cloudy-blue;
+  }
+}
+
+.plan-steps__checkbox:checked + .plan-steps__label--children::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  border: solid 1px $cloudy-blue;
+  background-image: url("../img/checkbox-on.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+}
+
+.plan-steps__calendar {
+  margin-top: 27px;
+}
+
+.plan-steps__link,
+.plan-steps__submit {
+  width: 230px;
+  height: 40px;
+  margin-top: 23px;
+  padding: 6px;
+  border-radius: 20px;
+  background-color: $light-gold;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.76;
+  color: $dark-grey;
+  border: none;
+}
+
+.link-prev {
+  border: none;
+  background-color: transparent;
+}
+
+.control-textarea {
+  width: 220px;
+  height: 220px;
+  margin-top: 16px;
+  padding-top: 13px;
+  padding-left: 15px;
+  padding-right: 21px;
+  border-radius: 4px;
+  border: solid 1px $cloudy-blue;
+  background-color: #ffffff;
+  line-height: 1.38;
+  color: $greyish-brown;
+  font-weight: normal;
+  text-align: left;
+}
+
+.plan-steps__label--textarea {
+  text-transform: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+}

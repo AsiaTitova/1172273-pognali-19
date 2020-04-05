@@ -1,0 +1,19 @@
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+
+.copyright__by {
+  line-height: 1.38;
+  text-align: center;
+  color: $greyish-brown;
+}
+
+.copyright__link {
+  margin-left: auto;
+}
+
+.copyright__img {
+  display: block;
+}

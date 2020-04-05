@@ -2,6 +2,12 @@
   @include vertical-paddings (28px, 46px);
 }
 
+.results__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .results__show {
   margin-top: 26px;
 }
