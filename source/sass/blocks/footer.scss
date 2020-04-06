@@ -1,0 +1,23 @@
+.page-footer {
+  @include border-top-radius (20px, 20px);
+  @include vertical-paddings (38px, 14px);
+  background-color: $white;
+}
+
+.page-footer__logo {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-footer__logo-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.page-footer .socials-list__item {
+  @include round (45px, 45px, 50%, $light-gold);
+}
+
+.page-footer__copyright {
+  margin-top: 60px;
+}

@@ -1,0 +1,90 @@
+.main-navigation {
+  @include wrapper(320px, 0 auto, 0 25px);
+  @include vertical-paddings (52px, 30px);
+  color: $dark-blue-grey;
+  background-color: $white;
+}
+
+.main-navigation__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 0 43px;
+  text-align: center;
+}
+
+.site-list__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $dark-blue-grey;
+}
+
+.user-list {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 58px;
+}
+
+.user-list__login {
+  padding: 16px 0;
+  width: 270px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.76;
+  color: $dark-grey;
+  background-color: $light-gold;
+  border-radius: 25px;
+}
+
+.user-list__tel {
+  position: relative;
+  margin-top: 67px;
+  padding-left: 61px;
+  font-weight: bold;
+  line-height: 1.38;
+  text-align: left;
+  color: $dark-blue-grey;
+
+  &::before {
+    @include psevdo ("", absolute);
+    @include round (45px, 45px, 50%, $dark-grey);
+    left: 0;
+    top: -14px;
+    background-image: url("../img/contacts-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px 18px;
+  }
+}
+
+.user-list__email {
+  position: relative;
+  margin-top: 32px;
+  padding-left: 61px;
+  font-weight: bold;
+  line-height: 1.38;
+  text-align: left;
+  color: $dark-blue-grey;
+
+  &::before {
+    @include psevdo ("", absolute);
+    @include round (45px, 45px, 50%, $dark-grey);
+    left: 0;
+    top: -14px;
+    background-image: url("../img/contacts-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px 18px;
+  }
+}

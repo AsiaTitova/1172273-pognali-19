@@ -1,0 +1,35 @@
+.alphabet {
+  margin: 0;
+  padding: 0 25px;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 270px;
+}
+
+.alphabet__button {
+  width: 43px;
+  height: 42px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  color: $dark-slate-blue;
+  border: solid 1px $cloudy-blue;
+  border-top: none;
+  border-left: none;
+  background-color: $white;
+
+  &--top {
+    border-top: solid 1px $cloudy-blue;
+  }
+
+  &--left {
+    border-left: solid 1px $cloudy-blue;
+  }
+}
+
+.alphabet__button--current {
+  color: $white;
+  background-color: $dark-slate-blue;
+}

@@ -1,0 +1,86 @@
+.questions__container {
+  @include border-bottom-radius (20px, 20px);
+  @include vertical-paddings (72px, 38px);
+  background-color: $dark-blue-grey;
+}
+
+.questions__title {
+  @include title($size-title, $bold, $mango);
+  line-height: 1;
+  text-align: center;
+}
+
+.questions__text {
+  @include text ($light, $white);
+  margin-top: 44px;
+  padding: 0 36px;
+  text-align: center;
+  line-height: 1.38;
+}
+
+.questions__link {
+  color: $light-gold;
+}
+
+.contacts {
+  margin: 0;
+  margin-top: 36px;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.contacts__item:last-child {
+  margin-top: 32px;
+}
+
+.contacts__tel {
+  position: relative;
+  display: block;
+  padding-left: 61px;
+  font-weight: bold;
+  line-height: 1.38;
+  text-align: left;
+  color: $light-gold;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -14px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $dark-grey;
+    background-image: url("../img/contacts-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px 18px;
+  }
+}
+
+.contacts__email {
+  position: relative;
+  display: block;
+  padding-left: 61px;
+  font-weight: bold;
+  line-height: 1.38;
+  text-align: left;
+  text-transform: uppercase;
+  color: $light-gold;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -14px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $dark-grey;
+    background-image: url("../img/contacts-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px 18px;
+  }
+}

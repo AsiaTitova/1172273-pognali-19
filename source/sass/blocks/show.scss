@@ -1,0 +1,36 @@
+.show {
+  margin-top: 26px;
+}
+
+.show__button {
+  padding-left: 93px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: $bold;
+  line-height: 1.76;
+  color: $dark-slate-blue;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+}
+
+.show__link {
+  display: flex;
+  margin-top: 27px;
+}
+
+.show-link__item {
+  display: block;
+  width: 133px;
+  height: 50px;
+  background-color: $white;
+}
+
+.show-link__item--previous {
+  @include border-left-radius (20px, 20px);
+  margin-right: 2px;
+}
+
+.show-link__item--next {
+  @include border-right-radius (20px, 20px);
+}

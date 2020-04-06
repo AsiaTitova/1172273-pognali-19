@@ -1,0 +1,24 @@
+
+.page-header {
+  color: $white;
+  background-color: $dark-blue-grey;
+}
+
+.page-header__menu {
+  display: flex;
+  padding: 27px 0;
+}
+
+.page-header__logo {
+  display: block;
+}
+
+.page-header__logo-image {
+  display: block;
+}
+
+.page-header__toggle-menu {
+  margin-left: auto;
+  background-color: $dark-blue-grey;
+  border: none;
+}

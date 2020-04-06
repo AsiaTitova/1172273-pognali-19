@@ -1,0 +1,39 @@
+.slider__button {
+  width: 40px;
+  margin-left: auto;
+  display: flex;
+}
+
+.slider-button__one,
+.slider-button__two,
+.slider-button__three {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.slider-button__one::before,
+.slider-button__two::before,
+.slider-button__three::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background-color: $steel-grey;
+  cursor: pointer;
+}
+
+.slider-button__active::before {
+  background-color: $dark-slate-blue;
+}
+
+.slider-button__two,
+.slider-button__three {
+  margin-left: 10px;
+}

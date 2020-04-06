@@ -1,0 +1,43 @@
+.trip {
+  @include wrapper (270px, 0 auto, 0 25px);
+  @include vertical-paddings (25px, 25px);
+  border-radius: 10px;
+  background-color: $white;
+  color: $dark-slate-blue;
+}
+
+.trip__name {
+  font-weight: bold;
+  line-height: 1;
+}
+
+.trip__name span {
+  font-weight: 500;
+  letter-spacing: 1.6px;
+}
+
+.trip__quantity,
+.trip__date {
+  margin-top: 21px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.trip__date {
+  margin-top: 7px;
+}
+
+.trip__link {
+  display: block;
+  margin-top: 27px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  color: $black-opacity;
+  text-transform: uppercase;
+  text-decoration: none;
+}

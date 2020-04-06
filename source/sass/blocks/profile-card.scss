@@ -1,0 +1,129 @@
+.profile-card {
+  background-color: $pale-grey;
+}
+
+.profile-card__container {
+  @include vertical-paddings (20px, 18px);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-card__photo {
+  margin-left: auto;
+  margin-bottom: 19px;
+}
+
+.profile-card__photo-img {
+  display: block;
+  border-radius: 50%;
+}
+
+.profile-card__change-photo {
+  @include vertical-paddings (6px, 6px);
+  display: block;
+  text-decoration: none;
+  width: 270px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: $pale-grey-dark;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.76;
+  text-align: center;
+  color: $dark-grey;
+  text-transform: uppercase;
+}
+
+.interests__fieldset {
+  margin-bottom: 19px;
+  width: 270px;
+  height: 89px;
+  border-radius: 10px;
+  border: solid 1px $cloudy-blue;
+}
+
+.interests__legend {
+  font-weight: bold;
+  line-height: 1.13;
+  text-align: center;
+  color: $dark-slate-blue;
+  text-transform: uppercase;
+}
+
+.interests__textarea {
+  width: 211px;
+  margin: 0 25px;
+  line-height: 1.38;
+  color: $greyish-brown;
+  font-family: inherit;
+  border: none;
+  background-color: $pale-grey;
+}
+
+.transport__wrap {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 40px;
+}
+
+.transport__label {
+  position: relative;
+}
+
+.transport__label::before {
+  @include round (33px, 33px, 50%, $white);
+  content: "";
+  position: absolute;
+}
+
+.transport__label--train::before {
+  content: "";
+  position: absolute;
+  left: 33px;
+  background-image: url("../img/bus.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 16px;
+  background-position: 50% 50%;
+}
+
+.transport__label--plane::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  background-image: url("../img/plane.svg");
+  background-repeat: no-repeat;
+  background-size: 14px 16px;
+  background-position: 50% 50%;
+}
+
+.transport__label--bike::before {
+  content: "";
+  position: absolute;
+  left: 66px;
+  background-image: url("../img/bike.svg");
+  background-repeat: no-repeat;
+  background-size: 19px 17px;
+  background-position: 50% 50%;
+}
+
+.transport__label--walk::before {
+  content: "";
+  position: absolute;
+  left: 99px;
+  background-image: url("../img/run.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 17px;
+  background-position: 50% 50%;
+}
+
+.profile-card__plans {
+  @include border-top-radius (20px, 20px);
+  @include vertical-paddings (29px, 30px);
+  background-color: $pale-grey-dark;
+}
+
+.profile-card__add-plan {
+  @include border-top-radius (20px, 20px);
+  @include vertical-paddings (30px, 44px);
+  background-color: $light-blue-grey;
+}

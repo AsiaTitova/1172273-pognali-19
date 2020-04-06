@@ -1,0 +1,31 @@
+.service__container {
+  @include border-bottom-radius (20px, 20px);
+  @include vertical-paddings (72px, 84px);
+  background-color: $darker-blue-grey;
+}
+
+.service__title {
+  @include title($size-title, $bold, $mango);
+  line-height: 1;
+}
+
+.service__text {
+  @include text ($light, $white);
+  margin-top: 25px;
+}
+
+.service__text--bold {
+  font-weight: $bold;
+}
+
+.service__link {
+  display: none;
+  padding: 24px;
+  background-color: $light-gold;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+  color: $dark-slate-blue;
+  border-radius: 10px;
+}
