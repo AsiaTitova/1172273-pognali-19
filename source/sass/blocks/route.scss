@@ -1,97 +1,104 @@
 .route__container {
   @include border-bottom-radius (20px, 20px);
   @include vertical-paddings (72px, 30px);
+  position: relative;
   background-color: $pale-grey;
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (74px, 80px);
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: 439px 79px;
+    background-size: 289px 575px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (167px, 139px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-position: 1091px 88px;
+  }
 }
 
 .route__title {
-  padding: 0 25px;
-  font-size: $size-title;
-  font-weight: bold;
+  @include title ($size-title, bold, $mango);
+  margin: 0;
+  padding-left: 25px;
   line-height: 1;
-  color: $mango;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+    font-size: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-right: 253px;
+    margin-left: auto;
+  }
 }
 
 .route__text {
+  @include text ($light,  $greyish-brown);
+  margin: 0;
   margin-top: 23px;
   padding-left: 25px;
   padding-right: 78px;
-  font-weight: 300;
-  line-height: 1.38;
-  color: $greyish-brown;
-}
 
-.country-list {
-  list-style-type: none;
-  padding: 0;
-  margin: none;
-  margin-top: 66px;
-  margin-bottom: 25px;
-}
+  @media (min-width: $tablet-width) {
+    margin-top: 62px;
+    padding-left: 35px;
+    padding-right: 306px;
+    font-size: 28px;
+    line-height: 1.18;
+  }
 
-.country-list__item {
-  position: relative;
-  width: 270px;
-  height: 190px;
-}
-
-.country-list__item:not(:first-child) {
-  margin-top: 10px;
-}
-
-.country-list__container {
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  width: 270px;
-  height: 90px;
-  background-color: $white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.country-list__image {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-
-.country-list__image img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.country-list__name {
-  margin-top: 28px;
-  margin-left: 24px;
-  font-size: 21px;
-  font-weight: bold;
-  line-height: 1;
-  color: $dark-grey;
-}
-
-.country-list__slogan {
-  margin-top: 5px;
-  margin-left: 24px;
-  font-weight: 500;
-  line-height: 1.13;
-  color: $grey-opacity;
-}
-
-.country-list__travelers {
-  font-weight: 500;
-  line-height: 1.88;
-  text-align: right;
-  color: $grey-opacity;
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-right: 181px;
+    margin-left: auto;
+    width: 342px;
+  }
 }
 
 .route__link {
+  position: relative;
   padding: 24px;
   background-color: $light-gold;
   font-size: 18px;
   font-weight: bold;
   line-height: 1;
-  text-align: left;
+  text-transform: none;
   color: $dark-slate-blue;
   border-radius: 10px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 31px;
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 35px;
+    width: 618px;
+    font-size: 24px;
+
+    &::before {
+      top: 30px;
+      right: 34px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
+    margin-right: 241px;
+    margin-top: 105px;
+    margin-left: auto;
+  }
 }

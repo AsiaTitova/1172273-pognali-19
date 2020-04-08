@@ -1,12 +1,23 @@
-.page-footer {
+.page-footer__container {
   @include border-top-radius (20px, 20px);
   @include vertical-paddings (38px, 14px);
   background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (43px, 46px);
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .page-footer__logo {
   margin-left: 50%;
   transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    transform: translateX(0);
+  }
 }
 
 .page-footer__logo-image {
@@ -14,10 +25,10 @@
   margin: 0 auto;
 }
 
-.page-footer .socials-list__item {
-  @include round (45px, 45px, 50%, $light-gold);
-}
-
 .page-footer__copyright {
   margin-top: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }

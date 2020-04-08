@@ -1,0 +1,104 @@
+.profile-card-index {
+  position: relative;
+}
+
+.profile-card-index__photo {
+  width: 270px;
+
+  @media (min-width: $tablet-width) {
+    width: 285px;
+  }
+}
+
+.profile-card-index__photo-img {
+  @include border-top-radius (20px, 20px);
+  display: block;
+}
+
+.profile-card-index__info {
+  @include border-bottom-radius (20px, 20px);
+  position: relative;
+  width: 270px;
+  padding: 0 45px;
+  padding-top: 27px;
+  padding-bottom: 60px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (29px, 31px);
+    width: 285px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.profile-card-index__name {
+  margin: 0;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  color: $dark-slate-blue;
+
+  &::before {
+    @include round (5px, 5px, 2.5px, $salmon);
+    content: "";
+    position: absolute;
+    left: 53px;
+    top: 33px;
+  }
+
+  &--online::before {
+    background-color: $green-apple;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+
+    &::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 3.5px;
+      left: 46px;
+      top: 39px;
+    }
+  }
+}
+
+.profile-card-index__interests {
+  margin: 0;
+  margin-top: 16px;
+  line-height: 1.13;
+  text-align: center;
+  color: $greyish-brown;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+.profile-card-index__transport {
+  margin-top: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 27px;
+  }
+}
+
+.profile-card-index__transport .transport__item:not(:first-child) {
+  margin-left: 14px;
+}
+
+.profile-card-index__flags {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.profile-card-index__level {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

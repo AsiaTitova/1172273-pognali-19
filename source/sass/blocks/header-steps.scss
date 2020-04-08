@@ -1,83 +1,118 @@
 .steps__container {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-paddings (51px, 84px);
+  @include vertical-paddings (24px, 84px);
   position: relative;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (0, 0);
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1320px;
+  }
 }
 
 .steps__slogan {
   @include title(36px, $bold, $white);
   line-height: 1.11;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 138px;
+    font-size: 60px;
+    line-height: 1.17;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 109px;
+    margin-left: 69px;
+    padding: 0;
+    width: 400px;
+  }
 }
 
-.menu-list {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  padding-top: 247px;
-  list-style-type: none;
-}
-
-.menu-list__item {
-  position: relative;
-}
-
-.menu-list__link {
-  display: block;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 1.76;
-  text-align: center;
-  color: $dark-grey;
-}
-
-.menu-list__tel {
-  width: 40px;
-  height: 40px;
-  background-color: $mango;
-  border-radius: 50%;
-  background-image: url("../img/topmenu-phone.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 18px 18px;
-}
-
-.menu-list__email {
-  width: 40px;
-  height: 40px;
-  background-color: $lighter-mango;
-  border-radius: 50%;
-  background-image: url("../img/topmenu-mail.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 18px 18px;
-}
-
-.menu-list__login {
-  border-radius: 20px;
-  background-color: $light-gold;
-  padding: 5px 35px;
+.steps__text {
+  @media (min-width: $desktop-width) {
+    width: 267px;
+    margin-left: auto;
+    margin-right: 27px;
+  }
 }
 
 .steps__quote {
-  margin-top: 30px;
+  margin: 0;
+  margin-top: 347px;
   padding-right: 100px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 96px;
+    padding-right: 400px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.18;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 109px;
+    padding: 0;
+  }
 }
 
 .steps__author {
+  margin: 0;
   margin-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 52px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.19;
+  }
+}
+
+.steps__position {
+  margin: 0;
   padding-right: 122px;
-  padding-bottom: 390px;
+  padding-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 431px;
+    padding-bottom: 353px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.19;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-bottom: 347px;
+  }
 }
 
 .steps__list {
   position: absolute;
-  bottom: 370px;
+  bottom: 80px;
   width: 270px;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 33px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 140px;
+    width: 688px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    display: flex;
+    width: 1290px;
+    bottom: 230px;
+  }
 }
 
 .steps__item {
@@ -90,37 +125,246 @@
   text-align: left;
   color: $dark-grey;
   border-radius: 10px;
-}
 
-.steps__item--one {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  padding-right: 140px;
-  background-color: $mango;
-}
+  &--one {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding-right: 140px;
+    background-color: $mango;
+  }
 
-.steps__item--two {
-  position: absolute;
-  top: 80px;
-  z-index: 2;
-  padding-right: 96px;
-  background-color: $light-mango;
-}
+  &--one::before {
+    content: "1";
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: $white;
+  }
 
-.steps__item--three {
-  position: absolute;
-  top: 160px;
-  z-index: 3;
-  padding-right: 105px;
-  background-color: $lighter-mango;
-}
+  &--two {
+    position: absolute;
+    top: 80px;
+    z-index: 2;
+    padding-right: 96px;
+    background-color: $light-mango;
+  }
 
-.steps__item--four {
-  position: absolute;
-  top: 240px;
-  z-index: 4;
-  padding-right: 125px;
-  height: 80px;
-  background-color: $light-gold;
+  &--two::before {
+    content: "2";
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: $white;
+  }
+
+  &--three {
+    position: absolute;
+    top: 160px;
+    z-index: 3;
+    padding-right: 105px;
+    background-color: $lighter-mango;
+  }
+
+  &--three::before {
+    content: "3";
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: $white;
+  }
+
+  &--four {
+    position: absolute;
+    top: 240px;
+    z-index: 4;
+    padding-right: 125px;
+    height: 80px;
+    background-color: $light-gold;
+  }
+
+  &--four::before {
+    content: "4";
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 140px;
+    padding-top: 31px;
+    padding-left: 31px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: $dark-grey;
+    border-radius: 10px;
+    font-size: 24px;
+
+    &--one {
+      @include border-bottom-radius (0, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 668px;
+      padding-right: 518px;
+      z-index: 1;
+      background-color: $mango;
+    }
+
+    &--one::before {
+      top: 45px;
+      right: 617px;
+      font-size: 30px;
+      line-height: 4;
+    }
+
+    &--two {
+      @include border-bottom-radius (0, 0);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 344px;
+      padding-right: 112px;
+      z-index: 2;
+      background-color: $light-mango;
+    }
+
+    &--two::before {
+      top: 45px;
+      right: 295px;
+      font-size: 30px;
+      line-height: 4;
+    }
+
+    &--three {
+      @include border-top-radius (0, 0);
+      position: absolute;
+      top: 140px;
+      left: 0;
+      width: 668px;
+      padding-right: 453px;
+      z-index: 3;
+      background-color: $lighter-mango;
+    }
+
+    &--three::before {
+      top: 45px;
+      right: 617px;
+      font-size: 30px;
+      line-height: 4;
+    }
+
+    &--four {
+      @include border-top-radius (0, 0);
+      position: absolute;
+      top: 140px;
+      right: 0;
+      width: 344px;
+      padding-right: 150px;
+      z-index: 4;
+      background-color: $light-gold;
+    }
+
+    &--four::before {
+      top: 45px;
+      right: 295px;
+      font-size: 30px;
+      line-height: 4;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 107px;
+    padding-top: 27px;
+    padding-left: 35px;
+
+    &--one {
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      width: 1290px;
+      padding-right: 0;
+      z-index: 1;
+      background-color: $mango;
+    }
+
+    &--one::before {
+      top: -10px;
+      right: 1012px;
+      font-size: 30px;
+      line-height: 4;
+    }
+
+    &--two {
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      left: 315px;
+      width: 975px;
+      padding-right: 0;
+      z-index: 2;
+      background-color: $light-mango;
+    }
+
+    &--two::before {
+      top: -10px;
+      right: 680px;
+      font-size: 30px;
+      line-height: 4;
+    }
+
+    &--three {
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      left: 630px;
+      width: 388px;
+      padding-right: 0;
+      z-index: 3;
+      background-color: $lighter-mango;
+    }
+
+    &--three::before {
+      top: -10px;
+      right: 76px;
+      font-size: 30px;
+      line-height: 4;
+    }
+
+    &--four {
+      border-radius: 20px;
+      position: absolute;
+      top: 0;
+      left: 975px;
+      width: 315px;
+      padding-right: 0;
+      z-index: 4;
+      background-color: $light-gold;
+    }
+
+    &--four::before {
+      top: -10px;
+      right: 33px;
+      font-size: 30px;
+      line-height: 4;
+    }
+  }
 }

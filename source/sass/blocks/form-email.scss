@@ -1,6 +1,9 @@
 .form-email {
   position: relative;
-  margin: 32px 0;
+
+  @media (min-width: $desktop-width) {
+    width: 1174px;
+  }
 }
 
 .form-email__email {
@@ -9,6 +12,18 @@
   border-radius: 10px;
   border: none;
   background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    @include border-left-radius (10px, 10px);
+    @include border-right-radius (0, 0);
+    width: 536px;
+    height: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include border-left-radius (20px, 20px);
+    width: 850px;
+  }
 }
 
 .form-email__button {
@@ -19,4 +34,45 @@
   border-radius: 10px;
   border: none;
   background-color: $light-gold;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 23px;
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include border-right-radius (10px, 10px);
+    @include border-left-radius (0, 0);
+    width: 82px;
+    height: 81px;
+
+    &::before {
+      top: 34px;
+      right: 36px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include border-right-radius (20px, 20px);
+    width: 324px;
+    height: 81px;
+
+    &::after {
+      content: "Регистрация";
+      position: absolute;
+      top: 30px;
+      left: 36px;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1;
+      text-align: left;
+      color: $dark-slate-blue;
+    }
+  }
 }

@@ -1,36 +1,64 @@
-.map__wrap {
-  width: 320px;
-  margin: 0 auto;
-  min-height: 280px;
-}
-
 .map__container {
+  @include border-bottom-radius (20px, 20px);
+  @include vertical-paddings (37px, 35px);
   position: relative;
-  padding-bottom: 35px;
-  padding-top: 37px;
+  z-index: 2;
   background-color: $light-gold;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 
   &::before {
+    @include round (45px, 45px, 50%,  $dark-blue-grey);
     content: "";
     position: absolute;
+    top: 32px;
     left: 25px;
-    width: 45px;
-    height: 45px;
-    background-color: $dark-blue-grey;
-    border-radius: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (66px, 85px);
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      top: 47px;
+      left: 76px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (85px, 89px);
+    display: flex;
+    align-items: baseline;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      top: 74px;
+      left: 223px;
+    }
   }
 }
 
 .map__adress {
+  margin: 0;
   padding-left: 61px;
-  font-weight: $bold;
-  line-height: 1.38;
+  padding-right: 66px;
+  font-weight: bold;
+  text-transform: uppercase;
   color: $dark-blue-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 129px;
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 289px;
+  }
 }
 
 .map__link {
+  position: relative;
   margin-top: 36px;
   padding: 24px;
   background-color: transparent;
@@ -41,4 +69,47 @@
   font-weight: bold;
   line-height: 1;
   text-align: left;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 35px;
+    margin-top: 64px;
+    font-size: 24px;
+    text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-left: 103px;
+    width: 324px;
+  }
+}
+
+.map__image-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.map__image {
+  display: block;
 }

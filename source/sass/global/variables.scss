@@ -31,6 +31,7 @@ $light-blue-grey: #d6daed;
 $pale-grey-dark: #dfe3f0;
 $black-opacity: rgba(0, 0, 0, 0.3);
 $steel-grey: #808285;
+$dark-slate-blue-opacity: rgba(29, 46, 91, 0.1);
 
 /** толщина шрифтов **/
 $bold: 700;
@@ -43,6 +44,10 @@ $size-title: 24px;
 /** центровка **/
 $margin-center: 0 auto;
 $padding-center: 0 25px;
-$padding-text: 0 50px;
 $padding-link: 13px 79px;
 $padding-cards: 0 20px;
+
+/** для адаптивной сетки **/
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
