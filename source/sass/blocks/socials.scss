@@ -19,6 +19,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 11px 21px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 14px 28px;
+  }
 }
 
 .socials-list__item--vk {
@@ -26,6 +30,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 23px 12px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 31px 16px;
+  }
 }
 
 .socials-list__item--instagram {
@@ -33,4 +41,31 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 18px 18px;
+
+  @media (min-width: $tablet-width) {
+    background-size: 24px 24px;
+  }
 }
+
+.main-navigation__socials {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer .socials-list {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    transform: translate(0);
+  }
+}
+
+.page-footer .socials-list__item {
+  @include round (45px, 45px, 50%, $light-gold);
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
+}
+

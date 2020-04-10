@@ -1,0 +1,107 @@
+.login {
+  position: absolute;
+  top: 247px;
+  z-index: 5;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: 0;
+    margin-left: auto;
+  }
+}
+
+.login__list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-top: 247px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
+}
+
+
+.login__item {
+  position: relative;
+}
+
+.login__link {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.76;
+  color: $dark-grey;
+
+  &--tel {
+    width: 40px;
+    height: 40px;
+    background-color: $mango;
+    border-radius: 50%;
+    background-image: url("../img/topmenu-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px 18px;
+  }
+
+  &--email {
+    width: 40px;
+    height: 40px;
+    background-color: $lighter-mango;
+    border-radius: 50%;
+    background-image: url("../img/topmenu-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px 18px;
+  }
+
+  &--login {
+    border-radius: 20px;
+    background-color: $light-gold;
+    padding: 5px 35px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+
+    &--tel {
+      display: none;
+    }
+
+    &--email {
+      display: none;
+    }
+
+    &--login {
+      padding: 12px 30px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+
+    &--tel {
+      display: block;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--email {
+      display: block;
+      width: 50px;
+      height: 50px;
+    }
+
+    &--login {
+      padding: 12px 30px;
+    }
+  }
+}

@@ -1,15 +1,23 @@
+@import "global/normalize.scss";
 @import "global/variables.scss";
 @import "global/mixins.scss";
 @import "global/fonts.scss"; // если вы подключаете шрифты в scss
 @import "global/global.scss"; // для служебных классов
 @import "blocks/container.scss";
 @import "blocks/header.scss";
+@import "blocks/logo.scss";
 @import "blocks/navigation.scss";
 @import "blocks/header-steps.scss";
+@import "blocks/login.scss";
+@import "blocks/user.scss";
+@import "blocks/site.scss";
 @import "blocks/service.scss";
 @import "blocks/route.scss";
+@import "blocks/country-route.scss";
 @import "blocks/travelers.scss";
+@import "blocks/profile-card-index.scss";
 @import "blocks/tariffs.scss";
+@import "blocks/tariffs-modal.scss";
 @import "blocks/questions.scss";
 @import "blocks/form-email.scss";
 @import "blocks/map.scss";
