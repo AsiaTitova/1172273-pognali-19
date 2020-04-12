@@ -1,14 +1,55 @@
 .traveler-search {
-  @include wrapper (270px, 0 auto, 0 25px);
   @include vertical-paddings (26px, 22px);
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: 0 auto;
   border-radius: 20px;
   background-color: $light-gold;
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (40px, 40px);
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (48px, 47px);
+    padding-left: 48px;
+    padding-right: 48px;
+  }
 }
 
 .traveler-search__title {
   @include title (22.5px, $bold, $dark-slate-blue);
+  position: relative;
   margin-bottom: 21px;
-  line-height: 1;
+  line-height: 22.5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+    font-size: 30px;
+    line-height: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -37px;
+      width: 618px;
+      height: 1px;
+      background-color: $cheese;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 21px;
+      font-size: 30px;
+      line-height: 30px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 .traveler-search__fieldset {
@@ -18,8 +59,19 @@
   border: none;
 }
 
+.traveler-search__wrap {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
 .traveler-search__legend {
-  @include title (16px, $bold, $dark-slate-blue);
+  @include title (16px, bold, $dark-slate-blue);
   position: relative;
   width: 220px;
   padding-top: 13px;
@@ -50,14 +102,34 @@
   &--transport {
     padding-bottom: 70px;
   }
-}
 
-.traveler-search__wrapper {
-  position: relative;
-}
+  @media (min-width: $tablet-width) {
+    width: 100px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    border: none;
 
-.traveler-search__wrapper--transport {
-  display: flex;
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &--level {
+      margin-right: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 220px;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 20px;
+
+      &--level {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .traveler-search__label {
@@ -70,6 +142,54 @@
   &--transport {
     padding: 0;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 33px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.traveler-search__row:not(:last-child) {
+  @media (min-width: $tablet-width) {
+    margin-right: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.traveler-search__row:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    margin-left: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
+}
+
+.traveler-search__row {
+  margin-top: 16px;
+
+  @media (min-width: $tablet-width) {
+    &--hobby:nth-child(2) {
+      margin-right: 58px;
+    }
+
+    &--hobby:nth-child(3) {
+      margin-right: 65px;
+    }
+
+    &--food:nth-child(2) {
+      margin-right: 73px;
+    }
+
+    &--food:nth-child(3) {
+      margin-right: 20px;
+    }
+  }
 }
 
 .traveler-search__control + .traveler-search__label:not(.traveler-search__label--transport)::before {
@@ -81,6 +201,12 @@
   border-radius: 4px;
   background-color: $white;
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
+    top: -2px;
+  }
 }
 
 .traveler-search__control:checked + .traveler-search__label:not(.traveler-search__label--transport)::before {
@@ -95,88 +221,97 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 9px 9px;
+
+  @media (min-width: $tablet-width) {
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    background-size: 12px 12px;
+  }
 }
 
-.traveler-search__label--transport::before {
-  @include round (33px, 33px, 50%, $white);
-  content: "";
-  position: absolute;
-  top: -52px;
+.traveler-search__wrapper {
+  margin-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 21px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-top: 23px;
+  }
 }
 
-.traveler-search__control:checked + .traveler-search__label--transport::before path {
-  fill: $dark-slate-blue;
+.transport__list .traveler-search__row {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
-.traveler-search__control + .traveler-search__label--transport::before path {
-  fill: $dark-slate-blue;
-  opacity: 0.15;
-}
+.traveler-search__wrap .transport__item {
+  background-color: $white;
 
-.traveler-search__label--train::before {
-  content: "";
-  position: absolute;
-  top: -52px;
-  left: 33px;
-  background-image: url("../img/bus.svg");
-  background-repeat: no-repeat;
-  background-size: 13px 16px;
-  background-position: 50% 50%;
-}
+  @media (min-width: $tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
 
-.traveler-search__label--plane::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -52px;
-  background-image: url("../img/plane.svg");
-  background-repeat: no-repeat;
-  background-size: 14px 16px;
-  background-position: 50% 50%;
-}
-
-.traveler-search__label--bike::before {
-  content: "";
-  position: absolute;
-  left: 66px;
-  top: -52px;
-  background-image: url("../img/bike.svg");
-  background-repeat: no-repeat;
-  background-size: 19px 17px;
-  background-position: 50% 50%;
-}
-
-.traveler-search__label--walk::before {
-  content: "";
-  position: absolute;
-  left: 99px;
-  top: -52px;
-  background-image: url("../img/run.svg");
-  background-repeat: no-repeat;
-  background-size: 15px 17px;
-  background-position: 50% 50%;
+  @media (min-width: $desktop-width) {
+    width: 33px;
+    height: 33px;
+  }
 }
 
 .traveler-search__level-range {
   margin-top: 15px;
   margin-bottom: 10px;
-}
 
-.traveler-search__row {
-  margin-top: 16px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .traveler-search__submit {
+  @include vertical-paddings (13px, 13px);
+  position: relative;
   width: 230px;
-  height: 40px;
-  font-family: inherit;
   font-size: 17px;
   font-weight: bold;
-  line-height: 1.76;
+  line-height: 30px;
   text-align: center;
-  text-transform: uppercase;
   color: $dark-grey;
   border-radius: 20px;
   border: none;
   background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (17px, 17px);
+    width: 618px;
+    font-size: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -37px;
+      width: 618px;
+      height: 1px;
+      background-color: $cheese;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (17px, 17px);
+    width: 196px;
+
+    &::before {
+      display: none;
+    }
+  }
 }

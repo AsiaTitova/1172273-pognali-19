@@ -37,7 +37,6 @@
   .user__link {
     position: relative;
     font-weight: bold;
-    line-height: 1.38;
     color: $dark-blue-grey;
 
     &--tel {
@@ -79,7 +78,7 @@
 @media (min-width: $tablet-width) {
   .user__link {
     font-size: 28px;
-    line-height: 1;
+    line-height: 28px;
 
     &--tel {
       margin-top: 173px;

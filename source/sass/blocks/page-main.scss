@@ -1,0 +1,22 @@
+.page-main__container {
+  @include vertical-paddings (28px, 46px);
+  background-color: $pale-grey;
+
+  @media (min-width: $desktop-width) {
+    @include wrapper (1440px, 0 auto, 0 60px);
+    @include vertical-paddings (151px, 76px);
+    display: flex;
+  }
+}
+
+.page-main__results {
+  @media (min-width: $desktop-width) {
+    order: 1;
+  }
+}
+
+.page-main__form-search {
+  @media (min-width: $desktop-width) {
+    order: 2;
+  }
+}

@@ -34,7 +34,7 @@
 .login__link {
   font-size: 17px;
   font-weight: bold;
-  line-height: 1.76;
+  line-height: 30px;
   color: $dark-grey;
 
   &--tel {
@@ -67,8 +67,8 @@
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 1.5;
     text-align: center;
+    line-height: 30px;
 
     &--tel {
       display: none;
@@ -83,9 +83,9 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 30px;
     text-align: center;
 
     &--tel {
