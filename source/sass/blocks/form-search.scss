@@ -1,3 +1,14 @@
 .form-search__container {
   @include vertical-paddings (27px, 22px);
+  background-color: $pale-grey;
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (40px, 40px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-left: auto;
+    width: 285px;
+  }
 }

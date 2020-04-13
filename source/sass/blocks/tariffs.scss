@@ -17,11 +17,12 @@
   @include title($size-title, $bold, $mango);
   margin: 0;
   padding-right: 133px;
-  line-height: 1;
+  line-height: 24px;
 
   @media (min-width: $tablet-width) {
     padding: 0 70px;
     font-size: 45px;
+    line-height: 45px;
     text-align: center;
   }
 
@@ -53,7 +54,7 @@
     position: relative;
     margin-top: 74px;
     font-size: 28px;
-    line-height: 1.18;
+    line-height: 33px;
 
     &::before {
       z-index: 2;

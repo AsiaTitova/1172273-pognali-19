@@ -18,13 +18,13 @@
 
 .steps__slogan {
   @include title(36px, $bold, $white);
-  line-height: 1.11;
+  line-height: 40px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     padding: 0 138px;
     font-size: 60px;
-    line-height: 1.17;
+    line-height: 70px;
   }
 
   @media (min-width: $desktop-width) {
@@ -53,7 +53,7 @@
     padding-right: 400px;
     font-size: 28px;
     font-weight: 300;
-    line-height: 1.18;
+    line-height: 33px;
   }
 
   @media (min-width: $desktop-width) {
@@ -70,7 +70,7 @@
     margin-top: 52px;
     font-size: 21px;
     font-weight: bold;
-    line-height: 1.19;
+    line-height: 25px;
   }
 }
 
@@ -84,7 +84,7 @@
     padding-bottom: 353px;
     font-size: 21px;
     font-weight: bold;
-    line-height: 1.19;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -121,7 +121,7 @@
   padding-left: 25px;
   font-size: 18px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 18px;
   text-align: left;
   color: $dark-grey;
   border-radius: 10px;
@@ -141,7 +141,7 @@
     right: 23px;
     font-size: 18px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 18px;
     text-align: center;
     color: $white;
   }
@@ -161,7 +161,7 @@
     right: 23px;
     font-size: 18px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 18px;
     text-align: center;
     color: $white;
   }
@@ -181,7 +181,7 @@
     right: 23px;
     font-size: 18px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 18px;
     text-align: center;
     color: $white;
   }
@@ -202,7 +202,7 @@
     right: 23px;
     font-size: 18px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 18px;
     text-align: center;
     color: $white;
   }
@@ -212,7 +212,7 @@
     padding-top: 31px;
     padding-left: 31px;
     font-weight: bold;
-    line-height: 1;
+    line-height: 31px;
     text-align: left;
     color: $dark-grey;
     border-radius: 10px;
@@ -233,7 +233,7 @@
       top: 45px;
       right: 617px;
       font-size: 30px;
-      line-height: 4;
+      line-height: 120px;
     }
 
     &--two {
@@ -251,7 +251,7 @@
       top: 45px;
       right: 295px;
       font-size: 30px;
-      line-height: 4;
+      line-height: 120px;
     }
 
     &--three {
@@ -269,7 +269,7 @@
       top: 45px;
       right: 617px;
       font-size: 30px;
-      line-height: 4;
+      line-height: 120px;
     }
 
     &--four {
@@ -287,7 +287,7 @@
       top: 45px;
       right: 295px;
       font-size: 30px;
-      line-height: 4;
+      line-height: 120px;
     }
   }
 
@@ -310,7 +310,7 @@
       top: -10px;
       right: 1012px;
       font-size: 30px;
-      line-height: 4;
+      line-height: 120px;
     }
 
     &--two {
@@ -328,7 +328,7 @@
       top: -10px;
       right: 680px;
       font-size: 30px;
-      line-height: 4;
+      line-height: 120px;
     }
 
     &--three {
@@ -346,7 +346,7 @@
       top: -10px;
       right: 76px;
       font-size: 30px;
-      line-height: 4;
+      line-height: 120px;
     }
 
     &--four {
@@ -364,7 +364,7 @@
       top: -10px;
       right: 33px;
       font-size: 30px;
-      line-height: 4;
+      line-height: 120px;
     }
   }
 }

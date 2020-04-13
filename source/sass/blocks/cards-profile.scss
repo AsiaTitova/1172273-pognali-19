@@ -1,25 +1,399 @@
-.profile-card-catalog {
+/**разметка карточек**/
+
+.profile-card {
   @include wrapper(270px, 0 auto, 0 20px);
   @include vertical-paddings (16px, 22px);
-  @include border-top-radius (20px, 20px);
-  @include border-bottom-radius (20px, 20px);
+  position: relative;
+  background-color: $white;
+  border-radius: 20px;
+
+  &--index {
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include wrapper(688px, 0 auto, 0 35px);
+    @include vertical-paddings (34px, 27px);
+
+    &--index {
+      width: 285px;
+      padding: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include wrapper(950px, 0, 0);
+    display: flex;
+
+    &--index {
+      display: block;
+      width: 285px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.profile-card__content {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  background-color: $white;
+
+  &--index {
+    @include vertical-paddings (27px, 22px);
+    @include border-bottom-radius (20px, 20px);
+    display: block;
+    width: 270px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (31px, 37px);
+
+    &--index {
+      @include vertical-paddings (29px, 31px);
+      width: 285px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include wrapper(665px, 0, 0 50px);
+    @include vertical-paddings (34px, 27px);
+
+    &--index {
+      @include vertical-paddings (29px, 31px);
+      width: 285px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
 }
 
-.profile-card-catalog:not(:first-child) {
+.profile-card:not(:first-child) {
   margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 40px;
+
+    &--index:not(:first-child) {
+      margin-top: 0;
+    }
+  }
 }
 
-.profile-card-catalog__photo {
+.profile-card--index:not(:first-child) {
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.profile-card__photo-img {
+  position: absolute;
+  display: block;
+  width: 70px;
+  height: 70px;
+  top: 16px;
+  left: 18px;
+  z-index: 2;
+  border-radius: 50%;
+
+  &--index {
+    @include border-top-radius (20px, 20px);
+    @include border-bottom-radius (0, 0);
+    position: relative;
+    width: 270px;
+    height: 270px;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    width: 190px;
+    height: 190px;
+    top: 35px;
+    left: 35px;
+    border-radius: 20px;
+
+    &--index {
+      @include border-top-radius (20px, 20px);
+      @include border-bottom-radius (0, 0);
+      position: relative;
+      width: 285px;
+      height: 285px;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include border-right-radius (0, 0);
+    position: relative;
+    width: 285px;
+    height: 285px;
+    top: 0;
+    left: 0;
+  }
+}
+
+.profile-card__info {
+  @media (min-width: $tablet-width) {
+    order: 2;
+    width: 230px;
+    margin-left: 233px;
+
+    &--index {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+
+    &--index {
+      margin: 0;
+    }
+  }
+}
+
+.profile-card__name {
+  @include title (20px, bold, $dark-slate-blue);
+  margin: 0;
+  padding-left: 88px;
+  padding-right: 50px;
+  line-height: 20px;
+
+  &--index {
+    padding: 0;
+    font-size: 21px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  &--index::before {
+    @include round (5px, 5px, 2.5px, $salmon);
+    content: "";
+    position: absolute;
+    left: 53px;
+    top: 33px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: 30px;
+    line-height: 30px;
+
+    &--index {
+      font-size: 24px;
+
+      &::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 3.5px;
+        left: 46px;
+        top: 39px;
+      }
+    }
+  }
+}
+
+.profile-card__interests {
+  margin: 0;
+  margin-top: 65px;
+  padding-right: 58px;
+  font-size: 15px;
+  line-height: 18px;
+  color: $greyish-brown;
+
+  &--index {
+    padding: 0;
+    margin-top: 16px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 24px;
+
+    &--index {
+      margin-top: 24px;
+    }
+  }
+}
+
+.profile-card__place {
   position: relative;
+  margin-top: 20px;
+
+  &--index {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 4;
+    margin-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 3;
+    width: 230px;
+    margin: 0;
+    margin-left: 80px;
+  }
+}
+
+.profile-card__wrapper {
+  display: flex;
+  margin-top: 20px;
+
+  &--index {
+    margin: 0 auto;
+    margin-top: 17px;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: 0;
+    order: 5;
+    flex-direction: column;
+
+    &--index {
+      position: relative;
+      margin-top: 27px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    right: 0;
+    margin: 0;
+    margin-left: 81px;
+    order: 5;
+    flex-direction: row;
+
+    &--index {
+      margin: 0;
+      margin-top: 27px;
+    }
+  }
+}
+
+.profile-card__transport {
+  &--index {
+    margin: 0 auto;
+  }
+}
+
+.profile-card__level {
+  margin-top: 27px;
+
+  &--index {
+    position: absolute;
+    top: -265px;
+    left: 25px;
+    z-index: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--index {
+      top: -445px;
+      left: -35px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-left: 22px;
+
+    &--index {
+      top: -445px;
+      left: -35px;
+    }
+  }
+}
+
+.profile-card__call {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  &--index {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    margin-left: 233px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 4;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.profile-card__link {
+  @include link ($padding-link, 20px, $light-gold);
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  color: $dark-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 13px 33px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+.profile-card__distance {
+  position: absolute;
+  margin: 0;
+  left: 50px;
+  top: 50px;
+  z-index: 2;
+  padding-left: 41px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $dark-grey;
 
   &::before {
-    @include psevdo ("", absolute);
     @include round (31px, 31px, 50%, $pale-grey);
-    right: -5px;
-    bottom: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-left: 55px;
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+      top: -10px;
+    }
   }
 }
 
@@ -27,88 +401,4 @@
   &::before {
     background-color: $beige;
   }
-}
-
-.profile-card-catalog__photo-img {
-  border-radius: 50%;
-}
-
-.profile-card-catalog__name-wrap {
-  margin-left: 16px;
-}
-
-.profile-card-catalog__name {
-  width: 78px;
-  font-size: 20px;
-  font-weight: $bold;
-  line-height: 1;
-  color: $dark-slate-blue;
-}
-
-.profile-card-catalog__distance {
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: $bold;
-  line-height: 1.5;
-  text-transform: uppercase;
-  color: $dark-grey;
-}
-
-.profile-card-catalog__interests {
-  margin-top: 16px;
-  padding-right: 58px;
-  font-size: 15px;
-  line-height: 1.2;
-  color: $greyish-brown;
-}
-
-.place {
-  @include vertical-paddings (20px, 0);
-  padding-right: 100px;
-  font-size: 15px;
-  line-height: 1.2;
-  color: $dark-slate-blue;
-}
-
-.place__title {
-  color: $greyish-brown;
-}
-
-.place__list {
-  margin: 0;
-  padding: 0 25px;
-  list-style-type: none;
-  margin-top: 27px;
-}
-
-.place__item:not(:first-child) {
-  margin-top: 16px;
-}
-
-.country__name {
-  margin-left: 14px;
-  font-weight: $medium;
-  text-transform: uppercase;
-}
-
-.transport,
-.profile-card-catalog__level {
-  margin-top: 21px;
-}
-
-.profile-card-catalog__level {
-  margin-left: auto;
-  text-align: right;
-}
-
-.profile-card-catalog__link {
-  @include link ($padding-link, 20px, $light-gold);
-  display: block;
-  margin-top: 20px;
-  font-size: 17px;
-  font-weight: $bold;
-  line-height: 1.76;
-  text-align: center;
-  text-transform: uppercase;
-  color: $dark-grey;
 }

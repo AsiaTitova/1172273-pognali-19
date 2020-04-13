@@ -1,36 +1,116 @@
 .show {
   margin-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (71px, 77px);
+    width: 950px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .show__button {
-  padding-left: 93px;
-  font-family: inherit;
+  margin: 0 auto;
   font-size: 17px;
-  font-weight: $bold;
-  line-height: 1.76;
+  font-weight: bold;
+  line-height: 30px;
   color: $dark-slate-blue;
   background-color: transparent;
   border: none;
-  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.show__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 54px;
+    padding: 25px 28px;
+    width: 688px;
+    background-color: $white;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 950px;
+  }
 }
 
 .show__link {
-  display: flex;
-  margin-top: 27px;
-}
-
-.show-link__item {
+  position: relative;
   display: block;
-  width: 133px;
-  height: 50px;
   background-color: $white;
+
+  &--switch {
+    width: 133px;
+    height: 50px;
+  }
+
+  &--next {
+    @include border-left-radius (20px, 20px);
+    margin-right: 2px;
+  }
+
+  &--previous {
+    @include border-right-radius (20px, 20px);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    color: $dark-grey;
+    background-color: transparent;
+
+    &--active {
+      @include round (50px, 50px, 50%, $light-gold);
+    }
+  }
 }
 
-.show-link__item--previous {
+.show__item {
+  &--page {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--page {
+      display: block;
+    }
+  }
+}
+
+.show__item--page:not(:first-child) {
+  @media (min-width: $tablet-width) {
+    margin-left: 22px;
+  }
+}
+
+.next {
   @include border-left-radius (20px, 20px);
   margin-right: 2px;
 }
 
-.show-link__item--next {
+.previous {
   @include border-right-radius (20px, 20px);
+}
+
+.show__item--next {
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }

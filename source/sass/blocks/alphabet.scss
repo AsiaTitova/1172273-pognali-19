@@ -5,6 +5,17 @@
   display: flex;
   flex-wrap: wrap;
   width: 270px;
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    padding: 0;
+  }
+}
+
+.alphabet__item {
+  @media (min-width: $desktop-width) {
+    margin-right: 163px;
+  }
 }
 
 .alphabet__button {
@@ -12,7 +23,7 @@
   height: 42px;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.29;
+  line-height: 18px;
   letter-spacing: 1.4px;
   color: $dark-slate-blue;
   border: solid 1px $cloudy-blue;
@@ -27,9 +38,26 @@
   &--left {
     border-left: solid 1px $cloudy-blue;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 84px;
+    font-size: 60px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: $dark-blue-grey-opacity;
+    border: none;
+    background-color: transparent;
+  }
 }
 
 .alphabet__button--current {
   color: $white;
   background-color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    color: $dark-blue-grey;
+    background-color: transparent;
+  }
 }

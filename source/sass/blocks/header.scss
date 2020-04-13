@@ -92,6 +92,14 @@
   }
 }
 
+.page-header__catalog .page-header__login {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .page-header__steps {
   order: 5;
 }

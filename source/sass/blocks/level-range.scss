@@ -1,3 +1,9 @@
+.level-range {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .level-range__price-controls {
   position: relative;
   display: flex;
@@ -11,6 +17,44 @@
     width: 16px;
     height: 1px;
     background-color: $cloudy-blue;
+  }
+
+  &--price {
+    order: 1;
+  }
+
+  &--scale {
+    order: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--price {
+      order: 2;
+      margin-left: 61px;
+    }
+
+    &--scale {
+      order: 1;
+    }
+
+    &::before {
+      left: 68px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--price {
+      order: 1;
+      margin-left: 0;
+    }
+
+    &--scale {
+      order: 2;
+    }
+
+    &::before {
+      left: 68px;
+    }
   }
 }
 
@@ -27,6 +71,14 @@
   font-family: inherit;
   border: solid 1px $cloudy-blue;
   background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    width: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 96px;
+  }
 }
 
 .level-range__min-control {
@@ -46,6 +98,14 @@ input::-webkit-inner-spin-button {
 .level-range__range-controls {
   margin-top: 24px;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 24px;
+  }
 }
 
 .level-range__bar {
@@ -66,6 +126,19 @@ input::-webkit-inner-spin-button {
     border-radius: 1px;
     background-color: rgba(29, 46, 91, 1);
   }
+
+  @media (min-width: $tablet-width) {
+    height: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 191px;
+    height: 2;
+
+    &::before {
+      width: 119px;
+    }
+  }
 }
 
 .level-range__toggle {
@@ -76,5 +149,21 @@ input::-webkit-inner-spin-button {
 
   &--min {
     right: 135px;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 13px;
+    width: 13px;
+    top: -6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 10px;
+    width: 10px;
+    top: -4px;
+
+    &--min {
+      right: 119px;
+    }
   }
 }
