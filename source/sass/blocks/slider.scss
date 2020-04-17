@@ -1,7 +1,10 @@
 .slider__button {
-  width: 40px;
   margin-left: auto;
   display: flex;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .slider-button__one,
@@ -13,6 +16,13 @@
   border: none;
   border-radius: 50%;
   background-color: transparent;
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 13.8px;
+    letter-spacing: 2px;
+    color: $black-opacity;
+  }
 }
 
 .slider-button__one::before,
@@ -27,13 +37,46 @@
   border-radius: 50%;
   background-color: $steel-grey;
   cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    left: -17px;
+    top: 3px;
+  }
 }
 
-.slider-button__active::before {
-  background-color: $dark-slate-blue;
+.slider-button__active {
+  color: $dark-slate-blue;
+
+  &::before {
+    background-color: $dark-slate-blue;
+  }
 }
 
 .slider-button__two,
 .slider-button__three {
   margin-left: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    margin-top: 26px;
+  }
+}
+
+
+.slider__button--show {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.slider__button--close {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }

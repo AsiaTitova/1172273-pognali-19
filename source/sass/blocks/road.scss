@@ -1,0 +1,209 @@
+.road {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    border-top: 1px solid $light-blue-grey;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 100px;
+      z-index: 1;
+      width: 1px;
+      height: 421px;
+      background-image: linear-gradient(to bottom, $light-blue-grey 80%, transparent);
+    }
+
+    @media (min-width: $desktop-width) {
+      &::before {
+        right: 177px;
+      }
+    }
+  }
+}
+
+.road__round {
+  &::before {
+    @include round (8px, 8px, 50%, $dark-slate-blue);
+    content: "";
+    position: absolute;
+    right: 48px;
+    top: 17px;
+    z-index: 2;
+  }
+
+  &--white::before {
+    background-color: $white;
+    border: 1px solid $cloudy-blue;
+  }
+
+  &--light::before {
+    background-color: $pale-grey;
+    border: 1px solid $cloudy-blue;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      width: 15px;
+      height: 15px;
+      border-radius: 38px;
+      right: 93px;
+      top: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      &::before {
+        right: 170px;
+      }
+    }
+  }
+}
+
+.road__round:not(:first-child) {
+  margin-top: 15px;
+}
+
+
+.road__row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+  }
+}
+
+.road__control {
+  width: 168px;
+  height: 43px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 13.5px;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: $dark-slate-blue;
+  border: solid 1px $cloudy-blue;
+  text-transform: uppercase;
+  border-radius: 4px;
+
+  &--select,
+  &--add {
+    @include border-left-radius (4px, 4px);
+    border-right: none;
+    padding-left: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &--add {
+    border: none;
+    background-color: $pale-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 390px;
+    height: 70px;
+    padding-left: 25px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-align: left;
+
+    &--select,
+    &--add {
+      width: 305px;
+      padding-left: 25px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+
+    &--select,
+    &--add {
+      width: 645px;
+    }
+  }
+}
+
+.road__button {
+  @include border-right-radius (4px, 4px);
+  margin: 0;
+  width: 43px;
+  height: 43px;
+  border: solid 1px $cloudy-blue;
+  background-color: $white;
+
+  &--add {
+    border: none;
+    background-color: $pale-grey;
+  }
+
+  &--choice {
+    position: absolute;
+    right: 50px;
+    border: none;
+    background-color: transparent;
+  }
+
+  &--choice::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 18px;
+    top: 12px;
+    left: 15px;
+    opacity: 0.3;
+    background-image: url("../img/month-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 9px 17px;
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    width: 85px;
+    height: 70px;
+    border-left: none;
+
+    &--choice {
+      @include border-right-radius (4px, 4px);
+      position: absolute;
+      right: 149px;
+      width: 85px;
+      height: 70px;
+      border: solid 1px $cloudy-blue;
+      background-color: $white;
+      border-left: none;
+    }
+
+    &--choice::before {
+      top: 27px;
+      left: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      &--choice {
+        right: 267px;
+      }
+    }
+  }
+}
+
+.road__flag {
+  @media (min-width: $tablet-width) {
+    margin-left: 53px;
+    width: 70px;
+    height: 47px;
+    border: none;
+  }
+}

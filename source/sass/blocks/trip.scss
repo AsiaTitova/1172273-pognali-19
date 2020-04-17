@@ -1,33 +1,120 @@
 .trip {
   @include wrapper (270px, 0 auto, 0 25px);
   @include vertical-paddings (25px, 25px);
+  position: relative;
   border-radius: 10px;
   background-color: $white;
   color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    @include wrapper (688px, 0 auto, 0 35px);
+    @include vertical-paddings (40px, 19px);
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 117px;
+      left: 0;
+      width: 688px;
+      height: 1px;
+      background-color: $pale-grey;
+    }
+
+    @media (min-width: $desktop-width) {
+      @include wrapper (1200px, 0 auto, 0 40px);
+      @include vertical-paddings (40px, 40px);
+      border-radius: 30px;
+      align-items: center;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 .trip__name {
+  margin: 0;
   font-weight: bold;
-  line-height: 1;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 300px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 50px;
+  }
+
+  @media (min-width: desktop-width) {
+    padding: 0;
+  }
 }
 
 .trip__name span {
   font-weight: 500;
   letter-spacing: 1.6px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 38px;
+  }
 }
 
 .trip__quantity,
 .trip__date {
-  margin-top: 21px;
+  margin: 0;
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+.trip__quantity {
+  margin-top: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-left: 250px;
+  }
 }
 
 .trip__date {
   margin-top: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 54px;
+    margin-left: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-left: 39px;
+  }
 }
 
 .trip__link {
@@ -40,4 +127,17 @@
   color: $black-opacity;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 54px;
+    margin-left: 87px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-left: 130px;
+  }
 }

@@ -1,0 +1,39 @@
+.interests__legend {
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: -10px;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: $pale-grey;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $tablet-width) {
+    transform: translateX(0);
+    left: 39px;
+  }
+}
+
+.interests__textarea {
+  padding: 25px 33px;
+  width: 211px;
+  color: $greyish-brown;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    padding: 37px 40px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

@@ -80,5 +80,11 @@
       background-image: url("../img/return.svg");
       background-repeat: no-repeat;
     }
+
+    @media (min-width: $desktop-width) {
+      &--form {
+        display: none;
+      }
+    }
   }
 }

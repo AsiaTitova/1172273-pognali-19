@@ -1,179 +1,122 @@
 .plan-steps {
   @include wrapper (270px, 0 auto, 0 25px);
   @include vertical-paddings (24px, 22px);
+  position: relative;
   border-radius: 10px;
   background-color: $white;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    @include wrapper (618px, 0 auto, 0 40px);
+    @include vertical-paddings (49px, 55px);
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include wrapper (1320px, 0 auto, 0 162px);
+    @include vertical-paddings (100px, 105px);
+  }
+}
+
+.plan-steps__legend {
+  display: none;
+}
+
+.plan-steps__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .plan-steps__title {
   @include title (20px, bold, $dark-slate-blue);
-  line-height: 1;
+  line-height: 20px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
+}
+
+.plan-steps__br {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .plan-steps__text {
+  margin: 0;
   margin-top: 18px;
-  line-height: 1.38;
-  color: $greyish-brown;
-}
-
-.plan-steps__row {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 25px;
-}
-
-.plan-steps__label {
-  position: relative;
-  width: 220px;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  color: $dark-slate-blue;
-
-  &--people::before {
-    content: "чел.";
-    position: absolute;
-    width: 35px;
-    height: 13px;
-    right: 0;
-    color: rgba(29, 46, 91, 0.3);
-  }
-
-  &--days::before {
-    content: "дн.";
-    position: absolute;
-    width: 35px;
-    height: 13px;
-    right: 0;
-    color: rgba(29, 46, 91, 0.3);
-  }
-}
-
-.plan-steps__number {
-  display: flex;
-  margin-top: 9px;
-}
-
-.plan-steps__minus,
-.plan-steps__plus {
-  width: 43px;
-  height: 43px;
-  background-color: $white;
-  border: solid 1px $cloudy-blue;
-}
-
-.plan-steps__minus {
-  @include border-left-radius (4px, 4px);
-  border-right: none;
-}
-
-.plan-steps__plus {
-  @include border-right-radius (4px, 4px);
-  border-left: none;
-}
-
-.plan-steps__control {
-  height: 43px;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 0.9;
-  letter-spacing: 1.5px;
-  text-align: center;
-  color: $dark-slate-blue;
-  border: solid 1px $cloudy-blue;
-}
-
-.control-number {
-  border-left: none;
-  border-right: none;
-}
-
-.control-select,
-.control-text {
-  padding-left: 12px;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.29;
-  text-align: left;
-  color: $dark-slate-blue;
-  text-transform: uppercase;
-}
-
-.control-select {
-  width: 168px;
-}
-
-.control-text {
-  width: 220px;
-}
-
-.control-add {
-  border: none;
-  background-color: $pale-grey;
-}
-
-.plan-steps__select,
-.plan-steps__add {
-  position: absolute;
-  right: 0;
-  width: 43px;
-  height: 43px;
-  border-radius: 4px;
-  border: none;
-  background-color: transparent;
-}
-
-.plan-steps__label--children {
-  position: relative;
-  padding-left: 39px;
-  font-size: 15px;
-  line-height: 1;
-  font-weight: normal;
-  text-transform: none;
+  margin-bottom: 24px;
+  line-height: 22px;
   color: $greyish-brown;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -5px;
-    width: 26px;
-    height: 26px;
-    border-radius: 4px;
-    border: solid 1px $cloudy-blue;
+  @media (min-width: $tablet-width) {
+    order: 2;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &--one {
+      width: 576px;
+    }
+
+    &--two {
+      width: 406px;
+    }
+
+    &--three {
+      width: 472px;
+      margin-bottom: 0;
+    }
   }
 }
 
-.plan-steps__checkbox:checked + .plan-steps__label--children::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -5px;
-  width: 26px;
-  height: 26px;
-  border-radius: 4px;
-  border: solid 1px $cloudy-blue;
-  background-image: url("../img/checkbox-on.png");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: 9px 9px;
+.plan-steps__slider {
+  @media (min-width: $desktop-width) {
+    order: 3;
+    position: absolute;
+    top: 108px;
+    right: 293px;
+  }
+}
+
+.plan-steps__registration {
+  @media (min-width: $desktop-width) {
+    order: 3;
+    margin-top: 56px;
+  }
 }
 
 .plan-steps__calendar {
   margin-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    order: 6;
+    margin-top: 59px;
+  }
 }
 
 .plan-steps__link,
 .plan-steps__submit {
-  width: 230px;
-  height: 40px;
+  display: inline-block;
   margin-top: 23px;
-  padding: 6px;
+  padding: 6px 40px;
   border-radius: 20px;
   background-color: $light-gold;
   font-size: 17px;
@@ -181,32 +124,50 @@
   line-height: 1.76;
   color: $dark-grey;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    width: 263px;
+    margin-top: 46px;
+    padding: 28px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 56px;
+  }
+}
+
+.plan-steps__link {
+  @media (min-width: $tablet-width) {
+    order: 7;
+  }
+}
+
+.plan-steps__actions {
+  @media (min-width: $tablet-width) {
+    order: 3;
+    margin-top: 74px;
+  }
+}
+
+.plan-steps__submit {
+  @media (min-width: $tablet-width) {
+    order: 4;
+  }
 }
 
 .link-prev {
   border: none;
   background-color: transparent;
-}
 
-.control-textarea {
-  width: 220px;
-  height: 220px;
-  margin-top: 16px;
-  padding-top: 13px;
-  padding-left: 15px;
-  padding-right: 21px;
-  border-radius: 4px;
-  border: solid 1px $cloudy-blue;
-  background-color: #ffffff;
-  line-height: 1.38;
-  color: $greyish-brown;
-  font-weight: normal;
-  text-align: left;
-}
+  @media (min-width: $tablet-width) {
+    margin-left: 6px;
+  }
 
-.plan-steps__label--textarea {
-  text-transform: none;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 1;
+  @media (min-width: $desktop-width) {
+    margin-left: 420px;
+  }
 }
