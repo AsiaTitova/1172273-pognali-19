@@ -3,7 +3,7 @@
   @include vertical-paddings (12px, 10px);
   position: relative;
   margin-bottom: 25px;
-  line-height: 1;
+  line-height: 20px;
   text-align: center;
   border: 1px solid $grey-opacity;
   border-left: none;
@@ -30,6 +30,29 @@
     background-repeat: no-repeat;
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (29px, 22px);
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: normal;
+
+    &::before {
+      width: 15px;
+      height: 28px;
+      left: 16px;
+    }
+
+    &::after {
+      width: 15px;
+      height: 28px;
+      right: 16px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
 }
 
 .calendar__table {
@@ -46,22 +69,74 @@
   &--output {
     color: $orange-red;
   }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.8px;
+  }
+}
+
+.week__letter {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
 }
 
 .days__cell {
   width: 33px;
   height: 33px;
   background-color: #ffffff;
-  border: 1px solid $grey-opacity;
+  border: 1px solid $cloudy-blue;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 77px;
+    height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 144px;
+    height: 72px;
+    text-align: left;
+    vertical-align: top;
+    padding: 15px 16px;
+  }
 }
 
 .days__link {
   display: block;
   text-decoration: none;
   font-size: 14px;
-  line-height: 1.29;
+  line-height: 18px;
   color: $grey-opacity;
+
+  &--text,
+  &--month {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.8px;
+
+    &--month {
+      display: inline;
+    }
+
+    &--text {
+      display: block;
+    }
+  }
 }
 
 .days__cell--active {
@@ -70,6 +145,10 @@
 
 .days__cell--focus {
   border: solid 2px $orange-red;
+
+  @media (min-width: $tablet-width) {
+    border: solid 4px $orange-red;
+  }
 }
 
 .days__link--active {

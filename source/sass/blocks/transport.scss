@@ -38,3 +38,23 @@
 .transport__item {
   @include round (33px, 33px, 50%, $pale-grey);
 }
+
+.transport__legend {
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $dark-slate-blue;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: -10px;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: $pale-grey;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+}

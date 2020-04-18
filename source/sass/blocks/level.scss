@@ -1,0 +1,59 @@
+.level {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    @include round (94px, 94px, 50%, transparent);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 3px;
+    border: solid 3px $mango;
+    z-index: 0;
+    transform: rotate(-45deg);
+    clip: rect(11px, 100px, 100px, 0);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 56px;
+    left: 25px;
+    width: 49px;
+    height: 2px;
+    background-color: $cloudy-blue;
+    z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+.level__number {
+  margin: 0;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 38px;
+  text-align: center;
+  color: $dark-grey;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.level__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: $greyish-brown;
+
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}

@@ -7,77 +7,93 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header page-header__catalog">
     <div class="page-header__container container">
-      <div class="page-header__menu">
-        <a class="page-header__logo" href="#">
-          <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" wigth="100" height="19" alt="Логотип 'Погнали'">
+      <div class="page-header__container--logo">
+        <a class="page-header__logo logo" href="index.html">
+          <picture>
+            <source class="logo__image" media="(min-width: 1200px)" srcset="img/logo-desktop-white@1x.png" type="image/png" sizes="(min-width: 1200px) 14vw">
+            <source class="logo__image" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png" type="image/png" sizes="(min-width: 769px) 21vw">
+            <source class="logo__image" media="(min-width: 320px)" srcset="img/logo-mobile-white@1x.png" type="image/png" sizes="(min-width: 320px) 31vw">
+            <img class="logo__image" src="img/logo-mobile-white@1x.png" alt="Логотип 'Погнали'">
+          </picture>
         </a>
-        <button class="page-header__toggle-menu" type="button">
-          <img class="main-navigation__toggle-menu-img" src="img/menu.svg" width="25" height="11" alt="кнопка открытия меню">
+        <button class="page-header__toggle-navigation toggle-navigation" type="button">
+          <img class="toggle-navigation__image" src="img/menu.svg" width="25" height="11" alt="кнопка открытия меню">
         </button>
       </div>
-    </div>
-    <nav class="main-navigation">
-      <div class="main-navigation__wrapper">
-        <ul class="main-navigation__list site-list">
-          <li class="site-list__item"><a class="site-list__link" href="#" aria-label="О сервисе">О сервисе</a></li>
-          <li class="site-list__item site-list__item--current"><a class="site-list__link" href="form.html" aria-label="Направления">Направления</a></li>
-          <li class="site-list__item"><a class="site-list__link" href="catalog.html" aria-label="Попутчики">Попутчики</a></li>
+      <section class="page-header__login login">
+        <ul class="login__list">
+          <li class="login__item"><a class="login__link login__link--tel button" href="tel:+78005558628" aria-label="Позвонить"></a></li>
+          <li class="login__item"><a class="login__link login__link--email button" href="#" aria-label="Написать"></a></li>
+          <li class="login__item"><a class="login__link login__link--login button" href="#" aria-label="Авторизация">Авторизация</a></li>
         </ul>
-        <ul class="main-navigation__list user-list">
-          <li class="user-list__item"><a class="user-list__login" href="#" aria-label="Авторизация">Авторизация</a></li>
-          <li class="user-list__item"><a class="user-list__tel" href="tel:+78005558628" aria-label="Позвонить">8 800
-              555-86-28</a></li>
-          <li class="user-list__item"><a class="user-list__email" href="#" aria-label="Написать">mail@htmlacademy.ru</a>
+      </section>
+      <nav class="page-header__main-navigation main-navigation main-navigation__open">
+        <ul class="main-navigation__site site-list">
+          <li class="site-list__item site-list__item--current"><a class="site-list__link button" href="#" aria-label="О сервисе">О сервисе</a></li>
+          <li class="site-list__item"><a class="site-list__link button" href="#" aria-label="Направления">Направления</a></li>
+          <li class="site-list__item"><a class="site-list__link button" href="catalog.html" aria-label="Попутчики">Попутчики</a></li>
+        </ul>
+        <ul class="main-navigation__user user">
+          <li class="user__item"><a class="user__link user__link--login button" href="#" aria-label="Авторизация">Авторизация</a></li>
+          <li class="user__item"><a class="user__link user__link--tel button" href="tel:+78005558628" aria-label="Позвонить">8 800 555-86-28</a></li>
+          <li class="user__item"><a class="user__link user__link--email button" href="#" aria-label="Написать">mail@htmlacademy.ru</a>
           </li>
         </ul>
-      </div>
-    </nav>
+        <ul class="main-navigation__socials socials-list">
+          <li class="socials-list__item"><a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук"></a></li>
+          <li class="socials-list__item"><a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте"></a></li>
+          <li class="socials-list__item"><a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм"></a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="page-main">
-    <h1 class="visually-hidden">Личный кабинет</h1>
-    <section class="profile-card">
+    <section class="page-main__title title container">
+      <h1 class="title__name">Направления</h1>
+      <a class="title__link title__link--form button" href="index.html">На главную</a>
+    </section>
+    <section class="personal_account">
       <h2 class="visually-hidden">Настройки профиля</h2>
-      <form class="profile-card__form" method="post" action="https://echo.htmlacademy.ru">
-        <div class="profile-card__container container">
-          <div class="profile-card__level">80 level</div>
-          <div class="profile-card__photo">
-            <img class="profile-card__photo-img" src="img/demin-desktop@1x.jpg" width="99" height="100"
-              alt="Фото профиля">
+      <form class="personal_account__form" method="post" action="https://echo.htmlacademy.ru">
+        <div class="personal_account__container container">
+          <div class="personal_account__level level">
+            <p class="level__number">80</p>
+            <p class="level__text">level</p>
           </div>
-          <a class="profile-card__change-photo" href="#">Сменить фото</a>
-        </div>
-
-        <div class="profile-card__interests interests container">
-          <fieldset class="interests__fieldset">
+          <div class="personal_account__photo">
+            <img class="personal_account__photo-img" src="img/demin-desktop@1x.jpg" width="99" height="100" alt="Фото профиля">
+          </div>
+          <a class="personal_account__change-photo button" href="#"><span>Сменить </span>фото</a>
+          <fieldset class="personal_account__fieldset personal_account__interests interests">
             <legend class="interests__legend">Теги</legend>
             <label class="interests__label visually-hidden" for="tags">Теги</label>
             <textarea class="interests__textarea" id="tags">#бургер #бар #футбол #концерт #крафт</textarea>
           </fieldset>
-          <fieldset class="interests__fieldset transport container">
-            <legend class="interests__legend interests__title">Транспорт</legend>
-              <div class="transport__wrap">
-              <div class="transport__row">
+          <fieldset class="personal_account__fieldset personal_account__transport transport">
+            <legend class="transport__legend">Транспорт</legend>
+              <ul class="transport__list">
+              <li class="transport__item">
                 <input class="transport__control visually-hidden" type="checkbox" name="plane" id="plane" checked>
                 <label class="transport__label transport__label--plane" for="plane"></label>
-              </div>
-              <div class="transport__row">
+              </li>
+              <li class="transport__item">
                 <input class="transport__control visually-hidden" type="checkbox" name="train" id="train" checked>
                   <label class="transport__label transport__label--train" for="train"></label>
-              </div>
-              <div class="transport__row">
+              </li>
+              <li class="transport__item">
                 <input class="transport__control visually-hidden" type="checkbox" name="bike" id="bike">
                 <label class="transport__label transport__label--bike" for="bike"></label>
-              </div>
-              <div class="transport__row">
+              </li>
+              <li class="transport__item">
                 <input class="transport__control visually-hidden" type="checkbox" name="walking" id="walking" checked>
                 <label class="transport__label  transport__label--walk" for="walking"></label>
-              </div>
-            </div>
+              </li>
+            </ul>
           </fieldset>
         </div>
-        <div class="profile-card__plans plans container">
+        <div class="personal_account__plans plans container">
           <p class="plans__title">Мои планы:</p>
           <ol class="plans__list">
             <li class="plans__item trip">
@@ -94,10 +110,10 @@
             </li>
           </ol>
         </div>
-        <div class="profile-card__add-plan add-plan slider container">
+        <div class="personal_account__add-plan add-plan add-plan__container container slider">
           <div class="add-plan_wrapper">
             <p class="add-plan__title">Добавить план:</p>
-            <div class="add-plan__slider slider__button slider-button">
+            <div class="add-plan__slider slider__button slider__button--close slider-button">
               <button class="slider-button__one slider-button__active button" type="button"></button>
               <button class="slider-button__two button" type="button"></button>
               <button class="slider-button__three button" type="button"></button>
@@ -105,153 +121,182 @@
           </div>
           <fieldset class="add-plan__fieldset plan-steps slider__item slider__item--one" id="sliderone">
             <legend class="plan-steps__legend visually-hidden">Даты прибывания</legend>
-            <p class="plan-steps__title">Шаг 1.<br> Даты прибывания</p>
-            <p class="plan-steps__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в
-              поездку и ее предполагаемую длительность.</p>
-            <div class="plan-steps__row">
-              <label class="plan-steps__label plan-steps__label--people" for="quantity">Ищем попутчиков:
-                <!--чел. возможно псевдоэлементом вставить?--></label>
-              <div class=plan-steps__number>
-                <button class="plan-steps__minus button" type="button"></button>
-                <input class="plan-steps__control control-number" type="number" id="quantity" name="quantity"
-                  placeholder="2">
-                <button class="plan-steps__plus button" type="button"></button>
+            <div class="plan-steps__wrapper">
+              <p class="plan-steps__title">Шаг 1. <br class="plan-steps__br">Даты прибывания</p>
+              <p class="plan-steps__text plan-steps__text--one">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <div class="plan-steps__slider slider__button slider__button--show slider-button">
+                <button class="slider-button__one slider-button__active slider__button--show button" type="button">Даты</button>
+                <button class="slider-button__two button" type="button">Маршрут</button>
+                <button class="slider-button__three button" type="button">Развлечения</button>
               </div>
-            </div>
-            <div class="plan-steps__row">
-              <label class="plan-steps__label plan-steps__label--days" for="duration">Длительность:
-                <!--дн. возможно псевдоэлементом вставить?--></label>
-                <div class=plan-steps__number>
-                  <button class="plan-steps__minus" type="button"></button>
-                  <input class="plan-steps__control control-number" type="number" id="duration" name="duration" placeholder="2">
-                  <button class="plan-steps__plus" type="button"></button>
+              <div class="plan-steps__registration registration">
+              <div class="registration__row registration__row--people">
+                <label class="registration__label registration__label--people" for="quantity">Ищу попутчиков:</label>
+                <p class="registration__units">чел.</p>
+                <div class="registration__number">
+                  <button class="registration__minus button" type="button"></button>
+                  <input class="registration__control" type="number" id="quantity" name="quantity"
+                    placeholder="2">
+                  <button class="registration__plus button" type="button"></button>
+                </div>
               </div>
+              <div class="registration__row registration__row--days">
+                <label class="registration__label registration__label--days" for="duration">Длительность:</label>
+                  <p class="registration__units">дн.</p>
+                  <div class="registration__number registration__number--days">
+                    <button class="registration__minus" type="button"></button>
+                    <input class="registration__control" type="number" id="duration" name="duration" placeholder="2">
+                    <button class="registration__plus" type="button"></button>
+                </div>
+              </div>
+              <div class="registration__row registration__row--children">
+                <input class="registration__checkbox visually-hidden" type="checkbox" id="with-children" name="with-children" checked>
+                <label class="registration__label registration__label--children" for="with-children">Можно с детьми</label>
+              </div>
+              </div>
+              <div class="plan-steps__calendar calendar">
+                <table class="calendar__table">
+                  <caption class="calendar__title"><span class="calendar__prev"></span>Март 2019<span class="calendar__next"></span></caption>
+                  <thead class="calendar__week week">
+                    <tr class="week__row">
+                      <th class="week__cell">П<span class="week__letter">н</span></th>
+                      <th class="week__cell">В<span class="week__letter">т</span></th>
+                      <th class="week__cell">С<span class="week__letter">р</span></th>
+                      <th class="week__cell">Ч<span class="week__letter">т</span></th>
+                      <th class="week__cell">П<span class="week__letter">т</span></th>
+                      <th class="week__cell week__cell--output">С<span class="week__letter">б</span></th>
+                      <th class="week__cell week__cell--output">В<span class="week__letter">с</span></th>
+                    </tr>
+                  </thead>
+                  <tbody class="calendar__days days">
+                    <tr class="days__row">
+                      <td class="days__cell"><a class="days__link" href="#">23</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">24</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">25</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">26</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">27</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">28</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">1<span class="days__link days__link--month"> мар</span></a></td>
+                    </tr>
+                    <tr class="days__row">
+                      <td class="days__cell"><a class="days__link" href="#">2</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">3</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">4</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">5</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">6</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">7</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">8</a></td>
+                    </tr>
+                    <tr class="days__row">
+                      <td class="days__cell"><a class="days__link" href="#">9</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">10</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">11</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">12</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">13</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">14</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">15</a></td>
+                    </tr>
+                    <tr class="days__row">
+                      <td class="days__cell"><a class="days__link" href="#">16</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">17</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">18</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">19</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">20</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">21</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">22</a></td>
+                    </tr>
+                    <tr class="days__row">
+                      <td class="days__cell"><a class="days__link" href="#">23</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">24</a></td>
+                      <td class="days__cell"><a class="days__link" href="#">25</a></td>
+                      <td class="days__cell days__cell--active days__cell--focus"><a class="days__link days__link--active" href="#">26<span class="days__link days__link--active days__link--text">Заезд</span></a></td>
+                      <td class="days__cell days__cell--active"><a class="days__link days__link--active" href="#">27</a></td>
+                      <td class="days__cell days__cell--active"><a class="days__link days__link--active" href="#">28<span class="days__link days__link--active days__link--text">Выезд</span></a></td>
+                      <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">29</a></td>
+                    </tr>
+                    <tr class="days__row">
+                      <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">30</a></td>
+                      <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">31</a></td>
+                      <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">1<span class="days__link days__link--free days__link--month"> апр</span></a></td>
+                      <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">2</a></td>
+                      <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">3</a></td>
+                      <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">4</a></td>
+                      <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">5</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a class="plan-steps__link link-next button" href="#slidertwo">Следующий шаг</a>
             </div>
-            <div class="plan-steps__row">
-              <input class="plan-steps__checkbox visually-hidden type="checkbox" id="with-children" name="with-children" checked>
-              <label class="plan-steps__label plan-steps__label--children" for="with-children">Можно с детьми</label>
-            </div>
-            <div class="plan-steps__calendar calendar">
-              <table class="calendar__table">
-                <caption class="calendar__title">
-                  <span class="calendar__prev">Март 2019</caption>
-                <thead class="calendar__week week">
-                  <tr class="week__row">
-                    <th class="week__cell">П</th>
-                    <th class="week__cell">В</th>
-                    <th class="week__cell">С</th>
-                    <th class="week__cell">Ч</th>
-                    <th class="week__cell">П</th>
-                    <th class="week__cell week__cell--output">С</th>
-                    <th class="week__cell week__cell--output">В</th>
-                  </tr>
-                </thead>
-                <tbody class="calendar__days days">
-                  <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">23</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">24</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">25</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">26</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">27</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">28</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">1</a></td>
-                  </tr>
-                  <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">2</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">3</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">4</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">5</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">6</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">7</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">8</a></td>
-                  </tr>
-                  <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">9</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">10</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">11</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">12</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">13</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">14</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">15</a></td>
-                  </tr>
-                  <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">16</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">17</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">18</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">19</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">20</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">21</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">22</a></td>
-                  </tr>
-                  <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">23</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">24</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">25</a></td>
-                    <td class="days__cell days__cell--active days__cell--focus"><a class="days__link days__link--active" href="#">26</a></td>
-                    <td class="days__cell days__cell--active"><a class="days__link days__link--active" href="#">27</a></td>
-                    <td class="days__cell days__cell--active"><a class="days__link days__link--active" href="#">28</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">29</a></td>
-                  </tr>
-                  <tr class="days__row">
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">30</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">31</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">1</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">2</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">3</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">4</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">5</a></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <a class="plan-steps__link link-next button" href="#slidertwo">Следующий шаг</a>
           </fieldset>
           <fieldset class="add-plan__fieldset plan-steps slider__item slider__item--two" id="slidertwo">
             <legend class="plan-steps__legend visually-hidden">Маршрут</legend>
-            <p class="plan-steps__title">Шаг 2.<br> Маршрут</p>
-            <p class="plan-steps__text">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу
-              несколько.</p>
-            <div class="plan-steps__row">
-              <select class="plan-steps__control control-select">
-                <option class="control-select__option">Босния и герцеговина</option>
-              </select>
-                <div class="flag"></div>
+              <div class="plan-steps__wrapper">
+                <p class="plan-steps__title">Шаг 2. <br class="plan-steps__br">Маршрут</p>
+                <p class="plan-steps__text plan-steps__text--two plan-steps__text--border">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+                <div class="plan-steps__slider slider__button slider__button--show slider-button">
+                  <button class="slider-button__one slider__button--show button" type="button">Даты</button>
+                  <button class="slider-button__two slider-button__active button" type="button">Маршрут</button>
+                  <button class="slider-button__three button" type="button">Развлечения</button>
+                </div>
+                <div class="plan-steps__wrap road">
+                  <div class="road__row road__round">
+                    <select class="road__control">
+                      <option class="road__option">Босния и герцеговина</option>
+                    </select>
+                    <button class="road__button road__button--choice button"></button>
+                    <div class="road__button road__flag flag"></div>
+                  </div>
+                  <div class="road__row road__round">
+                    <select class="road__control">
+                      <option class="road__option">Чехия</option>
+                    </select>
+                    <button class="road__button road__button--choice button"></button>
+                    <div class="road__button road__flag flag"></div>
+                  </div>
+                  <div class="plan-steps__round--white road__row road__round road__round--white">
+                    <label class="road__label visually-hidden" for="country-select">Выберите страну</label>
+                    <input class="road__control road__control--select" type="text" id="country-select" name="country-select" placeholder="Выберите страну">
+                    <button class="road__button button"></button>
+                  </div>
+                  <div class="road__row road__round road__round--light">
+                    <label class="road__label visually-hidden" for="country-add">Добавить страну</label>
+                    <input class="road__control road__control--add" type="text" id="country-add" name="country-add"
+                      placeholder="Добавить страну">
+                    <button class="road__button road__button--add button" type="button"></button>
+                  </div>
+                </div>
+                <a class="plan-steps__link link-next button" href="#sliderthree">Следующий шаг</a>
+                <a class="plan-steps__link link-prev button" href="#sliderone">На шаг назад</a>
             </div>
-            <div class="plan-steps__row">
-              <select class="plan-steps__control control-select">
-                <option class="control-select__option">Чехия</option>
-              </select>
-              <div class="flag"></div>
-            </div>
-            <div class="plan-steps__row">
-              <label class="plan-steps__label visually-hidden" for="country-select">Выберите страну</label>
-              <input class="plan-steps__control control-text" type="text" id="country-select" name="country-select"
-                placeholder="Выберите страну">
-              <button class="plan-steps__select button"></button>
-            </div>
-            <div class="plan-steps__row">
-              <label class="plan-steps__label visually-hidden" for="country-add">Добавить страну</label>
-              <input class="plan-steps__control control-text control-add" type="text" id="country-add" name="country-add"
-                placeholder="Добавить страну">
-              <button class="plan-steps__add button" type="button"></button>
-            </div>
-            <a class="plan-steps__link link-next button" href="#sliderthree">Следующий шаг</a>
-            <a class="plan-steps__link link-prev button" href="#sliderone">На шаг назад</a>
           </fieldset>
           <fieldset class="add-plan__fieldset plan-steps slider__item slider__item--three" id="sliderthree">
             <legend class="plan-steps__legend visually-hidden">Шаг 3. Развлечение</legend>
-            <p class="plans__title">Шаг 3. <br>Развлечение</p>
-            <p class="plan-steps__text">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной
-              форме и ставить тэги.</p>
-            <label class="plan-steps__label plan-steps__label--textarea" for="bg-textarea">Босния и герцеговина</label>
-              <div class="flag"></div>
-              <textarea class="plan-steps__control control-textarea" id="bg-textarea" placeholder="План действий"></textarea>
-            <label class="plan-steps__label plan-steps__label--textarea" for="plan-steps__textarea">Чехия</label>
-              <div class="flag"></div>
-              <textarea id="plan-steps__textarea"
-                class="plan-steps__control control-textarea">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-            <button class="plan-steps__submit button" type="submit">Отправить</button>
-            <a class="plan-steps__link link-prev button" href="#slidertwo">На шаг назад</a>
+            <div class="plan-steps__wrapper">
+              <p class="plan-steps__title">Шаг 3. <br  class="plan-steps__br">Развлечение</p>
+              <p class="plan-steps__text plan-steps__text--three">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <div class="plan-steps__slider slider__button slider__button--show slider-button">
+                <button class="slider-button__one slider__button--show button" type="button">Даты</button>
+                <button class="slider-button__two button" type="button">Маршрут</button>
+                <button class="slider-button__three slider-button__active button" type="button">Развлечения</button>
+              </div>
+              <div class="plan-steps__actions action">
+                <div class="action__row">
+                  <label class="action__label" for="bg-textarea">Босния и герцеговина</label>
+                  <textarea class="action__control" id="bg-textarea" placeholder="План действий"></textarea>
+                </div>
+                <div class="action__row">
+                  <label class="action__label" for="plan-steps__textarea">Чехия</label>
+                  <textarea id="action-textarea" class="action__control">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                </div>
+                <div class="action__flag">
+                    <div class="flag"></div>
+                    <div class="flag"></div>
+                </div>
+              </div>
+              <button class="plan-steps__submit button" type="submit">Отправить</button>
+              <a class="plan-steps__link link-prev button" href="#slidertwo">На шаг назад</a>
+              </div>
           </fieldset>
         </div>
       </form>
@@ -260,8 +305,12 @@
   <footer class="page-footer">
     <div class="page-footer__container container">
     <div class="page-footer__logo">
-      <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" weigth="96" height="15"
-        alt="Логотип компании">
+      <picture>
+        <source class="logo__image" media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png" type="image/png" sizes="(min-width: 1200px) 14vw">
+        <source class="logo__image" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png" type="image/png" sizes="(min-width: 769px) 21vw">
+        <source class="logo__image" media="(min-width: 320px)" srcset="img/logo-mobile-blue@1x.png" type="image/png" sizes="(min-width: 320px) 31vw">
+          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" weigth="100%" alt="Логотип компании">
+      </picture>
     </div>
     <ul class="page-footer__socials socials-list">
       <li class="socials-list__item"><a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук"></a></li>
