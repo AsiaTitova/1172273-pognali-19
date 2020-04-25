@@ -1,14 +1,28 @@
-.questions__container {
+.questions {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-paddings (72px, 38px);
   background-color: $dark-blue-grey;
+  position: relative;
+  z-index: 3;
+  margin-top: -58px;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (77px, 84px);
+    @include border-bottom-radius (50px, 50px);
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (103px, 138px);
+    @include border-bottom-radius (60px, 60px);
+  }
+}
+
+.questions__container {
+  @include vertical-paddings (129px, 38px);
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (130px, 80px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (163px, 134px);
   }
 }
 
@@ -26,23 +40,44 @@
 .questions__text {
   @include text ($light, $white);
   margin: 0;
-  margin-top: 44px;
-  padding: 0 36px;
+  margin-top: 19px;
+  padding: 0 35px;
   text-align: center;
 
+  &--answer {
+    margin-top: 27px;
+    padding: 0 20px;
+  }
+
   @media (min-width: $tablet-width) {
-    margin-top: 60px;
+    margin-top: 58px;
     font-size: 28px;
     line-height: 33px;
+
+    &--answer {
+      margin-top: 56px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 60px;
+    margin-top: 57px;
+    padding: 0 275px;
+
+    &--answer {
+      margin-top: 65px;
+      padding-left: 350px;
+      text-align: left;
+    }
   }
 }
 
 .questions__link {
   color: $light-gold;
+
+  @media (min-width: $desktop-width) {
+    font-size: 29.5px;
+    line-height: 40.5px;
+  }
 }
 
 .questions__form {
@@ -52,39 +87,43 @@
     margin: 0 35px;
     margin-top: 67px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 72px;
+    margin-top: 53px;
+  }
 }
 
 .contacts {
   margin: 0;
-  margin-top: 36px;
+  margin-top: 30px;
   padding: 0;
   list-style-type: none;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    margin-top: 66px;
-    padding-left: 35px;
+    margin-top: 62px;
+    padding-left: 30px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin: 0 180px;
-    margin-top: 78px;
+    margin-top: 77px;
   }
 }
 
 .contacts__item:last-child {
-  margin-top: 32px;
+  margin-top: 24px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 45px;
+    margin-top: 38px;
   }
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
-    margin-left: 111px;
+    margin-left: 100px;
   }
 }
 
@@ -119,18 +158,20 @@
     &::before {
       width: 67px;
       height: 67px;
-      top: -25px;
+      top: -21px;
+      left: 7px;
       background-size: 27px 27px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 132px;
+    padding-left: 135px;
 
     &::before {
       width: 90px;
       height: 90px;
-      top: -30px;
+      top: -31px;
+      left: 13px;
       background-size: 36px 36px;
     }
   }
@@ -168,7 +209,8 @@
     &::before {
       width: 67px;
       height: 67px;
-      top: -25px;
+      top: -19px;
+      left: 7px;
       background-size: 27px 27px;
     }
   }
@@ -179,7 +221,8 @@
     &::before {
       width: 90px;
       height: 90px;
-      top: -30px;
+      top: -31px;
+      left: 11px;
       background-size: 36px 36px;
     }
   }

@@ -81,24 +81,26 @@
     line-height: 28px;
 
     &--tel {
-      margin-top: 173px;
-      padding-left: 91px;
+      margin-top: 155px;
+      padding-left: 73px;
     }
 
     &--tel::before {
       @include round (67px, 67px, 50%, $dark-grey);
-      top: -24px;
+      top: -21px;
+      left: -18px;
       background-size: 27px 27px;
     }
 
     &--email {
-      margin-top: 45px;
-      padding-left: 91px;
+      margin-top: 39px;
+      padding-left: 74px;
     }
 
     &--email::before {
       @include round (67px, 67px, 50%, $dark-grey);
-      top: -24px;
+      top: -20px;
+      left: -18px;
       background-size: 27px 27px;
     }
   }

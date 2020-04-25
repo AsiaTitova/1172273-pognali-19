@@ -1,6 +1,6 @@
 .plan-steps {
   @include wrapper (270px, 0 auto, 0 25px);
-  @include vertical-paddings (24px, 22px);
+  @include vertical-paddings (24px, 24px);
   position: relative;
   border-radius: 10px;
   background-color: $white;
@@ -39,6 +39,7 @@
   @include title (20px, bold, $dark-slate-blue);
   line-height: 20px;
   margin: 0;
+  padding: 0 24px;
 
   @media (min-width: $tablet-width) {
     order: 1;

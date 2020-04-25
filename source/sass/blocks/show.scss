@@ -1,12 +1,14 @@
 .show {
-  margin-top: 26px;
+  margin-top: 20px;
+  margin-bottom: 61px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 51px;
+    margin-top: 44px;
+    margin-bottom: 130px;
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (71px, 77px);
+    @include vertical-paddings (63px, 117px);
     width: 950px;
     margin: 0;
     padding-left: 0;
@@ -31,12 +33,15 @@
 .show__list {
   list-style-type: none;
   margin: 0;
+  margin-top: 20px;
   padding: 0;
   display: flex;
 
   @media (min-width: $tablet-width) {
-    margin-top: 54px;
-    padding: 25px 28px;
+    @include vertical-paddings (25px, 25px);
+    padding-left: 28px;
+    padding-right: 28px;
+    margin-top: 48px;
     width: 688px;
     background-color: $white;
     border-radius: 20px;
@@ -44,6 +49,7 @@
 
   @media (min-width: $desktop-width) {
     width: 950px;
+    margin-top: 67px;
   }
 }
 
@@ -59,7 +65,6 @@
 
   &--next {
     @include border-left-radius (20px, 20px);
-    margin-right: 2px;
   }
 
   &--previous {
@@ -79,10 +84,18 @@
     &--active {
       @include round (50px, 50px, 50%, $light-gold);
     }
+
+    &--switch {
+      width: 20px;
+      height: 50px;
+      padding: 0;
+    }
   }
 }
 
 .show__item {
+  position: relative;
+
   &--page {
     display: none;
   }
@@ -91,12 +104,34 @@
     &--page {
       display: block;
     }
-  }
-}
 
-.show__item--page:not(:first-child) {
-  @media (min-width: $tablet-width) {
-    margin-left: 22px;
+    &--next {
+      margin-right: 25px;
+    }
+
+    &--next::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 20px;
+      top: 15px;
+      left: 7px;
+      background-image: url("../img/triangle-arrow-left.svg");
+      background-repeat: no-repeat;
+      background-size: 10px 20px;
+    }
+
+    &--previous::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 20px;
+      top: 15px;
+      left: 3px;
+      background-image: url("../img/triangle-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: 10px 20px;
+    }
   }
 }
 

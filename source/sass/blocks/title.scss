@@ -1,11 +1,26 @@
 .title {
-  @include vertical-paddings (32px, 12px);
   @include border-bottom-radius (20px, 20px);
   position: relative;
   background-color: $dark-grey;
+  z-index: 7;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (72px, 69px);
+    @include border-bottom-radius (50px, 50px);
+    background-color: $dark-blue-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include border-bottom-radius (60px, 60px);
+    background-color: $dark-grey;
+  }
+}
+
+.title__container {
+  @include vertical-paddings (53px, 12px);
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (125px, 66px);
     display: flex;
     align-items: center;
     padding-left: 75px;
@@ -14,7 +29,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (110px, 69px);
+    @include vertical-paddings (86px, 67px);
     padding-left: 126px;
     padding-right: 126px;
     background-color: $dark-grey;
@@ -44,7 +59,7 @@
 
     &::before {
       bottom: -4px;
-      left: 75px;
+      left: 77px;
       width: 287px;
       height: 8px;
       border-radius: 4px;
@@ -65,7 +80,8 @@
     position: relative;
     display: block;
     margin-left: auto;
-    padding-right: 62px;
+    padding-top: 10px;
+    padding-right: 60px;
     font-size: 20px;
     font-weight: bold;
     line-height: 24px;
@@ -75,6 +91,7 @@
       content: "";
       position: absolute;
       right: 0;
+      top: 12px;
       width: 32px;
       height: 16px;
       background-image: url("../img/return.svg");

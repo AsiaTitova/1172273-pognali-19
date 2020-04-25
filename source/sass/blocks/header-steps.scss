@@ -1,73 +1,88 @@
 .steps__container {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-paddings (24px, 84px);
+  @include vertical-paddings (45px, 84px);
   position: relative;
   background-color: transparent;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (0, 0);
+    @include vertical-paddings (69px, 0);
     background-color: transparent;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    width: 1320px;
   }
 }
 
 .steps__slogan {
-  @include title(36px, $bold, $white);
+  @include title(36px, bold, $white);
+  margin: 0;
+  padding: 0 15px;
   line-height: 40px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 0 138px;
+    padding-left: 140px;
+    padding-right: 140px;
     font-size: 60px;
     line-height: 70px;
+    order: 1;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 109px;
-    margin-left: 69px;
+    margin: 0;
+    margin-top: 8px;
     padding: 0;
-    width: 400px;
+    padding-left: 67px;
+    width: 470px;
+    text-align: left;
   }
 }
 
 .steps__text {
+  margin: 0;
+  padding: 0 25px;
+  margin-top: 314px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 87px;
+    padding-left: 35px;
+    padding-right: 340px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33px;
+    order: 2;
+  }
+
   @media (min-width: $desktop-width) {
-    width: 267px;
+    width: 286px;
+    margin: 0;
+    padding: 0;
     margin-left: auto;
-    margin-right: 27px;
+    margin-top: 20px;
   }
 }
 
 .steps__quote {
   margin: 0;
-  margin-top: 347px;
-  padding-right: 100px;
+  padding-right: 65px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 96px;
-    padding-right: 400px;
-    font-size: 28px;
-    font-weight: 300;
-    line-height: 33px;
+    padding-right: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 109px;
     padding: 0;
   }
 }
 
 .steps__author {
   margin: 0;
-  margin-top: 25px;
+  margin-top: 18px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 52px;
+    margin-top: 44px;
     font-size: 21px;
     font-weight: bold;
     line-height: 25px;
@@ -76,11 +91,10 @@
 
 .steps__position {
   margin: 0;
-  padding-right: 122px;
+  padding-right: 65px;
   padding-bottom: 33px;
 
   @media (min-width: $tablet-width) {
-    padding-right: 431px;
     padding-bottom: 353px;
     font-size: 21px;
     font-weight: bold;
@@ -95,7 +109,8 @@
 
 .steps__list {
   position: absolute;
-  bottom: 80px;
+  z-index: 10;
+  bottom: 86px;
   width: 270px;
   list-style-type: none;
   margin: 0;
@@ -105,19 +120,22 @@
     position: absolute;
     bottom: 140px;
     width: 688px;
+    order: 3;
+    z-index: 10;
   }
 
   @media (min-width: $desktop-width) {
     position: relative;
     display: flex;
-    width: 1290px;
-    bottom: 230px;
+    width: 1320px;
+    bottom: 227px;
   }
 }
 
 .steps__item {
+  width: 270px;
   height: 160px;
-  padding-top: 23px;
+  padding-top: 21px;
   padding-left: 25px;
   font-size: 18px;
   font-weight: bold;
@@ -137,8 +155,8 @@
   &--one::before {
     content: "1";
     position: absolute;
-    top: 23px;
-    right: 23px;
+    top: 21px;
+    right: 21px;
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
@@ -157,8 +175,8 @@
   &--two::before {
     content: "2";
     position: absolute;
-    top: 23px;
-    right: 23px;
+    top: 21px;
+    right: 22px;
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
@@ -177,8 +195,8 @@
   &--three::before {
     content: "3";
     position: absolute;
-    top: 23px;
-    right: 23px;
+    top: 21px;
+    right: 18px;
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
@@ -198,8 +216,8 @@
   &--four::before {
     content: "4";
     position: absolute;
-    top: 23px;
-    right: 23px;
+    top: 22px;
+    right: 22px;
     font-size: 18px;
     font-weight: bold;
     line-height: 18px;
@@ -210,12 +228,12 @@
   @media (min-width: $tablet-width) {
     height: 140px;
     padding-top: 31px;
-    padding-left: 31px;
+    padding-left: 33px;
     font-weight: bold;
-    line-height: 31px;
+    line-height: 24px;
     text-align: left;
     color: $dark-grey;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 24px;
 
     &--one {
@@ -230,8 +248,8 @@
     }
 
     &--one::before {
-      top: 45px;
-      right: 617px;
+      top: 44px;
+      right: 619px;
       font-size: 30px;
       line-height: 120px;
     }
@@ -248,8 +266,8 @@
     }
 
     &--two::before {
-      top: 45px;
-      right: 295px;
+      top: 44px;
+      right: 294px;
       font-size: 30px;
       line-height: 120px;
     }
@@ -260,7 +278,7 @@
       top: 140px;
       left: 0;
       width: 668px;
-      padding-right: 453px;
+      padding-right: 446px;
       z-index: 3;
       background-color: $lighter-mango;
     }
@@ -300,16 +318,16 @@
       border-radius: 20px;
       position: absolute;
       top: 0;
-      width: 1290px;
+      width: 1320px;
       padding-right: 0;
       z-index: 1;
       background-color: $mango;
     }
 
     &--one::before {
-      top: -10px;
-      right: 1012px;
-      font-size: 30px;
+      top: -21px;
+      right: 1039px;
+      font-size: 24px;
       line-height: 120px;
     }
 
@@ -320,14 +338,15 @@
       left: 315px;
       width: 975px;
       padding-right: 0;
+      padding-left: 31px;
       z-index: 2;
       background-color: $light-mango;
     }
 
     &--two::before {
-      top: -10px;
-      right: 680px;
-      font-size: 30px;
+      top: -21px;
+      right: 663px;
+      font-size: 24px;
       line-height: 120px;
     }
 
@@ -335,17 +354,18 @@
       border-radius: 20px;
       position: absolute;
       top: 0;
-      left: 630px;
+      left: 659px;
       width: 388px;
       padding-right: 0;
+      padding-left: 33px;
       z-index: 3;
       background-color: $lighter-mango;
     }
 
     &--three::before {
-      top: -10px;
-      right: 76px;
-      font-size: 30px;
+      top: -21px;
+      right: 74px;
+      font-size: 24px;
       line-height: 120px;
     }
 
@@ -353,17 +373,18 @@
       border-radius: 20px;
       position: absolute;
       top: 0;
-      left: 975px;
+      left: 1004px;
       width: 315px;
       padding-right: 0;
+      padding-left: 32px;
       z-index: 4;
       background-color: $light-gold;
     }
 
     &--four::before {
-      top: -10px;
-      right: 33px;
-      font-size: 30px;
+      top: -21px;
+      right: 32px;
+      font-size: 24px;
       line-height: 120px;
     }
   }

@@ -1,5 +1,5 @@
 .traveler-search {
-  @include vertical-paddings (26px, 22px);
+  @include vertical-paddings (25px, 22px);
   padding-left: 25px;
   padding-right: 25px;
   margin: 0 auto;
@@ -7,13 +7,13 @@
   background-color: $light-gold;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (40px, 40px);
+    @include vertical-paddings (35px, 40px);
     padding-left: 35px;
     padding-right: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (48px, 47px);
+    @include vertical-paddings (45px, 47px);
     padding-left: 48px;
     padding-right: 48px;
   }
@@ -22,11 +22,12 @@
 .traveler-search__title {
   @include title (22.5px, $bold, $dark-slate-blue);
   position: relative;
-  margin-bottom: 21px;
+  margin-top: 0;
+  margin-bottom: 23px;
   line-height: 22.5px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 76px;
+    margin-bottom: 60px;
     font-size: 30px;
     line-height: 30px;
 
@@ -34,14 +35,14 @@
       content: "";
       position: absolute;
       left: 0;
-      bottom: -37px;
+      bottom: -39px;
       width: 618px;
       height: 1px;
       background-color: $cheese;
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 21px;
+      margin-bottom: 24px;
       font-size: 30px;
       line-height: 30px;
 
@@ -54,15 +55,71 @@
 
 .traveler-search__fieldset {
   margin: 0;
-  margin-bottom: 19px;
   padding: 0;
   border: none;
+
+  &--hobby {
+    margin-bottom: 10px;
+  }
+
+  &--music {
+    margin-bottom: 16px;
+  }
+
+  &--food {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--music {
+      margin-bottom: 8px;
+    }
+
+    &--food {
+      margin-bottom: 20px;
+    }
+
+    &--transport {
+      margin-bottom: 11px;
+    }
+
+    &--level-range {
+      margin-bottom: 72px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--music {
+      margin-bottom: 19px;
+    }
+
+    &--food {
+      margin-bottom: 21px;
+    }
+
+    &--transport {
+      margin-bottom: 23px;
+    }
+
+    &--level-range {
+      margin-bottom: 37px;
+    }
+  }
 }
 
 .traveler-search__wrap {
+  &--music:not(:first-child) {
+    margin-top: 10px;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
+
+    &--transport {
+      align-items: center;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -74,7 +131,7 @@
   @include title (16px, bold, $dark-slate-blue);
   position: relative;
   width: 220px;
-  padding-top: 13px;
+  padding-top: 11px;
   line-height: 1.13;
   text-transform: uppercase;
   border-top: 1px solid $cheese;
@@ -99,10 +156,6 @@
     transform: rotate(90deg);
   }
 
-  &--transport {
-    padding-bottom: 70px;
-  }
-
   @media (min-width: $tablet-width) {
     width: 100px;
     font-size: 20px;
@@ -110,13 +163,17 @@
     line-height: 30px;
     border: none;
 
+    &--transport {
+      padding-top: 0;
+    }
+
     &::before,
     &::after {
       display: none;
     }
 
     &--level {
-      margin-right: 22px;
+      margin-right: 25px;
     }
 
     @media (min-width: $desktop-width) {
@@ -148,6 +205,10 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 36px;
+  }
 }
 
 .traveler-search__row:not(:last-child) {
@@ -162,7 +223,7 @@
 
 .traveler-search__row:nth-child(2) {
   @media (min-width: $tablet-width) {
-    margin-left: 22px;
+    margin-left: 29px;
   }
 
   @media (min-width: $desktop-width) {
@@ -171,23 +232,70 @@
 }
 
 .traveler-search__row {
-  margin-top: 16px;
+  margin-top: 14px;
+
+  &--close {
+    display: none;
+  }
+
+  &--music:not(.traveler-search__row--hardrock) {
+    margin-top: 8px;
+  }
+
+  &--transport {
+    margin-top: 0;
+  }
 
   @media (min-width: $tablet-width) {
+    margin-top: 0;
+
     &--hobby:nth-child(2) {
-      margin-right: 58px;
+      margin-right: 60px;
     }
 
     &--hobby:nth-child(3) {
-      margin-right: 65px;
+      margin-right: 82px;
+    }
+
+    &--music:nth-child(2) {
+      margin-right: 30px;
+    }
+
+    &--music:nth-child(3) {
+      margin-right: 42px;
     }
 
     &--food:nth-child(2) {
-      margin-right: 73px;
+      margin-right: 77px;
     }
 
     &--food:nth-child(3) {
-      margin-right: 20px;
+      margin-right: 34px;
+    }
+
+    &--close {
+      display: block;
+    }
+
+    &--transport {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-top: 28px;
+
+    &--music:nth-child(3) {
+      margin-top: 18px;
+    }
+
+    &--music:nth-child(4) {
+      margin-top: 16px;
+    }
+
+    &--close {
+      display: none;
     }
   }
 }
@@ -205,6 +313,7 @@
   @media (min-width: $tablet-width) {
     width: 24px;
     height: 24px;
+    left: -3px;
     top: -2px;
   }
 }
@@ -225,22 +334,24 @@
   @media (min-width: $tablet-width) {
     width: 24px;
     height: 24px;
-    top: -2px;
+    left: -3px;
+    top: 0;
     background-size: 12px 12px;
   }
 }
 
 .traveler-search__wrapper {
-  margin-top: 23px;
+  margin-top: 15px;
+  margin-bottom: 19px;
 
   @media (min-width: $tablet-width) {
+    margin: 0;
     margin-left: 21px;
-    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {
     margin-left: 0;
-    margin-top: 23px;
+    margin-top: 21px;
   }
 }
 
@@ -250,49 +361,37 @@
   }
 }
 
-.traveler-search__wrap .transport__item {
-  background-color: $white;
-
-  @media (min-width: $tablet-width) {
-    width: 43px;
-    height: 43px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 33px;
-    height: 33px;
-  }
-}
-
 .traveler-search__level-range {
-  margin-top: 15px;
-  margin-bottom: 10px;
+  margin-top: 12px;
+  margin-bottom: 27px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 76px;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 40px;
+    margin-top: 19px;
+    margin-bottom: 0;
   }
 }
 
 .traveler-search__submit {
-  @include vertical-paddings (13px, 13px);
+  @include vertical-paddings (4px, 6px);
   position: relative;
-  width: 230px;
+  padding-left: 70px;
+  padding-right: 77px;
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
-  text-align: center;
   color: $dark-grey;
   border-radius: 20px;
   border: none;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (17px, 17px);
-    width: 618px;
+    @include vertical-paddings (10px, 10px);
+    padding-left: 261px;
+    padding-right: 267px;
     font-size: 20px;
 
     &::before {
@@ -307,8 +406,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (17px, 17px);
-    width: 196px;
+    @include vertical-paddings (9px, 10px);
+    padding-left: 50px;
+    padding-right: 56px;
 
     &::before {
       display: none;

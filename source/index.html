@@ -5,15 +5,41 @@
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    /* Mobile layout by default */
+    background-image: url("preview/pognali-index-mobile.png");
+  }
+  /* Tablet */
+  @media (min-width: 768px) {
+    html {
+      /* Tablet layout */
+      background-image: url("preview/pognali-index-tablet.png");
+    }
+  }
+  /* Desktop */
+  @media (min-width: 1440px) {
+    html {
+      /* Desktop layout */
+      background-image: url("preview/pognali-index-desktop.png");
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+<script src="https://yoksel.github.io/pixel-glass-js/script.js" ></script>
+<!-- // Pixel Glass -->
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__container container">
+  <header class="page-header page-header--index">
+    <div class="page-header__container page-header__container--index container">
       <div class="page-header__container--logo">
         <a class="page-header__logo logo" href="#">
           <picture>
-            <source class="logo__image" media="(min-width: 1200px)" srcset="img/logo-desktop-white@1x.png" type="image/png" sizes="(min-width: 1200px) 14vw">
+            <source class="logo__image" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png" type="image/png" sizes="(min-width: 1440px) 14vw">
             <source class="logo__image" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png" type="image/png" sizes="(min-width: 769px) 21vw">
             <source class="logo__image" media="(min-width: 320px)" srcset="img/logo-mobile-white@1x.png" type="image/png" sizes="(min-width: 320px) 31vw">
             <img class="logo__image" src="img/logo-mobile-white@1x.png" alt="Логотип 'Погнали'">
@@ -43,10 +69,10 @@
           <li class="user__item"><a class="user__link user__link--email button" href="#" aria-label="Написать">mail@htmlacademy.ru</a>
           </li>
         </ul>
-        <ul class="main-navigation__socials socials-list">
-          <li class="socials-list__item"><a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук"></a></li>
-          <li class="socials-list__item"><a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте"></a></li>
-          <li class="socials-list__item"><a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм"></a></li>
+        <ul class="main-navigation__socials socials-list socials-list--navigation">
+          <li class="socials-list__item socials-list__item--navigation"><a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук"></a></li>
+          <li class="socials-list__item socials-list__item--navigation"><a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте"></a></li>
+          <li class="socials-list__item socials-list__item--navigation"><a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм"></a></li>
         </ul>
       </nav>
       <section class="page-header__steps steps">
@@ -54,7 +80,7 @@
         <div class="steps__container">
           <p class="steps__slogan">В путешествие с крутыми попутчиками!</p>
           <div class="steps__text">
-            <p class="steps__quote">«Лучшее приложение, что я видел в жизни!»</p>
+            <p class="steps__quote">«Лучшее&nbsp;приложение, что я видел в жизни!»</p>
             <p class="steps__author">Мурат Эльтазин</p>
             <p class="steps__position">главный редактор газеты «гаджетлайф»</p>
           </div>
@@ -72,8 +98,8 @@
     <section class="service">
       <div class="service__container container">
         <h2 class="service__title">О сервисе</h2>
-        <p class="service__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь
-          своими идеями путешествий и черпайте вдохновение в чужих.</p>
+        <p class="service__text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с тобой! Делитесь
+          своими идеями путешествий и&nbsp;черпайте вдохновение в чужих.</p>
         <p class="service__text service__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
         <a class="service__link button" aria-label="Подробнее">Подробнее</a>
       </div>
@@ -81,12 +107,12 @@
     <section class="route">
       <div class="route__container container">
         <h2 class="route__title">Направления</h2>
-        <p class="route__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы
+        <p class="route__text">Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут о странах, куда хотели бы
           отправиться и чем можно там заняться.</p>
         <ul class="route__list country-list">
           <li class="country-list__item">
             <div class="country-list__container">
-              <h3 class="country-list__name">Тайланд</h3>
+              <h3 class="country-list__name">Таиланд</h3>
               <p class="country-list__slogan">Джунгли зовут!</p>
               <p class="country-list__travelers">18321</p>
             </div>
@@ -120,11 +146,11 @@
             <div class="country-list__container">
               <h3 class="country-list__name">Чехия</h3>
               <p class="country-list__slogan">Закоулки старой Европы</p>
-              <p class="country-list__travelers">5326</p>
+              <p class="country-list__travelers country-list__travelers--czech">5326</p>
             </div>
             <div class="country-list__image">
               <picture>
-                <source media="(min-width: 1200px)" srcset="img/czech-desktop@1x.jpg" type="image/png">
+                <source media="(min-width: 1440px)" srcset="img/czech-desktop@1x.jpg" type="image/png">
                 <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg" type="image/png">
                 <source media="(min-width: 320px)" srcset="img/czech-mobile@1x.jpg" type="image/png">
                 <img src="img/czech-mobile@1x.jpg" width="100%" alf="фото страны">
@@ -145,7 +171,7 @@
         <ul class="travelers__list">
           <li class="travelers__item profile-card profile-card--index">
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/firsova-desktop@1x.jpg">
+              <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg">
               <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg">
               <source media="(min-width: 320px)" srcset="img/firsova-tablet@1x.jpg">
               <img class="profile-card__photo-img profile-card__photo-img--index" src="img/firsova-desktop@1x.jpg" width="100%" alt="Фото профиля">
@@ -155,19 +181,19 @@
                 <h3 class="profile-card__name profile-card__name--index">Таня Фирсова</h3>
                 <p class="profile-card__interests profile-card__interests--index">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               </div>
-              <div class="profile-card__place profile-card__place--index place place--index">
+              <div class="profile-card__place profile-card__place--index profile-card__place--one place place--index">
                 <p class="place__title place__title--index">Хочет посетить</p>
                 <ul class="place__list place__list--index">
                   <li class="place__item place__item--index country">
-                    <div class="country__flag flag flag--index"></div>
+                    <div class="country__flag country__flag--index flag flag--index"></div>
                     <p class="country__name country__name--index">Шри ланка</p>
                   </li>
-                  <li class="place__item country">
-                    <div class="country__flag flag flag--index"></div>
+                  <li class="place__item place__item--index country">
+                    <div class="country__flag country__flag--index flag flag--index"></div>
                     <p class="country__name country__name--index">Таиланд</p>
                   </li>
-                  <li class="place__item country">
-                    <div class="country__flag flag flag--index"></div>
+                  <li class="place__item place__item--index country">
+                    <div class="country__flag country__flag--index flag flag--index"></div>
                     <p class="country__name country__name--index">Сейшелы</p>
                   </li>
                 </ul>
@@ -176,13 +202,16 @@
                 <div class="profile-card__transport profile-card__transport--index transport">
                   <p class="transport__title transport__title--index">Транспорт</p>
                   <ul class="transport__list transport__list--index">
-                    <li class="transport__item transport__item--plane"></li>
-                    <li class="transport__item transport__item--train"></li>
-                    <li class="transport__item transport__item--bicycle"></li>
-                    <li class="transport__item transport__item--walking"></li>
+                    <li class="transport__item transport__item--index transport__item--plane"></li>
+                    <li class="transport__item transport__item--index transport__item--train"></li>
+                    <li class="transport__item transport__item--index transport__item--bicycle"></li>
+                    <li class="transport__item transport__item--index transport__item--walking"></li>
                   </ul>
                 </div>
-                <div class="profile-card__level profile-card__level--index">99 level</div>
+                <div class="profile-card__level profile-card__level--index level level--index level--99">
+                  <p class="level__number level__number--index">99</p>
+                  <p class="level__text level__text--index">level</p>
+                </div>
               </div>
               <div class="profile-card__call profile-card__call--index">
                 <a class="profile-card__link button" href="#" aria-label="Позвать">Позвать!</a>
@@ -202,15 +231,15 @@
                 <h3 class="profile-card__name profile-card__name--index profile-card__name--online">Петя Демин</h3>
                 <p class="profile-card__interests profile-card__interests--index">#бургер #бар #футбол #концерт #крафт</p>
               </div>
-              <div class="profile-card__place profile-card__place--index place place--index">
+              <div class="profile-card__place profile-card__place--index profile-card__place--two place place--index">
                 <p class="place__title place__title--index">Хочет посетить</p>
                 <ul class="place__list place__list--index">
                   <li class="place__item place__item--index country">
-                    <div class="country__flag flag flag--index"></div>
+                    <div class="country__flag country__flag--index flag flag--one"></div>
                     <p class="country__name country__name--index">Беьгия</p>
                   </li>
-                  <li class="place__item country">
-                    <div class="country__flag flag flag--index"></div>
+                  <li class="place__item place__item--index country">
+                    <div class="country__flag country__flag--index flag flag--two"></div>
                     <p class="country__name country__name--index">Чехия</p>
                   </li>
                 </ul>
@@ -219,13 +248,16 @@
                 <div class="profile-card__transport profile-card__transport--index transport">
                   <p class="transport__title transport__title--index">Транспорт</p>
                   <ul class="transport__list transport__list--index">
-                    <li class="transport__item transport__item--plane"></li>
-                    <li class="transport__item transport__item--train"></li>
-                    <li class="transport__item transport__item--bicycle"></li>
-                    <li class="transport__item transport__item--walking"></li>
+                    <li class="transport__item transport__item--index transport__item--plane"></li>
+                    <li class="transport__item transport__item--index transport__item--train"></li>
+                    <li class="transport__item transport__item--index transport__item--bicycle"></li>
+                    <li class="transport__item transport__item--index transport__item--walking"></li>
                   </ul>
                 </div>
-                <div class="profile-card__level profile-card__level--index">80 level</div>
+                <div class="profile-card__level profile-card__level--index level level--index level--80">
+                  <p class="level__number level__number--index">80</p>
+                  <p class="level__text level__text--index">level</p>
+                </div>
               </div>
               <div class="profile-card__call profile-card__call--index">
                 <a class="profile-card__link button" href="#" aria-label="Позвать">Позвать!</a>
@@ -284,36 +316,38 @@
       <h2 class="visually-hidden">Ответим на вопросы</h2>
       <div class="questions__container container">
         <p class="questions__title">Заинтересовались?</p>
-        <p class="questions__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a
+        <p class="questions__text">Зарегистрируйтесь, это&nbsp;быстро и бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее <a
             class="questions__link" href="#" aria-label="Авторизуйтесь">авторизуйтесь</a>.</p>
         <form class="questions__form form-email" method="post" action="https://echo.htmlacademy.ru">
           <label class="form-email__label visually-hidden" for="email">Введите e-mail</label>
           <input class="form-email__email" type="email" name="email" id="email">
           <button class="form-email__button" type="submit" aria-label="Отправить e-mail"></button>
         </form>
-        <p class="questions__text questions__text--answer">Остались вопросы? Мы с радостью на них ответим!</p>
+        <p class="questions__text questions__text--answer">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
         <ul class="questions__contacts contacts">
           <li class="contacts__item"><a class="contacts__tel button" href="tel:+78005558628" aria-label="Позвонить">8 800 555-86-28</a></li>
           <li class="contacts__item"><a class="contacts__email button" href="#" aria-label="Написать">mail@htmlacademy.ru</a></li>
         </ul>
       </div>
     </section>
-    <section class="map">
+    <section class="adress">
       <h2 class="visually-hidden">Карта</h2>
-        <div class="map__container container">
-          <p class="map__adress">ул. Большая Конюшенная, 19/8</p>
-          <a class="map__link button" href="#" aria-label="Проложить маршрут">Проложить маршрут</a>
+        <div class="adress__container container">
+          <p class="adress__name">ул. Большая Конюшенная, 19/8</p>
+          <a class="adress__link button" href="#" aria-label="Проложить маршрут">Проложить маршрут</a>
         </div>
-        <div class="map__image-wrapper">
-          <img class="map__image" src="img/map.jpg" weigth="320" height="546" alt="Карта с адресом">
-        </div>
+    </section>
+    <section class="map">
+      <div class="map__image-wrapper">
+        <img class="map__image" src="img/map.jpg" weigth="100%" height="546" alt="Карта с адресом">
+      </div>
     </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__container container">
     <div class="page-footer__logo">
       <picture>
-        <source class="logo__image" media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png" type="image/png" sizes="(min-width: 1200px) 14vw">
+        <source class="logo__image" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png" type="image/png" sizes="(min-width: 1440px) 14vw">
         <source class="logo__image" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png" type="image/png" sizes="(min-width: 769px) 21vw">
         <source class="logo__image" media="(min-width: 320px)" srcset="img/logo-mobile-blue@1x.png" type="image/png" sizes="(min-width: 320px) 31vw">
           <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" weigth="100%" alt="Логотип компании">

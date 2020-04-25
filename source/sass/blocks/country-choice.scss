@@ -1,7 +1,7 @@
 .country-choice {
   margin: 0;
-  margin-top: 28px;
-  padding: 0 25px;
+  margin-top: 12px;
+  padding: 0 27px;
   list-style-type: none;
 
   @media (min-width: $desktop-width) {
@@ -12,15 +12,8 @@
   }
 }
 
-.country-choice__list:not(.country-choice__list--bottom) {
-  @media (min-width: $desktop-width) {
-    margin-bottom: 150px;
-  }
-}
-
 .country-choice__name {
   text-decoration: none;
-  line-height: 30px;
   color: $greyish-brown;
 
   @media (min-width: $tablet-width) {
@@ -29,30 +22,30 @@
   }
 }
 
-.country-choice__2,
-.country-choice__3,
-.country-choice__4,
-.country-choice__5,
-.country-choice__6,
-.country-choice__7,
-.country-choice__8,
-.country-choice__9,
-.country-choice__10,
-.country-choice__11,
-.country-choice__12,
-.country-choice__13,
-.country-choice__14,
-.country-choice__15,
-.country-choice__16,
-.country-choice__17,
-.country-choice__18,
-.country-choice__19,
-.country-choice__20,
-.country-choice__21,
-.country-choice__22,
-.country-choice__23,
-.country-choice__24,
-.country-choice__25 {
+.country-choice__list--2,
+.country-choice__list--3,
+.country-choice__list--4,
+.country-choice__list--5,
+.country-choice__list--6,
+.country-choice__list--7,
+.country-choice__list--8,
+.country-choice__list--9,
+.country-choice__list--10,
+.country-choice__list--11,
+.country-choice__list--12,
+.country-choice__list--13,
+.country-choice__list--14,
+.country-choice__list--15,
+.country-choice__list--16,
+.country-choice__list--17,
+.country-choice__list--18,
+.country-choice__list--19,
+.country-choice__list--20,
+.country-choice__list--21,
+.country-choice__list--22,
+.country-choice__list--23,
+.country-choice__list--24,
+.country-choice__list--25 {
   display: none;
 
   @media (min-width: $desktop-width) {
@@ -67,15 +60,15 @@
   list-style-type: none;
 
   @media (min-width: $desktop-width) {
-    width: 248px;
+    width: 254px;
 
     &::before {
       content: "";
       position: absolute;
       width: 50;
       height: 50px;
-      top: -58px;
-      left: -5px;
+      top: -74px;
+      left: 0;
       font-size: 60px;
       font-weight: bold;
       line-height: 24px;
@@ -85,7 +78,7 @@
   }
 }
 
-.country-choice__1 {
+.country-choice__list--1 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "А";
@@ -93,15 +86,17 @@
   }
 }
 
-.country-choice__2 {
+.country-choice__list--2 {
   @media (min-width: $desktop-width) {
+    margin-bottom: 139px;
+
     &::before {
       content: "Б";
     }
   }
 }
 
-.country-choice__3 {
+.country-choice__list--3 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "В";
@@ -109,7 +104,7 @@
   }
 }
 
-.country-choice__4 {
+.country-choice__list--4 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Г";
@@ -117,7 +112,7 @@
   }
 }
 
-.country-choice__5 {
+.country-choice__list--5 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Д";
@@ -125,7 +120,7 @@
   }
 }
 
-.country-choice__6 {
+.country-choice__list--6 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Е";
@@ -133,7 +128,7 @@
   }
 }
 
-.country-choice__7 {
+.country-choice__list--7 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "З";
@@ -141,7 +136,7 @@
   }
 }
 
-.country-choice__8 {
+.country-choice__list--8 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "И";
@@ -149,15 +144,17 @@
   }
 }
 
-.country-choice__9 {
+.country-choice__list--9 {
   @media (min-width: $desktop-width) {
+    margin-bottom: 142px;
+
     &::before {
       content: "К";
     }
   }
 }
 
-.country-choice__10 {
+.country-choice__list--10 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Л";
@@ -165,15 +162,17 @@
   }
 }
 
-.country-choice__11 {
+.country-choice__list--11 {
   @media (min-width: $desktop-width) {
+    margin-bottom: 180px;
+
     &::before {
       content: "М";
     }
   }
 }
 
-.country-choice__12 {
+.country-choice__list--12 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Н";
@@ -181,7 +180,7 @@
   }
 }
 
-.country-choice__13 {
+.country-choice__list--13 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "О";
@@ -189,7 +188,7 @@
   }
 }
 
-.country-choice__14 {
+.country-choice__list--14 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "П";
@@ -197,7 +196,7 @@
   }
 }
 
-.country-choice__15 {
+.country-choice__list--15 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Р";
@@ -205,15 +204,17 @@
   }
 }
 
-.country-choice__16 {
+.country-choice__list--16 {
   @media (min-width: $desktop-width) {
+    margin-bottom: 143px;
+
     &::before {
       content: "С";
     }
   }
 }
 
-.country-choice__17 {
+.country-choice__list--17 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Т";
@@ -221,7 +222,7 @@
   }
 }
 
-.country-choice__18 {
+.country-choice__list--18 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "У";
@@ -229,7 +230,7 @@
   }
 }
 
-.country-choice__19 {
+.country-choice__list--19 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Ф";
@@ -237,7 +238,7 @@
   }
 }
 
-.country-choice__20 {
+.country-choice__list--20 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Х";
@@ -245,7 +246,7 @@
   }
 }
 
-.country-choice__21 {
+.country-choice__list--21 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Ч";
@@ -253,7 +254,7 @@
   }
 }
 
-.country-choice__22 {
+.country-choice__list--22 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Ш";
@@ -261,7 +262,7 @@
   }
 }
 
-.country-choice__23 {
+.country-choice__list--23 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Э";
@@ -269,7 +270,7 @@
   }
 }
 
-.country-choice__24 {
+.country-choice__list--24 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Ю";
@@ -277,7 +278,7 @@
   }
 }
 
-.country-choice__25 {
+.country-choice__list--25 {
   @media (min-width: $desktop-width) {
     &::before {
       content: "Я";

@@ -1,23 +1,37 @@
-.route__container {
+.route {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-paddings (72px, 30px);
-  position: relative;
   background-color: $pale-grey;
+  position: relative;
+  z-index: 6;
+  top: -62px;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (74px, 80px);
+    @include border-bottom-radius (50px, 50px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include border-bottom-radius (60px, 60px);
+  }
+}
+
+.route__container {
+  @include vertical-paddings (132px, 30px);
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (131px, 80px);
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
-    background-position: 439px 79px;
+    background-position: 439px 142px;
     background-size: 289px 575px;
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (167px, 139px);
+    @include vertical-paddings (225px, 139px);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    background-position: 1091px 88px;
+    background-position: 1091px 150px;
   }
 }
 
@@ -28,14 +42,14 @@
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 35px;
+    padding-left: 34px;
     font-size: 45px;
     line-height: 45px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    margin-right: 253px;
+    margin-right: 250px;
     margin-left: auto;
   }
 }
@@ -43,29 +57,48 @@
 .route__text {
   @include text ($light,  $greyish-brown);
   margin: 0;
-  margin-top: 23px;
+  margin-top: 19px;
   padding-left: 25px;
-  padding-right: 78px;
+  padding-right: 50px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 62px;
+    margin-top: 59px;
     padding-left: 35px;
     padding-right: 306px;
     font-size: 28px;
-    line-height: 1.18;
+    line-height: 33px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    margin-right: 181px;
+    margin-right: 177px;
+    margin-top: 58px;
     margin-left: auto;
     width: 342px;
   }
 }
 
+.route__list {
+  margin-top: 61px;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 107px;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 224px;
+    left: 132px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .route__link {
   position: relative;
-  padding: 24px;
+  padding: 22px 24px;
   background-color: $light-gold;
   font-size: 18px;
   font-weight: bold;
@@ -77,8 +110,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 25px;
-    right: 31px;
+    top: 24px;
+    right: 23px;
     width: 10px;
     height: 14px;
     background-image: url("../img/triangle-arrow-right.svg");
@@ -87,12 +120,14 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 35px;
+    padding: 29px 34px;
     width: 618px;
     font-size: 24px;
     line-height: 24px;
+    border-radius: 20px;
 
     &::before {
-      top: 30px;
+      top: 34px;
       right: 34px;
     }
   }
@@ -100,7 +135,12 @@
   @media (min-width: $desktop-width) {
     width: 274px;
     margin-right: 241px;
-    margin-top: 105px;
+    margin-top: 98px;
     margin-left: auto;
+    padding: 29px 32px;
+
+    &::before {
+      right: 37px;
+    }
   }
 }

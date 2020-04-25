@@ -1,47 +1,81 @@
-/**.service {
+.service {
+  @include border-bottom-radius (20px, 20px);
+  background-color: $dark-blue-grey;
   position: relative;
+  z-index: 7;
+  margin-top: -60px;
 
-  @media (min-width: $tablet-width) {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 688px;
-      height: 213px;
-      left: 40px;
-      top: 236px;
-      z-index: 1;
-      background-color: $dark-grey;
-      border-radius: 20px;
-    }
+  @media (min-width: $desktop-width) {
+    @include border-bottom-radius (60px, 60px);
   }
 }
-**/
 
 .service__container {
-  @include border-bottom-radius (20px, 20px);
-  @include vertical-paddings (312px, 84px);
-  background-color: $darker-blue-grey;
+  @include vertical-paddings (364px, 60px);
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
   background-image: url("../../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: 18px 293px;
+  background-position: 19px 333px;
   background-size: 292px 352px;
+
+  &::before {
+    @include border-right-radius (20px, 20px);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 273px;
+    z-index: -1;
+    width: 113px;
+    height: 132px;
+    background-color: $darker-blue-grey;
+  }
 
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (279px, 88px);
+    @include border-bottom-radius (60px, 60px);
+    @include vertical-paddings (336px, 88px);
     position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
     background-color: $dark-blue-grey;
-    background-image: url("../../img/about-tablet@1x.png"), linear-gradient($darker-blue-grey);
-    background-repeat: no-repeat, no-repeat;
-    background-position: 401px 284px, 40px 236px;
-    background-size: 400px 578px, 688px 213px;
+    background-image: url("../../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: 383px 346px;
+    background-size: 379px 546px;
+
+    &::before {
+      @include border-right-radius (20px, 20px);
+      content: "";
+      position: absolute;
+      left: 40px;
+      top: 236px;
+      z-index: -1;
+      width: 688px;
+      height: 213px;
+      background-color: $darker-blue-grey;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (133px, 109px);
-    background-image: url("../../img/about-desktop@1x.png"), linear-gradient($darker-blue-grey);
-    background-position: 750px 85px, 60px 71px;
-    background-size: 630px 665px, 213px 213px;
+    @include vertical-paddings (191px, 163px);
+    padding-left: 58px;
+    background-image: url("../../img/about-desktop@1x.png");
+    background-position: 750px 147px;
+    background-size: 630px 665px;
+
+    &::before {
+      @include border-right-radius (20px, 20px);
+      content: "";
+      position: absolute;
+      left: 60px;
+      top: 71px;
+      z-index: -1;
+      width: 213px;
+      height: 213px;
+      background-color: $darker-blue-grey;
+    }
   }
 }
 
@@ -63,12 +97,12 @@
 }
 
 .service__text {
-  @include text ($light, $white);
+  @include text (300px, $white);
   margin: 0;
-  margin-top: 25px;
+  margin-top: 19px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 43px;
+    margin-top: 41px;
     padding-right: 352px;
     padding-left: 35px;
     font-size: 28px;
@@ -76,22 +110,24 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 61px;
+    margin-top: 58px;
     padding-right: 630px;
     padding-left: 72px;
   }
 }
 
 .service__text--bold {
-  font-weight: $bold;
+  font-weight: bold;
 
   @media (min-width: $tablet-width) {
-    margin-top: 38px;
-    padding-right: 303px;
+    margin-top: 32px;
+    padding-right: 344px;
+    font-size: 21px;
+    line-height: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 44px;
+    margin-top: 40px;
     padding-right: 830px;
   }
 }
@@ -103,7 +139,7 @@
     position: relative;
     display: block;
     width: 274px;
-    padding: 30px 126px 28px 34px;
+    padding: 28px 126px 29px 34px;
     margin-top: 53px;
     margin-left: 35px;
     background-color: $light-gold;
@@ -111,8 +147,9 @@
     font-weight: bold;
     line-height: 24px;
     text-align: left;
+    text-transform: none;
     color: $dark-slate-blue;
-    border-radius: 10px;
+    border-radius: 20px;
 
     &::before {
       content: "";

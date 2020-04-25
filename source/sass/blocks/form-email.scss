@@ -14,7 +14,7 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    @include border-left-radius (10px, 10px);
+    @include border-left-radius (20px, 20px);
     @include border-right-radius (0, 0);
     width: 536px;
     height: 81px;
@@ -47,7 +47,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include border-right-radius (10px, 10px);
+    @include border-right-radius (20px, 20px);
     @include border-left-radius (0, 0);
     width: 82px;
     height: 81px;

@@ -1,5 +1,6 @@
 .transport__title {
   margin: 0;
+  padding-left: 6px;
 
   &--index {
     display: none;
@@ -14,8 +15,12 @@
   display: flex;
   list-style-type: none;
   margin: 0;
-  margin-top: 16px;
+  margin-top: 12px;
   padding: 0;
+
+  &--index {
+    margin-top: -5px;
+  }
 
   @media (min-width: $tablet-width) {
     &--index {
@@ -37,6 +42,49 @@
 
 .transport__item {
   @include round (33px, 33px, 50%, $pale-grey);
+
+  &--index {
+    background-color: $white;
+  }
+
+  &--plane {
+    background-image: url("../img/plane.svg");
+    background-repeat: no-repeat;
+    background-size: 19px 21px;
+    background-position: 50% 50%;
+  }
+
+  &--train {
+    background-image: url("../img/bus.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 21px;
+    background-position: 50% 50%;
+  }
+
+  &--bicycle {
+    background-image: url("../img/bike.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 21px;
+    background-position: 50% 50%;
+  }
+
+  &--walking {
+    background-image: url("../img/run.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 21px;
+    background-position: 50% 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 43px;
+    height: 43px;
+    background-color: $white;
+
+    &--catalog {
+      width: 33px;
+      height: 33px;
+    }
+  }
 }
 
 .transport__legend {

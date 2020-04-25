@@ -2,21 +2,25 @@
 
 .profile-card {
   @include wrapper(270px, 0 auto, 0 20px);
-  @include vertical-paddings (16px, 22px);
+  @include vertical-paddings (13px, 22px);
   position: relative;
   background-color: $white;
   border-radius: 20px;
 
   &--index {
+    margin: 0;
     padding: 0;
+    border-radius: 10px;
   }
 
   @media (min-width: $tablet-width) {
     @include wrapper(688px, 0 auto, 0 35px);
-    @include vertical-paddings (34px, 27px);
+    @include vertical-paddings (32px, 21px);
 
     &--index {
       width: 285px;
+      border-radius: 20px;
+      margin: 0;
       padding: 0;
     }
   }
@@ -40,8 +44,7 @@
   flex-wrap: wrap;
 
   &--index {
-    @include vertical-paddings (27px, 22px);
-    @include border-bottom-radius (20px, 20px);
+    @include vertical-paddings (23px, 15px);
     display: block;
     width: 270px;
     padding-left: 25px;
@@ -49,25 +52,24 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (31px, 37px);
-
     &--index {
-      @include vertical-paddings (29px, 31px);
+      @include vertical-paddings (26px, 24px);
       width: 285px;
-      padding-left: 32px;
+      padding-left: 27px;
       padding-right: 32px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    @include wrapper(665px, 0, 0 50px);
-    @include vertical-paddings (34px, 27px);
+    @include vertical-paddings (45px, 27px);
+    width: 665px;
+    padding-left: 60px;
+    padding-right: 40px;
 
     &--index {
-      @include vertical-paddings (29px, 31px);
+      @include vertical-paddings (27px, 23px);
       width: 285px;
-      padding-left: 32px;
-      padding-right: 32px;
+      padding-left: 27px;
     }
   }
 }
@@ -76,7 +78,15 @@
   margin-top: 10px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 40px;
+    margin-top: 42px;
+
+    &--index:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
 
     &--index:not(:first-child) {
       margin-top: 0;
@@ -101,7 +111,7 @@
   border-radius: 50%;
 
   &--index {
-    @include border-top-radius (20px, 20px);
+    @include border-top-radius (10px, 10px);
     @include border-bottom-radius (0, 0);
     position: relative;
     width: 270px;
@@ -136,6 +146,10 @@
     height: 285px;
     top: 0;
     left: 0;
+
+    &--index {
+      @include border-top-radius (20px, 20px);
+    }
   }
 }
 
@@ -143,7 +157,7 @@
   @media (min-width: $tablet-width) {
     order: 2;
     width: 230px;
-    margin-left: 233px;
+    margin-left: 223px;
 
     &--index {
       margin: 0;
@@ -162,7 +176,7 @@
 .profile-card__name {
   @include title (20px, bold, $dark-slate-blue);
   margin: 0;
-  padding-left: 88px;
+  padding-left: 85px;
   padding-right: 50px;
   line-height: 20px;
 
@@ -202,14 +216,15 @@
 
 .profile-card__interests {
   margin: 0;
-  margin-top: 65px;
-  padding-right: 58px;
+  margin-top: 46px;
+  padding-left: 6px;
+  padding-right: 50px;
   font-size: 15px;
   line-height: 18px;
   color: $greyish-brown;
 
   &--index {
-    padding: 0;
+    padding: 0 25px;
     margin-top: 16px;
     line-height: 18px;
     text-align: center;
@@ -217,43 +232,86 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    margin-top: 20px;
+    margin-top: 17px;
+    padding-left: 2px;
     font-size: 20px;
     line-height: 24px;
 
     &--index {
-      margin-top: 24px;
+      margin-top: 18px;
+      padding-left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--index {
+      margin-top: 16px;
     }
   }
 }
 
 .profile-card__place {
   position: relative;
-  margin-top: 20px;
+  margin-top: 12px;
+  padding-left: 7px;
 
   &--index {
     position: absolute;
     top: 0;
-    left: 100px;
     margin: 0;
+    padding: 0;
+  }
+
+  &--one {
+    left: 62px;
+  }
+
+  &--two {
+    left: 91px;
+  }
+
+  &--twoflags {
+    margin-bottom: 6px;
   }
 
   @media (min-width: $tablet-width) {
     order: 4;
-    margin-top: 40px;
+    padding: 0;
+    margin-top: 20px;
+
+    &--index {
+      margin-top: 0;
+    }
+
+    &--one {
+      left: 70px;
+    }
+
+    &--two {
+      left: 97px;
+    }
+
+    &--twoflags {
+      margin-bottom: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
     order: 3;
-    width: 230px;
     margin: 0;
-    margin-left: 80px;
+    margin-left: 98px;
+    margin-top: 2px;
+
+    &--index {
+      margin-top: -13px;
+      margin-left: 0;
+    }
   }
 }
 
 .profile-card__wrapper {
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
 
   &--index {
     margin: 0 auto;
@@ -270,7 +328,7 @@
 
     &--index {
       position: relative;
-      margin-top: 27px;
+      margin-top: 19px;
     }
   }
 
@@ -278,47 +336,57 @@
     position: relative;
     right: 0;
     margin: 0;
-    margin-left: 81px;
+    margin-left: 67px;
+    margin-top: 20px;
     order: 5;
     flex-direction: row;
 
     &--index {
       margin: 0;
-      margin-top: 27px;
+      margin-top: 20px;
     }
   }
 }
 
 .profile-card__transport {
   &--index {
-    margin: 0 auto;
+    margin: 0 49px;
   }
 }
 
 .profile-card__level {
-  margin-top: 27px;
+  margin: 0;
+  margin-left: 50px;
 
   &--index {
     position: absolute;
-    top: -265px;
-    left: 25px;
+    top: -242px;
+    left: -17px;
     z-index: 2;
   }
 
   @media (min-width: $tablet-width) {
+    margin: 0;
+
     &--index {
-      top: -445px;
-      left: -35px;
+      top: -394px;
+      left: 10px;
+    }
+
+    &--catalog {
+      margin-top: 15px;
+      left: 0;
     }
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    margin-left: 22px;
+    margin-left: 63px;
 
     &--index {
-      top: -445px;
-      left: -35px;
+      margin: 0;
+      top: -392px;
+      left: 14px;
     }
   }
 }
@@ -334,29 +402,42 @@
 
   @media (min-width: $tablet-width) {
     order: 3;
-    margin-left: 233px;
+    margin-left: 221px;
+    margin-top: 47px;
     padding-right: 10px;
   }
 
   @media (min-width: $desktop-width) {
     order: 4;
     margin: 0;
+    margin-top: -13px;
     padding: 0;
   }
 }
 
 .profile-card__link {
-  @include link ($padding-link, 20px, $light-gold);
+  padding: 5px 79px;
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
   text-align: center;
+  border-radius: 20px;
   color: $dark-grey;
+  background-color: $light-gold;
 
   @media (min-width: $tablet-width) {
-    padding: 13px 33px;
-    height: 50px;
+    padding-top: 11px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-size: 20px;
+    border-radius: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
+    padding-left: 28px;
+    padding-right: 34px;
   }
 }
 
@@ -364,9 +445,9 @@
   position: absolute;
   margin: 0;
   left: 50px;
-  top: 50px;
+  top: 47px;
   z-index: 2;
-  padding-left: 41px;
+  padding-left: 35px;
   font-size: 14px;
   font-weight: bold;
   line-height: 21px;
@@ -377,15 +458,15 @@
     @include round (31px, 31px, 50%, $pale-grey);
     content: "";
     position: absolute;
-    left: 0;
-    top: -5px;
+    left: -3px;
+    top: -6px;
   }
 
   @media (min-width: $tablet-width) {
     position: relative;
     left: 0;
     top: 0;
-    padding-left: 55px;
+    padding-left: 60px;
     font-size: 20px;
     line-height: 30px;
 

@@ -12,20 +12,20 @@
   position: absolute;
   top: 73px;
   left: 0;
-  z-index: 6;
+  z-index: 10;
   display: none;
   color: $dark-blue-grey;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
     @include wrapper(768px, 0 auto, 0 40px);
-    @include vertical-paddings (78px, 52px);
+    @include vertical-paddings (49px, 82px);
     top: 130px;
   }
 
   @media (min-width: $desktop-width) {
     @include wrapper(auto, 0 0, 0 0);
-    @include vertical-paddings (67px, 30px);
+    @include vertical-paddings (60px, 30px);
     display: block;
     top: 0;
     background-color: $dark-grey;
