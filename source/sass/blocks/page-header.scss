@@ -1,0 +1,22 @@
+.page-header {
+  position: relative;
+  background-color: $dark-grey;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    background-color: $dark-blue-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include border-bottom-radius (60px, 60px);
+    background-color: $dark-grey;
+
+    &--catalog {
+      border-radius: 0;
+    }
+  }
+}
+
+.page-header__steps {
+  order: 5;
+}

@@ -1,17 +1,14 @@
 .site-list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding-left: 58px;
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    padding-left: 145px;
+    position: relative;
 
     &::before {
       content: "";

@@ -1,9 +1,13 @@
 .service {
-  @include border-bottom-radius (20px, 20px);
+  @include border-bottom-radius (30px, 30px);
   background-color: $dark-blue-grey;
   position: relative;
   z-index: 7;
   margin-top: -60px;
+
+  @media (min-width: $tablet-width) {
+    @include border-bottom-radius (60px, 60px);
+  }
 
   @media (min-width: $desktop-width) {
     @include border-bottom-radius (60px, 60px);
@@ -11,13 +15,13 @@
 }
 
 .service__container {
-  @include vertical-paddings (364px, 60px);
+  @include vertical-paddings (370px, 62px);
   position: relative;
   padding-left: 50px;
   padding-right: 50px;
   background-image: url("../../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: 19px 333px;
+  background-position: 19px 338px;
   background-size: 292px 352px;
 
   &::before {
@@ -34,15 +38,13 @@
 
 
   @media (min-width: $tablet-width) {
-    @include border-bottom-radius (60px, 60px);
-    @include vertical-paddings (336px, 88px);
+    @include vertical-paddings (332px, 88px);
     position: relative;
     padding-left: 40px;
     padding-right: 40px;
-    background-color: $dark-blue-grey;
     background-image: url("../../img/about-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: 383px 346px;
+    background-position: 383px 342px;
     background-size: 379px 546px;
 
     &::before {
@@ -59,7 +61,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (191px, 163px);
+    @include vertical-paddings (191px, 160px);
     padding-left: 58px;
     background-image: url("../../img/about-desktop@1x.png");
     background-position: 750px 147px;
@@ -70,7 +72,7 @@
       content: "";
       position: absolute;
       left: 60px;
-      top: 71px;
+      top: 132px;
       z-index: -1;
       width: 213px;
       height: 213px;
@@ -82,27 +84,30 @@
 .service__title {
   @include title($size-title, $bold, $mango);
   margin: 0;
+  margin-bottom: 19px;
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
     font-size: 45px;
     line-height: 45px;
+    margin-bottom: 41px;
     padding-left: 35px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 45px;
+    margin-bottom: 58px;
     padding-left: 72px;
   }
 }
 
 .service__text {
-  @include text (300px, $white);
+  @include text (300, $white);
   margin: 0;
-  margin-top: 19px;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 41px;
+    margin-bottom: 32px;
     padding-right: 352px;
     padding-left: 35px;
     font-size: 28px;
@@ -110,7 +115,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 58px;
+    margin-bottom: 40px;
     padding-right: 630px;
     padding-left: 72px;
   }
@@ -120,14 +125,14 @@
   font-weight: bold;
 
   @media (min-width: $tablet-width) {
-    margin-top: 32px;
+    margin-bottom: 53px;
     padding-right: 344px;
     font-size: 21px;
     line-height: 25px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 40px;
+    margin-bottom: 86px;
     padding-right: 830px;
   }
 }
@@ -136,35 +141,19 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    position: relative;
     display: block;
     width: 274px;
     padding: 28px 126px 29px 34px;
-    margin-top: 53px;
     margin-left: 35px;
-    background-color: $light-gold;
     font-size: 24px;
     font-weight: bold;
     line-height: 24px;
     text-align: left;
     text-transform: none;
-    color: $dark-slate-blue;
     border-radius: 20px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 34px;
-      right: 36px;
-      width: 10px;
-      height: 14px;
-      background-image: url("../img/triangle-arrow-right.svg");
-      background-repeat: no-repeat;
-    }
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 86px;
     margin-left: 72px;
   }
 }

@@ -1,0 +1,26 @@
+.flag-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.flag-list__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.flag {
+  border: 1px solid red;
+  width: 35px;
+  height: 24px;
+
+  @media (min-width: $tablet-width) {
+    width: 35px;
+    height: 24px;
+
+    &--route {
+      width: 70px;
+      height: 47px;
+    }
+  }
+}

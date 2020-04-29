@@ -7,12 +7,6 @@
   background-color: $white;
   border-radius: 20px;
 
-  &--index {
-    margin: 0;
-    padding: 0;
-    border-radius: 10px;
-  }
-
   @media (min-width: $tablet-width) {
     @include wrapper(688px, 0 auto, 0 35px);
     @include vertical-paddings (32px, 21px);

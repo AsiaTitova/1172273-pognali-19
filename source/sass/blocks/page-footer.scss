@@ -45,8 +45,9 @@
   margin: 0 auto;
 }
 
-.page-footer__socials {
-  margin-left: -48px;
+.page-footer__socials-list {
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .page-footer__copyright {

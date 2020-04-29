@@ -1,5 +1,5 @@
 .route {
-  @include border-bottom-radius (20px, 20px);
+  @include border-bottom-radius (25px, 25px);
   background-color: $pale-grey;
   position: relative;
   z-index: 6;
@@ -38,10 +38,12 @@
 .route__title {
   @include title ($size-title, bold, $mango);
   margin: 0;
+  margin-bottom: 20px;
   padding-left: 25px;
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
     padding-left: 34px;
     font-size: 45px;
     line-height: 45px;
@@ -49,20 +51,20 @@
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    margin-right: 250px;
-    margin-left: auto;
+    margin-bottom: 58px;
+    padding-left: 802px;
   }
 }
 
 .route__text {
   @include text ($light,  $greyish-brown);
   margin: 0;
-  margin-top: 19px;
+  margin-bottom: 61px;
   padding-left: 25px;
   padding-right: 50px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 59px;
+    margin-bottom: 107px;
     padding-left: 35px;
     padding-right: 306px;
     font-size: 28px;
@@ -70,20 +72,17 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
-    margin-right: 177px;
-    margin-top: 58px;
-    margin-left: auto;
-    width: 342px;
+    margin-bottom: 99px;
+    padding-left: 802px;
+    padding-right: 170px;
   }
 }
 
 .route__list {
-  margin-top: 61px;
+  margin: 0;
   margin-bottom: 23px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 107px;
     margin-bottom: 47px;
   }
 
@@ -97,14 +96,11 @@
 }
 
 .route__link {
-  position: relative;
   padding: 22px 24px;
-  background-color: $light-gold;
   font-size: 18px;
   font-weight: bold;
   line-height: 18px;
   text-transform: none;
-  color: $dark-slate-blue;
   border-radius: 10px;
 
   &::before {
@@ -135,7 +131,6 @@
   @media (min-width: $desktop-width) {
     width: 274px;
     margin-right: 241px;
-    margin-top: 98px;
     margin-left: auto;
     padding: 29px 32px;
 

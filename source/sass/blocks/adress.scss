@@ -7,44 +7,23 @@
 }
 
 .adress__container {
-  @include vertical-paddings (109px, 35px);
+  @include vertical-paddings (107px, 35px);
   position: relative;
   z-index: 2;
 
-  &::before {
-    @include round (45px, 45px, 50%,  $dark-blue-grey);
-    content: "";
-    position: absolute;
-    top: 107px;
-    left: 25px;
-  }
-
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (142px, 85px);
-
-    &::before {
-      width: 67px;
-      height: 67px;
-      top: 122px;
-      left: 76px;
-    }
+    @include vertical-paddings (121px, 85px);
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (132px, 62px);
+    @include vertical-paddings (126px, 56px);
     display: flex;
     align-items: baseline;
-
-    &::before {
-      width: 90px;
-      height: 90px;
-      top: 128px;
-      left: 283px;
-    }
   }
 }
 
 .adress__name {
+  position: relative;
   margin: 0;
   padding-left: 61px;
   padding-right: 66px;
@@ -52,14 +31,38 @@
   text-transform: uppercase;
   color: $dark-blue-grey;
 
+  &::before {
+    @include round (45px, 45px, 50%,  $dark-blue-grey);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   @media (min-width: $tablet-width) {
     padding-left: 129px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 28px;
     line-height: 28px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+      left: 36px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-left: 344px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      left: 223px;
+    }
   }
 }
 
@@ -90,7 +93,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0 35px;
-    margin-top: 64px;
+    margin-top: 44px;
     padding: 25px 34px;
     font-size: 24px;
     line-height: 24px;
