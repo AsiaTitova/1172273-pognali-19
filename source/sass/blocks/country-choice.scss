@@ -1,7 +1,6 @@
 .country-choice {
   margin: 0;
-  margin-top: 12px;
-  padding: 0 27px;
+  padding: 0;
   list-style-type: none;
 
   @media (min-width: $desktop-width) {
@@ -22,42 +21,16 @@
   }
 }
 
-.country-choice__list--2,
-.country-choice__list--3,
-.country-choice__list--4,
-.country-choice__list--5,
-.country-choice__list--6,
-.country-choice__list--7,
-.country-choice__list--8,
-.country-choice__list--9,
-.country-choice__list--10,
-.country-choice__list--11,
-.country-choice__list--12,
-.country-choice__list--13,
-.country-choice__list--14,
-.country-choice__list--15,
-.country-choice__list--16,
-.country-choice__list--17,
-.country-choice__list--18,
-.country-choice__list--19,
-.country-choice__list--20,
-.country-choice__list--21,
-.country-choice__list--22,
-.country-choice__list--23,
-.country-choice__list--24,
-.country-choice__list--25 {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: block;
-  }
-}
-
 .country-choice__list {
   position: relative;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: none;
+
+  &--open {
+    display: block;
+  }
 
   @media (min-width: $desktop-width) {
     width: 254px;
@@ -75,213 +48,209 @@
       text-transform: uppercase;
       color: $dark-blue-grey;
     }
-  }
-}
 
-.country-choice__list--1 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "А";
+    &--1 {
+      display: block;
+
+      &::before {
+        content: "А";
+      }
     }
-  }
-}
 
-.country-choice__list--2 {
-  @media (min-width: $desktop-width) {
-    margin-bottom: 139px;
+    &--2 {
+      display: block;
+      margin-bottom: 139px;
 
-    &::before {
-      content: "Б";
+      &::before {
+        content: "Б";
+      }
     }
-  }
-}
 
-.country-choice__list--3 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "В";
+    &--3 {
+      display: block;
+
+      &::before {
+        content: "В";
+      }
     }
-  }
-}
 
-.country-choice__list--4 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Г";
+    &--4 {
+      display: block;
+
+      &::before {
+        content: "Г";
+      }
     }
-  }
-}
 
-.country-choice__list--5 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Д";
+    &--5 {
+      display: block;
+
+      &::before {
+        content: "Д";
+      }
     }
-  }
-}
 
-.country-choice__list--6 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Е";
+    &--6 {
+      display: block;
+
+      &::before {
+        content: "Е";
+      }
     }
-  }
-}
 
-.country-choice__list--7 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "З";
+    &--7 {
+      display: block;
+
+      &::before {
+        content: "З";
+      }
     }
-  }
-}
 
-.country-choice__list--8 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "И";
+    &--8 {
+      display: block;
+
+      &::before {
+        content: "И";
+      }
     }
-  }
-}
 
-.country-choice__list--9 {
-  @media (min-width: $desktop-width) {
-    margin-bottom: 142px;
+    &--9 {
+      display: block;
+      margin-bottom: 142px;
 
-    &::before {
-      content: "К";
+      &::before {
+        content: "К";
+      }
     }
-  }
-}
 
-.country-choice__list--10 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Л";
+    &--10 {
+      display: block;
+
+      &::before {
+        content: "Л";
+      }
     }
-  }
-}
 
-.country-choice__list--11 {
-  @media (min-width: $desktop-width) {
-    margin-bottom: 180px;
+    &--11 {
+      display: block;
+      margin-bottom: 180px;
 
-    &::before {
-      content: "М";
+      &::before {
+        content: "М";
+      }
     }
-  }
-}
 
-.country-choice__list--12 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Н";
+    &--12 {
+      display: block;
+
+      &::before {
+        content: "Н";
+      }
     }
-  }
-}
 
-.country-choice__list--13 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "О";
+    &--13 {
+      display: block;
+
+      &::before {
+        content: "О";
+      }
     }
-  }
-}
 
-.country-choice__list--14 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "П";
+    &--14 {
+      display: block;
+
+      &::before {
+        content: "П";
+      }
     }
-  }
-}
 
-.country-choice__list--15 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Р";
+    &--15 {
+      display: block;
+
+      &::before {
+        content: "Р";
+      }
     }
-  }
-}
 
-.country-choice__list--16 {
-  @media (min-width: $desktop-width) {
-    margin-bottom: 143px;
+    &--16 {
+      display: block;
+      margin-bottom: 143px;
 
-    &::before {
-      content: "С";
+      &::before {
+        content: "С";
+      }
     }
-  }
-}
 
-.country-choice__list--17 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Т";
+    &--17 {
+      display: block;
+
+      &::before {
+        content: "Т";
+      }
     }
-  }
-}
 
-.country-choice__list--18 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "У";
+    &--18 {
+      display: block;
+
+      &::before {
+        content: "У";
+      }
     }
-  }
-}
 
-.country-choice__list--19 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Ф";
+    &--19 {
+      display: block;
+
+      &::before {
+        content: "Ф";
+      }
     }
-  }
-}
 
-.country-choice__list--20 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Х";
+    &--20 {
+      display: block;
+
+      &::before {
+        content: "Х";
+      }
     }
-  }
-}
 
-.country-choice__list--21 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Ч";
+    &--21 {
+      display: block;
+
+      &::before {
+        content: "Ч";
+      }
     }
-  }
-}
 
-.country-choice__list--22 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Ш";
+    &--22 {
+      display: block;
+
+      &::before {
+        content: "Ш";
+      }
     }
-  }
-}
 
-.country-choice__list--23 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Э";
+    &--23 {
+      display: block;
+
+      &::before {
+        content: "Э";
+      }
     }
-  }
-}
 
-.country-choice__list--24 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Ю";
+    &--24 {
+      display: block;
+
+      &::before {
+        content: "Ю";
+      }
     }
-  }
-}
 
-.country-choice__list--25 {
-  @media (min-width: $desktop-width) {
-    &::before {
-      content: "Я";
+    &--25 {
+      display: block;
+
+      &::before {
+        content: "Я";
+      }
     }
   }
 }

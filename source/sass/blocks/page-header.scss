@@ -8,11 +8,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include border-bottom-radius (60px, 60px);
     background-color: $dark-grey;
 
-    &--catalog {
-      border-radius: 0;
+    &--index {
+      @include border-bottom-radius (60px, 60px);
     }
   }
 }

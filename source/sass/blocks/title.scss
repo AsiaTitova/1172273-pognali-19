@@ -16,23 +16,21 @@
 }
 
 .title__container {
-  @include vertical-paddings (53px, 12px);
+  @include vertical-paddings (19px, 12px);
   position: relative;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (125px, 66px);
+    @include vertical-paddings (82px, 66px);
     display: flex;
     align-items: center;
     padding-left: 75px;
     padding-right: 75px;
-    background-color: $dark-blue-grey;
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (86px, 67px);
+    @include vertical-paddings (66px, 67px);
     padding-left: 126px;
     padding-right: 126px;
-    background-color: $dark-grey;
   }
 }
 
