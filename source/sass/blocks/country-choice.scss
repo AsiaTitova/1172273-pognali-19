@@ -33,20 +33,21 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 254px;
+    width: 252px;
+    padding-top: 92px;
+    margin-bottom: 48px;
 
     &::before {
       content: "";
       position: absolute;
-      width: 50;
-      height: 50px;
-      top: -74px;
+      top: 0;
       left: 0;
       font-size: 60px;
       font-weight: bold;
-      line-height: 24px;
+      line-height: 60px;
       text-transform: uppercase;
       color: $dark-blue-grey;
+      display: block;
     }
 
     &--1 {
@@ -59,7 +60,6 @@
 
     &--2 {
       display: block;
-      margin-bottom: 139px;
 
       &::before {
         content: "Б";
@@ -116,7 +116,6 @@
 
     &--9 {
       display: block;
-      margin-bottom: 142px;
 
       &::before {
         content: "К";
@@ -133,7 +132,7 @@
 
     &--11 {
       display: block;
-      margin-bottom: 180px;
+      margin-bottom: 85px;
 
       &::before {
         content: "М";
@@ -174,7 +173,6 @@
 
     &--16 {
       display: block;
-      margin-bottom: 143px;
 
       &::before {
         content: "С";

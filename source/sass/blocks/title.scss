@@ -29,8 +29,9 @@
 
   @media (min-width: $desktop-width) {
     @include vertical-paddings (66px, 67px);
-    padding-left: 126px;
-    padding-right: 126px;
+    padding-left: 120px;
+    padding-right: 130px;
+
   }
 }
 
@@ -66,7 +67,7 @@
 
   @media (min-width: $desktop-width) {
     &::before {
-      left: 126px;
+      left: 120px;
     }
   }
 }

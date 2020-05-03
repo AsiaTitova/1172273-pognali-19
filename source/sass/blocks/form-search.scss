@@ -5,7 +5,7 @@
 
   @media (min-width: $tablet-width) {
     @include wrapper ($tablet-width, 0 auto, 0 40px);
-    @include vertical-paddings (78px, 38px);
+    @include vertical-paddings (78px, 40px);
   }
 
   @media (min-width: $desktop-width) {

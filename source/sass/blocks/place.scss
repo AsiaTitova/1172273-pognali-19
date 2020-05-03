@@ -6,41 +6,13 @@
 }
 
 .place__title {
+  position: relative;
+  z-index: 1;
   margin: 0;
   color: $greyish-brown;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 125px;
-    height: 1px;
-    top: 10px;
-    left: 105px;
-    background-color: $pale-grey;
-  }
-
-  &--index {
-    display: none;
-  }
-
   @media (min-width: $tablet-width) {
-    padding-left: 44px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 60px;
-      height: 1px;
-      top: 10px;
-      left: -35px;
-      background-color: $pale-grey;
-    }
-
-    &::before {
-      width: 520px;
-      height: 1px;
-      left: 135px;
-    }
+    padding-left: 49px;
   }
 
   @media (min-width: $desktop-width) {

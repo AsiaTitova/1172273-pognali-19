@@ -18,15 +18,7 @@
   margin-top: 12px;
   padding: 0;
 
-  &--index {
-    margin-top: -5px;
-  }
-
   @media (min-width: $tablet-width) {
-    &--index {
-      margin: 0;
-    }
-
     &--catalog {
       flex-direction: column;
       margin: 0;
@@ -41,11 +33,7 @@
 }
 
 .transport__item {
-  @include round (33px, 33px, 50%, $pale-grey);
-
-  &--index {
-    background-color: $white;
-  }
+  @include round (33px, 33px, 50%, $white);
 
   &--plane {
     background-image: url("../img/plane.svg");

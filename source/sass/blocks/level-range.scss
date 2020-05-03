@@ -1,6 +1,4 @@
 .level-range {
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -11,12 +9,23 @@
   &::before {
     content: "";
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 17px;
     left: 102px;
     width: 16px;
     height: 1px;
     background-color: $cloudy-blue;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 102px;
+    width: 16px;
+    height: 13px;
+    background-color: $white;
   }
 
   &--price {
@@ -30,7 +39,7 @@
   @media (min-width: $tablet-width) {
     &--price {
       order: 2;
-      margin-left: 61px;
+      margin-left: 62px;
     }
 
     &--scale {
@@ -38,7 +47,16 @@
     }
 
     &::before {
+      width: 21px;
+      left: 64px;
+      top: 22px;
+    }
+
+    &::after {
+      top: 15px;
       left: 68px;
+      width: 21px;
+      height: 15px;
     }
   }
 
@@ -46,6 +64,7 @@
     &--price {
       order: 1;
       margin-left: 0;
+      margin-top: 10px;
     }
 
     &--scale {
@@ -53,13 +72,23 @@
     }
 
     &::before {
-      left: 68px;
+      left: 85px;
+    }
+
+    &::after {
+      left: 85px;
     }
   }
 }
 
+.level-range__min-price,
+.level-range__max-price {
+  display: block;
+}
+
 .level-range__min-control,
 .level-range__max-control {
+  position: relative;
   width: 110px;
   height: 35px;
   font-size: 15px;
@@ -73,7 +102,6 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    margin-top: -13px;
     width: 75px;
     height: 46px;
     font-size: 20px;
@@ -89,12 +117,12 @@
 }
 
 .level-range__min-control {
-  position: relative;
+  @include border-left-radius (5px, 5px);
   border-right: none;
 }
 
 .level-range__max-control {
-  border-left: none;
+  @include border-right-radius (5px, 5px);
 }
 
 input::-webkit-outer-spin-button,
@@ -108,6 +136,7 @@ input::-webkit-inner-spin-button {
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    margin-top: 13px;
   }
 
   @media (min-width: $desktop-width) {

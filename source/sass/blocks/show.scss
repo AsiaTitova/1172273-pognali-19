@@ -17,7 +17,9 @@
 }
 
 .show__button {
+  position: relative;
   margin: 0 auto;
+  padding-left: 52px;
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
@@ -25,8 +27,28 @@
   background-color: transparent;
   border: none;
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 3px;
+    top: 15px;
+    left: 0;
+    background-color: $dark-slate-blue;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 344px;
+    padding-left: 49px;
   }
 }
 

@@ -29,8 +29,18 @@
   @media (min-width: $desktop-width) {
     @include vertical-paddings (45px, 27px);
     width: 665px;
-    padding-left: 60px;
+    padding-left: 59px;
     padding-right: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 187px;
+      top: 41px;
+      left: 345px;
+      background-image: linear-gradient(to bottom, transparent 5%, $pale-grey 10%, $pale-grey 90%, transparent 95%);
+    }
   }
 }
 
@@ -84,7 +94,7 @@
     padding-right: 140px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -120,30 +130,84 @@
 
   @media (min-width: $desktop-width) {
     width: 250px;
+    padding-left: 3px;
   }
 }
 
 .profile-card__place {
   margin-top: 12px;
   padding-left: 7px;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 1px;
+    top: 10px;
+    left: -20px;
+    z-index: -1;
+    background-color: $pale-grey;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $white;
+  }
 
   @media (min-width: $tablet-width) {
     order: 5;
     padding: 0;
     margin-top: 20px;
+
+    &::before {
+      width: 690px;
+      left: -36px;
+    }
+
+    &::after {
+      left: 40px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     order: 3;
     margin: 0;
-    margin-left: 20px;
+    margin-left: 80px;
     margin-top: 2px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
 
 .profile-card__wrapper {
   display: flex;
   margin-top: 10px;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 1px;
+    top: 12px;
+    left: -20px;
+    z-index: -1;
+    background-color: $pale-grey;
+  }
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -152,6 +216,10 @@
     right: 0;
     order: 6;
     flex-direction: column;
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -162,6 +230,32 @@
     margin-top: 20px;
     order: 5;
     flex-direction: row;
+  }
+}
+
+.profile-card__wrapper .transport__title--catalog {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $white;
+  }
+}
+
+.profile-card__wrapper .level__title--catalog {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 57px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $white;
   }
 }
 
@@ -187,7 +281,7 @@
 
   @media (min-width: $tablet-width) {
     order: 4;
-    padding-left: 221px;
+    padding-left: 220px;
     margin-top: 47px;
     padding-right: 100px;
   }
@@ -195,7 +289,6 @@
   @media (min-width: $desktop-width) {
     order: 4;
     margin: 0;
-    margin-top: -13px;
     padding: 0;
   }
 }
@@ -211,10 +304,10 @@
   background-color: $light-gold;
 
   @media (min-width: $tablet-width) {
-    padding-top: 11px;
+    padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 34px;
     font-size: 20px;
     border-radius: 25px;
   }
@@ -226,46 +319,17 @@
   }
 }
 
-.profile-card__distance {
+.profile-card__like {
   position: absolute;
+  display: flex;
   margin: 0;
   left: 47px;
   top: 42px;
   z-index: 2;
-  padding: 5px 0;
-  padding-left: 37px;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: $dark-grey;
-
-  &::before {
-    @include round (31px, 31px, 50%, $pale-grey);
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
 
   @media (min-width: $tablet-width) {
     position: relative;
     left: 0;
     top: 0;
-    padding: 10px 0;
-    padding-left: 60px;
-    font-size: 20px;
-    line-height: 30px;
-
-    &::before {
-      width: 50px;
-      height: 50px;
-    }
-  }
-}
-
-.like {
-  &::before {
-    background-color: $beige;
   }
 }
