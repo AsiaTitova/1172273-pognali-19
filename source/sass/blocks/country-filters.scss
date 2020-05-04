@@ -1,26 +1,31 @@
-.country-filters__container {
-  @include vertical-paddings (0, 27px);
+.country-filters {
   @include border-bottom-radius (20px, 20px);
   position: relative;
+  background-color: $pale-grey-blue;
+  margin-top: -60px;
+  z-index: 6;
+}
+
+.country-filters__container {
+  @include vertical-paddings (56px, 14px);
   display: flex;
   flex-wrap: wrap;
-  background-color: $pale-grey-blue;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (60px, 74px);
+    @include vertical-paddings (118px, 53px);
     padding-right: 75px;
-    padding-left: 75px;
+    padding-left: 54px;
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (60px, 74px);
-    padding-right: 120px;
-    padding-left: 80px;
+    @include vertical-paddings (117px, 74px);
+    padding-right: 60px;
+    padding-left: 54px;
   }
 }
 
 .country-filters__name {
-  @include vertical-paddings (20px, 20px);
+  @include vertical-paddings (20px, 0);
   @include title (16px, bold, $dark-blue-grey);
   position: relative;
   margin: 0;
@@ -45,9 +50,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    display: block;
-    order: 1;
     position: relative;
+    display: block;
+    order: 2;
+    margin-left: 20px;
     padding: 0;
     padding-left: 44px;
     padding-right: 5px;
@@ -71,17 +77,26 @@
 }
 
 .country-filters__part-world {
+  margin-top: 29px;
+  padding-left: 20px;
+
+  &--close {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     order: 1;
+    margin: 0;
+    display: flex;
   }
 
   @media (min-width: $desktop-width) {
     order: 2;
-    margin-left: 35px;
+    margin-left: 13px;
   }
 }
 
-.country-filters__open {
+.country-filters__toggler {
   @media (min-width: $tablet-width) {
     order: 2;
     margin-left: auto;
@@ -93,23 +108,50 @@
   }
 }
 
-.country-filters__close {
+.country-filters__show {
+  &--close {
+    display: none;
+  }
+
+  &--open {
+    display: block;
+  }
+
   @media (min-width: $tablet-width) {
     order: 3;
+    margin-top: 45px;
+
+    &--close {
+      display: none;
+    }
+
+    &--open {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+    }
   }
 
   @media (min-width: $desktop-width) {
     order: 4;
+    margin-top: 69px;
+
+    &--close {
+      position: relative;
+    }
+
+    &--choice {
+      display: flex;
+    }
   }
 }
 
 .country-filters__alphabet {
-  margin-top: 25px;
+  margin-top: 18px;
 
   @media (min-width: $tablet-width) {
     order: 4;
-    margin-top: 60px;
-    margin-left: -20px;
+    margin-top: unset;
   }
 
   @media (min-width: $desktop-width) {
@@ -119,31 +161,37 @@
 }
 
 .country-filters__country-choice {
+  margin-top: 12px;
+  padding: 0 27px;
+
   @media (min-width: $tablet-width) {
     order: 5;
     padding: 0;
-    margin-top: 60px;
+    padding-right: 20px;
+    margin-top: 9px;
     margin-left: auto;
   }
 
   @media (min-width: $desktop-width) {
     order: 6;
     margin: 0;
-    margin-top: 170px;
+    padding: 0;
+    padding-left: 35px;
   }
 }
 
 .country-filters__hide {
-  @include border-left-radius (20px, 20px);
-  @include border-right-radius (20px, 20px);
   position: relative;
-  width: 270px;
-  padding: 12px 0;
-  margin-top: 41px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 110px;
+  padding-right: 86px;
+  margin-top: 30px;
+  margin-bottom: 14px;
   font-size: 16.5px;
   font-weight: bold;
   line-height: 29.5px;
-  text-align: center;
+  border-radius: 20px;
   color: $dark-grey;
   background-color: $light-blue-grey;
   border: none;
@@ -153,7 +201,7 @@
     content: "";
     position: absolute;
     top: 19px;
-    left: 70px;
+    left: 83px;
     width: 16px;
     height: 2px;
     background-color: $dark-blue-grey;
@@ -166,17 +214,20 @@
 
   @media (min-width: $tablet-width) {
     order: 6;
-    width: 618px;
-    padding: 42px 0;
-    margin-top: 56px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 282px;
+    padding-right: 248px;
+    margin-top: 49px;
+    margin-bottom: 21px;
     border-radius: 20px;
     font-size: 20px;
     line-height: 30px;
 
     &::before,
     &::after {
-      top: 45px;
-      left: 220px;
+      top: 51px;
+      left: 241px;
       width: 22px;
       height: 2px;
     }
@@ -184,12 +235,18 @@
 
   @media (min-width: $desktop-width) {
     order: 7;
-    width: 1320px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 633px;
+    padding-right: 597px;
+    margin: 0;
+    margin-top: 20px;
 
     &::before,
     &::after {
-      top: 55px;
-      left: 530px;
+      top: 49px;
+      left: 591px;
+      width: 25px;
     }
   }
 }

@@ -1,0 +1,119 @@
+.price-list {
+  @include text ($light, $greyish-brown);
+  position: relative;
+  z-index: 2;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    background-color: $grey-opacity;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    font-size: 28px;
+    line-height: 33px;
+
+    &::before {
+      left: 78px;
+      width: 578px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 826px;
+    }
+  }
+}
+
+.price-list__item {
+  @include vertical-paddings (11px, 12px);
+  position: relative;
+  padding-right: 40px;
+
+  &::before {
+    @include round (34px, 34px, 50%, $light-mango);
+    content: "1";
+    position: absolute;
+    top: 6px;
+    right: 0;
+    padding: 10px 13px;
+    color: $white;
+    line-height: 0.88;
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    background-color: $grey-opacity;
+    bottom: 0;
+    left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 18px;
+    padding-left: 91px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      top: 0;
+      left: 0;
+      padding: 20px 25px;
+      line-height: 1;
+    }
+
+    &::after {
+      left: 80px;
+      width: 578px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 272px;
+    padding-bottom: 19px;
+    padding-left: 90px;
+
+    &::after {
+      width: 826px;
+    }
+  }
+}
+
+.price-list__item:nth-child(2) {
+  &::before {
+    content: "2";
+    background-color: $lighter-mango;
+  }
+}
+
+.price-list__item:last-child {
+  &::before {
+    content: "3";
+    background-color: $light-gold;
+  }
+}
+
+.price-list__offers {
+  margin: 0;
+}
+
+.price-list__cost {
+  margin: 0;
+}

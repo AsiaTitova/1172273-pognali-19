@@ -1,0 +1,24 @@
+.button {
+  position: relative;
+  display: block;
+  font-family: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $dark-slate-blue;
+  cursor: pointer;
+
+  &--arrow::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    right: 36px;
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--bg {
+    background-color: $light-gold;
+  }
+}

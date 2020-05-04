@@ -1,13 +1,16 @@
 .form-search__container {
-  @include vertical-paddings (27px, 22px);
+  @include wrapper ($mobile-width, 0 auto, 0 25px);
+  @include vertical-paddings (56px, 27px);
   background-color: $pale-grey;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (40px, 40px);
+    @include wrapper ($tablet-width, 0 auto, 0 40px);
+    @include vertical-paddings (78px, 40px);
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
+    margin: 0;
     margin-left: auto;
     width: 285px;
   }

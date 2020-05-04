@@ -1,17 +1,27 @@
 .socials-list {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin-top: 38px;
+  margin-bottom: 0;
   display: flex;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  margin-top: 41px;
+
+  &--navigation {
+    margin: 0;
+    margin-top: 141px;
+    padding-left: 66px;
+  }
 }
 
 .socials-list__item {
   display: block;
   width: 45px;
   height: 45px;
+}
+
+.socials-list__item--navigation:not(:first-child) {
+  @media (min-width: $tablet-width) {
+    margin-left: 15px;
+  }
 }
 
 .socials-list__item--fb {

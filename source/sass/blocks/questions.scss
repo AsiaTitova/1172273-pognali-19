@@ -1,14 +1,28 @@
-.questions__container {
+.questions {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-paddings (72px, 38px);
   background-color: $dark-blue-grey;
+  position: relative;
+  z-index: 3;
+  margin-top: -58px;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (77px, 84px);
+    @include border-bottom-radius (50px, 50px);
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (103px, 138px);
+    @include border-bottom-radius (60px, 60px);
+  }
+}
+
+.questions__container {
+  @include vertical-paddings (129px, 30px);
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (130px, 59px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (163px, 101px);
   }
 }
 
@@ -26,18 +40,34 @@
 .questions__text {
   @include text ($light, $white);
   margin: 0;
-  margin-top: 44px;
-  padding: 0 36px;
+  margin-top: 19px;
+  padding: 0 35px;
   text-align: center;
 
+  &--answer {
+    margin-top: 27px;
+    padding: 0 20px;
+  }
+
   @media (min-width: $tablet-width) {
-    margin-top: 60px;
+    margin-top: 58px;
     font-size: 28px;
     line-height: 33px;
+
+    &--answer {
+      margin-top: 56px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 60px;
+    margin-top: 57px;
+    padding: 0 275px;
+
+    &--answer {
+      margin-top: 66px;
+      padding-left: 350px;
+      text-align: left;
+    }
   }
 }
 
@@ -46,141 +76,30 @@
 }
 
 .questions__form {
-  margin-top: 32px;
+  margin-top: 30px;
 
   @media (min-width: $tablet-width) {
     margin: 0 35px;
     margin-top: 67px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 72px;
+    margin-top: 59px;
+  }
 }
 
-.contacts {
-  margin: 0;
-  margin-top: 36px;
-  padding: 0;
-  list-style-type: none;
-  position: relative;
+.questions__contacts.contacts {
+  margin-top: 18px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 66px;
-    padding-left: 35px;
+    margin-top: 41px;
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 180px;
-    margin-top: 78px;
+    margin-left: 223px;
+    margin-right: 180px;
+    margin-top: 41px;
   }
 }
 
-.contacts__item:last-child {
-  margin-top: 32px;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 45px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-top: 0;
-    margin-left: 111px;
-  }
-}
-
-.contacts__tel {
-  position: relative;
-  display: block;
-  padding-left: 61px;
-  font-weight: bold;
-  text-align: left;
-  color: $light-gold;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -14px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: $dark-grey;
-    background-image: url("../img/contacts-phone.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 18px 18px;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-left: 95px;
-    font-size: 28px;
-    line-height: 1;
-
-    &::before {
-      width: 67px;
-      height: 67px;
-      top: -25px;
-      background-size: 27px 27px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 132px;
-
-    &::before {
-      width: 90px;
-      height: 90px;
-      top: -30px;
-      background-size: 36px 36px;
-    }
-  }
-}
-
-.contacts__email {
-  position: relative;
-  display: block;
-  padding-left: 61px;
-  font-weight: bold;
-  text-align: left;
-  text-transform: uppercase;
-  color: $light-gold;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -14px;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: $dark-grey;
-    background-image: url("../img/contacts-mail.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 18px 18px;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-left: 95px;
-    font-size: 28px;
-    line-height: 28px;
-
-    &::before {
-      width: 67px;
-      height: 67px;
-      top: -25px;
-      background-size: 27px 27px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-left: 132px;
-
-    &::before {
-      width: 90px;
-      height: 90px;
-      top: -30px;
-      background-size: 36px 36px;
-    }
-  }
-}

@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  position: relative;
   font-family: $font-name;
   font-size: 16px;
   line-height: 22px;
@@ -29,10 +30,3 @@ body {
   border: 0;
 }
 
-.button {
-  display: block;
-  font-family: inherit;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-}

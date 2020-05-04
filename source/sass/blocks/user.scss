@@ -3,103 +3,61 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  margin-top: 58px;
-}
+  display: flex;
 
-@media (min-width: $tablet-width) {
-  .user {
-    padding-left: 75px;
-  }
-}
-
-@media (min-width: $mobile-width) {
-  .user__link--login {
-    display: block;
-    padding: 16px 0;
-    width: 270px;
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 1.76;
-    text-align: center;
-    color: $dark-grey;
-    background-color: $light-gold;
-    border-radius: 25px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .user__link--login {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
-@media (min-width: $mobile-width) {
-  .user__link {
-    position: relative;
-    font-weight: bold;
-    color: $dark-blue-grey;
+.user__link {
+  position: relative;
+  font-weight: bold;
+  color: $dark-blue-grey;
 
-    &--tel {
-      margin-top: 67px;
-      padding-left: 61px;
-    }
-
-    &--tel::before {
-      @include round (45px, 45px, 50%, $dark-grey);
-      content: "";
-      position: absolute;
-      left: 0;
-      top: -14px;
-      background-image: url("../img/contacts-phone.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 18px 18px;
-    }
-
-    &--email {
-      margin-top: 32px;
-      padding-left: 61px;
-    }
-
-    &--email::before {
-      @include round (45px, 45px, 50%, $dark-grey);
-      content: "";
-      position: absolute;
-      left: 0;
-      top: -14px;
-      background-image: url("../img/contacts-mail.svg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 18px 18px;
-    }
+  &--tel {
+    width: 40px;
+    height: 40px;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .user__link {
-    font-size: 28px;
-    line-height: 28px;
+  &--tel::before {
+    @include round (40px, 40px, 50%, $mango);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../img/topmenu-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px 18px;
+  }
 
-    &--tel {
-      margin-top: 173px;
-      padding-left: 91px;
-    }
+  &--email {
+    width: 40px;
+    height: 40px;
+  }
 
-    &--tel::before {
-      @include round (67px, 67px, 50%, $dark-grey);
-      top: -24px;
-      background-size: 27px 27px;
-    }
+  &--email::before {
+    @include round (40px, 40px, 50%, $lighter-mango);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("../../img/topmenu-mail.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px 18px;
+  }
 
-    &--email {
-      margin-top: 45px;
-      padding-left: 91px;
-    }
-
-    &--email::before {
-      @include round (67px, 67px, 50%, $dark-grey);
-      top: -24px;
-      background-size: 27px 27px;
-    }
+  &--login {
+    display: block;
+    padding: 6px 39px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    color: $dark-grey;
+    background-color: $light-gold;
+    border-radius: 25px;
   }
 }

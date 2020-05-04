@@ -1,26 +1,76 @@
-.travelers__container {
+.travelers {
   @include border-bottom-radius (20px, 20px);
-  @include vertical-paddings (72px, 88px);
-  position: relative;
   background-color: $dark-blue-grey;
-  background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png"), linear-gradient($darker-blue-grey);
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 143px 143px, 71px 71px, 132px 132px;
-  background-position: 152px 39px, -10px 311px, -19px 39px;
+  position: relative;
+  z-index: 5;
+  top: -111px;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (143px, 88px);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background-size: 143px 143px, 285px 285px, 213px 213px;
-    background-position: 40px 425px, 405px 80px, 40px 80px;
+    @include border-bottom-radius (50px, 50px);
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (131px, 134px);
-    background-size: 143px 143px, 285px 285px, 213px 213px;
-    background-position: 547px 133px, 192px 385px, 60px 68px;
+    @include border-bottom-radius (60px, 60px);
+  }
+}
+
+.travelers__container {
+  @include vertical-paddings (120px, 30px);
+  position: relative;
+  background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-desktop@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 143px 143px, 71px 71px;
+  background-position: 153px 88px, -10px 360px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 89px;
+    z-index: -1;
+    width: 132px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: $darker-blue-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (186px, 88px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-size: 143px 143px, 285px 285px;
+    background-position: 41px 474px, 408px 127px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 40px;
+      top: 127px;
+      z-index: -1;
+      width: 213px;
+      height: 213px;
+      border-radius: 20px;
+      background-color: $darker-blue-grey;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (174px, 134px);
+    background-size: 143px 143px, 285px 285px;
+    background-position: 547px 182px, 192px 435px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 60px;
+      top: 116px;
+      z-index: -1;
+      width: 213px;
+      height: 213px;
+      border-radius: 20px;
+      background-color: $darker-blue-grey;
+    }
   }
 }
 
@@ -31,13 +81,13 @@
   line-height: 24px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 35px;
+    padding-left: 32px;
     font-size: 45px;
     line-height: 45px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 71px;
+    padding-left: 69px;
   }
 }
 
@@ -45,20 +95,20 @@
   @include text ($light, $white);
   padding: 0 25px;
   margin: 0;
-  margin-top: 25px;
-  line-height: 18px;
+  margin-top: 20px;
+  line-height: 22px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 61px;
+    margin-top: 58px;
     padding-left: 35px;
     padding-right: 226px;
     font-size: 28px;
-    line-height: 30px;
+    line-height: 33px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 0;
-    margin-top: 61px;
+    margin-top: 57px;
     padding-left: 71px;
     width: 503px;
   }
@@ -68,7 +118,7 @@
   font-weight: $bold;
 
   @media (min-width: $tablet-width) {
-    margin-top: 46px;
+    margin-top: 39px;
     padding-left: 35px;
     padding-right: 400px;
     font-size: 21px;
@@ -76,7 +126,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 46px;
+    margin-top: 41px;
+    padding: 0;
     padding-left: 71px;
   }
 }
@@ -85,20 +136,20 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 60px;
+  margin-top: 58px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 35px;
-    margin-top: 62px;
+    margin-top: 60px;
+    padding: 0 35px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
     position: absolute;
-    top: 133px;
-    right: 60px;
+    top: 183px;
+    right: 25px;
   }
 }
 
@@ -112,7 +163,7 @@
 
 .travelers__item:nth-child(2n) {
   @media (min-width: $tablet-width) {
-    margin-left: 43px;
+    margin-left: 48px;
   }
 
   @media (min-width: $desktop-width) {
@@ -128,12 +179,12 @@
 
 .travelers__link {
   position: relative;
-  margin-top: 20px;
-  padding: 24px;
+  margin-top: 21px;
+  padding: 22px 24px;
   background-color: $light-gold;
   font-size: 18px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 18px;
   color: $dark-slate-blue;
   border-radius: 10px;
   text-transform: none;
@@ -141,8 +192,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 26px;
-    right: 36px;
+    top: 24px;
+    right: 23px;
     width: 10px;
     height: 14px;
     background-image: url("../img/triangle-arrow-right.svg");
@@ -150,8 +201,18 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0 35px;
-    margin-top: 60px;
+    margin-left: 35px;
+    margin-right: 41px;
+    margin-top: 79px;
+    padding: 29px 33px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+
+    &::before {
+      top: 35px;
+      right: 36px;
+    }
   }
 
   @media (min-width: $desktop-width) {

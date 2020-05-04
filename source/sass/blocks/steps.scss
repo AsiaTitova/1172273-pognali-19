@@ -1,0 +1,232 @@
+.steps__list {
+  width: 270px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 688px;
+    display: flex;
+    flex-wrap: wrap;
+    order: 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 1320px;
+  }
+}
+
+.steps__item {
+  position: relative;
+  margin-top: -15px;
+  width: 270px;
+  padding-top: 21px;
+  padding-bottom: 38px;
+  padding-left: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: left;
+  color: $dark-grey;
+  border-radius: 10px;
+
+  &--one {
+    z-index: 1;
+    margin-top: unset;
+    padding-right: 140px;
+    background-color: $mango;
+  }
+
+  &--one::before {
+    content: "1";
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+  }
+
+  &--two {
+    z-index: 2;
+    padding-right: 96px;
+    background-color: $light-mango;
+  }
+
+  &--two::before {
+    content: "2";
+    position: absolute;
+    top: 21px;
+    right: 22px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+  }
+
+  &--three {
+    z-index: 3;
+    padding-right: 105px;
+    background-color: $lighter-mango;
+  }
+
+  &--three::before {
+    content: "3";
+    position: absolute;
+    top: 21px;
+    right: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+  }
+
+  &--four {
+    z-index: 4;
+    padding-bottom: 23px;
+    padding-right: 125px;
+    background-color: $light-gold;
+  }
+
+  &--four::before {
+    content: "4";
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 31px;
+    padding-bottom: 61px;
+    padding-left: 33px;
+    margin-top: unset;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: left;
+    color: $dark-grey;
+    border-radius: 20px;
+    font-size: 24px;
+
+    &--one {
+      @include border-bottom-radius (0, 0);
+      width: 379px;
+    }
+
+    &--one::before {
+      top: 41px;
+      left: 33px;
+      right: unset;
+      font-size: 30px;
+      line-height: 120px;
+    }
+
+    &--two {
+      @include border-bottom-radius (0, 0);
+      width: 344px;
+      margin-left: -35px;
+    }
+
+    &--two::before {
+      top: 41px;
+      left: 33px;
+      right: unset;
+      font-size: 30px;
+      line-height: 120px;
+    }
+
+    &--three {
+      @include border-top-radius (0, 0);
+      width: 379px;
+    }
+
+    &--three::before {
+      top: 41px;
+      left: 33px;
+      right: unset;
+      font-size: 30px;
+      line-height: 120px;
+    }
+
+    &--four {
+      @include border-top-radius (0, 0);
+      width: 344px;
+      margin-left: -35px;
+    }
+
+    &--four::before {
+      top: 41px;
+      left: 33px;
+      right: unset;
+      font-size: 30px;
+      line-height: 120px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 27px;
+    padding-bottom: 31px;
+    padding-left: 30px;
+    margin-left: -40px;
+    border-radius: 20px;
+
+    &--one {
+      margin-left: unset;
+      width: 355px;
+      padding-left: 33px;
+    }
+
+    &--one::before {
+      top: -20px;
+      right: 74px;
+      left: unset;
+      font-size: 24px;
+      line-height: 120px;
+    }
+
+    &--two {
+      width: 385px;
+    }
+
+    &--two::before {
+      top: -20px;
+      right: 74px;
+      left: unset;
+      font-size: 24px;
+      line-height: 120px;
+    }
+
+    &--three {
+      width: 385px;
+    }
+
+    &--three::before {
+      top: -20px;
+      right: 74px;
+      left: unset;
+      font-size: 24px;
+      line-height: 120px;
+    }
+
+    &--four {
+      width: 315px;
+    }
+
+    &--four::before {
+      top: -20px;
+      right: 35px;
+      left: unset;
+      font-size: 24px;
+      line-height: 120px;
+    }
+  }
+}

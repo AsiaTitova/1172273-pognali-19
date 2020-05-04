@@ -15,6 +15,36 @@
     clip: rect(11px, 100px, 100px, 0);
   }
 
+  &--index::before {
+    width: 60px;
+    height: 60px;
+    top: -9px;
+    left: -17px;
+    background-color: $black-opacity;
+    z-index: 0;
+  }
+
+  &--catalog::before {
+    width: 45px;
+    height: 45px;
+    top: 6px;
+  }
+
+  &--99::before {
+    transform: rotate(0);
+    clip: rect(0, 100px, 100px, 0);
+  }
+
+  &--50::before {
+    transform: rotate(-90deg);
+    clip: rect(29px, 100px, 100px, 0);
+  }
+
+  &--25::before {
+    transform: rotate(-138deg);
+    clip: rect(51px, 100px, 100px, 0);
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -26,9 +56,55 @@
     z-index: 1;
   }
 
+  &--index::after {
+    top: 22px;
+    left: -3px;
+    width: 31px;
+    height: 1px;
+    opacity: 0.3;
+    background-color: $cloudy-blue;
+    z-index: 1;
+  }
+
+  &--catalog::after {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--catalog::before {
+      width: 60px;
+      height: 60px;
+      top: -11px;
+      left: -17px;
+    }
+
+    &--catalog::after {
+      display: block;
+      width: 31px;
+      height: 1px;
+      opacity: 0.1;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     &::after {
       opacity: 0.3;
+    }
+  }
+}
+
+.level__title {
+  position: relative;
+  display: none;
+
+  &--catalog {
+    display: block;
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--catalog {
+      display: none;
     }
   }
 }
@@ -41,6 +117,32 @@
   text-align: center;
   color: $dark-grey;
 
+  &--index {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: normal;
+    color: $white;
+    z-index: 1;
+  }
+
+  &--catalog {
+    margin-top: 20px;
+    padding-left: 10px;
+    font-size: 24px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--catalog {
+      margin-top: 0;
+      padding: 0;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     color: $white;
   }
@@ -48,10 +150,30 @@
 
 .level__text {
   margin: 0;
+  margin-top: 3px;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
   color: $greyish-brown;
+
+  &--index {
+    font-size: 14px;
+    line-height: 14px;
+    color: $white;
+    z-index: 1;
+  }
+
+  &--catalog {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--catalog {
+      display: block;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
 
   @media (min-width: $desktop-width) {
     color: $white;

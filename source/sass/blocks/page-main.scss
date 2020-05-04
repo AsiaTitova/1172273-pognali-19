@@ -1,10 +1,20 @@
+.page-main {
+  position: relative;
+  z-index: 1;
+  background-color: $pale-grey;
+}
+
 .page-main__container {
   @include vertical-paddings (28px, 46px);
-  background-color: $pale-grey;
+  position: relative;
+  margin-top: -60px;
+
 
   @media (min-width: $desktop-width) {
-    @include wrapper (1440px, 0 auto, 0 60px);
-    @include vertical-paddings (151px, 76px);
+    @include wrapper ($desktop-width, 0 auto, unset);
+    @include vertical-paddings (75px, 76px);
+    padding-left: 54px;
+    padding-right: 66px;
     display: flex;
   }
 }

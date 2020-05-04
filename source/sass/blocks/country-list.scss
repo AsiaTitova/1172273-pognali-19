@@ -1,20 +1,14 @@
-
 .country-list {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  margin-top: 66px;
-  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 113px;
-    margin-bottom: 47px;
     padding-left: 35px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 406px;
+      top: 469px;
       left: 40px;
       width: 141px;
       height: 141px;
@@ -24,10 +18,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 161px;
-    left: 132px;
-    margin: 0;
     padding: 0;
 
     &::before {
@@ -52,12 +42,10 @@
 .country-list__item {
   position: relative;
   width: 270px;
-  height: 190px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     width: 616px;
-    height: 140px;
   }
 }
 
@@ -66,29 +54,37 @@
 }
 
 .country-list__container {
-  @include border-top-radius (10px, 10px);
-  position: absolute;
-  bottom: 0;
+  position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: space-between;
   width: 270px;
-  height: 90px;
-  padding: 0 24px;
+  margin-top: -11px;
+  padding: 24px;
+  border-radius: 10px;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
     @include border-left-radius (20px, 20px);
-    border-top-right-radius: 0;
+    @include border-right-radius (0, 0);
     position: relative;
     z-index: 0;
-    width: 430px;
-    height: 140px;
-    padding: 0 30px;
+    order: 1;
+    display: block;
+    margin-top: 0;
+    width: 435px;
+    padding: 30px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 372px;
+    padding: 21px 30px;
   }
 }
 
 .country-list__image {
-  position: absolute;
-  top: 0;
+  position: relative;
   z-index: 1;
   width: 270px;
   display: block;
@@ -96,6 +92,7 @@
   @media (min-width: $tablet-width) {
     position: relative;
     z-index: 0;
+    order: 2;
     width: 186px;
     height: 140px;
   }
@@ -111,48 +108,56 @@
   }
 }
 
+.country-list__wrapper {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 21px;
+  }
+}
+
 .country-list__name {
   margin: 0;
-  margin-top: 28px;
+  margin-bottom: 4px;
   font-size: 21px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 21px;
   color: $dark-grey;
 
   @media (min-width: $tablet-width) {
-    margin-top: 32px;
+    margin-bottom: 5px;
     font-size: 24px;
+    line-height: 24px;
   }
 }
 
 .country-list__slogan {
   margin: 0;
-  margin-top: 5px;
   font-weight: 500;
-  line-height: 1.13;
+  line-height: 18px;
   color: $grey-opacity;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
-    line-height: 0.88;
   }
 }
 
 .country-list__travelers {
-  position: absolute;
-  top: 21px;
-  right: 26px;
+  position: relative;
   margin: 0;
+  padding-left: 18px;
   font-weight: 500;
-  line-height: 1.88;
+  line-height: 30px;
   text-align: right;
   color: $grey-opacity;
 
   &::before {
     content: "";
     position: absolute;
-    top: 10px;
-    right: 44px;
+    top: 8px;
+    left: 0;
     width: 11px;
     height: 11px;
     background-image: url("../img/user.svg.png");
@@ -162,21 +167,33 @@
 
   @media (min-width: $tablet-width) {
     position: relative;
-    top: 0;
-    margin-top: 21px;
-    padding-left: 58px;
+    padding-left: 30px;
     font-size: 20px;
-    line-height: 1.5;
     text-align: left;
 
     &::before {
       content: "";
-      top: 4px;
-      right: 0;
-      left: 30px;
+      top: 6px;
       width: 21px;
       height: 20px;
       background-size: 21px 20px;
     }
+  }
+}
+
+.country-list__flag {
+  position: absolute;
+  top: 87px;
+  left: 25px;
+  z-index: 3;
+
+  @media (min-width: $tablet-width) {
+    top: 16px;
+    left: 398px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 22px;
+    left: 337px;
   }
 }

@@ -1,0 +1,335 @@
+/**разметка карточек**/
+
+.profile-card {
+  @include wrapper(270px, 0 auto, 0 20px);
+  @include vertical-paddings (13px, 22px);
+  position: relative;
+  background-color: $white;
+  border-radius: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include wrapper(688px, 0 auto, 0 35px);
+    @include vertical-paddings (32px, 21px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include wrapper(950px, 0, 0);
+    display: flex;
+  }
+}
+
+.profile-card__content {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (45px, 27px);
+    width: 665px;
+    padding-left: 59px;
+    padding-right: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 187px;
+      top: 41px;
+      left: 345px;
+      background-image: linear-gradient(to bottom, transparent 5%, $pale-grey 10%, $pale-grey 90%, transparent 95%);
+    }
+  }
+}
+
+.profile-card:not(:first-child) {
+  margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+  }
+}
+
+.profile-card__photo {
+  position: absolute;
+  display: block;
+  width: 70px;
+  height: 70px;
+  top: 16px;
+  left: 18px;
+  z-index: 2;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    width: 190px;
+    height: 190px;
+    top: 35px;
+    left: 35px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include border-right-radius (0, 0);
+    position: relative;
+    width: 285px;
+    height: 285px;
+    top: 0;
+    left: 0;
+  }
+}
+
+.profile-card__info {
+  padding-right: 50px;
+
+  @media (min-width: $tablet-width) {
+    order: 2;
+    padding-left: 223px;
+    padding-right: 140px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.profile-card__name {
+  @include title (20px, bold, $dark-slate-blue);
+  margin: 0;
+  padding-left: 85px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+.profile-card__interests {
+  margin: 0;
+  margin-top: 46px;
+  padding-left: 6px;
+  font-size: 15px;
+  line-height: 18px;
+  color: $greyish-brown;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-top: 17px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
+    padding-left: 3px;
+  }
+}
+
+.profile-card__place {
+  margin-top: 12px;
+  padding-left: 7px;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 1px;
+    top: 10px;
+    left: -20px;
+    z-index: -1;
+    background-color: $pale-grey;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 5;
+    padding: 0;
+    margin-top: 20px;
+
+    &::before {
+      width: 690px;
+      left: -36px;
+    }
+
+    &::after {
+      left: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 3;
+    margin: 0;
+    margin-left: 80px;
+    margin-top: 2px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.profile-card__wrapper {
+  display: flex;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 1px;
+    top: 12px;
+    left: -20px;
+    z-index: -1;
+    background-color: $pale-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: 0;
+    order: 6;
+    flex-direction: column;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    right: 0;
+    margin: 0;
+    margin-left: 67px;
+    margin-top: 20px;
+    order: 5;
+    flex-direction: row;
+  }
+}
+
+.profile-card__wrapper .transport__title--catalog {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $white;
+  }
+}
+
+.profile-card__wrapper .level__title--catalog {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 57px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $white;
+  }
+}
+
+.profile-card__level {
+  margin: 0;
+  margin-left: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: unset;
+    margin-top: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-left: 63px;
+  }
+}
+
+.profile-card__call {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    order: 4;
+    padding-left: 220px;
+    margin-top: 47px;
+    padding-right: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 4;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.profile-card__link {
+  padding: 5px 79px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 20px;
+  color: $dark-grey;
+  background-color: $light-gold;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 34px;
+    font-size: 20px;
+    border-radius: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 10px;
+    padding-left: 28px;
+    padding-right: 34px;
+  }
+}
+
+.profile-card__like {
+  position: absolute;
+  display: flex;
+  margin: 0;
+  left: 47px;
+  top: 42px;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}

@@ -15,11 +15,9 @@
 }
 
 .part-world__button {
-  @include vertical-paddings (8px, 8px);
-  padding-left: 25px;
+  @include vertical-paddings (2px, 2px);
   text-align: left;
   font-weight: bold;
-  line-height: 1.38;
   text-transform: uppercase;
   color: $grey-opacity;
   border: none;
@@ -33,7 +31,10 @@
 }
 
 .part-world__item:not(:first-child) {
+  margin-top: 6px;
+
   @media (min-width: $tablet-width) {
+    margin-top: 0;
     margin-left: 25px;
   }
 }
