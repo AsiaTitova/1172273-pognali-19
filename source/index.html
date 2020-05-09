@@ -38,7 +38,7 @@
 
 <body>
   <header class="page-header page-header--index">
-    <nav class="page-header__main-navigation main-navigation">
+    <nav class="page-header__main-navigation main-navigation main-navigation--index">
       <div class="main-navigation__container container">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo logo" href="#">
@@ -57,7 +57,7 @@
           </button>
         </div>
         <ul class="main-navigation__site-list site-list">
-          <li class="site-list__item site-list__item--current"><a class="site-list__link button" href="#"
+          <li class="site-list__item"><a class="site-list__link site-list__link--current button" href="#"
               aria-label="О сервисе">О сервисе</a></li>
           <li class="site-list__item"><a class="site-list__link button" href="form.html"
               aria-label="Направления">Направления</a></li>
@@ -207,7 +207,7 @@
               <img class="card__photo" src="img/firsova-desktop@1x.jpg" width="100%" alt="Фото профиля">
             </picture>
             <div class="card__container">
-              <h3 class="card__name">Таня Фирсова</h3>
+              <a class="card__name" href="#" aria-label="профиль Тани Фирсоовой">Таня Фирсова</a>
               <p class="card__interests">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
               <ul class="card__flag-list flag-list">
                 <li class="flag-list__item">
@@ -240,10 +240,10 @@
               <source media="(min-width: 1200px)" srcset="img/demin-desktop@1x.jpg">
               <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg">
               <source media="(min-width: 320px)" srcset="img/demin-desktop@1x.jpg">
-              <img class="profile-card__photo-img profile-card__photo-img--index" src="img/demin-desktop@1x.jpg" width="100%" alt="Фото профиля">
+              <img class="card__photo" src="img/demin-desktop@1x.jpg" width="100%" alt="Фото профиля">
             </picture>
             <div class="card__container">
-              <h3 class="card__name">Петя Демин</h3>
+              <a class="card__name" href="#" aria-label="профиль Пети Дёмина">Петя Демин</a>
               <p class="card__interests">#бургер #бар #футбол #концерт #крафт</p>
               <ul class="card__flag-list flag-list">
                 <li class="flag-list__item">

@@ -13,6 +13,18 @@
   border: none;
   background-color: $white;
 
+  &:hover {
+    color: $greyish-brown-opacity50;
+    background-color: $pale-grey;
+  }
+
+  &:focus,
+  &:active {
+    border: 4px solid $white;
+    background-color: transparent;
+    color: $white;
+  }
+
   @media (min-width: $tablet-width) {
     @include border-left-radius (20px, 20px);
     @include border-right-radius (0, 0);

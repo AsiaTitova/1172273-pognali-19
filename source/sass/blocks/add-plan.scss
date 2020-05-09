@@ -1,23 +1,35 @@
 .add-plan__container {
   @include border-top-radius (20px, 20px);
-  @include vertical-paddings (30px, 30px);
+  @include vertical-paddings (28px, 62px);
   background-color: $light-blue-grey;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (57px, 63px);
+    @include vertical-paddings (43px, 177px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include vertical-paddings (46px, 187px);
   }
 }
 
 .add-plan_wrapper {
+  @include wrapper ($mobile-width, 0 auto, 0 25px);
   position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 31px;
+  padding-right: 34px;
 
   @media (min-width: $tablet-width) {
+    @include wrapper (688px, 0 auto, 0 75px);
     padding-right: 35px;
     padding-left: 35px;
-    margin-bottom: 60px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include wrapper ($desktop-width, 0 auto, 0 130px);
+    margin-bottom: 52px;
   }
 }
 
@@ -37,5 +49,19 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 44px;
+  }
+}
+
+.add-plan__fieldset:last-child {
+  @media (min-width: $tablet-width) {
+    margin-top: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 45px;
   }
 }

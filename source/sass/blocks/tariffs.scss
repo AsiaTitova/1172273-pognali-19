@@ -106,7 +106,16 @@
   font-weight: $bold;
   line-height: 16px;
   text-transform: none;
-  color: $dark-blue-grey;
+  color: $light-navy;
+
+  &:hover,
+  &:focus {
+    color: $light-navy70;
+  }
+
+  &:active {
+    color: $light-navy30;
+  }
 
   @media (min-width: $tablet-width) {
     position: relative;

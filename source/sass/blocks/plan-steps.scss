@@ -1,34 +1,41 @@
 .plan-steps {
   @include wrapper (270px, 0 auto, 0 25px);
-  @include vertical-paddings (24px, 24px);
+  @include vertical-paddings (22px, 6px);
   position: relative;
   border-radius: 10px;
   background-color: $white;
   border: none;
 
+  &--pb {
+    padding-bottom: 22px;
+  }
+
   @media (min-width: $tablet-width) {
-    @include wrapper (618px, 0 auto, 0 40px);
-    @include vertical-paddings (49px, 55px);
+    @include wrapper (618px, 0 auto, 0 44px);
+    @include vertical-paddings (45px, 47px);
     border-radius: 30px;
     display: flex;
     flex-wrap: wrap;
+
+    &--pb {
+      padding-bottom: 55px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    @include wrapper (1320px, 0 auto, 0 162px);
-    @include vertical-paddings (100px, 105px);
+    @include wrapper (1320px, 0 auto, 0 160px);
+    @include vertical-paddings (88px, 99px);
+    border-radius: 60px;
+
+    &--pb {
+      padding-bottom: 105px;
+    }
   }
 }
 
-.plan-steps__legend {
+.plan-steps .button--arrow::before,
+.plan-steps .button--back::before {
   display: none;
-}
-
-.plan-steps__wrapper {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-  }
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -39,16 +46,19 @@
   @include title (20px, bold, $dark-slate-blue);
   line-height: 20px;
   margin: 0;
-  padding: 0 24px;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
     order: 1;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 20px;
+    line-height: 50px;
+    padding-right: 250px;
+    margin-bottom: 29px;
   }
 }
 
@@ -60,8 +70,7 @@
 
 .plan-steps__text {
   margin: 0;
-  margin-top: 18px;
-  margin-bottom: 24px;
+  margin-bottom: 21px;
   line-height: 22px;
   color: $greyish-brown;
 
@@ -69,21 +78,24 @@
     order: 2;
     font-size: 20px;
     line-height: 24px;
-    margin-top: 37px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+
+    &--mb {
+      margin-bottom: 35px;
+    }
+
+    &--pr {
+      padding-right: 130px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    &--one {
-      width: 576px;
-    }
+    padding-right: 420px;
+    margin-bottom: 56px;
 
-    &--two {
-      width: 406px;
-    }
-
-    &--three {
-      width: 472px;
-      margin-bottom: 0;
+    &--pr {
+      padding-right: 590px;
     }
   }
 }
@@ -98,38 +110,63 @@
 }
 
 .plan-steps__registration {
+  margin-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   @media (min-width: $desktop-width) {
     order: 3;
-    margin-top: 56px;
+    margin-bottom: 32px;
   }
 }
 
 .plan-steps__calendar {
-  margin-top: 27px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
-    order: 6;
-    margin-top: 59px;
+    order: 4;
+    margin-top: 41px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 53px;
+  }
+}
+
+.plan-steps__road {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 55px;
+    flex-grow: 1;
   }
 }
 
 .plan-steps__link,
 .plan-steps__submit {
-  display: inline-block;
-  margin-top: 23px;
-  padding: 6px 40px;
+  padding: 5px 40px;
   border-radius: 20px;
-  background-color: $light-gold;
   font-size: 17px;
   font-weight: bold;
-  line-height: 1.76;
+  line-height: 30px;
   color: $dark-grey;
   border: none;
 
   @media (min-width: $tablet-width) {
-    width: 263px;
-    margin-top: 46px;
-    padding: 28px;
+    padding-left: 33px;
+    padding-right: 77px;
+    padding-top: 28px;
+    padding-bottom: 29px;
     font-size: 24px;
     font-weight: bold;
     line-height: 24px;
@@ -137,38 +174,77 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 56px;
+    width: 285px;
   }
 }
 
 .plan-steps__link {
+  &:active {
+    color: $dark-slate-blue-opacity30;
+  }
+
+  &--next {
+    margin-bottom: 6px;
+  }
+
+  &--prev {
+    padding-left: 53px;
+    padding-right: 27px;
+    border: none;
+    background-color: transparent;
+  }
+
+  &--prev:hover,
+  &--prev:focus {
+    color: $dark-slate-blue-opacity70;
+  }
+
+  &--prev:active {
+    color: $dark-slate-blue-opacity30;
+  }
+
   @media (min-width: $tablet-width) {
     order: 7;
+
+    &--prev {
+      margin-left: 46px;
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--prev {
+      width: 204px;
+      padding-right: 3px;
+      padding-left: 35px;
+      margin-left: auto;
+      text-align: right;
+    }
   }
 }
 
 .plan-steps__actions {
+  margin-bottom: 22px;
+
   @media (min-width: $tablet-width) {
     order: 3;
-    margin-top: 74px;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
   }
 }
 
 .plan-steps__submit {
+  padding-left: 65px;
+  padding-right: 72px;
+  margin-bottom: 6px;
+
   @media (min-width: $tablet-width) {
     order: 4;
-  }
-}
-
-.link-prev {
-  border: none;
-  background-color: transparent;
-
-  @media (min-width: $tablet-width) {
-    margin-left: 6px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 420px;
+    padding-left: 32px;
+    padding-bottom: 29px;
+    padding-right: 139px;
   }
 }

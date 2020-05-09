@@ -1,15 +1,13 @@
-.slider__button {
+.slider {
   margin-left: auto;
   display: flex;
 
   @media (min-width: $desktop-width) {
-    flex-direction: column;
+    display: none;
   }
 }
 
-.slider-button__one,
-.slider-button__two,
-.slider-button__three {
+.slider__button {
   position: relative;
   width: 10px;
   height: 10px;
@@ -17,26 +15,20 @@
   border-radius: 50%;
   background-color: transparent;
 
-  @media (min-width: $desktop-width) {
-    font-size: 20px;
-    line-height: 13.8px;
-    letter-spacing: 2px;
-    color: $black-opacity;
+  &--active::before {
+    background-color: $dark-slate-blue;
   }
 }
 
-.slider-button__one::before,
-.slider-button__two::before,
-.slider-button__three::before {
+.slider__button::before {
   content: "";
   position: absolute;
   width: 6px;
   height: 6px;
   left: 0;
-  top: 0;
+  top: 3px;
   border-radius: 50%;
   background-color: $steel-grey;
-  cursor: pointer;
 
   @media (min-width: $desktop-width) {
     left: -17px;
@@ -44,39 +36,10 @@
   }
 }
 
-.slider-button__active {
-  color: $dark-slate-blue;
-
-  &::before {
-    background-color: $dark-slate-blue;
-  }
-}
-
-.slider-button__two,
-.slider-button__three {
+.slider__button:not(:first-child) {
   margin-left: 10px;
 
   @media (min-width: $tablet-width) {
     margin-left: 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: 0;
-    margin-top: 26px;
-  }
-}
-
-
-.slider__button--show {
-  display: none;
-
-  @media (min-width: $desktop-width) {
-    display: block;
-  }
-}
-
-.slider__button--close {
-  @media (min-width: $desktop-width) {
-    display: none;
   }
 }

@@ -1,39 +1,82 @@
-.interests__legend {
+.interests__label {
+  position: relative;
+  padding: 0 18px;
   font-weight: bold;
   line-height: 18px;
-  text-align: center;
   text-transform: uppercase;
   color: $dark-slate-blue;
+  z-index: 2;
+  margin-left: 100px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 73px;
+    height: 18px;
+    background-color: $pale-grey;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    bottom: -10px;
-    transform: translateX(-50%);
-    left: 50%;
-    background-color: $pale-grey;
     font-size: 20px;
     font-weight: 500;
     line-height: 18px;
     letter-spacing: 2px;
+    order: 2;
+    margin: 0;
+    margin-top: -10px;
+    text-align: center;
+
+    &::before {
+      width: 86px;
+      left: 263px;
+    }
   }
 
-  @media (min-width: $tablet-width) {
-    transform: translateX(0);
-    left: 39px;
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-left: 38px;
+
+    &::before {
+      left: 22px;
+    }
   }
 }
 
 .interests__textarea {
-  padding: 25px 33px;
-  width: 211px;
-  color: $greyish-brown;
-  border: none;
+  margin-top: -12px;
+  padding: 21px 24px;
+  padding-bottom: 22px;
+  width: 270px;
+  color: $greyish-brown-opacity60;
+  line-height: 22px;
+  border: solid 1px $cloudy-blue;
+  border-radius: 10px;
   background-color: transparent;
 
+  &:hover,
+  &:focus {
+    border: solid 1px $dark-cloudy-blue;
+  }
+
+  &:active {
+    color: $greyish-brown;
+    border: solid 1px $dark-grey;
+  }
+
   @media (min-width: $tablet-width) {
-    width: 688px;
-    padding: 37px 40px;
+    width: 618px;
+    order: 1;
+    padding: 33px 40px;
+    padding-bottom: 11px;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+    margin-top: 0;
   }
 }

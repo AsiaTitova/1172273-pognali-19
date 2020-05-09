@@ -12,9 +12,15 @@
   }
 }
 
-.alphabet__item {
+.alphabet__item:not(:nth-child(5n)) {
   @media (min-width: $desktop-width) {
-    margin-right: 163px;
+    margin-right: 13px;
+  }
+}
+
+.alphabet__item:not(.alphabet__item--top) {
+  @media (min-width: $desktop-width) {
+    margin-top: 13px;
   }
 }
 
@@ -49,6 +55,19 @@
     color: $dark-blue-grey-opacity;
     border: none;
     background-color: transparent;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 62px;
+    height: 71px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: $dark-slate-blue;
+    border: solid 1px $cloudy-blue;
   }
 }
 

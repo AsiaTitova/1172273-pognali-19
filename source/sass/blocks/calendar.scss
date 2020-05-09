@@ -1,8 +1,8 @@
 .calendar__title {
   @include title (20px, bold, $dark-slate-blue);
-  @include vertical-paddings (12px, 10px);
+  @include vertical-paddings (10px, 12px);
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   line-height: 20px;
   text-align: center;
   border: 1px solid $grey-opacity;
@@ -32,8 +32,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (29px, 22px);
-    margin-bottom: 40px;
+    @include vertical-paddings (20px, 22px);
+    margin-bottom: 26px;
     font-size: 36px;
     line-height: normal;
 
@@ -50,8 +50,8 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 19px;
+  @media (min-width: $desktop-width) {
+    margin-bottom: 4px;
   }
 }
 
@@ -60,8 +60,10 @@
 }
 
 .week__cell {
+  padding-top: 2px;
+  padding-bottom: 7px;
   font-size: 14px;
-  line-height: 1.29;
+  line-height: 18px;
   text-align: center;
   font-weight: normal;
   color: $greyish-brown;
@@ -71,9 +73,18 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 5px;
+    padding-bottom: 4px;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 1.8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 7px;
+    padding-bottom: 14px;
+    padding-left: 17px;
+    text-align: left;
   }
 }
 
@@ -87,22 +98,22 @@
 
 .days__cell {
   width: 33px;
-  height: 33px;
+  height: 31px;
   background-color: #ffffff;
   border: 1px solid $cloudy-blue;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     width: 77px;
-    height: 70px;
+    height: 69px;
   }
 
   @media (min-width: $desktop-width) {
     width: 144px;
-    height: 72px;
+    height: 71px;
     text-align: left;
     vertical-align: top;
-    padding: 15px 16px;
+    padding: 5px 16px;
   }
 }
 
