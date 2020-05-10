@@ -1,0 +1,46 @@
+.slider-button {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    top: 105px;
+    right: 200px;
+  }
+}
+
+.slider-button__button:not(:first-child) {
+  margin-top: 21px;
+}
+
+.slider-button__button {
+  @media (min-width: $desktop-width) {
+    padding: 5px;
+    padding-left: 42px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    line-height: 13.8px;
+    letter-spacing: 2px;
+    color: $black-opacity30;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    left: 0;
+    top: 10px;
+    border-radius: 50%;
+    background-color: $steel-grey;
+  }
+
+  &--active {
+    color: $dark-slate-blue;
+  }
+
+  &--active::before {
+    background-color: $dark-slate-blue;
+  }
+}

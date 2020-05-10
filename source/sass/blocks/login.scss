@@ -8,6 +8,10 @@
   background-color: $light-gold;
   border-radius: 25px;
 
+  &:hover {
+    background-color: $lighter-mango;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
   }

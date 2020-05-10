@@ -44,11 +44,35 @@
   }
 
   @media (min-width: $desktop-width) {
-    font-family: inherit;
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
     text-align: left;
     color: $white;
+    overflow: hidden;
+
+    & span {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s;
+      transform: translate3d(0, 0, 0);
+    }
+
+    & span::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      color: $light-gold;
+      transition: transform 0.3s;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:hover span {
+      transform: translateY(-100%);
+    }
+
+    &--current {
+      color: $light-gold-opacity30;
+    }
   }
 }

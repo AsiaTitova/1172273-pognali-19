@@ -107,6 +107,10 @@
       background-position: 50% 50%;
       background-size: 18px 18px;
     }
+
+    &--navigation:hover::before {
+      background-color: $dusty-orange;
+    }
   }
 }
 
@@ -184,6 +188,10 @@
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: 18px 18px;
+    }
+
+    &--navigation:hover::before {
+      background-color: $mango;
     }
   }
 }

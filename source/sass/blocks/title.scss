@@ -16,7 +16,7 @@
 }
 
 .title__container {
-  @include vertical-paddings (19px, 12px);
+  @include vertical-paddings (35px, 12px);
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -32,6 +32,9 @@
     padding-left: 120px;
     padding-right: 130px;
 
+    &--form {
+      padding-left: 126px;
+    }
   }
 }
 
@@ -52,6 +55,10 @@
     background-color: $mango;
   }
 
+  &--form::before {
+    width: 214px;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 70px;
@@ -63,11 +70,20 @@
       height: 8px;
       border-radius: 4px;
     }
+
+    &--form::before {
+      width: 354px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     &::before {
       left: 120px;
+    }
+
+    &--form::before {
+      width: 357px;
+      left: 126px;
     }
   }
 }

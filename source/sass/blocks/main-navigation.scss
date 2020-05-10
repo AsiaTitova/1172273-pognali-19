@@ -1,6 +1,10 @@
 .main-navigation {
-  padding: 16px 0;
+  padding: 8px 0;
   width: 100%;
+
+  &--index {
+    padding: 16px 0;
+  }
 
   &--open {
     position: absolute;
@@ -234,4 +238,3 @@
 .main-navigation--open .main-navigation__login {
   display: block;
 }
-

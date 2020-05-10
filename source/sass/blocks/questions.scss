@@ -73,6 +73,15 @@
 
 .questions__link {
   color: $light-gold;
+
+  &:hover,
+  &:focus {
+    color: $mango;
+  }
+
+  &:active {
+    color: $mango-opacity30;
+  }
 }
 
 .questions__form {
@@ -102,4 +111,3 @@
     margin-top: 41px;
   }
 }
-

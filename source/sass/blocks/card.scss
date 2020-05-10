@@ -61,12 +61,21 @@
 
 .card__name {
   @include title (20px, bold, $dark-slate-blue);
-  margin: 0;
   margin-bottom: 16px;
-  padding: 0;
+  padding: 0 40px;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $dark-slate-blue-opacity70;
+  }
+
+  &:active {
+    color: $dark-slate-blue-opacity30;
+  }
 
   &::before {
     @include round (5px, 5px, 2.5px, $salmon);
