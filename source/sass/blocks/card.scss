@@ -36,7 +36,7 @@
 
 .card__container {
   @include border-bottom-radius (10px, 10px);
-  @include vertical-paddings (23px, 16px);
+  @include vertical-paddings (23px, 12px);
   position: relative;
   display: block;
   width: 270px;
@@ -62,11 +62,12 @@
 .card__name {
   @include title (20px, bold, $dark-slate-blue);
   margin-bottom: 16px;
-  padding: 0 40px;
+  padding: 0 37px;
   font-size: 21px;
   line-height: 21px;
   text-align: center;
   text-decoration: none;
+  display: block;
 
   &:hover,
   &:focus {
@@ -131,8 +132,16 @@
   margin: 0;
   padding: 0;
 
+  &--twoflags {
+    left: 90px;
+  }
+
   @media (min-width: $tablet-width) {
     left: 70px;
+
+    &--twoflags {
+      left: 100px;
+    }
   }
 }
 
