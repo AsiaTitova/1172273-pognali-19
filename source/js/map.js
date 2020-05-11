@@ -31,4 +31,3 @@ myMap.geoObjects
 
 myMap.behaviors.disable('scrollZoom');
 });
-
