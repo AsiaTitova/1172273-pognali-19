@@ -16,10 +16,18 @@
   @media (min-width: $tablet-width) {
     @include border-top-radius (50px, 50px);
     margin-top: -50px;
+
+    &--index {
+      margin-top: -154px;
+    }
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-top: -115px;
+
+    &--index {
+      margin-top: -155px;
+    }
   }
 }
 
@@ -47,6 +55,13 @@
 .page-footer__logo-image {
   display: block;
   margin: 0 auto;
+  width: 100px;
+  height: 19px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .page-footer__socials-list {

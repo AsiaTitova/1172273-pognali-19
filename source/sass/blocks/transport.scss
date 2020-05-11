@@ -13,14 +13,19 @@
 
 .transport__list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
+  width: 132px;
   margin: 0;
   margin-top: 12px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
+    width: 176px;
+
     &--catalog {
       flex-direction: column;
+      width: unset;
       margin: 0;
     }
   }
@@ -28,6 +33,7 @@
   @media (min-width: $desktop-width) {
     &--catalog {
       flex-direction: row;
+      width: 132px;
     }
   }
 }
