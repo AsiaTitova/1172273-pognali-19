@@ -175,6 +175,7 @@
 
   @media (min-width: $desktop-width) {
     width: auto;
+    padding-top: 38px;
   }
 }
 
@@ -194,6 +195,7 @@
     order: 2;
     display: flex;
     padding-left: 145px;
+    padding-bottom: 10px;
   }
 }
 
@@ -240,7 +242,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    @include vertical-paddings (50px, 50px);
+    @include vertical-paddings (50px, 10px);
     order: 4;
     margin-left: unset;
   }

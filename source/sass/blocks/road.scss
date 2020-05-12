@@ -277,6 +277,7 @@
 .road__flag {
   @include border-right-radius (4px, 4px);
   margin: 0;
+  padding: 9px 7px;
   width: 52px;
   height: 43px;
   border: solid 1px $cloudy-blue;
@@ -301,6 +302,8 @@
     margin-left: 53px;
     width: 70px;
     height: 47px;
+    padding: 0;
+    padding-top: 12px;
     border: none;
     border-left: none;
 
@@ -308,6 +311,21 @@
       top: 27px;
       left: 36px;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-left: 84px;
+  }
+}
+
+.road__flag .flag__img {
+  width: 35px;
+  height: 24px;
+
+  @media (min-width: $tablet-width) {
+    width: 70px;
+    height: 47px;
   }
 }
 
