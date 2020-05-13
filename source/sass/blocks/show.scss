@@ -42,6 +42,27 @@
     transform: rotate(90deg);
   }
 
+  &:hover,
+  &:focus {
+    color: $dark-slate-blue-opacity60;
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    background-color: $dark-slate-blue-opacity60;
+  }
+
+  &:active {
+    color: $dark-slate-blue-opacity30;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $dark-slate-blue-opacity30;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
   }
@@ -78,7 +99,18 @@
 .show__link {
   position: relative;
   display: block;
+  color: $dark-grey;
   background-color: $white;
+
+  &:not(.show__link--active):not(.show__link--switch):hover,
+  &:not(.show__link--active):not(.show__link--switch):focus {
+    color: $dark-grey-opacity60;
+  }
+
+  &:not(.show__link--active):not(.show__link--switch):active {
+    @include round (50px, 50px, 50%, $light-gold);
+    color: $dark-grey;
+  }
 
   &--switch {
     width: 133px;

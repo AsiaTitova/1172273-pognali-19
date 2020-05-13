@@ -16,37 +16,13 @@
   color: $dark-blue-grey;
 
   &--tel {
-    width: 40px;
-    height: 40px;
-  }
-
-  &--tel::before {
     @include round (40px, 40px, 50%, $mango);
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: url("../img/topmenu-phone.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 18px 18px;
+    padding: 11px 11px;
   }
 
   &--email {
-    width: 40px;
-    height: 40px;
-  }
-
-  &--email::before {
     @include round (40px, 40px, 50%, $lighter-mango);
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: url("../../img/topmenu-mail.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 18px 18px;
+    padding: 11px 11px;
   }
 
   &--login {
@@ -59,5 +35,41 @@
     color: $dark-grey;
     background-color: $light-gold;
     border-radius: 25px;
+  }
+
+  &--tel:hover,
+  &--tel:focus {
+    background-color: $dusty-orange;
+  }
+
+  &--email:hover,
+  &--email:focus {
+    background-color: $mango;
+  }
+
+  &--login:hover,
+  &--login:focus {
+    background-color: $lighter-mango;
+  }
+
+  &--tel:active {
+    background-color: $dusty-orange;
+  }
+
+  &--email:active {
+    background-color: $mango;
+  }
+
+  &--tel:active .user__icon {
+    opacity: 0.3;
+  }
+
+  &--email:active .user__icon {
+    opacity: 0.3;
+  }
+
+  &--login:active {
+    color: $dark-grey-opacity30;
+    background-color: $lighter-mango;
   }
 }

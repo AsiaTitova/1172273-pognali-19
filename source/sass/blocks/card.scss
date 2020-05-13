@@ -19,6 +19,14 @@
   }
 }
 
+.card:first-child {
+  z-index: 2;
+}
+
+.card:last-child {
+  z-index: 1;
+}
+
 .card__photo {
   @include border-top-radius (10px, 10px);
   @include border-bottom-radius (0, 0);
@@ -36,7 +44,7 @@
 
 .card__container {
   @include border-bottom-radius (10px, 10px);
-  @include vertical-paddings (23px, 12px);
+  @include vertical-paddings (23px, 16px);
   position: relative;
   display: block;
   width: 270px;
@@ -107,7 +115,7 @@
 
 .card__interests {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-size: 15px;
   color: $greyish-brown;
   padding: 0 25px;
@@ -116,6 +124,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    margin-bottom: 16px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -145,8 +154,64 @@
   }
 }
 
+.card__flag-list .flag::before {
+  content: "";
+  position: absolute;
+  display: none;
+  bottom: -66px;
+  left: -59px;
+  padding: 18px 24px;
+  border-radius: 4px;
+  background-color: $darker-slate-blue;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: $white;
+}
+
+.card__flag-list .flag::after {
+  content: "";
+  position: absolute;
+  display: none;
+  bottom: -13px;
+  left: 9px;
+  width: 16px;
+  height: 18px;
+  background-image: url("../img/triangle-arrow-left.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 16px 8px;
+  transform: rotate(90deg);
+}
+
+.card__flag-list .flag--belgium::before {
+  content: "Бельгия";
+}
+
+.card__flag-list .flag--czech::before {
+  content: "Чехия";
+}
+
+.card__flag-list .flag--srilanka::before {
+  content: "Шри-ланка";
+}
+
+.card__flag-list .flag--thailand::before {
+  content: "Таиланд";
+}
+
+.card__flag-list .flag--seychelles::before {
+  content: "Сейшелы";
+}
+
+.card__flag-list .flag:hover::before,
+.card__flag-list .flag:hover::after {
+  display: block;
+}
+
+
 .card__transport {
-  margin: 0 49px;
+  margin: 0 42px;
 }
 
 .card__level {

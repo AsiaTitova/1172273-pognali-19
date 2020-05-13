@@ -20,7 +20,7 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (82px, 66px);
+    @include vertical-paddings (89px, 66px);
     display: flex;
     align-items: center;
     padding-left: 75px;

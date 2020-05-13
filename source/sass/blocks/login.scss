@@ -1,18 +1,86 @@
-.login__button {
-  padding: 9px 30px;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
-  color: $dark-grey;
-  background-color: $light-gold;
-  border-radius: 25px;
+.login {
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
 
-  &:hover {
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.login__link {
+  position: relative;
+  font-weight: bold;
+  color: $dark-blue-grey;
+
+  &--tel {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      @include round (50px, 50px, 50%, $mango);
+      display: block;
+      padding: 15px 16px;
+    }
+  }
+
+  &--email {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      @include round (50px, 50px, 50%, $lighter-mango);
+      padding: 15px 16px;
+      display: block;
+    }
+  }
+
+  &--login {
+    padding: 9px 30px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    color: $dark-grey;
+    background-color: $light-gold;
+    border-radius: 25px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+    }
+  }
+
+  &--tel:hover,
+  &--tel:focus {
+    background-color: $dusty-orange;
+  }
+
+  &--email:hover,
+  &--email:focus {
+    background-color: $mango;
+  }
+
+  &--login:hover,
+  &--login:focus {
     background-color: $lighter-mango;
   }
 
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
+  &--tel:active {
+    background-color: $dusty-orange;
+  }
+
+  &--email:active {
+    background-color: $mango;
+  }
+
+  &--tel:active .login__icon {
+    opacity: 0.3;
+  }
+
+  &--email:active .login__icon {
+    opacity: 0.3;
+  }
+
+  &--login:active {
+    color: $dark-grey-opacity30;
+    background-color: $lighter-mango;
   }
 }

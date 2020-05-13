@@ -181,6 +181,8 @@
 }
 
 .travelers__item {
+  z-index: 1;
+
   &:hover,
   &:focus {
     box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);

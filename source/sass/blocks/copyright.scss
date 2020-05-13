@@ -1,6 +1,15 @@
 .copyright {
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__by {
@@ -22,6 +31,7 @@
   }
 }
 
-.copyright__img {
-  display: block;
+.copyright__icon {
+  fill: $dark-blue-grey;
 }
+

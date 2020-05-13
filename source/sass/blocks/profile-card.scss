@@ -106,6 +106,16 @@
   padding-left: 85px;
   line-height: 20px;
 
+  &:hover,
+  &:focus {
+    color: $dark-slate-blue-opacity70;
+  }
+
+
+  &:active {
+    color: $dark-slate-blue-opacity30;
+  }
+
   @media (min-width: $tablet-width) {
     padding-left: 0;
     font-size: 30px;
@@ -301,7 +311,10 @@
   text-align: center;
   border-radius: 20px;
   color: $dark-grey;
-  background-color: $light-gold;
+
+  &:active {
+    color: $dark-grey-opacity30;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 10px;
