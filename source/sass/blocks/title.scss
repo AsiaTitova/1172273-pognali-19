@@ -20,11 +20,15 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (82px, 66px);
+    @include vertical-paddings (83px, 66px);
     display: flex;
     align-items: center;
     padding-left: 75px;
     padding-right: 75px;
+
+    &--form {
+      padding-top: 89px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -111,6 +115,15 @@
       height: 16px;
       background-image: url("../img/return.svg");
       background-repeat: no-repeat;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.2;
     }
 
     @media (min-width: $desktop-width) {

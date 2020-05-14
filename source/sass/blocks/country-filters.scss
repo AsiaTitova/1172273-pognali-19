@@ -97,6 +97,15 @@
 }
 
 .country-filters__toggler {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     order: 2;
     margin-left: auto;

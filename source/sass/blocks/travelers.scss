@@ -17,13 +17,13 @@
 .travelers__container {
   @include vertical-paddings (120px, 30px);
   position: relative;
-  background-image: url("../img/smolov-back-mobile@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
+  background-image: url("../img/smolov-back-desktop@1x.png"), url("../img/rogovaya-back-mobile@1x.png");
   background-repeat: no-repeat, no-repeat;
   background-size: 143px 143px, 71px 71px;
   background-position: 153px 88px, -10px 360px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/smolov-back-mobile@2x.png"), url("../img/rogovaya-back-mobile@2x.png");
+    background-image: url("../img/smolov-back-desktop@2x.png"), url("../img/rogovaya-back-mobile@2x.png");
   }
 
   &::before {
@@ -181,6 +181,8 @@
 }
 
 .travelers__item {
+  z-index: 1;
+
   &:hover,
   &:focus {
     box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);

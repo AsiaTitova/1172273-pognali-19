@@ -37,6 +37,10 @@
     position: absolute;
     top: 0;
     left: 0;
+    background-image: url("../img/contacts-location.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 14px 21px;
   }
 
   @media (min-width: $tablet-width) {
@@ -50,6 +54,7 @@
       width: 68px;
       height: 68px;
       left: 36px;
+      background-size: 21px 31px;
     }
   }
 
@@ -62,6 +67,7 @@
       width: 90px;
       height: 90px;
       left: 223px;
+      background-size: 28px 43px;
     }
   }
 }

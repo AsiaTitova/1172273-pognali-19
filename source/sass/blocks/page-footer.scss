@@ -15,7 +15,7 @@
 
   @media (min-width: $tablet-width) {
     @include border-top-radius (50px, 50px);
-    margin-top: -50px;
+    margin-top: -114px;
 
     &--index {
       margin-top: -154px;
@@ -32,7 +32,7 @@
 }
 
 .page-footer__container {
-  @include vertical-paddings (38px, 14px);
+  @include vertical-paddings (38px, 30px);
 
   @media (min-width: $tablet-width) {
     @include vertical-paddings (48px, 46px);
@@ -70,7 +70,7 @@
 }
 
 .page-footer__copyright {
-  margin-top: 39px;
+  margin-top: 36px;
 
   @media (min-width: $tablet-width) {
     margin: 0;

@@ -23,6 +23,15 @@
   border: none;
   background-color: $pale-grey-blue;
 
+  &:hover,
+  &:focus {
+    color: $dark-blue-grey-opacity60;
+  }
+
+  &:active {
+    color: $dark-blue-grey;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0;
     font-size: 20px;

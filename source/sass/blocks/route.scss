@@ -147,3 +147,12 @@
     }
   }
 }
+
+.route .flag {
+  position: absolute;
+}
+
+.route .flag:hover::before,
+.route .flag:hover::after {
+  display: none;
+}
