@@ -1,6 +1,8 @@
 .copyright {
   display: flex;
   align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid $black-opacity5;
 
   &:hover,
   &:focus {
@@ -10,9 +12,14 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    border-top: 0;
+  }
 }
 
 .copyright__by {
+  margin: 0;
   text-align: center;
   color: $greyish-brown;
 
@@ -25,6 +32,7 @@
 
 .copyright__link {
   margin-left: auto;
+  padding-top: 2px;
 
   @media (min-width: $tablet-width) {
     margin-left: 24px;
@@ -34,4 +42,3 @@
 .copyright__icon {
   fill: $dark-blue-grey;
 }
-
