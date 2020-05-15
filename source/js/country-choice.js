@@ -1399,3 +1399,26 @@ alphabet__button25.addEventListener("click", function (evt) {
   country_choice23.classList.remove("country-choice__list--open");
   country_choice24.classList.remove("country-choice__list--open");
 });
+
+
+// var alphabet__button = document.querySelectorAll(".alphabet__button");
+// var country_choice = document.querySelectorAll(".country-choice__list");
+
+
+
+// var x = function(alphabet__button, country_choice) {
+//   alphabet__button.addEventListener("click", function (evt) {
+//       event.preventDefault();
+//       alphabet__button[i].classList.add("alphabet__button--current");
+//       country_choice[j].classList.add("country-choice__list--open");
+//   });
+
+
+//   for (i = 0; i < alphabet__button.length; i++) {
+//     x(alphabet__button[i]);
+//   }
+
+//   for (j = 0; j < country_choice.length; j++) {
+//     y(country_choice[j]);
+//   };
+// }

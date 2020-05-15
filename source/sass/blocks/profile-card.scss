@@ -25,6 +25,7 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
   }
 
   @media (min-width: $desktop-width) {
@@ -49,7 +50,7 @@
   margin-top: 10px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 42px;
+    margin-top: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -103,24 +104,68 @@
 
 .profile-card__name {
   @include title (20px, bold, $dark-slate-blue);
+  position: relative;
   margin: 0;
   padding-left: 85px;
+  padding-right: 143px;
   line-height: 20px;
+
+  &::before {
+    @include round (6px, 6px, 2.6px, $salmon);
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 0;
+  }
+
+  &--online::before {
+    background-color: $green-apple;
+  }
 
   &:hover,
   &:focus {
     color: $dark-slate-blue-opacity70;
   }
 
-
   &:active {
     color: $dark-slate-blue-opacity30;
   }
 
   @media (min-width: $tablet-width) {
-    padding-left: 0;
+    padding: 0;
     font-size: 30px;
     line-height: 30px;
+
+    &::before {
+      width: 7px;
+      height: 7px;
+    }
+
+    &--round1::before {
+      right: 47px;
+    }
+
+    &--round2::before {
+      right: 76px;
+      top: 13px;
+    }
+
+    &--round3::before {
+      right: 57px;
+      top: 14px;
+    }
+
+    &--round4::before {
+      right: 20px;
+      top: 16px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      right: unset;
+      left: -26px;
+    }
   }
 }
 
@@ -150,6 +195,10 @@
   padding-left: 7px;
   z-index: 1;
 
+  &--twoflags {
+    padding-bottom: 6px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -177,6 +226,11 @@
     padding: 0;
     margin-top: 20px;
 
+    &--twoflags {
+      margin-top: 22px;
+      padding-bottom: 2px;
+    }
+
     &::before {
       width: 690px;
       left: -36px;
@@ -199,6 +253,10 @@
 
     &::after {
       display: none;
+    }
+
+    &--twoflags {
+      margin-top: 2px;
     }
   }
 }
@@ -238,17 +296,29 @@
     position: relative;
     right: 0;
     margin: 0;
-    margin-left: 67px;
-    margin-top: 20px;
+    margin-left: auto;
+    margin-top: 0;
     order: 5;
     flex-direction: row;
   }
 }
 
+.profile-card__wrapper .transport__list {
+  margin-top: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+}
+
+
 .profile-card__wrapper .transport__item {
-  padding: 0;
   width: 33px;
   height: 33px;
+
+  @media (min-width: $tablet-width) {
+    padding: 4px 5px;
+  }
 }
 
 .profile-card__wrapper .transport__title--catalog {
@@ -280,22 +350,27 @@
 .profile-card__level {
   margin: 0;
   margin-left: 50px;
+  margin-top: 29px;
+  width: 45px;
+  height: 45px;
 
   @media (min-width: $tablet-width) {
     margin-left: unset;
     margin-top: 3px;
+    width: 60px;
+    height: 60px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    margin-left: 63px;
+    margin-left: 42px;
   }
 }
 
 .profile-card__call {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 14px;
 
   @media (min-width: $tablet-width) {
     order: 4;

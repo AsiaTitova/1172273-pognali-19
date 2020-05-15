@@ -221,6 +221,21 @@
     transform: rotate(-45deg);
   }
 
+  &:hover,
+  &focus {
+    background-color: $light-blue;
+  }
+
+  &:active {
+    color: $dark-slate-blue-opacity30;
+    background-color: $light-blue;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     order: 6;
     padding-top: 36px;

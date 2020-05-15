@@ -1,5 +1,5 @@
 .show {
-  margin-top: 20px;
+  margin-top: 17px;
   margin-bottom: 61px;
 
   @media (min-width: $tablet-width) {
@@ -19,7 +19,7 @@
 .show__button {
   position: relative;
   margin: 0 auto;
-  padding-left: 52px;
+  padding-left: 33px;
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
@@ -31,8 +31,8 @@
   &::after {
     content: "";
     position: absolute;
-    width: 27px;
-    height: 3px;
+    width: 18px;
+    height: 2px;
     top: 15px;
     left: 0;
     background-color: $dark-slate-blue;
@@ -64,7 +64,14 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-left: 52px;
     font-size: 20px;
+
+    &::before,
+    &::after {
+      width: 27px;
+      height: 3px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -125,6 +132,40 @@
     @include border-right-radius (20px, 20px);
   }
 
+  &--next::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 63px;
+    border: 10px solid #1d2e5b;
+    border-left: none;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  &--previous::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 59px;
+    border: 10px solid #1d2e5b;
+    border-right: none;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
+  &--next:hover::before,
+  &--next:focus::before,
+  &--previous:hover::before,
+  &--previous:focus::before {
+    opacity: 0.6;
+  }
+
+  &--next:active::before,
+  &--previous:active::before {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     width: 50px;
     height: 50px;
@@ -140,9 +181,27 @@
     }
 
     &--switch {
-      width: 20px;
+      width: 30px;
       height: 50px;
       padding: 0;
+    }
+
+    &--next::before {
+      left: 25px;
+    }
+
+    &--previous::before {
+      left: 13px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--next::before {
+      left: 16px;
+    }
+
+    &--previous::before {
+      left: 4px;
     }
   }
 }
@@ -154,6 +213,10 @@
     display: none;
   }
 
+  &--next {
+    margin-right: 6px;
+  }
+
   @media (min-width: $tablet-width) {
     &--page {
       display: block;
@@ -161,45 +224,7 @@
 
     &--next {
       margin-right: 25px;
+      margin-left: auto;
     }
-
-    &--next::before {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 20px;
-      top: 15px;
-      left: 7px;
-      background-image: url("../img/triangle-arrow-left.svg");
-      background-repeat: no-repeat;
-      background-size: 10px 20px;
-    }
-
-    &--previous::before {
-      content: "";
-      position: absolute;
-      width: 10px;
-      height: 20px;
-      top: 15px;
-      left: 3px;
-      background-image: url("../img/triangle-arrow-right.svg");
-      background-repeat: no-repeat;
-      background-size: 10px 20px;
-    }
-  }
-}
-
-.next {
-  @include border-left-radius (20px, 20px);
-  margin-right: 2px;
-}
-
-.previous {
-  @include border-right-radius (20px, 20px);
-}
-
-.show__item--next {
-  @media (min-width: $tablet-width) {
-    margin-left: auto;
   }
 }

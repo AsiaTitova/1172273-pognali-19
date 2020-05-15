@@ -54,28 +54,6 @@
   }
 }
 
-.page-footer .socials-list {
-  @media (min-width: $tablet-width) {
-    margin: 0;
-    transform: translate(0);
-  }
-}
-
-.page-footer .socials-list__item {
-  @include round (45px, 45px, 50%, $light-gold);
-
-  @media (min-width: $tablet-width) {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-.page-footer .socials-list__item:hover,
-.page-footer .socials-list__item:focus,
-.page-footer .socials-list__item:active {
-  background-color: $light-mango;
-}
-
 .socials-list__icon {
   fill: $dark-blue-grey;
 

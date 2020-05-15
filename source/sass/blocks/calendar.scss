@@ -12,6 +12,7 @@
   &::before {
     content: "";
     position: absolute;
+    top: 13px;
     left: 0;
     width: 9px;
     height: 18px;
@@ -23,6 +24,7 @@
   &::after {
     content: "";
     position: absolute;
+    top: 13px;
     right: 0;
     width: 9px;
     height: 18px;
@@ -31,21 +33,36 @@
     opacity: 0.3;
   }
 
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after {
+    opacity: 0.5;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.1;
+  }
+
   @media (min-width: $tablet-width) {
     @include vertical-paddings (20px, 22px);
     margin-bottom: 26px;
     font-size: 36px;
     line-height: normal;
 
-    &::before {
+    &::before,
+    &::after {
       width: 15px;
       height: 28px;
+      top: 28px;
+    }
+
+    &::before {
       left: 16px;
     }
 
     &::after {
-      width: 15px;
-      height: 28px;
       right: 16px;
     }
   }
@@ -103,6 +120,33 @@
   border: 1px solid $cloudy-blue;
   text-align: center;
 
+  &--free {
+    background-color: $pale-grey;
+  }
+
+  &--active {
+    background-color: $darker-blue;
+  }
+
+  &--focus {
+    background-color: $dark-slate-blue;
+    border: solid 2px $orange-red;
+
+    @media (min-width: $tablet-width) {
+      border: solid 4px $orange-red;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $dark-slate-blue;
+    border: solid 2px $orange-red;
+
+    @media (min-width: $tablet-width) {
+      border: solid 4px $orange-red;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 77px;
     height: 69px;
@@ -111,22 +155,44 @@
   @media (min-width: $desktop-width) {
     width: 144px;
     height: 71px;
-    text-align: left;
-    vertical-align: top;
-    padding: 5px 16px;
   }
 }
 
-.days__link {
+.days__button {
   display: block;
-  text-decoration: none;
+  width: 100%;
+  height: 100%;
   font-size: 14px;
   line-height: 18px;
-  color: $grey-opacity;
+  text-align: center;
+  color: $greyish-brown;
+  border: none;
+  background-color: $pale-grey;
+
+  &:disabled {
+    color: $grey-opacity;
+    background-color: $white;
+  }
 
   &--text,
   &--month {
     display: none;
+  }
+
+  &--active {
+    color: $white;
+    background-color: $darker-blue;
+  }
+
+  &--focus {
+    color: $white;
+    background-color: $dark-slate-blue;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $dark-slate-blue;
   }
 
   @media (min-width: $tablet-width) {
@@ -136,9 +202,15 @@
   }
 
   @media (min-width: $desktop-width) {
+    height: unset;
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 1.8px;
+    font-weight: 400;
+    text-align: left;
+    vertical-align: top;
+    padding: 5px 16px;
+    padding-bottom: 33px;
 
     &--month {
       display: inline;
@@ -147,29 +219,30 @@
     &--text {
       display: block;
     }
+
+    &--active {
+      padding-bottom: 0;
+    }
+
+    &--focus {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &--active span {
+      color: $white;
+    }
+
+    &:disabled span {
+      color: $grey-opacity;
+    }
   }
 }
 
-.days__cell--active {
-  background-color: $dark-slate-blue;
-}
-
-.days__cell--focus {
-  border: solid 2px $orange-red;
-
-  @media (min-width: $tablet-width) {
-    border: solid 4px $orange-red;
-  }
-}
-
-.days__link--active {
-  color: $white;
-}
-
-.days__cell--free {
-  background-color: $pale-grey;
-}
-
-.days__link--free {
-  color: $greyish-brown;
+.days__button span {
+  border: none;
+  background-color: transparent;
+  text-transform: none;
+  padding: 0;
+  height: 30px;
 }

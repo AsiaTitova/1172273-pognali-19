@@ -29,6 +29,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 38px;
+    padding-left: 0;
     font-size: 30px;
     line-height: 30px;
   }
@@ -147,6 +148,24 @@
     transform: rotate(-90deg);
   }
 
+  &:hover,
+  &focus {
+    color: $dark-slate-blue-opacity60;
+  }
+
+  &:hover::before,
+  &focus::before {
+    opacity: 0.6;
+  }
+
+  &:active {
+    color: $dark-slate-blue-opacity30;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+
   @media (min-width: $tablet-width) {
     width: 110px;
     font-size: 20px;
@@ -239,6 +258,15 @@
     padding: 0;
   }
 
+  &:hover,
+  &:focus {
+    color: $greyish-brown-opacity60;
+  }
+
+  &:active {
+    color: $greyish-brown-opacity30;
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 8px;
     padding-left: 35px;
@@ -277,6 +305,15 @@
   }
 }
 
+.traveler-search__control + .traveler-search__label:not(.traveler-search__label--transport):hover::before,
+.traveler-search__control + .traveler-search__label:not(.traveler-search__label--transport):focus::before {
+  opacity: 0.6;
+}
+
+.traveler-search__control + .traveler-search__label:not(.traveler-search__label--transport):active::before {
+  opacity: 0.3;
+}
+
 .traveler-search__control:checked + .traveler-search__label:not(.traveler-search__label--transport)::before {
   background-image: url("../img/checkbox-on.png");
   background-repeat: no-repeat;
@@ -288,6 +325,15 @@
     height: 24px;
     background-size: 12px 12px;
   }
+}
+
+.traveler-search__control:checked + .traveler-search__label:not(.traveler-search__label--transport):hover::before,
+.traveler-search__control:checked + .traveler-search__label:not(.traveler-search__label--transport):focus::before {
+  opacity: 0.6;
+}
+
+.traveler-search__control:checked + .traveler-search__label:not(.traveler-search__label--transport):active::before {
+  opacity: 0.3;
 }
 
 .traveler-search__level-range {
@@ -317,6 +363,16 @@
   border-radius: 20px;
   border: none;
   background-color: $white;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    color: $dark-grey-opacity30;
+    background-color: $cheese;
+  }
 
   @media (min-width: $tablet-width) {
     @include vertical-paddings (10px, 10px);
