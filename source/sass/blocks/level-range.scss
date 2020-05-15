@@ -101,6 +101,15 @@
   border: solid 1px $cloudy-blue;
   background-color: $white;
 
+  &:hover,
+  &:focus {
+    border: solid 1px $blue-grey;
+  }
+
+  &:active {
+    border: solid 1px $dark-grey;
+  }
+
   @media (min-width: $tablet-width) {
     width: 75px;
     height: 46px;
@@ -190,9 +199,23 @@ input::-webkit-inner-spin-button {
   position: absolute;
   right: 0;
   top: -4px;
+  border: none;
 
   &--min {
     right: 143px;
+  }
+
+  &:hover,
+  &:focus {
+    width: 19px;
+    height: 19px;
+    top: -17px;
+  }
+
+  &:active {
+    width: 26px;
+    height: 26px;
+    top: -21px;
   }
 
   @media (min-width: $tablet-width) {

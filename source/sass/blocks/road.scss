@@ -161,6 +161,11 @@
   border-radius: 4px;
   background-color: $white;
 
+  &:hover,
+  &:focus {
+    border: solid 1px $blue-grey;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -216,6 +221,7 @@
     &:hover,
     &:focus {
       background-color: $pale-grey-dark;
+      border: none;
     }
 
     &:hover::before,

@@ -43,11 +43,13 @@
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo logo" href="index.html">
             <picture>
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" type="image/png">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" type="image/png">
-                <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png" alt="Логотип 'Погнали'">
-              </picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
+              <source srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2px" type="image/png">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" type="image/png">
+              <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png" alt="Логотип 'Погнали'">
+            </picture>
           </a>
           <button class="main-navigation__toggler">
             <span class="visually-hidden">переключатель меню</span>
@@ -58,27 +60,68 @@
           <li class="site-list__item"><a class="site-list__link site-list__link--current button" href="#" aria-label="Направления"><span data-hover="Направления">Направления</span></a></li>
           <li class="site-list__item"><a class="site-list__link button" href="catalog.html" aria-label="Попутчики"><span data-hover="Попутчики">Попутчики</span></a></li>
         </ul>
-        <div class="main-navigation__login login">
-          <a class="login__button button button--bg" href="#" aria-label="Авторизация">Авторизация</a>
-        </div>
+        <ul class="main-navigation__login login">
+          <li class="login__item"><a class="login__link login__link--tel button" href="tel:+78005558628"
+            aria-label="Позвонить">
+            <svg class="login__icon" width="18" height="18">
+              <use xlink:href="img/sprite.svg#phonelogin"></use>
+            </svg>
+            <span class="visually-hidden">8 800 555-86-28</span></a></li>
+        <li class="login__item"><a class="login__link login__link--email button" href="#" aria-label="написать">
+          <svg class="login__icon" width="18" height="14">
+            <use xlink:href="img/sprite.svg#maillogin"></use>
+          </svg>
+          <span
+              class="visually-hidden">mail@htmlacademy.ru</span></a></li>
+              <li class="login__item">
+                <a class="login__link login__link--login button button--bg" href="#" aria-label="Авторизация">Авторизация</a>
+                </li>
+        </ul>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__contacts contacts contacts--navigation">
             <li class="contacts__item contacts__item--navigation">
-              <a class="contacts__tel contacts__tel--navigation button" href="tel:+78005558628"
-                aria-label="Позвонить"><span>8 800 555-86-28</span></a>
+              <a class="contacts__link contacts__link--navigation button" href="tel:+78005558628"
+                aria-label="Позвонить">
+                <div class="contacts__wrapper">
+                <svg class="contacts__icon" width="18" height="18">
+                  <use xlink:href="img/sprite.svg#phonemenu"></use>
+                </svg>
+              </div>
+                <span>8 800 555-86-28</span></a>
             </li>
             <li class="contacts__item contacts__item--navigation">
-              <a class="contacts__email contacts__email--navigation button" href="#"
-                aria-label="Написать"><span>mail@htmlacademy.ru</span></a>
+              <a class="contacts__link contacts__link--navigation button" href="#"
+                aria-label="Написать">
+                <div class="contacts__wrapper">
+                <svg class="contacts__icon" width="18" height="14">
+                  <use xlink:href="img/sprite.svg#mailmenu"></use>
+                </svg>
+                </div>
+                <span>mail@htmlacademy.ru</span></a>
             </li>
           </ul>
           <ul class="main-navigation__socials socials-list">
-            <li class="socials-list__item socials-list__item--navigation"><a
-                class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук"></a></li>
-            <li class="socials-list__item socials-list__item--navigation"><a
-                class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте"></a></li>
-            <li class="socials-list__item socials-list__item--navigation"><a
-                class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм"></a></li>
+            <li class="socials-list__item socials-list__item--navigation">
+              <a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук">
+                <svg class="socials-list__icon socials-list__icon--fb socials-list__icon--navigation" width="11" height="21">
+                  <use xlink:href="img/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item socials-list__item--navigation">
+              <a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте">
+                <svg class="socials-list__icon socials-list__icon--vk socials-list__icon--navigation" width="23" height="12">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item socials-list__item--navigation">
+              <a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм">
+                <svg class="socials-list__icon socials-list__icon--inst socials-list__icon--navigation" width="18" height="18">
+                  <use xlink:href="img/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -95,12 +138,20 @@
       <h2 class="visually-hidden">Настройки профиля</h2>
       <form class="personal-account__form" method="get" action="https://echo.htmlacademy.ru">
         <div class="personal-account__container container">
-          <div class="personal-account__level level">
-            <p class="level__number">80</p>
-            <p class="level__text">level</p>
-          </div>
+          <div class="personal-account__level level level--form level--80">
+            <svg class="level__round">
+              <use xlink:href="img/sprite.svg#level"></use>
+            </svg>
+            <div class="level__content">
+              <div class="level__name level__name--form">
+                <span class="level__number level__number--form">80</span>
+                <span class="level__text level__text--form">level</span></div>
+              </div>
+            </div>
           <div class="personal-account__photo">
             <picture>
+              <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x" type="image/webp">
+                <source srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x" type="image/jpg">
               <img class="personal-account__photo-img" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" alt="Фото профиля">
             </picture>
@@ -112,13 +163,32 @@
           </div>
           <div class="personal-account__transport transport">
             <p class="transport__title">Транспорт</p>
-            <div class="transport__list">
-              <button class="transport__item transport__item--plane button" type="button"></button>
-              <button class="transport__item transport__item--train button" type="button"></button>
-              <button class="transport__item transport__item--bicycle button" type="button"></button>
-              <button class="transport__item transport__item--walking button" type="button"></button>
+            <ul class="transport__list">
+              <li class="transport__item transport__item--plane transport__item--on">
+                <svg class="transport__icon" width="19" height="21">
+                  <use xlink:href="img/sprite.svg#plane"></use>
+                </svg>
+                <span class="visually-hidden">Авиаперелет</span>
+              </li>
+              <li class="transport__item transport__item--train transport__item--on">
+                <svg class="transport__icon" width="17" height="21">
+                  <use xlink:href="img/sprite.svg#bus"></use>
+                </svg>
+                <span class="visually-hidden">Автотранспорт</span>
+              </li>
+              <li class="transport__item transport__item--bicycle">
+                <svg class="transport__icon" width="24" height="21">
+                  <use xlink:href="img/sprite.svg#bike"></use>
+                </svg>
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="transport__item transport__item--walking">
+                <svg class="transport__icon" width="19" height="21">
+                  <use xlink:href="img/sprite.svg#run"></use>
+                </svg>
+                <span class="visually-hidden">Пешком</span></li>
             </div>
-          </div>
+          </ul>
         </div>
         <div class="personal-account__plans plans">
           <p class="plans__title">Мои планы:</p>
@@ -199,63 +269,63 @@
                 </thead>
                 <tbody class="calendar__days days">
                   <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">23</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">24</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">25</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">26</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">27</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">28</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">1<span class="days__link days__link--month">
-                          мар</span></a></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>23</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>24</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>25</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>26</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>27</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>28</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>1<span class="days__button button days__button--month">
+                          мар</span></button></td>
                   </tr>
                   <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">2</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">3</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">4</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">5</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">6</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">7</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">8</a></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>2</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>3</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>4</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>5</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>6</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>7</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>8</button></td>
                   </tr>
                   <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">9</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">10</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">11</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">12</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">13</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">14</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">15</a></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>9</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>10</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>11</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>12</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>13</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>14</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>15</button></td>
                   </tr>
                   <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">16</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">17</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">18</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">19</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">20</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">21</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">22</a></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>16</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>17</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>18</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>19</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>20</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>21</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>22</button></td>
                   </tr>
                   <tr class="days__row">
-                    <td class="days__cell"><a class="days__link" href="#">23</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">24</a></td>
-                    <td class="days__cell"><a class="days__link" href="#">25</a></td>
-                    <td class="days__cell days__cell--active days__cell--focus"><a class="days__link days__link--active"
-                        href="#">26<span class="days__link days__link--active days__link--text">Заезд</span></a></td>
-                    <td class="days__cell days__cell--active"><a class="days__link days__link--active" href="#">27</a>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>23</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>24</button></td>
+                    <td class="days__cell"><button class="days__button button" type="button" disabled>25</button></td>
+                    <td class="days__cell days__cell--focus"><button class="days__button button days__button--focus"
+                        type="button">26<span class="days__button button days__button--active days__button--text">Заезд</span></button></td>
+                    <td class="days__cell days__cell--active"><button class="days__button button days__button--active" type="button">27</button>
                     </td>
-                    <td class="days__cell days__cell--active"><a class="days__link days__link--active" href="#">28<span
-                          class="days__link days__link--active days__link--text">Выезд</span></a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">29</a></td>
+                    <td class="days__cell days__cell--active"><button class="days__button button days__button--active" type="button">28<span
+                          class="days__button button days__button button--active days__button--text">Выезд</span></button></td>
+                    <td class="days__cell days__cell--free"><button class="days__button button days__button--free" type="button">29</button></td>
                   </tr>
                   <tr class="days__row">
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">30</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">31</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">1<span
-                          class="days__link days__link--free days__link--month"> апр</span></a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">2</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">3</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">4</a></td>
-                    <td class="days__cell days__cell--free"><a class="days__link days__link--free" href="#">5</a></td>
+                    <td class="days__cell days__cell--free"><button class="days__button button days__button--free" type="button">30</button></td>
+                    <td class="days__cell days__cell--free"><button class="days__button button days__button--free" type="button">31</button></td>
+                    <td class="days__cell days__cell--free"><button class="days__button button days__button--free" type="button">1<span
+                          class="days__button button days__button--free days__button--month"> апр</span></button></td>
+                    <td class="days__cell days__cell--free"><button class="days__button button days__button--free" type="button">2</button></td>
+                    <td class="days__cell days__cell--free"><button class="days__button button days__button--free" type="button">3</button></td>
+                    <td class="days__cell days__cell--free"><button class="days__button button days__button--free" type="button">4</button></td>
+                    <td class="days__cell days__cell--free"><button class="days__button button days__button--free" type="button">5</button></td>
                   </tr>
                 </tbody>
               </table>
@@ -267,23 +337,27 @@
             <p class="plan-steps__text plan-steps__text--mb plan-steps__text--pr">Укажите страны, которые вы хотели
               посетить. Это может быть одна или сразу несколько.</p>
             <div class="plan-steps__slider-button slider-button">
-              <button class="slider-button__button slider-button__button--active button"
+              <button class="slider-button__button button"
                 type="button"><span>Даты</span></button>
-              <button class="slider-button__button button" type="button">Маршрут</button>
+              <button class="slider-button__button slider-button__button--active button" type="button">Маршрут</button>
               <button class="slider-button__button button" type="button">Развлечения</button>
             </div>
             <div class="plan-steps__road road">
               <div class="road__row">
                 <button class="road__control button" type="button">Босния и герцеговина</button>
                 <div class="road__flag flag">
-                  <img class="flag__img" src="img/flag-bosnia.svg" alt="флаг боснии">
+                  <svg class="flag__img" width="71" height="48">
+                    <use xlink:href="img/sprite.svg#belgium"></use>
+                  </svg>
                 </div>
                 <button class="road__close button" type="button"></button>
               </div>
               <div class="road__row">
                 <button class="road__control button" type="button">Чехия</button>
                 <div class="road__flag flag">
-                  <img class="flag__img" src="img/flag-czech.svg" alt="флаг чехии">
+                  <svg class="flag__img" width="71" height="48">
+                    <use xlink:href="img/sprite.svg#czech"></use>
+                  </svg>
                 </div>
                 <button class="road__close button" type="button"></button>
               </div>
@@ -846,26 +920,33 @@
             <p class="plan-steps__text plan-steps__text--mb">Наконец, расскажите о своих планах времяпровождения.
               Можно&nbsp;писать в свободной форме и ставить тэги.</p>
             <div class="plan-steps__slider-button slider-button">
-              <button class="slider-button__button slider-button__button--active button"
+              <button class="slider-button__button button"
                 type="button"><span>Даты</span></button>
               <button class="slider-button__button button" type="button">Маршрут</button>
-              <button class="slider-button__button button" type="button">Развлечения</button>
+              <button class="slider-button__button slider-button__button--active button" type="button">Развлечения</button>
             </div>
             <div class="plan-steps__actions action">
               <div class="action__row">
                 <label class="action__label action__label--gr" for="bg-textarea">Босния и Герцеговина</label>
                 <div class="action__flag action__flag--line flag">
-                  <img class="flag__img" src="img/flag-bosnia.svg" alt="флаг боснии">
+                  <svg class="flag__img" width="71" height="48">
+                    <use xlink:href="img/sprite.svg#belgium"></use>
+                  </svg>
                 </div>
-                <textarea class="action__control" id="bg-textarea" placeholder="План действий"></textarea>
+                <div class="action__wrap">
+                <textarea class="action__control" id="bgtextarea" name="bgtextarea" placeholder="План действий" value=""></textarea>
+                </div>
               </div>
               <div class="action__row">
                 <label class="action__label" for="plan-steps__textarea">Чехия</label>
                 <div class="action__flag flag">
-                  <img class="flag__img" src="img/flag-czech.svg" alt="флаг чехии">
+                  <svg class="flag__img" width="71" height="48">
+                    <use xlink:href="img/sprite.svg#czech"></use>
+                  </svg>
                 </div>
-                <textarea class="action__control"
-                  id="action-textarea">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                <div class="action__wrap">
+                <textarea class="action__control" id="actiontextarea" name="actiontextarea" value="">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  </div>
               </div>
             </div>
             <button class="plan-steps__submit button button--arrow button--bg" type="submit">Отправить</button>
@@ -879,23 +960,49 @@
     <div class="page-footer__container container">
       <div class="page-footer__logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" type="image/png">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" type="image/png">
-          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png"  srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип компании">
+          <source media="(min-width: 1440px)"
+            srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x"
+            type="image/webp">
+          <source srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
+
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x"
+            type="image/png">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x"
+            type="image/png">
+          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+            alt="Логотип компании">
         </picture>
       </div>
       <ul class="page-footer__socials-list socials-list">
-        <li class="socials-list__item"><a class="socials-list__item socials-list__item--fb" href="#"
-            aria-label="Фейсбук"></a></li>
-        <li class="socials-list__item"><a class="socials-list__item socials-list__item--vk" href="#"
-            aria-label="ВКонтакте"></a></li>
-        <li class="socials-list__item"><a class="socials-list__item socials-list__item--instagram" href="#"
-            aria-label="Инстаграм"></a></li>
+        <li class="socials-list__item">
+          <a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук">
+            <svg class="socials-list__icon socials-list__icon--fb" width="11" height="21">
+              <use xlink:href="img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте">
+            <svg class="socials-list__icon socials-list__icon--vk" width="23" height="12">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-list__item">
+          <a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм">
+            <svg class="socials-list__icon socials-list__icon--inst" width="18" height="18">
+              <use xlink:href="img/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
       </ul>
       <div class="page-footer__copyright copyright">
         <p class="copyright__by">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMLacademy">
-          <img class="copyright__img" src="img/htmlacademy.svg" wight="27" height="34" alt="логотип академии">
+          <svg class="copyright__icon" width="27" height="34">
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
@@ -908,5 +1015,6 @@
 <script src="js/menu.js"></script>
 <script src="js/modal-alphabet.js"></script>
 <script src="js/country-choice.js"></script>
+<script src="js/error.js"></script>
 </body>
 </html>

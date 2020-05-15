@@ -15,6 +15,15 @@
   text-decoration: none;
   color: $greyish-brown;
 
+  &:hover,
+  &:focus {
+    color: $dark-slate-blue;
+  }
+
+  &:active {
+    color: $dark-slate-blue-opacity30;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 30px;

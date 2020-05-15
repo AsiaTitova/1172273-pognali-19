@@ -171,19 +171,6 @@
   border-right: none;
   text-transform: uppercase;
 
-  &:hover,
-  &:focus {
-    border: solid 1px $blue-grey;
-    border-left: none;
-    border-right: none;
-  }
-
-  &:active {
-    border: solid 1px $dark-grey;
-    border-left: none;
-    border-right: none;
-  }
-
   @media (min-width: $tablet-width) {
     width: 390px;
     height: 70px;
@@ -225,6 +212,42 @@
   display: flex;
   margin-top: 9px;
 
+  &:hover .registration__control,
+  &:focus .registration__control {
+    border: solid 1px $blue-grey;
+    border-left: none;
+    border-right: none;
+  }
+
+  &:active .registration__control {
+    border: solid 1px $dark-grey;
+    border-left: none;
+    border-right: none;
+  }
+
+  &:hover .registration__minus,
+  &:focus .registration__minus {
+    border: solid 1px $blue-grey;
+    border-right: none;
+  }
+
+  &:active .registration__minus {
+    border: solid 1px $dark-grey;
+    border-right: none;
+  }
+
+  &:focus .registration__plus,
+  &:hover .registration__plus {
+    border: solid 1px $blue-grey;
+    border-left: none;
+  }
+
+  &:active .registration__plus {
+    border: solid 1px $dark-grey;
+    border-left: none;
+  }
+
+
   @media (min-width: $tablet-width) {
     margin-top: 25px;
   }
@@ -256,15 +279,6 @@
     top: 20px;
     right: 15px;
     background-color: $cloudy-blue;
-  }
-
-  &:hover,
-  &:focus {
-    border: solid 1px $blue-grey;
-  }
-
-  &:active {
-    border: solid 1px $dark-grey;
   }
 
   &:hover::before,

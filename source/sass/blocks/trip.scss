@@ -27,8 +27,6 @@
     @media (min-width: $desktop-width) {
       @include vertical-paddings (23px, 24px);
       width: 1256px;
-      margin-right: 40px;
-      margin-left: 146px;
       padding-left: 40px;
       padding-right: 40px;
       border-radius: 10px;
@@ -129,6 +127,10 @@
   @media (min-width: $desktop-width) {
     margin-top: 0;
     margin-left: 39px;
+
+    &--ml {
+      margin-left: 50px;
+    }
   }
 }
 
