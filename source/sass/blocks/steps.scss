@@ -33,7 +33,7 @@
 
   &--one {
     z-index: 1;
-    margin-top: unset;
+    margin-top: 0;
     padding-right: 140px;
     background-color: $mango;
   }
@@ -109,7 +109,7 @@
     padding-top: 31px;
     padding-bottom: 61px;
     padding-left: 33px;
-    margin-top: unset;
+    margin-top: 0;
     font-weight: bold;
     line-height: 24px;
     text-align: left;
@@ -123,9 +123,8 @@
     }
 
     &--one::before {
-      top: 41px;
-      left: 33px;
-      right: unset;
+      top: 43px;
+      right: 330px;
       font-size: 30px;
       line-height: 120px;
     }
@@ -137,9 +136,8 @@
     }
 
     &--two::before {
-      top: 41px;
-      left: 33px;
-      right: unset;
+      top: 43px;
+      right: 294px;
       font-size: 30px;
       line-height: 120px;
     }
@@ -150,9 +148,8 @@
     }
 
     &--three::before {
-      top: 41px;
-      left: 33px;
-      right: unset;
+      top: 43px;
+      right: 330px;
       font-size: 30px;
       line-height: 120px;
     }
@@ -164,9 +161,8 @@
     }
 
     &--four::before {
-      top: 41px;
-      left: 33px;
-      right: unset;
+      top: 43px;
+      right: 294px;
       font-size: 30px;
       line-height: 120px;
     }

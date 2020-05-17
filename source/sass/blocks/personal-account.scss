@@ -275,20 +275,6 @@
   }
 }
 
-.personal-account__plans {
-  @include wrapper ($mobile-width, 0 auto, 0 25px);
-  position: relative;
-  z-index: 1;
-
-  @media (min-width: $tablet-width) {
-    @include wrapper ($tablet-width, 0 auto, 0 75px);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include wrapper ($desktop-width, 0 auto, 0 125px);
-  }
-}
-
 .personal-account__add-plan {
   position: relative;
   z-index: 2;

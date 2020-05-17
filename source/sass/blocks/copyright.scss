@@ -1,7 +1,7 @@
 .copyright {
+  padding-top: 12px;
   display: flex;
   align-items: center;
-  padding-top: 10px;
   border-top: 1px solid $black-opacity5;
 
   &:hover,
@@ -31,8 +31,8 @@
 }
 
 .copyright__link {
+  display: flex;
   margin-left: auto;
-  padding-top: 2px;
 
   @media (min-width: $tablet-width) {
     margin-left: 24px;

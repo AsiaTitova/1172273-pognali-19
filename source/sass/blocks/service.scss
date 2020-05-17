@@ -42,13 +42,13 @@
 
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (332px, 88px);
+    @include vertical-paddings (335px, 88px);
     position: relative;
     padding-left: 40px;
     padding-right: 40px;
     background-image: url("../img/about-tablet@1x.png");
     background-repeat: no-repeat;
-    background-position: 383px 342px;
+    background-position: 383px 345px;
     background-size: 379px 546px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {

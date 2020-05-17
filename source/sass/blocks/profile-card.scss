@@ -132,32 +132,16 @@
   }
 
   @media (min-width: $tablet-width) {
+    display: inline-block;
     padding: 0;
+    padding-right: 30px;
     font-size: 30px;
     line-height: 30px;
 
     &::before {
       width: 7px;
       height: 7px;
-    }
-
-    &--round1::before {
-      right: 47px;
-    }
-
-    &--round2::before {
-      right: 76px;
-      top: 13px;
-    }
-
-    &--round3::before {
-      right: 57px;
-      top: 14px;
-    }
-
-    &--round4::before {
-      right: 20px;
-      top: 16px;
+      right: 0;
     }
   }
 

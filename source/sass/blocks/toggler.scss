@@ -39,8 +39,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: unset;
-    height: unset;
+    width: 200px;
+    height: 24px;
     padding-right: 27px;
 
     &--open::before {
