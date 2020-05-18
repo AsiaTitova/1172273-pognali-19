@@ -206,6 +206,10 @@
   padding: 0;
   list-style: none;
 
+  &--transport .transport__item {
+    padding: 0;
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -214,19 +218,11 @@
     &--transport {
       margin-left: 11px;
     }
-
-    &--transport .transport__item {
-      padding: 10px 11px;
-    }
   }
 
   @media (min-width: $desktop-width) {
     display: none;
     margin-left: 0;
-
-    &--transport {
-      padding-top: 11px;
-    }
   }
 }
 
@@ -334,6 +330,10 @@
 
 .traveler-search__control:checked + .traveler-search__label:not(.traveler-search__label--transport):active::before {
   opacity: 0.3;
+}
+
+.traveler-search__transport .transport__item {
+  padding: 0;
 }
 
 .traveler-search__level-range {

@@ -9,13 +9,6 @@
   }
 }
 
-
-.action__row {
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-}
-
 .action__row:not(:first-child) {
   margin-top: 20px;
 
@@ -28,7 +21,7 @@
   }
 }
 
-.action__label {
+.action__name {
   position: relative;
   padding-left: 12px;
   font-weight: 500;
@@ -52,11 +45,20 @@
     font-size: 30px;
     font-weight: bold;
     line-height: 18px;
+
+    &--gr::before {
+      display: none;
+    }
   }
 }
 
 .action__wrap {
   position: relative;
+  display: flex;
+  flex-grow: 1;
+}
+
+.action__wrap:not(:first-child) {
   margin-top: 13px;
 
   @media (min-width: $tablet-width) {

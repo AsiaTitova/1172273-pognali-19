@@ -43,16 +43,16 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header page-header--index">
-    <nav class="page-header__main-navigation main-navigation main-navigation--index">
+    <nav class="page-header__main-navigation main-navigation main-navigation--open main-navigation--cross main-navigation--form">
       <div class="main-navigation__container container">
         <div class="main-navigation__logo-wrapper">
-          <a class="main-navigation__logo logo" href="#">
+          <a class="main-navigation__logo logo" href="index.html">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
               <source srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x" type="image/png">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x" type="image/png">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
               <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png" alt="Логотип 'Погнали'">
             </picture>
           </a>
@@ -67,38 +67,40 @@
         </ul>
         <ul class="main-navigation__login login">
           <li class="login__item"><a class="login__link login__link--tel button" href="tel:+78005558628" aria-label="Позвонить">
-            <svg class="login__icon" width="18" height="18">
-              <use xlink:href="#icon-topmenu-phone"></use>
-            </svg>
-            <span class="visually-hidden">8 800 555-86-28</span></a></li>
-        <li class="login__item"><a class="login__link login__link--email button" href="#" aria-label="написать">
-          <svg class="login__icon" width="18" height="14">
-            <use xlink:href="#icon-topmenu-mail"></use>
-          </svg>
-          <span class="visually-hidden">mail@htmlacademy.ru</span></a></li>
-              <li class="login__item">
-                <a class="login__link login__link--login button button--bg" href="#" aria-label="Авторизация">Авторизация</a>
-                </li>
+              <svg class="login__icon" width="18" height="18">
+                <use xlink:href="#icon-topmenu-phone"></use>
+              </svg>
+              <span class="visually-hidden">8 800 555-86-28</span></a></li>
+          <li class="login__item"><a class="login__link login__link--email button" href="#" aria-label="написать">
+              <svg class="login__icon" width="18" height="14">
+                <use xlink:href="#icon-topmenu-mail"></use>
+              </svg>
+              <span class="visually-hidden">mail@htmlacademy.ru</span></a></li>
+          <li class="login__item">
+            <a class="login__link login__link--login button button--bg" href="#" aria-label="Авторизация">Авторизация</a>
+          </li>
         </ul>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__contacts contacts contacts--navigation">
             <li class="contacts__item contacts__item--navigation">
               <a class="contacts__link contacts__link--navigation button" href="tel:+78005558628" aria-label="Позвонить">
-                <div class="contacts__wrapper contacts__wrapper--navigation">
-                <svg class="contacts__icon" width="18" height="18">
-                  <use xlink:href="#icon-topmenu-phone"></use>
-                </svg>
-              </div>
-                <span>8 800 555-86-28</span></a>
+                <div class="contacts__wrapper">
+                  <svg class="contacts__icon" width="18" height="18">
+                    <use xlink:href="#icon-contacts-phone"></use>
+                  </svg>
+                </div>
+                <span>8 800 555-86-28</span>
+              </a>
             </li>
             <li class="contacts__item contacts__item--navigation">
               <a class="contacts__link contacts__link--navigation button" href="#" aria-label="Написать">
-                <div class="contacts__wrapper contacts__wrapper--navigation">
-                <svg class="contacts__icon" width="18" height="14">
-                  <use xlink:href="#icon-topmenu-mail"></use>
-                </svg>
+                <div class="contacts__wrapper">
+                  <svg class="contacts__icon" width="18" height="14">
+                    <use xlink:href="#icon-contacts-mail"></use>
+                  </svg>
                 </div>
-                <span>mail@htmlacademy.ru</span></a>
+                <span>mail@htmlacademy.ru</span>
+              </a>
             </li>
           </ul>
           <ul class="main-navigation__socials socials-list">
@@ -184,7 +186,7 @@
               <picture>
                 <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x" type="image/webp">
                 <source srcset="img/thailand-mobile@1x.webp 1x, img/thailand-mobile@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x" type="image/jpg">
+                <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
                 <img src="img/thailand-mobile@1x.jpg" srcset="img/thailand-desktop@2x.jpg 2x" alt="фото страны">
               </picture>
             </div>
@@ -204,7 +206,7 @@
               <picture>
                 <source media="(min-width: 768px)" srcset="img/france-desktop@1x.webp 1x, img/france-desktop@2x.webp 2x" type="image/webp">
                   <source srcset="img/france-mobile@1x.webp 1x, img/france-mobile@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x" type="image/jpg">
+                <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
                 <img src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" alt="фото страны">
               </picture>
             </div>
@@ -224,7 +226,7 @@
               <picture>
                 <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.webp 1x, img/czech-desktop@2x.webp 2x" type="image/webp">
                   <source srcset="img/czech-mobile@1x.webp 1x, img/czech-mobile@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x" type="image/jpg">
+                <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
                 <img src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@1x.jpg" alt="фото страны">
               </picture>
             </div>
@@ -240,7 +242,7 @@
             </div>
           </li>
         </ul>
-        <a class="route__link button button--bg" href="#" aria-label="Показать все">Показать все</a>
+        <a class="route__link button button--bg" href="form.html" aria-label="Показать все">Показать все</a>
       </div>
     </section>
     <section class="travelers">
@@ -376,7 +378,7 @@
               </div>
           </li>
         </ul>
-        <a class="travelers__link button button--bg" href="#" aria-label="Показать всех">Показать всех</a>
+        <a class="travelers__link button button--bg" href="catalog.html" aria-label="Показать всех">Показать всех</a>
       </div>
     </section>
     <section class="tariffs">
@@ -397,7 +399,7 @@
             <p class="price-list__cost">59 руб./мес</p>
           </li>
         </ol>
-        <a class="tariffs__link button" href="#" aria-label="Показать тарифы для бизнеса">Показать тарифы для
+        <a class="tariffs__link button" href="tariffs.html" aria-label="Показать тарифы для бизнеса">Показать тарифы для
           бизнеса</a>
         <div class="tariffs__tariffs-modal tariffs-modal">
           <h2 class="tariffs-modal__title">Бизнес-тарифы</h2>
@@ -428,7 +430,7 @@
       <div class="questions__container container">
         <p class="questions__title">Заинтересовались?</p>
         <p class="questions__text">Зарегистрируйтесь, это&nbsp;быстро и бесплатно! Уже&nbsp;зарегистрированы? Тогда
-          скорее <a class="questions__link" href="#" aria-label="Авторизуйтесь">авторизуйтесь</a>.</p>
+          скорее <a class="questions__link" href="login.html" aria-label="Авторизуйтесь">авторизуйтесь</a>.</p>
         <form class="questions__form form-email" method="post" action="https://echo.htmlacademy.ru">
           <label class="form-email__label visually-hidden" for="email">Введите e-mail</label>
           <input class="form-email__email" type="email" name="email" id="email">
@@ -461,7 +463,7 @@
       <h2 class="visually-hidden">Карта</h2>
       <div class="adress__container container">
         <p class="adress__name">ул. Большая Конюшенная, 19/8</p>
-        <a class="adress__link button" href="#" aria-label="Проложить маршрут">Проложить маршрут</a>
+        <a class="adress__link button" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.325853%2C59.938874&mode=routes&rtext=59.938942%2C30.325139~59.938635%2C30.323118&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.325%252C59.939%26spn%3D0.002%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%25A8%25D0%25B2%25D0%25B5%25D0%25B4%25D1%2581%25D0%25BA%25D0%25B8%25D0%25B9%2520%25D0%25BF%25D0%25B5%25D1%2580%25D0%25B5%25D1%2583%25D0%25BB%25D0%25BE%25D0%25BA~ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8&z=18" aria-label="Проложить маршрут">Проложить маршрут</a>
       </div>
     </section>
     <section class="map">
@@ -472,8 +474,8 @@
           <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" type="image/webp">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" type="image/webp">
             <source media="(min-width: 768px)" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" type="image/jpg">
-          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" type="image/jpg">
+          <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
           <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта с адресом">
         </picture>
       </div>
@@ -486,9 +488,8 @@
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x" type="image/webp">
           <source srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
-
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x" type="image/png">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x" type="image/png">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
           <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип компании">
         </picture>
       </div>
@@ -525,14 +526,14 @@
       </div>
     </div>
   </footer>
-  <script>
-    // Picture element HTML5 shiv
-    document.createElement("picture");
-  </script>
-  <script src="js/picturefill.js" async=""></script>
   <script src="js/menu.js"></script>
   <script src="js/tariffs.js"></script>
   <script src="js/map.js"></script>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.js"></script>
 </body>
 
 </html>

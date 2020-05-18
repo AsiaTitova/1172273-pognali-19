@@ -7,12 +7,32 @@
   }
 
   &--open {
-    position: absolute;
+    position: relative;
     top: 0;
     z-index: 2;
     display: block;
     background-color: $white;
   }
+
+  &--absolute {
+    position: absolute;
+  }
+
+  &--cross .main-navigation__toggler::before,
+  &--cross .main-navigation__toggler::after {
+    display: none;
+  }
+
+  &--fixed {
+    position: fixed;
+    background-color: $white;
+  }
+
+  &--fixed .main-navigation__toggler::before,
+  &--fixed .main-navigation__toggler::after {
+    background-color: $dark-blue-grey;
+  }
+
 
   @media (min-width: $tablet-width) {
     padding: 42px 0;
@@ -45,7 +65,8 @@
   }
 }
 
-.main-navigation--open .main-navigation__logo {
+.main-navigation--open .main-navigation__logo,
+.main-navigation--fixed .main-navigation__logo {
   position: relative;
 
   &::after {
@@ -228,6 +249,10 @@
 
 .main-navigation--open .main-navigation__wrapper {
   display: block;
+
+  @media (min-width: $desktop-width) {;
+    display: none;
+  }
 }
 
 .main-navigation__login {
@@ -252,6 +277,11 @@
 
 .main-navigation--open .main-navigation__login {
   display: block;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    margin-left: auto;
+  }
 }
 
 .main-navigation .contacts {
