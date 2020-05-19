@@ -1,4 +1,11 @@
 var popup = document.querySelectorAll(".traveler-search__fieldset");
+
+var y = function (popup) {
+  if (popup) {
+    popup.classList.remove("traveler-search__fieldset--open");
+  }
+}
+
 var toggler = document.querySelectorAll(".traveler-search__toggler");
 
 var x = function (popup, toggler) {
@@ -9,5 +16,6 @@ var x = function (popup, toggler) {
 }
 
 for (i = 0; i < popup.length; i++) {
+  y(popup[i]);
   x(popup[i], toggler[i]);
 }

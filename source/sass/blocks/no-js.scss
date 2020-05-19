@@ -1,0 +1,34 @@
+.no-js .main-navigation--open {
+  position: relative;
+}
+
+.no-js .toggler--close::before,
+.no-js .toggler--close::after {
+  display: block;
+}
+
+.no-js .toggler--open::before {
+  display: none;
+}
+
+.no-js .country-filters__show {
+  display: block;
+}
+
+.no-js .toggler__text--close {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.no-js .toggler__text--open {
+  display: none;
+}
+
+.no-js .page-header {
+  background-position: 0 232px, 60% 731px, 50% 461px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 60% 956px, 50% 981px;
+  }
+}

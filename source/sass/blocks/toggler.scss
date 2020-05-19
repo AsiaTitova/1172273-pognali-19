@@ -28,7 +28,7 @@
       width: 16px;
       height: 1px;
       top: 27px;
-      left: 19px;
+      right: 0;
       background-color: $dark-blue-grey;
       transform: rotate(45deg);
     }
@@ -39,8 +39,8 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: unset;
-    height: unset;
+    width: 200px;
+    height: 24px;
     padding-right: 27px;
 
     &--open::before {
@@ -55,7 +55,6 @@
       &::after {
         width: 24px;
         height: 2px;
-        left: unset;
         top: 11px;
         right: 0;
       }
@@ -67,7 +66,6 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
     margin: 0;
     padding-right: 20px;
     font-size: 20px;
@@ -75,12 +73,13 @@
     line-height: 24px;
     color: $dark-blue-grey;
 
-    &--close {
-      padding-right: 57px;
+    &--open {
+      display: none;
     }
 
-    &--show {
-      display: none;
+    &--close {
+      padding-right: 57px;
+      display: block;
     }
   }
 }

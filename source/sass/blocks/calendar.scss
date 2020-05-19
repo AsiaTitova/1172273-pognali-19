@@ -53,22 +53,37 @@
 
     &::before,
     &::after {
-      width: 15px;
-      height: 28px;
-      top: 28px;
+      width: 18px;
+      height: 34px;
+      top: 25px;
     }
 
     &::before {
-      left: 16px;
+      left: 15px;
     }
 
     &::after {
-      right: 16px;
+      right: 15px;
     }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 4px;
+
+    &::before,
+    &::after {
+      width: 20px;
+      height: 36px;
+      top: 27px;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
   }
 }
 

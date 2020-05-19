@@ -214,19 +214,11 @@
     &--transport {
       margin-left: 11px;
     }
-
-    &--transport .transport__item {
-      padding: 10px 11px;
-    }
   }
 
   @media (min-width: $desktop-width) {
     display: none;
     margin-left: 0;
-
-    &--transport {
-      padding-top: 11px;
-    }
   }
 }
 
@@ -336,6 +328,10 @@
   opacity: 0.3;
 }
 
+.traveler-search__transport .transport__item {
+  padding: 0;
+}
+
 .traveler-search__level-range {
   display: none;
   margin-top: 2px;
@@ -344,10 +340,18 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     margin-left: 16px;
+    display: flex;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    display: none;
+  }
+}
+
+.traveler-search__fieldset--open .level-range {
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 

@@ -56,6 +56,7 @@
     line-height: 24px;
     text-align: center;
     color: $white;
+    white-space: nowrap;
   }
 
   &::after {
@@ -109,7 +110,7 @@
   }
 
   &--on .transport__icon {
-    opacity: 1;
+    fill: $dark-slate-blue;
   }
 
   &:hover .transport__icon,
@@ -165,8 +166,12 @@
   }
 }
 
-
 .transport__icon {
+  fill: $dark-slate-blue-opacity15;
+  color: $dark-slate-blue-opacity15;
+}
+
+input[type="checkbox"]:checked + .transport__icon {
   fill: $dark-slate-blue;
-  opacity: 0.15;
+  color: $dark-slate-blue;
 }
