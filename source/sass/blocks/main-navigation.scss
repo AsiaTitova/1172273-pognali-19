@@ -7,15 +7,11 @@
   }
 
   &--open {
-    position: relative;
+    position: absolute;
     top: 0;
     z-index: 2;
     display: block;
     background-color: $white;
-  }
-
-  &--absolute {
-    position: absolute;
   }
 
   &--cross .main-navigation__toggler::before,
@@ -250,7 +246,7 @@
 .main-navigation--open .main-navigation__wrapper {
   display: block;
 
-  @media (min-width: $desktop-width) {;
+  @media (min-width: $desktop-width) {
     display: none;
   }
 }

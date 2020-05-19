@@ -37,12 +37,12 @@
   <!-- // Pixel Glass -->
 </head>
 
-<body>
+<body class="no-js">
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header">
-    <nav class="page-header__main-navigation main-navigation main-navigation--open main-navigation--cross main-navigation--form">
+    <nav class="page-header__main-navigation main-navigation main-navigation--form">
       <div class="main-navigation__container container">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo logo" href="index.html">
@@ -169,37 +169,37 @@
               <li class="transport__item transport__item--plane">
                 <span class="visually-hidden">Авиаперелет</span>
                 <label class="transport__label" for="plane">
+                  <input class="transport__control visually-hidden" type="checkbox" id="plane" name="plane" checked>
                   <svg class="transport__icon" width="19" height="21">
-                    <use xlink:href="#icon-plane"></use>
+                    <use class="transport__use" xlink:href="#icon-plane" fill="currentColor"></use>
                   </svg>
                 </label>
-                <input class="transport__control visually-hidden" type="checkbox" id="plane" name="plane" checked>
               </li>
               <li class="transport__item transport__item--train">
                 <span class="visually-hidden">Автотранспорт</span>
                 <label class="transport__label" for="train">
+                  <input class="transport__control visually-hidden" type="checkbox" id="train" name="train" checked>
                   <svg class="transport__icon" width="17" height="21">
-                  <use xlink:href="#icon-bus"></use>
-                </svg>
+                    <use class="transport__use" xlink:href="#icon-bus" fill="currentColor"></use>
+                  </svg>
                 </label>
-                <input class="transport__control visually-hidden" type="checkbox" id="train" name="train">
               </li>
               <li class="transport__item transport__item--bicycle">
                 <label class="transport__label" for="bike">
+                  <input class="transport__control visually-hidden" type="checkbox" id="bike" name="bike">
                   <svg class="transport__icon" width="24" height="21">
-                    <use xlink:href="#icon-bike"></use>
+                    <use class="transport__use" xlink:href="#icon-bike" fill="currentColor"></use>
                   </svg>
                 </label>
-                <input class="transport__control visually-hidden" type="checkbox" id="bike" name="bike">
                 <span class="visually-hidden">Велосипед</span>
               </li>
               <li class="transport__item transport__item--walking">
                 <label class="transport__label" for="run">
+                  <input class="transport__control visually-hidden" type="checkbox" id="run" name="run" checked>
                   <svg class="transport__icon" width="19" height="21">
-                    <use xlink:href="#icon-run"></use>
+                    <use class="transport__use" xlink:href="#icon-run" fill="currentColor"></use>
                   </svg>
                 </label>
-                <input class="transport__control visually-hidden" type="checkbox" id="run" name="run" checked>
                 <span class="visually-hidden">Пешком</span></li>
             </ul>
           </div>
@@ -379,7 +379,7 @@
               <div class="road__row">
                 <button class="road__control button" type="button">Босния и герцеговина</button>
                 <div class="road__flag flag">
-                  <img class="flag__img" src="img/flag-belgium.svg" alt="флаг бельгии">
+                  <img class="flag__img" src="img/flag-bosnia.svg" alt="флаг босния">
                 </div>
                 <button class="road__close button" type="button"></button>
               </div>
@@ -769,7 +769,7 @@
                 <div class="action__wrap">
                 <div class="action__name action__name--gr">Босния и Герцеговина</div>
                 <div class="action__flag action__flag--line flag">
-                  <img class="flag__img" src="img/flag-belgium.svg" alt="флаг бельгии">
+                  <img class="flag__img" src="img/flag-bosnia.svg" alt="флаг босния">
                 </div>
               </div>
                 <div class="action__wrap">

@@ -15,18 +15,19 @@
     display: none;
   }
 
-  &--close .toggler__text--close {
-    display: none;
-  }
-
-  &--close .toggler__text--open {
-    display: block;
-  }
 
   @media (min-width: $tablet-width) {
     @include vertical-paddings (118px, 53px);
     padding-right: 75px;
     padding-left: 54px;
+
+    &--close .toggler__text--close {
+      display: none;
+    }
+
+    &--close .toggler__text--open {
+      display: block;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -91,6 +92,11 @@
 .country-filters__part-world {
   margin-top: 29px;
   padding-left: 20px;
+  display: none;
+
+  &--show {
+    display: block;
+  }
 
   @media (min-width: $tablet-width) {
     order: 1;

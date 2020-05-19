@@ -1,9 +1,4 @@
 var filters = document.querySelector(".country-filters__container");
-
-if (filters) {
-  filters.classList.add("country-filters__container--close");
-}
-
 var togglers = document.querySelector(".country-filters__toggler");
 
 togglers.addEventListener("click", function (evt) {

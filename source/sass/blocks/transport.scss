@@ -56,6 +56,7 @@
     line-height: 24px;
     text-align: center;
     color: $white;
+    white-space: nowrap;
   }
 
   &::after {
@@ -109,7 +110,7 @@
   }
 
   &--on .transport__icon {
-    opacity: 1;
+    fill: $dark-slate-blue;
   }
 
   &:hover .transport__icon,
@@ -165,30 +166,12 @@
   }
 }
 
-.transport__label {
-  @include round (33px, 33px, 50%, $white);
-  position: relative;
-  display: block;
-  padding: 6px;
-
-  @media (min-width: $tablet-width) {
-    width: 43px;
-    height: 43px;
-    padding: 10px 11px;
-  }
-}
-
 .transport__icon {
-  fill: $dark-slate-blue;
-  opacity: 0.15;
+  fill: $dark-slate-blue-opacity15;
+  color: $dark-slate-blue-opacity15;
 }
 
-.transport__control:checked + .transport__label.transport__icon {
+input[type="checkbox"]:checked + .transport__icon {
   fill: $dark-slate-blue;
-  opacity: 1;
-}
-
-.transport__control + .transport__label.transport__icon {
-  fill: $dark-slate-blue;
-  opacity: 0.15;
+  color: $dark-slate-blue;
 }

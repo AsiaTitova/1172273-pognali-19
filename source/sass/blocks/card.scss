@@ -167,6 +167,7 @@
   line-height: 24px;
   text-align: center;
   color: $white;
+  white-space: nowrap;
 }
 
 .card__flag-list .flag::after {

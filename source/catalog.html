@@ -6,7 +6,6 @@
   <title>HTML Academy: Погнали</title>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.legacy.min.js"></script>
   <!-- Pixel Glass -->
   <style>
     html {
@@ -37,22 +36,27 @@
   <!-- // Pixel Glass -->
 </head>
 
-<body>
+<body class="no-js">
   <div style="display:none">
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header">
-    <nav class="page-header__main-navigation main-navigation main-navigation--open main-navigation--cross main-navigation--form">
+    <nav class="page-header__main-navigation main-navigation main-navigation--form">
       <div class="main-navigation__container container">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo logo" href="index.html">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1440px)"
+                srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)"
+                srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
               <source srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-              <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png" alt="Логотип 'Погнали'">
+              <source media="(min-width: 1440px)"
+                srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png"
+                alt="Логотип 'Погнали'">
             </picture>
           </a>
           <button class="main-navigation__toggler">
@@ -60,12 +64,16 @@
           </button>
         </div>
         <ul class="main-navigation__site-list site-list">
-          <li class="site-list__item"><a class="site-list__link button" href="#" aria-label="О сервисе"><span data-hover="О сервисе">О сервисе</span></a></li>
-          <li class="site-list__item"><a class="site-list__link button" href="form.html" aria-label="Направления"><span data-hover="Направления">Направления</span></a></li>
-          <li class="site-list__item"><a class="site-list__link site-list__link--current button" href="#" aria-label="Попутчики"><span data-hover="Попутчики">Попутчики</span></a></li>
+          <li class="site-list__item"><a class="site-list__link button" href="#" aria-label="О сервисе"><span
+                data-hover="О сервисе">О сервисе</span></a></li>
+          <li class="site-list__item"><a class="site-list__link button" href="form.html" aria-label="Направления"><span
+                data-hover="Направления">Направления</span></a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--current button" href="#"
+              aria-label="Попутчики"><span data-hover="Попутчики">Попутчики</span></a></li>
         </ul>
         <ul class="main-navigation__login login">
-          <li class="login__item"><a class="login__link login__link--tel button" href="tel:+78005558628" aria-label="Позвонить">
+          <li class="login__item"><a class="login__link login__link--tel button" href="tel:+78005558628"
+              aria-label="Позвонить">
               <svg class="login__icon" width="18" height="18">
                 <use xlink:href="#icon-topmenu-phone"></use>
               </svg>
@@ -76,13 +84,15 @@
               </svg>
               <span class="visually-hidden">mail@htmlacademy.ru</span></a></li>
           <li class="login__item">
-            <a class="login__link login__link--login button button--bg" href="#" aria-label="Авторизация">Авторизация</a>
+            <a class="login__link login__link--login button button--bg" href="#"
+              aria-label="Авторизация">Авторизация</a>
           </li>
         </ul>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__contacts contacts contacts--navigation">
             <li class="contacts__item contacts__item--navigation">
-              <a class="contacts__link contacts__link--navigation button" href="tel:+78005558628" aria-label="Позвонить">
+              <a class="contacts__link contacts__link--navigation button" href="tel:+78005558628"
+                aria-label="Позвонить">
                 <div class="contacts__wrapper">
                   <svg class="contacts__icon" width="18" height="18">
                     <use xlink:href="#icon-contacts-phone"></use>
@@ -105,21 +115,24 @@
           <ul class="main-navigation__socials socials-list">
             <li class="socials-list__item socials-list__item--navigation">
               <a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук">
-                <svg class="socials-list__icon socials-list__icon--fb socials-list__icon--navigation" width="11" height="21">
+                <svg class="socials-list__icon socials-list__icon--fb socials-list__icon--navigation" width="11"
+                  height="21">
                   <use xlink:href="#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="socials-list__item socials-list__item--navigation">
               <a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте">
-                <svg class="socials-list__icon socials-list__icon--vk socials-list__icon--navigation" width="23" height="12">
+                <svg class="socials-list__icon socials-list__icon--vk socials-list__icon--navigation" width="23"
+                  height="12">
                   <use xlink:href="#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="socials-list__item socials-list__item--navigation">
               <a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм">
-                <svg class="socials-list__icon socials-list__icon--inst socials-list__icon--navigation" width="18" height="18">
+                <svg class="socials-list__icon socials-list__icon--inst socials-list__icon--navigation" width="18"
+                  height="18">
                   <use xlink:href="#icon-instagram"></use>
                 </svg>
               </a>
@@ -137,48 +150,75 @@
       </div>
     </section>
     <section class="page-main__country-filters country-filters">
-      <div class="country-filters__container container">
+      <div class="country-filters__container country-filters__container--close container">
         <h2 class="country-filters__name">Фильтрация по странам</h2>
-        <button class="country-filters__toggler toggler toggler--close button" type="button">
+        <button class="country-filters__toggler toggler toggler--open button" type="button">
           <span class="toggler__text toggler__text--open">Показать все</span>
           <span class="toggler__text toggler__text--close">Свернуть</span>
         </button>
         <ul class="country-filters__part-world part-world">
-          <li class="part-world__item"><button class="part-world__button part-world__button--current button" type="button">Европа</button></li>
+          <li class="part-world__item"><button class="part-world__button part-world__button--current button"
+              type="button">Европа</button></li>
           <li class="part-world__item"><button class="part-world__button button" type="button">Азия</button></li>
           <li class="part-world__item"><button class="part-world__button button" type="button">Америка</button></li>
           <li class="part-world__item"><button class="part-world__button button" type="button">Острова</button></li>
         </ul>
         <div class="country-filters__show">
           <ul class="country-filters__alphabet alphabet">
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--1 alphabet__button--top alphabet__button--left alphabet__button--current button" type="button">а</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--2 alphabet__button--top button" type="button">б</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--3 alphabet__button--top button" type="button">в</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--4 alphabet__button--top button" type="button">г</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--5 alphabet__button--top button" type="button">д</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--6 button alphabet__button--left" type="button">е</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--7 button" type="button">з</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--8 button" type="button">и</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--9 button" type="button">к</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--10 button" type="button">л</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--11 button alphabet__button--left" type="button">м</button>
+            <li class="alphabet__item"><button
+                class="alphabet__button alphabet__button--1 alphabet__button--top alphabet__button--left alphabet__button--current button"
+                type="button">а</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--2 alphabet__button--top button"
+                type="button">б</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--3 alphabet__button--top button"
+                type="button">в</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--4 alphabet__button--top button"
+                type="button">г</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--5 alphabet__button--top button"
+                type="button">д</button></li>
+            <li class="alphabet__item"><button
+                class="alphabet__button alphabet__button--6 button alphabet__button--left" type="button">е</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--7 button"
+                type="button">з</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--8 button"
+                type="button">и</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--9 button"
+                type="button">к</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--10 button"
+                type="button">л</button></li>
+            <li class="alphabet__item"><button
+                class="alphabet__button alphabet__button--11 button alphabet__button--left" type="button">м</button>
             </li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--12 button" type="button">н</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--13 button" type="button">о</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--14 button" type="button">п</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--15 button" type="button">р</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--16 button alphabet__button--left" type="button">с</button>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--12 button"
+                type="button">н</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--13 button"
+                type="button">о</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--14 button"
+                type="button">п</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--15 button"
+                type="button">р</button></li>
+            <li class="alphabet__item"><button
+                class="alphabet__button alphabet__button--16 button alphabet__button--left" type="button">с</button>
             </li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--17 button" type="button">т</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--18 button" type="button">у</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--19 button" type="button">ф</button></li>
-            <li class="alphabet__item"><button class="alphabet__button alphabet__button--20 button" type="button">х</button></li>
-            <li class="alphabet__item alphabet__item--bottom"><button class="alphabet__button alphabet__button--21 button alphabet__button--left" type="button">ч</button>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--17 button"
+                type="button">т</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--18 button"
+                type="button">у</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--19 button"
+                type="button">ф</button></li>
+            <li class="alphabet__item"><button class="alphabet__button alphabet__button--20 button"
+                type="button">х</button></li>
+            <li class="alphabet__item alphabet__item--bottom"><button
+                class="alphabet__button alphabet__button--21 button alphabet__button--left" type="button">ч</button>
             </li>
-            <li class="alphabet__item alphabet__item--bottom"><button class="alphabet__button alphabet__button--22 button" type="button">ш</button></li>
-            <li class="alphabet__item alphabet__item--bottom"><button class="alphabet__button alphabet__button--23 button" type="button">э</button></li>
-            <li class="alphabet__item alphabet__item--bottom"><button class="alphabet__button alphabet__button--24 button" type="button">ю</button></li>
-            <li class="alphabet__item alphabet__item--bottom"><button class="alphabet__button alphabet__button--25 button" type="button">я</button></li>
+            <li class="alphabet__item alphabet__item--bottom"><button
+                class="alphabet__button alphabet__button--22 button" type="button">ш</button></li>
+            <li class="alphabet__item alphabet__item--bottom"><button
+                class="alphabet__button alphabet__button--23 button" type="button">э</button></li>
+            <li class="alphabet__item alphabet__item--bottom"><button
+                class="alphabet__button alphabet__button--24 button" type="button">ю</button></li>
+            <li class="alphabet__item alphabet__item--bottom"><button
+                class="alphabet__button alphabet__button--25 button" type="button">я</button></li>
           </ul>
           <div class="country-filters__country-choice country-choice">
             <ul class="country-choice__list country-choice__list--1 country-choice__list--open">
@@ -186,7 +226,8 @@
               </li>
               <li class="country-choice__item"><a class="country-choice__name" href="europe/austria.html">Австрия</a>
               </li>
-              <li class="country-choice__item"><a class="country-choice__name" href="asia/azerbaijan.html">Азербайджан</a>
+              <li class="country-choice__item"><a class="country-choice__name"
+                  href="asia/azerbaijan.html">Азербайджан</a>
               </li>
               <li class="country-choice__item"><a class="country-choice__name" href="europe/albania.html">Албания</a>
               </li>
@@ -194,10 +235,13 @@
               <li class="country-choice__item"><a class="country-choice__name" href="asia/angora.html">Ангора</a></li>
               <li class="country-choice__item"><a class="country-choice__name" href="europa/andorra.html">Андорра</a>
               </li>
-              <li class="country-choice__item"><a class="country-choice__name" href="islands/antiguaandbarbuda.html">Антигуа и Барбуда</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="america/argentina.html">Аргентина</a></li>
+              <li class="country-choice__item"><a class="country-choice__name"
+                  href="islands/antiguaandbarbuda.html">Антигуа и Барбуда</a></li>
+              <li class="country-choice__item"><a class="country-choice__name"
+                  href="america/argentina.html">Аргентина</a></li>
               <li class="country-choice__item"><a class="country-choice__name" href="asia/armenia.html">Армения</a></li>
-              <li class="country-choice__item"><a class="country-choice__name" href="asia/afghanistan.html">Афганистан</a>
+              <li class="country-choice__item"><a class="country-choice__name"
+                  href="asia/afghanistan.html">Афганистан</a>
               </li>
             </ul>
             <ul class="country-choice__list country-choice__list--2">
@@ -508,7 +552,8 @@
             <button class="traveler-search__toggler button" type="button">Хобби</button>
             <ul class="traveler-search__list">
               <li class="traveler-search__item">
-                <input class="traveler-search__control visually-hidden" type="checkbox" name="sport" id="sport" checked="">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="sport" id="sport"
+                  checked="">
                 <label class="traveler-search__label" for="sport">Спортзал</label>
               </li>
               <li class="traveler-search__item">
@@ -525,7 +570,8 @@
             <button class="traveler-search__toggler button" type="button">Музыка</button>
             <ul class="traveler-search__list">
               <li class="traveler-search__item">
-                <input class="traveler-search__control visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked="">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="hardrock" id="hardrock"
+                  checked="">
                 <label class="traveler-search__label" for="hardrock">Тяжелый рок</label>
               </li>
               <li class="traveler-search__item">
@@ -542,7 +588,8 @@
             <button class="traveler-search__toggler button" type="button">Еда</button>
             <ul class="traveler-search__list">
               <li class="traveler-search__item">
-                <input class="traveler-search__control visually-hidden" type="checkbox" name="meat" id="meat" checked="">
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="meat" id="meat"
+                  checked="">
                 <label class="traveler-search__label" for="meat">Мясоед</label>
               </li>
               <li class="traveler-search__item">
@@ -556,60 +603,63 @@
             </ul>
           </div>
           <div class="traveler-search__fieldset traveler-search__fieldset--open transport">
-            <button class="traveler-search__toggler traveler-search__toggler--transport button" type="button">транспорт</button>
-              <ul class="traveler-search__list traveler-search__list--transport transport__list">
-                  <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--plane">
-                    <span class="visually-hidden">Авиаперелет</span>
-                    <label class="transport__label" for="plane">
-                      <svg class="transport__icon" width="19" height="21">
-                        <use xlink:href="#icon-plane"></use>
-                      </svg>
-                    </label>
-                    <input class="transport__control visually-hidden" type="checkbox" id="plane" name="plane" checked>
-                  </li>
-                  <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--train">
-                    <span class="visually-hidden">Автотранспорт</span>
-                    <label class="transport__label" for="train">
-                      <svg class="transport__icon" width="17" height="21">
-                      <use xlink:href="#icon-bus"></use>
-                    </svg>
-                    </label>
-                    <input class="transport__control visually-hidden" type="checkbox" id="train" name="train">
-                  </li>
-                  <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--bicycle">
-                    <label class="transport__label" for="bike">
-                      <svg class="transport__icon" width="24" height="21">
-                        <use xlink:href="#icon-bike"></use>
-                      </svg>
-                    </label>
-                    <input class="transport__control visually-hidden" type="checkbox" id="bike" name="bike">
-                    <span class="visually-hidden">Велосипед</span>
-                  </li>
-                  <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--walking">
-                    <label class="transport__label" for="run">
-                      <svg class="transport__icon" width="19" height="21">
-                        <use xlink:href="#icon-run"></use>
-                      </svg>
-                    </label>
-                    <input class="transport__control visually-hidden" type="checkbox" id="run" name="run" checked>
-                    <span class="visually-hidden">Пешком</span></li>
-              </ul>
+            <button class="traveler-search__toggler traveler-search__toggler--transport button"
+              type="button">транспорт</button>
+            <ul class="traveler-search__list traveler-search__list--transport transport__list">
+              <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--plane">
+                <span class="visually-hidden">Авиаперелет</span>
+                <label class="transport__label" for="plane">
+                  <input class="transport__control visually-hidden" type="checkbox" id="plane" name="plane" checked>
+                  <svg class="transport__icon" width="19" height="21">
+                    <use class="transport__use" xlink:href="#icon-plane" fill="currentColor"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--train">
+                <span class="visually-hidden">Автотранспорт</span>
+                <label class="transport__label" for="train">
+                  <input class="transport__control visually-hidden" type="checkbox" id="train" name="train">
+                  <svg class="transport__icon" width="17" height="21">
+                    <use class="transport__use" xlink:href="#icon-bus" fill="currentColor"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--bicycle">
+                <label class="transport__label" for="bike">
+                  <input class="transport__control visually-hidden" type="checkbox" id="bike" name="bike">
+                  <svg class="transport__icon" width="24" height="21">
+                    <use class="transport__use" xlink:href="#icon-bike" fill="currentColor"></use>
+                  </svg>
+                </label>
+                <span class="visually-hidden">Велосипед</span>
+              </li>
+              <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--walking">
+                <label class="transport__label" for="run">
+                  <input class="transport__control visually-hidden" type="checkbox" id="run" name="run">
+                  <svg class="transport__icon" width="19" height="21">
+                    <use class="transport__use" xlink:href="#icon-run" fill="currentColor"></use>
+                  </svg>
+                </label>
+                <span class="visually-hidden">Пешком</span></li>
+            </ul>
           </div>
-          <div class="traveler-search__fieldset traveler-search__fieldset--open traveler-search__fieldset--level-range">
-              <button class="traveler-search__toggler button" type="button">левел</button>
-              <div class="traveler-search__level-range level-range">
-                <div class="level-range__price-controls level-range__price-controls--price">
-                  <label class="level-range__min-price"><input class="level-range__min-control" name="min-price" type="number" value="30"></label>
-                  <label class="level-range__max-price"><input class="level-range__max-control" name="max-price" type="number" value="100"></label>
-                </div>
-                <div class="level-range__range-controls level-range__price-controls level-range__price-controls--scale">
-                  <div class="level-range__scale">
-                    <div class="level-range__bar"></div>
-                  </div>
-                  <button class="level-range__toggle level-range__toggle--min"></button>
-                  <button class="level-range__toggle level-range__toggle--max"></button>
-                </div>
+          <div class="traveler-search__fieldset traveler-search__fieldset--level-range">
+            <button class="traveler-search__toggler button" type="button">левел</button>
+            <div class="traveler-search__level-range level-range">
+              <div class="level-range__price-controls level-range__price-controls--price">
+                <label class="level-range__min-price"><input class="level-range__min-control" name="min-price"
+                    type="number" value="30"></label>
+                <label class="level-range__max-price"><input class="level-range__max-control" name="max-price"
+                    type="number" value="100"></label>
               </div>
+              <div class="level-range__range-controls level-range__price-controls level-range__price-controls--scale">
+                <div class="level-range__scale">
+                  <div class="level-range__bar"></div>
+                </div>
+                <button class="level-range__toggle level-range__toggle--min"></button>
+                <button class="level-range__toggle level-range__toggle--max"></button>
+              </div>
+            </div>
           </div>
           <button class="traveler-search__submit button" type="submit">Показать</button>
         </form>
@@ -620,12 +670,16 @@
           <ul class="results__list">
             <li class="results__item profile-card">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1440px)"
+                  srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x"
+                  type="image/webp">
                 <source srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <source media="(min-width: 1440px)"
+                  srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
-                <img class="profile-card__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobail@2x.jpg 2x" alt="Фото профиля">
+                <img class="profile-card__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobail@2x.jpg 2x"
+                  alt="Фото профиля">
               </picture>
               <div class="profile-card__content">
                 <div class="profile-card__info">
@@ -649,7 +703,8 @@
                     </li>
                     <li class="place__item place__item--catalog country">
                       <div class="place__flag flag">
-                        <img class="flag__img" src="img/flag-seychelles.svg" width="35" heigth="24" alt="флаг сейшелльских островов">
+                        <img class="flag__img" src="img/flag-seychelles.svg" width="35" heigth="24"
+                          alt="флаг сейшелльских островов">
                       </div>
                       <p class="place__name">Сейшелы</p>
                     </li>
@@ -682,7 +737,7 @@
                           <use xlink:href="#icon-run"></use>
                         </svg>
                         <span class="visually-hidden">Пешком</span></li>
-                  </ul>
+                    </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--99">
                     <svg class="level__round">
@@ -692,8 +747,8 @@
                       <div class="level__name level__name--catalog">
                         <span class="level__number level__number--catalog">99</span>
                         <span class="level__text level__text--catalog">level</span></div>
-                      </div>
                     </div>
+                  </div>
                 </div>
                 <div class="profile-card__call">
                   <a class="profile-card__link button button--bg" href="#" aria-label="Позвать">Позвать!</a>
@@ -710,12 +765,15 @@
             </li>
             <li class="results__item profile-card">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x"
+                  type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x"
+                  type="image/webp">
                 <source srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-                <img class="profile-card__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Фото профиля">
+                <img class="profile-card__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x"
+                  alt="Фото профиля">
               </picture>
               <div class="profile-card__content">
                 <div class="profile-card__info">
@@ -737,35 +795,35 @@
                       </div>
                       <p class="place__name">Чехия</p>
                     </li>
-                    </ul>
+                  </ul>
                 </div>
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
                     <p class="transport__title transport__title--catalog">транспорт</p>
                     <ul class="transport__list transport__list--catalog">
-                        <li class="transport__item transport__item--plane transport__item--on">
-                          <svg class="transport__icon" width="19" height="21">
-                            <use xlink:href="#icon-plane"></use>
-                          </svg>
-                          <span class="visually-hidden">Авиаперелет</span>
-                        </li>
-                        <li class="transport__item transport__item--train">
-                          <svg class="transport__icon" width="17" height="21">
-                            <use xlink:href="#icon-bus"></use>
-                          </svg>
-                          <span class="visually-hidden">Автотранспорт</span>
-                        </li>
-                        <li class="transport__item transport__item--bicycle">
-                          <svg class="transport__icon" width="24" height="21">
-                            <use xlink:href="#icon-bike"></use>
-                          </svg>
-                          <span class="visually-hidden">Велосипед</span>
-                        </li>
-                        <li class="transport__item transport__item--walking">
-                          <svg class="transport__icon" width="19" height="21">
-                            <use xlink:href="#icon-run"></use>
-                          </svg>
-                          <span class="visually-hidden">Пешком</span></li>
+                      <li class="transport__item transport__item--plane transport__item--on">
+                        <svg class="transport__icon" width="19" height="21">
+                          <use xlink:href="#icon-plane"></use>
+                        </svg>
+                        <span class="visually-hidden">Авиаперелет</span>
+                      </li>
+                      <li class="transport__item transport__item--train">
+                        <svg class="transport__icon" width="17" height="21">
+                          <use xlink:href="#icon-bus"></use>
+                        </svg>
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport__item transport__item--bicycle">
+                        <svg class="transport__icon" width="24" height="21">
+                          <use xlink:href="#icon-bike"></use>
+                        </svg>
+                        <span class="visually-hidden">Велосипед</span>
+                      </li>
+                      <li class="transport__item transport__item--walking">
+                        <svg class="transport__icon" width="19" height="21">
+                          <use xlink:href="#icon-run"></use>
+                        </svg>
+                        <span class="visually-hidden">Пешком</span></li>
                     </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--80">
@@ -776,8 +834,8 @@
                       <div class="level__name level__name--catalog">
                         <span class="level__number level__number--catalog">80</span>
                         <span class="level__text level__text--catalog">level</span></div>
-                      </div>
                     </div>
+                  </div>
 
                 </div>
                 <div class="profile-card__call">
@@ -795,12 +853,15 @@
             </li>
             <li class="results__item profile-card">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1440px)"
+                  srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x"
+                  type="image/webp">
                 <source srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x" type="image/webp">
                 <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
-                <img class="profile-card__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Фото профиля">
+                <img class="profile-card__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x"
+                  alt="Фото профиля">
               </picture>
               <div class="profile-card__content">
                 <div class="profile-card__info">
@@ -857,16 +918,16 @@
                           <use xlink:href="#icon-run"></use>
                         </svg>
                         <span class="visually-hidden">Пешком</span></li>
-                  </ul>
+                    </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--25">
                     <svg class="level__round">
                       <use xlink:href="#icon-level"></use>
                     </svg>
                     <div class="level__content level__content--catalog">
-                    <div class="level__name level__name--catalog">
-                      <span class="level__number level__number--catalog">25</span>
-                      <span class="level__text level__text--catalog">level</span></div>
+                      <div class="level__name level__name--catalog">
+                        <span class="level__number level__number--catalog">25</span>
+                        <span class="level__text level__text--catalog">level</span></div>
                     </div>
                   </div>
                 </div>
@@ -885,16 +946,22 @@
             </li>
             <li class="results__item profile-card">
               <picture>
-                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 1440px)"
+                  srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x" type="image/webp">
                 <source srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
-                <img class="profile-card__photo" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-desktop@2x.jpg 2x" alt="Фото профиля">
+                <source media="(min-width: 1440px)"
+                  srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                <img class="profile-card__photo" src="img/rogovaya-mobile@1x.jpg"
+                  srcset="img/rogovaya-desktop@2x.jpg 2x" alt="Фото профиля">
               </picture>
               <div class="profile-card__content">
                 <div class="profile-card__info">
-                  <h3 class="profile-card__name profile-card__name--round4 profile-card__name--online">Лариса Роговая</h3>
+                  <h3 class="profile-card__name profile-card__name--round4 profile-card__name--online">Лариса Роговая
+                  </h3>
                   <p class="profile-card__interests">#образование #карьера #учеба #линкедин</p>
                 </div>
                 <div class="profile-card__place profile-card__place--twoflags place">
@@ -902,7 +969,8 @@
                   <ul class="place__list">
                     <li class="place__item place__item--catalog country">
                       <div class="place__flag flag">
-                        <img class="flag__img" src="img/flag-united-kingdom.svg" width="35" heigth="24" alt="флаг англии">
+                        <img class="flag__img" src="img/flag-united-kingdom.svg" width="35" heigth="24"
+                          alt="флаг англии">
                       </div>
                       <p class="place__name">Великобритания</p>
                     </li>
@@ -912,35 +980,35 @@
                       </div>
                       <p class="place__name">Германия</p>
                     </li>
-                    </ul>
+                  </ul>
                 </div>
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
                     <p class="transport__title transport__title--catalog">транспорт</p>
                     <ul class="transport__list transport__list--catalog">
-                        <li class="transport__item transport__item--plane transport__item--on">
-                          <svg class="transport__icon" width="19" height="21">
-                            <use xlink:href="#icon-plane"></use>
-                          </svg>
-                          <span class="visually-hidden">Авиаперелет</span>
-                        </li>
-                        <li class="transport__item transport__item--train transport__item--on">
-                          <svg class="transport__icon" width="17" height="21">
-                            <use xlink:href="#icon-bus"></use>
-                          </svg>
-                          <span class="visually-hidden">Автотранспорт</span>
-                        </li>
-                        <li class="transport__item transport__item--bicycle">
-                          <svg class="transport__icon" width="24" height="21">
-                            <use xlink:href="#icon-bike"></use>
-                          </svg>
-                          <span class="visually-hidden">Велосипед</span>
-                        </li>
-                        <li class="transport__item transport__item--walking">
-                          <svg class="transport__icon" width="19" height="21">
-                            <use xlink:href="#icon-run"></use>
-                          </svg>
-                          <span class="visually-hidden">Пешком</span></li>
+                      <li class="transport__item transport__item--plane transport__item--on">
+                        <svg class="transport__icon" width="19" height="21">
+                          <use xlink:href="#icon-plane"></use>
+                        </svg>
+                        <span class="visually-hidden">Авиаперелет</span>
+                      </li>
+                      <li class="transport__item transport__item--train transport__item--on">
+                        <svg class="transport__icon" width="17" height="21">
+                          <use xlink:href="#icon-bus"></use>
+                        </svg>
+                        <span class="visually-hidden">Автотранспорт</span>
+                      </li>
+                      <li class="transport__item transport__item--bicycle">
+                        <svg class="transport__icon" width="24" height="21">
+                          <use xlink:href="#icon-bike"></use>
+                        </svg>
+                        <span class="visually-hidden">Велосипед</span>
+                      </li>
+                      <li class="transport__item transport__item--walking">
+                        <svg class="transport__icon" width="19" height="21">
+                          <use xlink:href="#icon-run"></use>
+                        </svg>
+                        <span class="visually-hidden">Пешком</span></li>
                     </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--50">
@@ -951,7 +1019,7 @@
                       <div class="level__name level__name--catalog">
                         <span class="level__number level__number--catalog">50</span>
                         <span class="level__text level__text--catalog">level</span></div>
-                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="profile-card__call">
@@ -969,29 +1037,31 @@
             </li>
           </ul>
         </div>
-          <div class="results__show show container">
-            <button class="show__button button" type="button">Показать ещё</button>
-            <ul class="show__list">
-              <li class="show__item show__item  show__item--page">
-                <a href="#" class="show__link show__link--active button" aria-label="Первая страница каталога">1</a>
-              </li>
-              <li class="show__item show__item--page">
-                <a href="#" class="show__link button" aria-label="Вторая страница каталога">2</a>
-              </li>
-              <li class="show__item show__item--page">
-                <a href="#" class="show__link button" aria-label="Третья страница каталога">3</a>
-              </li>
-              <li class="show__item show__item--page">
-                <a href="#" class="show__link button" aria-label="Третья страница каталога">4</a>
-              </li>
-              <li class="show__item show__item--next">
-                <a href="#" class="show__link show__link--switch show__link--next button" aria-label="Перейти на следующую страницу каталога"></a>
-              </li>
-              <li class="show__item show__item--previous">
-                <a href="#" class="show__link show__link--switch show__link--previous button" aria-label="Перейти на следующую страницу каталога"></a>
-              </li>
-            </ul>
-          </div>
+        <div class="results__show show container">
+          <button class="show__button button" type="button">Показать ещё</button>
+          <ul class="show__list">
+            <li class="show__item show__item  show__item--page">
+              <a href="#" class="show__link show__link--active button" aria-label="Первая страница каталога">1</a>
+            </li>
+            <li class="show__item show__item--page">
+              <a href="#" class="show__link button" aria-label="Вторая страница каталога">2</a>
+            </li>
+            <li class="show__item show__item--page">
+              <a href="#" class="show__link button" aria-label="Третья страница каталога">3</a>
+            </li>
+            <li class="show__item show__item--page">
+              <a href="#" class="show__link button" aria-label="Третья страница каталога">4</a>
+            </li>
+            <li class="show__item show__item--next">
+              <a href="#" class="show__link show__link--switch show__link--next button"
+                aria-label="Перейти на следующую страницу каталога"></a>
+            </li>
+            <li class="show__item show__item--previous">
+              <a href="#" class="show__link show__link--switch show__link--previous button"
+                aria-label="Перейти на следующую страницу каталога"></a>
+            </li>
+          </ul>
+        </div>
       </section>
     </div>
   </main>
@@ -999,12 +1069,15 @@
     <div class="page-footer__container container">
       <div class="page-footer__logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 1440px)"
+            srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x"
+            type="image/webp">
           <source srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип компании">
+          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+            alt="Логотип компании">
         </picture>
       </div>
       <ul class="page-footer__socials-list socials-list">
@@ -1046,8 +1119,10 @@
   <script src="js/form-search.js"></script>
   <script>
     // Picture element HTML5 shiv
-    document.createElement( "picture" );
+    document.createElement("picture");
   </script>
   <script src="js/picturefill.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.legacy.min.js"></script>
 </body>
+
 </html>

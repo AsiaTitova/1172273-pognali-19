@@ -206,10 +206,6 @@
   padding: 0;
   list-style: none;
 
-  &--transport .transport__item {
-    padding: 0;
-  }
-
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -344,10 +340,18 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     margin-left: 16px;
+    display: flex;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    display: none;
+  }
+}
+
+.traveler-search__fieldset--open .level-range {
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }
 
