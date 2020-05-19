@@ -56,6 +56,7 @@
   position: relative;
   display: flex;
   flex-grow: 1;
+  z-index: 1;
 }
 
 .action__wrap:not(:first-child) {
@@ -66,13 +67,13 @@
   }
 }
 
-.action__row--error .action__wrap::before {
+.action__wrap--error::before {
   @include border-bottom-radius (4px, 4px);
   content: "Это поле должно быть запонено";
   position: absolute;
   z-index: 2;
   bottom: 0;
-  width: 100%;
+  width: 220px;
   padding-left: 20px;
   padding-top: 19px;
   padding-bottom: 20px;
@@ -84,13 +85,23 @@
   background-color: $very-light-pink;
   border: 1px solid $color-error-text;
   border-top: none;
+
+  @media (min-width: $tablet-width) {
+    width: 499px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
 }
 
-.action__row--error .action__control {
+.action__wrap--error .action__control {
   border: 1px solid $color-error-text;
 }
 
 .action__control {
+  position: relative;
+  z-index: 1;
   width: 220px;
   height: 220px;
   padding-top: 8px;

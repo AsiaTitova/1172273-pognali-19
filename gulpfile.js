@@ -32,19 +32,19 @@ var imagemin = require("gulp-imagemin");
 
 gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-  .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.mozjpeg({progressive: true})
-  ]))
-  .pipe(gulp.dest("build/img"));
+    .pipe(imagemin([
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.mozjpeg({ progressive: true })
+    ]))
+    .pipe(gulp.dest("build/img"));
 });
 
 var webp = require("gulp-webp");
 
-gulp.task("webp", function() {
+gulp.task("webp", function () {
   return gulp.src("source/img/**/*{png,jpg}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"));
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img"));
 });
 
 var svgstore = require("gulp-svgstore");
@@ -52,48 +52,60 @@ var svgstore = require("gulp-svgstore");
 gulp.task("sprite", function () {
   return gulp.src(
     "source/img/icon-*.svg"
-    )
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename("sprite.svg"))
-  .pipe(gulp.dest("build/img"));
+  )
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
 });
 
+var htmlmin = require("gulp-htmlmin");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(gulp.dest("build"));
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+});
+
+var uglify = require("gulp-uglify");
+var pipeline = require("readable-stream").pipeline;
+
+gulp.task("js", async function () {
+  return pipeline(
+    gulp.src("source/js/**/*.js"),
+    uglify(),
+    rename({suffix: ".min"}),
+    gulp.dest("build/js"));
 });
 
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**",
-    "source/*.ico",
-    "sourse/preview/**"
+    "source/*.ico"
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"));
 });
 
 var del = require("del");
 
-gulp.task("clean", function() {
+gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series (
+gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
+  "js",
   "sprite",
   "html"
 ));
