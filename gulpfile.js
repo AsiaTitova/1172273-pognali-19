@@ -62,13 +62,9 @@ gulp.task("sprite", function () {
 
 var htmlmin = require("gulp-htmlmin");
 var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-    .pipe(posthtml([
-      include()
-    ]))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
