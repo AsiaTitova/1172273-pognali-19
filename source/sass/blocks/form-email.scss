@@ -9,6 +9,11 @@
 .form-email__email {
   width: 270px;
   height: 62px;
+  padding-left: 23px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  color: $greyish-brown-opacity30;
   border-radius: 10px;
   border: none;
   background-color: $white;
@@ -25,16 +30,52 @@
     color: $white;
   }
 
+  &::-webkit-input-placeholder {
+    color: $greyish-brown-opacity30;
+  }
+
+  &:hover::-webkit-input-placeholder {
+    color: $greyish-brown-opacity50;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: $white;
+  }
+
+  &:active::-webkit-input-placeholder {
+    color: $white;
+  }
+
+  &::-moz-placeholder {
+    color: $greyish-brown-opacity30;
+  }
+
+  &:hover::-moz-placeholder {
+    color: $greyish-brown-opacity50;
+  }
+
+  &:focus::-moz-placeholder {
+    color: $white;
+  }
+
+  &:active::-moz-placeholder {
+    color: $white;
+  }
+
   @media (min-width: $tablet-width) {
     @include border-left-radius (20px, 20px);
     @include border-right-radius (0, 0);
     width: 536px;
     height: 81px;
+    padding-left: 30px;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
     @include border-left-radius (20px, 20px);
     width: 850px;
+    padding-left: 35px;
   }
 }
 

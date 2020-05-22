@@ -3,14 +3,50 @@
   display: flex;
   flex-wrap: wrap;
   color: $white;
+  background-image: linear-gradient(to top, $dark-grey 41%, rgba(255, 255, 255, 0) 41%), url("../img/traveller-illustration-mobile@1x.png");
+  background-position: 0 0, 79px 150px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 100%, 192px 256px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: linear-gradient(to top, $dark-grey 41%, rgba(255, 255, 255, 0) 41%), url("../img/traveller-illustration-mobile@2x.png");
+    background-position: 0 0, 79px 150px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 100%, 192px 256px;
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/traveller-illustration-tablet@1x.png");
+    background-position: 284px 281px;
+    background-size: 372px 448px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/traveller-illustration-tablet@2x.png");
+      background-size: 372px 448px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include border-bottom-radius (60px, 60px);
+    background-image: url("../img/traveller-illustration-desktop@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 604px, 110px;
+    background-size: 431px 640px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/traveller-illustration-desktop@2x.png");
+      background-size: 431px 640px;
+    }
+  }
 }
 
 .promo__container {
   position: relative;
   padding-top: 20px;
 
+
   @media (min-width: $tablet-width) {
-    padding-top: 25px;
+    padding-top: 36px;
   }
 
   @media (min-width: $desktop-width) {
@@ -22,7 +58,7 @@
   margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 213px;
+    margin-bottom: 216px;
   }
 
   @media (min-width: $desktop-width) {
@@ -42,7 +78,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 91px;
+    margin-bottom: 88px;
     padding-left: 140px;
     padding-right: 140px;
     font-size: 60px;
@@ -101,10 +137,10 @@
 
 .promo__author {
   margin: 0;
+  font-weight: bold;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
-    font-weight: bold;
     line-height: 25px;
   }
 }
@@ -112,10 +148,10 @@
 .promo__position {
   margin: 0;
   padding-right: 65px;
+  font-weight: bold;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
-    font-weight: bold;
     line-height: 24px;
   }
 

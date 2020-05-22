@@ -81,7 +81,8 @@
     padding-left: 39px;
     font-size: 15px;
     line-height: 15px;
-    font-weight: normal;
+    letter-spacing: normal;
+    font-weight: 400;
     text-transform: none;
     color: $greyish-brown;
 
@@ -150,10 +151,16 @@
   border: solid 1px $blue-grey;
 }
 
+
 .registration__checkbox + .registration__label--children:active::before,
 .registration__checkbox:checked + .registration__label--children:active::before {
   border: none;
   background-color: $pale-grey-blue-light;
+}
+
+.registration__checkbox:focus + .registration__label,
+.registration__checkbox:checked:focus + .registration__label {
+  outline: 2px solid  #81b3d2;
 }
 
 .registration__control {
@@ -183,6 +190,14 @@
     width: 40px;
     padding: 0;
   }
+}
+
+.registration__control::-webkit-input-placeholder {
+  color: $dark-slate-blue;
+}
+
+.registration__control::-moz-placeholder {
+  color: $dark-slate-blue;
 }
 
 .registration__units {

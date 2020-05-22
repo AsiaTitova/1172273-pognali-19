@@ -166,7 +166,7 @@
   }
 }
 
-.personal-account__transport .transport__item {
+.personal-account__transport-item {
   background-color: $white;
   border: none;
 
@@ -186,7 +186,7 @@
   }
 }
 
-.personal-account__transport .transport__list {
+.personal-account__transport-list {
   width: 270px;
   margin: 0;
   margin-top: -10px;
@@ -221,7 +221,7 @@
   }
 }
 
-.personal-account__transport .transport__title {
+.personal-account__transport-title {
   position: relative;
   padding: 0 18px;
   font-weight: bold;
@@ -229,6 +229,7 @@
   text-transform: uppercase;
   color: $dark-slate-blue;
   z-index: 2;
+  margin: 0;
   margin-left: 77px;
 
   &::before {
@@ -270,7 +271,7 @@
 
     &::before {
       width: 156px;
-      left: 77px;
+      left: 112px;
     }
   }
 }

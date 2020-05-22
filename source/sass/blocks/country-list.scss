@@ -1,6 +1,18 @@
 .country-list {
+  position: relative;
   list-style-type: none;
   padding: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 270px;
+    height: 81px;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top, $pale-grey, rgba(255, 255, 255, 0));
+  }
 
   @media (min-width: $tablet-width) {
     padding-left: 35px;
@@ -8,16 +20,21 @@
     &::before {
       content: "";
       position: absolute;
-      top: 469px;
-      left: 40px;
+      top: -35px;
+      left: -9px;
       width: 141px;
       height: 141px;
       border-radius: 20px;
       background-color: $pale-grey-blue;
     }
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
+    position: absolute;
     padding: 0;
 
     &::before {
@@ -30,6 +47,7 @@
     &::after {
       content: "";
       position: absolute;
+      display: block;
       width: 681px;
       height: 81px;
       bottom: 0;

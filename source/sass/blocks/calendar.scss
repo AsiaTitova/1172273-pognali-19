@@ -9,10 +9,34 @@
   border-left: none;
   border-right: none;
 
+  @media (min-width: $tablet-width) {
+    @include vertical-paddings (20px, 22px);
+    margin-bottom: 26px;
+    font-size: 36px;
+    line-height: normal;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 4px;
+  }
+}
+
+.calendar__wrap {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.calendar__prev {
+  position: relative;
+  width: 30px;
+  border: none;
+  background-color: transparent;
+
   &::before {
     content: "";
     position: absolute;
-    top: 13px;
+    top: 0;
     left: 0;
     width: 9px;
     height: 18px;
@@ -21,10 +45,44 @@
     opacity: 0.3;
   }
 
+  &:hover::before,
+  &:focus::before {
+    opacity: 0.5;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      width: 18px;
+      height: 34px;
+      top: 0;
+      left: 15px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 20px;
+      height: 36px;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+.calendar__next {
+  position: relative;
+  width: 30px;
+  border: none;
+  background-color: transparent;
+
   &::after {
     content: "";
     position: absolute;
-    top: 13px;
+    top: 0;
     right: 0;
     width: 9px;
     height: 18px;
@@ -33,36 +91,20 @@
     opacity: 0.3;
   }
 
-  &:hover::before,
   &:hover::after,
-  &:focus::before,
   &:focus::after {
     opacity: 0.5;
   }
 
-  &:active::before,
   &:active::after {
     opacity: 0.1;
   }
 
   @media (min-width: $tablet-width) {
-    @include vertical-paddings (20px, 22px);
-    margin-bottom: 26px;
-    font-size: 36px;
-    line-height: normal;
-
-    &::before,
     &::after {
       width: 18px;
       height: 34px;
-      top: 25px;
-    }
-
-    &::before {
-      left: 15px;
-    }
-
-    &::after {
+      top: 0;
       right: 15px;
     }
   }
@@ -70,18 +112,10 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 4px;
 
-    &::before,
     &::after {
       width: 20px;
       height: 36px;
-      top: 27px;
-    }
-
-    &::before {
-      left: 0;
-    }
-
-    &::after {
+      top: 0;
       right: 0;
     }
   }
@@ -89,175 +123,4 @@
 
 .calendar__table {
   border-collapse: collapse;
-}
-
-.week__cell {
-  padding-top: 2px;
-  padding-bottom: 7px;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  font-weight: normal;
-  color: $greyish-brown;
-
-  &--output {
-    color: $orange-red;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-top: 5px;
-    padding-bottom: 4px;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 1.8px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 7px;
-    padding-bottom: 14px;
-    padding-left: 17px;
-    text-align: left;
-  }
-}
-
-.week__letter {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    display: inline;
-  }
-}
-
-.days__cell {
-  width: 33px;
-  height: 31px;
-  background-color: #ffffff;
-  border: 1px solid $cloudy-blue;
-  text-align: center;
-
-  &--free {
-    background-color: $pale-grey;
-  }
-
-  &--active {
-    background-color: $darker-blue;
-  }
-
-  &--focus {
-    background-color: $dark-slate-blue;
-    border: solid 2px $orange-red;
-
-    @media (min-width: $tablet-width) {
-      border: solid 4px $orange-red;
-    }
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $dark-slate-blue;
-    border: solid 2px $orange-red;
-
-    @media (min-width: $tablet-width) {
-      border: solid 4px $orange-red;
-    }
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 77px;
-    height: 69px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 144px;
-    height: 71px;
-  }
-}
-
-.days__button {
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  color: $greyish-brown;
-  border: none;
-  background-color: $pale-grey;
-
-  &:disabled {
-    color: $grey-opacity;
-    background-color: $white;
-  }
-
-  &--text,
-  &--month {
-    display: none;
-  }
-
-  &--active {
-    color: $white;
-    background-color: $darker-blue;
-  }
-
-  &--focus {
-    color: $white;
-    background-color: $dark-slate-blue;
-  }
-
-  &:hover,
-  &:focus {
-    color: $white;
-    background-color: $dark-slate-blue;
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 2px;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: unset;
-    font-size: 18px;
-    line-height: 30px;
-    letter-spacing: 1.8px;
-    font-weight: 400;
-    text-align: left;
-    vertical-align: top;
-    padding: 5px 16px;
-    padding-bottom: 33px;
-
-    &--month {
-      display: inline;
-    }
-
-    &--text {
-      display: block;
-    }
-
-    &--active {
-      padding-bottom: 0;
-    }
-
-    &--focus {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-
-    &--active span {
-      color: $white;
-    }
-
-    &:disabled span {
-      color: $grey-opacity;
-    }
-  }
-}
-
-.days__button span {
-  border: none;
-  background-color: transparent;
-  text-transform: none;
-  padding: 0;
-  height: 30px;
 }

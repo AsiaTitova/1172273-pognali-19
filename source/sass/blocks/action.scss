@@ -10,14 +10,10 @@
 }
 
 .action__row:not(:first-child) {
-  margin-top: 20px;
+  margin-top: 24px;
 
   @media (min-width: $tablet-width) {
     margin-top: 43px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-top: 38px;
   }
 }
 

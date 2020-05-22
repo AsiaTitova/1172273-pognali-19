@@ -58,6 +58,11 @@
   }
 }
 
+.profile-card__link-img {
+  display: block;
+  cursor: pointer;
+}
+
 .profile-card__photo {
   position: absolute;
   display: block;
@@ -105,11 +110,13 @@
 .profile-card__name {
   @include title (20px, bold, $dark-slate-blue);
   position: relative;
+  display: block;
   margin: 0;
   padding-left: 85px;
   padding-right: 143px;
   line-height: 20px;
   text-decoration: none;
+  cursor: pointer;
 
   &::before {
     @include round (6px, 6px, 2.6px, $salmon);
@@ -288,7 +295,7 @@
   }
 }
 
-.profile-card__wrapper .transport__list {
+.profile-card__transport-list {
   margin-top: 14px;
 
   @media (min-width: $tablet-width) {
@@ -297,7 +304,7 @@
 }
 
 
-.profile-card__wrapper .transport__item {
+.profile-card__transport-item {
   width: 33px;
   height: 33px;
 
@@ -306,7 +313,14 @@
   }
 }
 
-.profile-card__wrapper .transport__title--catalog {
+.profile-card__transport-title {
+  margin: 0;
+  padding-left: 7px;
+  padding-top: 2px;
+  font-size: 15px;
+  line-height: 18px;
+  color: $greyish-brown;
+
   &::after {
     content: "";
     position: absolute;
@@ -317,30 +331,18 @@
     z-index: -1;
     background-color: $white;
   }
-}
 
-.profile-card__wrapper .level__title--catalog {
-  &::after {
-    content: "";
-    position: absolute;
-    width: 57px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: $white;
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }
 
 .profile-card__level {
   margin: 0;
   margin-left: 50px;
-  margin-top: 29px;
-  width: 45px;
-  height: 45px;
 
   @media (min-width: $tablet-width) {
-    margin-left: unset;
+    margin-left: 0;
     margin-top: 3px;
     width: 60px;
     height: 60px;
@@ -352,10 +354,46 @@
   }
 }
 
+.profile-card__level-title {
+  margin: 0;
+  margin-bottom: 9px;
+  padding-left: 7px;
+  padding-top: 2px;
+  font-size: 15px;
+  line-height: 18px;
+  color: $greyish-brown;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $white;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.profile-card__level-wrap {
+  position: relative;
+  width: 45px;
+  height: 45px;
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 .profile-card__call {
   display: flex;
   align-items: center;
-  margin-top: 14px;
+  margin-top: 23px;
 
   @media (min-width: $tablet-width) {
     order: 4;

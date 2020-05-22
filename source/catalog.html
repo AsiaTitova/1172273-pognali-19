@@ -8,38 +8,29 @@
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body class="no-js">
-  <header class="page-header">
-    <nav class="page-header__main-navigation main-navigation main-navigation--form">
+  <header class="page-header no-js__page-header">
+    <nav class="page-header__main-navigation main-navigation main-navigation--catalog no-js__main-navigation">
       <div class="main-navigation__container container">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo logo" href="index.html">
             <picture>
-              <source media="(min-width: 1440px)"
-                srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 768px)"
-                srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x" type="image/webp">
               <source srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x" type="image/webp">
-              <source media="(min-width: 1440px)"
-                srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-              <source media="(min-width: 768px)"
-                srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-              <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png"
-                alt="Логотип 'Погнали'">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png" alt="Логотип 'Погнали'">
             </picture>
           </a>
-          <button class="main-navigation__toggler">
+          <button class="main-navigation__toggler" type="button">
             <span class="visually-hidden">переключатель меню</span>
           </button>
         </div>
         <ul class="main-navigation__site-list site-list">
-          <li class="site-list__item"><a class="site-list__link button" href="#" aria-label="О сервисе"><span
-                data-hover="О сервисе">О сервисе</span></a></li>
-          <li class="site-list__item"><a class="site-list__link button" href="form.html" aria-label="Направления"><span
-                data-hover="Направления">Направления</span></a></li>
-          <li class="site-list__item"><a class="site-list__link site-list__link--current button" href="#"
-              aria-label="Попутчики"><span data-hover="Попутчики">Попутчики</span></a></li>
+          <li class="main-navigation__site-item site-list__item"><a class="main-navigation__site-link site-list__link button" href="#" aria-label="О сервисе"><span data-hover="О сервисе">О сервисе</span></a></li>
+          <li class="main-navigation__site-item site-list__item"><a class="main-navigation__site-link site-list__link button" href="form.html" aria-label="Направления"><span data-hover="Направления">Направления</span></a></li>
+          <li class="main-navigation__site-item site-list__item"><a class="main-navigation__site-link site-list__link site-list__link--current button" href="#" aria-label="Попутчики"><span data-hover="Попутчики">Попутчики</span></a></li>
         </ul>
         <ul class="main-navigation__login login">
           <li class="login__item">
@@ -66,8 +57,7 @@
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__contacts contacts contacts--navigation">
             <li class="contacts__item contacts__item--navigation">
-              <a class="contacts__link contacts__link--navigation button" href="tel:+78005558628"
-                aria-label="Позвонить">
+              <a class="contacts__link contacts__link--navigation button" href="tel:+78005558628" aria-label="Позвонить">
                 <div class="contacts__wrapper">
                   <svg class="contacts__icon" width="18" height="18">
                     <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
@@ -87,27 +77,24 @@
               </a>
             </li>
           </ul>
-          <ul class="main-navigation__socials socials-list">
+          <ul class="main-navigation__socials socials-list socials-list--navigation">
             <li class="socials-list__item socials-list__item--navigation">
               <a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук">
-                <svg class="socials-list__icon socials-list__icon--fb socials-list__icon--navigation" width="11"
-                  height="21">
+                <svg class="socials-list__icon socials-list__icon--fb socials-list__icon--navigation" width="11" height="21">
                   <use xlink:href="img/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="socials-list__item socials-list__item--navigation">
               <a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте">
-                <svg class="socials-list__icon socials-list__icon--vk socials-list__icon--navigation" width="23"
-                  height="12">
+                <svg class="socials-list__icon socials-list__icon--vk socials-list__icon--navigation" width="23" height="12">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="socials-list__item socials-list__item--navigation">
               <a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм">
-                <svg class="socials-list__icon socials-list__icon--inst socials-list__icon--navigation" width="18"
-                  height="18">
+                <svg class="socials-list__icon socials-list__icon--inst socials-list__icon--navigation" width="18" height="18">
                   <use xlink:href="img/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
@@ -117,20 +104,19 @@
       </div>
     </nav>
   </header>
-  <main class="page-main">
-    <section class="page-main__title title">
+  <main class="page-main page-main-catalog">
+    <section class="page-main__title page-main-catalog__title title">
       <div class="title__container container">
         <h1 class="title__name">Попутчики</h1>
         <a class="title__link button" href="index.html" aria-label="вернуться на главную страницу">На главную</a>
       </div>
     </section>
-    <section class="page-main__country-filters country-filters">
+    <section class="page-main__country-filters page-main-catalog__country-filters country-filters">
       <div class="country-filters__container country-filters__container--close container">
         <h2 class="country-filters__name">Фильтрация по странам</h2>
-        <button class="country-filters__toggler toggler toggler--open button" type="button"
-          aria-label="переключить фильтр стран">
-          <span class="toggler__text toggler__text--open">Показать все</span>
-          <span class="toggler__text toggler__text--close">Свернуть</span>
+        <button class="country-filters__toggler toggler toggler--close button no-js__toggler" type="button" aria-label="переключить фильтр стран">
+          <span class="toggler__text toggler__text--open no-js__text no-js__text--open">Показать все</span>
+          <span class="toggler__text toggler__text--close no-js__text no-js__text--close">Свернуть</span>
         </button>
         <ul class="country-filters__part-world part-world">
           <li class="part-world__item"><button class="part-world__button part-world__button--current button"
@@ -145,7 +131,7 @@
             <button class="part-world__button button" type="button" aria-label="острова">Острова</button>
           </li>
         </ul>
-        <div class="country-filters__show">
+        <div class="country-filters__show no-js__country-filters">
           <ul class="country-filters__alphabet alphabet">
             <li class="alphabet__item alphabet__item--top">
               <button
@@ -752,25 +738,24 @@
         </div>
       </div>
     </section>
-    <div class="page-main__container">
-      <aside class="page-main__form-search form-search form-search__container">
+    <div class="page-main__container page-main-catalog__container">
+      <aside class="page-main__form-search page-main-catalog__form-search form-search form-search__container">
         <form class="form-search__form traveler-search" method="get" action="https://echo.htmlacademy.ru">
           <h2 class="traveler-search__title">Подберите идеального попутчика</h2>
           <div class="traveler-search__fieldset traveler-search__fieldset--open traveler-search__fieldset--top">
             <button class="traveler-search__toggler button" type="button">Хобби</button>
             <ul class="traveler-search__list">
               <li class="traveler-search__item">
-                <input class="traveler-search__control visually-hidden" type="checkbox" name="sport" id="sport"
-                  checked="">
-                <label class="traveler-search__label" for="sport">Спортзал</label>
+                <input class="traveler-search__control visually-hidden" type="checkbox" name="sport" id="sport" checked>
+                <label class="traveler-search__label" for="sport" >Спортзал</label>
               </li>
               <li class="traveler-search__item">
                 <input class="traveler-search__control visually-hidden" type="checkbox" name="hookah" id="hookah">
-                <label class="traveler-search__label" for="hookah">Кальян</label>
+                <label class="traveler-search__label" for="hookah" >Кальян</label>
               </li>
               <li class="traveler-search__item">
                 <input class="traveler-search__control visually-hidden" type="checkbox" name="sofa" id="sofa">
-                <label class="traveler-search__label" for="sofa">Диван</label>
+                <label class="traveler-search__label" for="sofa" >Диван</label>
               </li>
             </ul>
           </div>
@@ -779,16 +764,16 @@
             <ul class="traveler-search__list">
               <li class="traveler-search__item">
                 <input class="traveler-search__control visually-hidden" type="checkbox" name="hardrock" id="hardrock"
-                  checked="">
-                <label class="traveler-search__label" for="hardrock">Тяжелый рок</label>
+                  checked>
+                <label class="traveler-search__label" for="hardrock" >Тяжелый рок</label>
               </li>
               <li class="traveler-search__item">
                 <input class="traveler-search__control visually-hidden" type="checkbox" name="rap" id="rap">
-                <label class="traveler-search__label" for="rap">Русский рэп</label>
+                <label class="traveler-search__label" for="rap" >Русский рэп</label>
               </li>
               <li class="traveler-search__item">
                 <input class="traveler-search__control visually-hidden" type="checkbox" name="eurodens" id="eurodens">
-                <label class="traveler-search__label" for="eurodens">Евроденс</label>
+                <label class="traveler-search__label" for="eurodens" >Евроденс</label>
               </li>
             </ul>
           </div>
@@ -797,7 +782,7 @@
             <ul class="traveler-search__list">
               <li class="traveler-search__item">
                 <input class="traveler-search__control visually-hidden" type="checkbox" name="meat" id="meat"
-                  checked="">
+                  checked>
                 <label class="traveler-search__label" for="meat">Мясоед</label>
               </li>
               <li class="traveler-search__item">
@@ -817,9 +802,8 @@
               <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--plane">
                 <span class="visually-hidden">Авиаперелет</span>
                 <label class="transport__label" for="plane">
-                  <input class="transport__control visually-hidden" type="checkbox" id="plane" name="plane"
-                    aria-label="самолет" checked>
-                  <svg class="transport__icon" width="19" height="21">
+                  <input class="transport__control visually-hidden" type="checkbox" id="plane" name="plane" aria-label="самолет" checked>
+                  <svg class="transport__icon transport__icon--plane" width="14" height="16">
                     <use class="transport__use" xlink:href="img/sprite.svg#icon-plane" fill="currentColor"></use>
                   </svg>
                 </label>
@@ -827,18 +811,16 @@
               <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--train">
                 <span class="visually-hidden">Автотранспорт</span>
                 <label class="transport__label" for="train">
-                  <input class="transport__control visually-hidden" type="checkbox" id="train" name="train"
-                    aria-label="автотранспорт">
-                  <svg class="transport__icon" width="17" height="21">
+                  <input class="transport__control visually-hidden" type="checkbox" id="train" name="train" aria-label="автотранспорт">
+                  <svg class="transport__icon transport__icon--train" width="13" height="16">
                     <use class="transport__use" xlink:href="img/sprite.svg#icon-bus" fill="currentColor"></use>
                   </svg>
                 </label>
               </li>
               <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--bicycle">
                 <label class="transport__label" for="bike">
-                  <input class="transport__control visually-hidden" type="checkbox" id="bike" name="bike"
-                    aria-label="велосипед">
-                  <svg class="transport__icon" width="24" height="21">
+                  <input class="transport__control visually-hidden" type="checkbox" id="bike" name="bike" aria-label="велосипед">
+                  <svg class="transport__icon transport__icon--bicycle" width="19" height="17">
                     <use class="transport__use" xlink:href="img/sprite.svg#icon-bike" fill="currentColor"></use>
                   </svg>
                 </label>
@@ -846,9 +828,8 @@
               </li>
               <li class="traveler-search_item traveler-search_item--transport transport__item transport__item--walking">
                 <label class="transport__label" for="run">
-                  <input class="transport__control visually-hidden" type="checkbox" id="run" name="run"
-                    aria-label="пешком">
-                  <svg class="transport__icon" width="19" height="21">
+                  <input class="transport__control visually-hidden" type="checkbox" id="run" name="run" aria-label="пешком">
+                  <svg class="transport__icon transport__icon--walking" width="15" height="17">
                     <use class="transport__use" xlink:href="img/sprite.svg#icon-run" fill="currentColor"></use>
                   </svg>
                 </label>
@@ -856,52 +837,44 @@
               </li>
             </ul>
           </div>
-          <div class="traveler-search__fieldset traveler-search__fieldset--level-range">
+          <div class="traveler-search__fieldset traveler-search__fieldset--open">
             <button class="traveler-search__toggler button" type="button">левел</button>
             <div class="traveler-search__level-range level-range">
               <div class="level-range__price-controls level-range__price-controls--price">
-                <label class="level-range__min-price"><input class="level-range__min-control" name="min-price"
-                    type="number" value="30"></label>
-                <label class="level-range__max-price"><input class="level-range__max-control" name="max-price"
-                    type="number" value="100"></label>
+                <label class="level-range__min-price"><input class="level-range__min-control" name="min-price" type="number" value="30"></label>
+                <label class="level-range__max-price"><input class="level-range__max-control" name="max-price" type="number" value="100"></label>
               </div>
               <div class="level-range__range-controls level-range__price-controls level-range__price-controls--scale">
                 <div class="level-range__scale">
                   <div class="level-range__bar"></div>
+                  <button class="level-range__toggle level-range__toggle--min" type="button" aria-label="нижняя граница уровня"></button>
+                  <button class="level-range__toggle level-range__toggle--max" type="button" aria-label="верхняя граница уровня"></button>
                 </div>
-                <button class="level-range__toggle level-range__toggle--min"
-                  aria-label="нижняя граница уровня"></button>
-                <button class="level-range__toggle level-range__toggle--max"
-                  aria-label="верхняя граница уровня"></button>
               </div>
             </div>
           </div>
-          <button class="traveler-search__submit button" type="submit"
-            aria-label="показать результаты">Показать</button>
+          <button class="traveler-search__submit button" type="submit" aria-label="показать результаты">Показать</button>
         </form>
       </aside>
-      <section class="page-main__results results">
+      <section class="page-main__results page-main-catalog__results results">
         <h2 class="visually-hidden">Результаты поиска</h2>
         <div class="results__container">
           <ul class="results__list">
             <li class="results__item profile-card">
-              <picture>
-                <source media="(min-width: 1440px)"
-                  srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x"
-                  type="image/webp">
-                <source srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 1440px)"
-                  srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
-                <img class="profile-card__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobail@2x.jpg 2x"
-                  alt="Фото профиля">
-              </picture>
+              <a class="profile-card__link-img" href="#">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x" type="image/webp">
+                  <source srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                  <img class="profile-card__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobail@2x.jpg 2x" alt="Фото профиля">
+                </picture>
+              </a>
               <div class="profile-card__content">
                 <div class="profile-card__info">
-                  <a class="profile-card__name profile-card__name--round1" href="#" aria-label="перейти в профиль">
-                    Таня Фирсова</a>
-                    <p class="profile-card__interests">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+                  <a class="profile-card__name profile-card__name--round1" href="#" aria-label="перейти в профиль">Таня Фирсова</a>
+                  <p class="profile-card__interests">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 </div>
                 <div class="profile-card__place place">
                   <p class="place__title">хочет посетить</p>
@@ -920,8 +893,7 @@
                     </li>
                     <li class="place__item place__item--catalog country">
                       <div class="place__flag flag">
-                        <img class="flag__img" src="img/flag-seychelles.svg" width="35" height="24"
-                          alt="флаг сейшелльских островов">
+                        <img class="flag__img" src="img/flag-seychelles.svg" width="35" height="24" alt="флаг сейшелльских островов">
                       </div>
                       <p class="place__name">Сейшелы</p>
                     </li>
@@ -929,28 +901,28 @@
                 </div>
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
-                    <p class="transport__title transport__title--catalog">транспорт</p>
-                    <ul class="transport__list transport__list--catalog">
-                      <li class="transport__item transport__item--plane transport__item--on">
-                        <svg class="transport__icon" width="19" height="21">
+                    <p class="profile-card__transport-title transport__title transport__title--catalog">транспорт</p>
+                    <ul class="profile-card__transport-list transport__list transport__list--catalog">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
                           <use xlink:href="img/sprite.svg#icon-plane"></use>
                         </svg>
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="transport__item transport__item--train">
-                        <svg class="transport__icon" width="17" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--train">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--train" width="13" height="16">
                           <use xlink:href="img/sprite.svg#icon-bus"></use>
                         </svg>
                         <span class="visually-hidden">Автотранспорт</span>
                       </li>
-                      <li class="transport__item transport__item--bicycle">
-                        <svg class="transport__icon" width="24" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bicycle">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--bicycle" width="19" height="17">
                           <use xlink:href="img/sprite.svg#icon-bike"></use>
                         </svg>
                         <span class="visually-hidden">Велосипед</span>
                       </li>
-                      <li class="transport__item transport__item--walking">
-                        <svg class="transport__icon" width="19" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--walking">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--walking" width="15" height="17">
                           <use xlink:href="img/sprite.svg#icon-run"></use>
                         </svg>
                         <span class="visually-hidden">Пешком</span>
@@ -958,6 +930,8 @@
                     </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--99">
+                    <p class="profile-card__level-title level__title">левел</p>
+                    <div class="profile-card__level-wrap">
                     <svg class="level__round">
                       <use xlink:href="img/sprite.svg#icon-level"></use>
                     </svg>
@@ -966,6 +940,7 @@
                         <span class="level__number level__number--catalog">99</span>
                         <span class="level__text level__text--catalog">level</span>
                       </div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -983,21 +958,19 @@
               </div>
             </li>
             <li class="results__item profile-card">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x"
-                  type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x"
-                  type="image/webp">
-                <source srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-                <img class="profile-card__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x"
-                  alt="Фото профиля">
-              </picture>
+              <a class="profile-card__link-img" href="#">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x" type="image/webp">
+                  <source srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                  <img class="profile-card__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Фото профиля">
+                </picture>
+              </a>
               <div class="profile-card__content">
                 <div class="profile-card__info">
-                  <a class="profile-card__name profile-card__name--round2" href="#" aria-label="перейти в профиль">
-                    Петя Демин</a>
+                  <a class="profile-card__name profile-card__name--round2" href="#" aria-label="перейти в профиль">Петя Демин</a>
                     <p class="profile-card__interests">#бургер #бар #футбол #концерт #крафт</p>
                 </div>
                 <div class="profile-card__place profile-card__place--twoflags place">
@@ -1019,41 +992,46 @@
                 </div>
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
-                    <p class="transport__title transport__title--catalog">транспорт</p>
-                    <ul class="transport__list transport__list--catalog">
-                      <li class="transport__item transport__item--plane transport__item--on">
-                        <svg class="transport__icon" width="19" height="21">
+                    <p class="profile-card__transport-title transport__title transport__title--catalog">транспорт</p>
+                    <ul class="profile-card__transport-list transport__list transport__list--catalog">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
                           <use xlink:href="img/sprite.svg#icon-plane"></use>
                         </svg>
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="transport__item transport__item--train">
-                        <svg class="transport__icon" width="17" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--train transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--train" width="13" height="16">
                           <use xlink:href="img/sprite.svg#icon-bus"></use>
                         </svg>
                         <span class="visually-hidden">Автотранспорт</span>
                       </li>
-                      <li class="transport__item transport__item--bicycle">
-                        <svg class="transport__icon" width="24" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bicycle">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--bicycle" width="19" height="17">
                           <use xlink:href="img/sprite.svg#icon-bike"></use>
                         </svg>
                         <span class="visually-hidden">Велосипед</span>
                       </li>
-                      <li class="transport__item transport__item--walking">
-                        <svg class="transport__icon" width="19" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--walking transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--walking" width="15" height="17">
                           <use xlink:href="img/sprite.svg#icon-run"></use>
                         </svg>
-                        <span class="visually-hidden">Пешком</span></li>
+                        <span class="visually-hidden">Пешком</span>
+                      </li>
                     </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--80">
+                    <p class="profile-card__level-title level__title">левел</p>
+                    <div class="profile-card__level-wrap">
                     <svg class="level__round">
                       <use xlink:href="img/sprite.svg#icon-level"></use>
                     </svg>
                     <div class="level__content level__content--catalog">
                       <div class="level__name level__name--catalog">
                         <span class="level__number level__number--catalog">80</span>
-                        <span class="level__text level__text--catalog">level</span></div>
+                        <span class="level__text level__text--catalog">level</span>
+                    </div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -1071,21 +1049,19 @@
               </div>
             </li>
             <li class="results__item profile-card">
-              <picture>
-                <source media="(min-width: 1440px)"
-                  srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x"
-                  type="image/webp">
-                <source srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
-                <img class="profile-card__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x"
-                  alt="Фото профиля">
-              </picture>
+              <a class="profile-card__link-img" href="#">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x" type="image/webp">
+                  <source srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                  <img class="profile-card__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Фото профиля">
+                </picture>
+              </a>
               <div class="profile-card__content">
                 <div class="profile-card__info">
-                  <a class="profile-card__name profile-card__name--round3" href="#" aria-label="перейти в профиль">
-                    Марк Смолов</a>
+                  <a class="profile-card__name profile-card__name--round3" href="#" aria-label="перейти в профиль">Марк Смолов</a>
                     <p class="profile-card__interests">#рэп #тату #хайпбист #кроссовки #суприм</p>
                 </div>
                 <div class="profile-card__place place">
@@ -1113,34 +1089,37 @@
                 </div>
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
-                    <p class="transport__title transport__title--catalog">транспорт</p>
-                    <ul class="transport__list transport__list--catalog">
-                      <li class="transport__item transport__item--plane transport__item--on">
-                        <svg class="transport__icon" width="19" height="21">
+                    <p class="profile-card__transport-title transport__title transport__title--catalog">транспорт</p>
+                    <ul class="profile-card__transport-list transport__list transport__list--catalog">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
                           <use xlink:href="img/sprite.svg#icon-plane"></use>
                         </svg>
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="transport__item transport__item--train">
-                        <svg class="transport__icon" width="17" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--train">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--train" width="13" height="16">
                           <use xlink:href="img/sprite.svg#icon-bus"></use>
                         </svg>
                         <span class="visually-hidden">Автотранспорт</span>
                       </li>
-                      <li class="transport__item transport__item--bicycle transport__item--on">
-                        <svg class="transport__icon" width="24" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bicycle transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon" width="19" height="17">
                           <use xlink:href="img/sprite.svg#icon-bike"></use>
                         </svg>
                         <span class="visually-hidden">Велосипед</span>
                       </li>
-                      <li class="transport__item transport__item--walking">
-                        <svg class="transport__icon" width="19" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--walking">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--walking" width="15" height="17">
                           <use xlink:href="img/sprite.svg#icon-run"></use>
                         </svg>
-                        <span class="visually-hidden">Пешком</span></li>
+                        <span class="visually-hidden">Пешком</span>
+                      </li>
                     </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--25">
+                    <p class="profile-card__level-title level__title">левел</p>
+                    <div class="profile-card__level-wrap">
                     <svg class="level__round">
                       <use xlink:href="img/sprite.svg#icon-level"></use>
                     </svg>
@@ -1148,6 +1127,7 @@
                       <div class="level__name level__name--catalog">
                         <span class="level__number level__number--catalog">25</span>
                         <span class="level__text level__text--catalog">level</span></div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -1165,24 +1145,19 @@
               </div>
             </li>
             <li class="results__item profile-card">
-              <picture>
-                <source media="(min-width: 1440px)"
-                  srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 768px)"
-                  srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x" type="image/webp">
-                <source srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x" type="image/webp">
-                <source media="(min-width: 1440px)"
-                  srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
-                <img class="profile-card__photo" src="img/rogovaya-mobile@1x.jpg"
-                  srcset="img/rogovaya-desktop@2x.jpg 2x" alt="Фото профиля">
-              </picture>
+              <a class="profile-card__link-img" href="#">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x" type="image/webp">
+                  <source srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x" type="image/webp">
+                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                  <img class="profile-card__photo" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-desktop@2x.jpg 2x" alt="Фото профиля">
+                </picture>
+              </a>
               <div class="profile-card__content">
                 <div class="profile-card__info">
-                  <a class="profile-card__name profile-card__name--round4 profile-card__name--online" href="#"
-                    aria-label="перейти в профиль">Лариса Роговая
-                  </a>
+                  <a class="profile-card__name profile-card__name--round4 profile-card__name--online" href="#" aria-label="перейти в профиль">Лариса Роговая</a>
                   <p class="profile-card__interests">#образование #карьера #учеба #линкедин</p>
                 </div>
                 <div class="profile-card__place profile-card__place--twoflags place">
@@ -1190,8 +1165,7 @@
                   <ul class="place__list">
                     <li class="place__item place__item--catalog country">
                       <div class="place__flag flag">
-                        <img class="flag__img" src="img/flag-united-kingdom.svg" width="35" height="24"
-                          alt="флаг англии">
+                        <img class="flag__img" src="img/flag-united-kingdom.svg" width="35" height="24" alt="флаг англии">
                       </div>
                       <p class="place__name">Великобритания</p>
                     </li>
@@ -1205,28 +1179,28 @@
                 </div>
                 <div class="profile-card__wrapper">
                   <div class="profile-card__transport transport">
-                    <p class="transport__title transport__title--catalog">транспорт</p>
-                    <ul class="transport__list transport__list--catalog">
-                      <li class="transport__item transport__item--plane transport__item--on">
-                        <svg class="transport__icon" width="19" height="21">
+                    <p class="profile-card__transport-title transport__title transport__title--catalog">транспорт</p>
+                    <ul class="profile-card__transport-list transport__list transport__list--catalog">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--plane transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--plane" width="14" height="16">
                           <use xlink:href="img/sprite.svg#icon-plane"></use>
                         </svg>
                         <span class="visually-hidden">Авиаперелет</span>
                       </li>
-                      <li class="transport__item transport__item--train transport__item--on">
-                        <svg class="transport__icon" width="17" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--train transport__item--on">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--train" width="13" height="16">
                           <use xlink:href="img/sprite.svg#icon-bus"></use>
                         </svg>
                         <span class="visually-hidden">Автотранспорт</span>
                       </li>
-                      <li class="transport__item transport__item--bicycle">
-                        <svg class="transport__icon" width="24" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--bicycle">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--bicycle" width="19" height="17">
                           <use xlink:href="img/sprite.svg#icon-bike"></use>
                         </svg>
                         <span class="visually-hidden">Велосипед</span>
                       </li>
-                      <li class="transport__item transport__item--walking">
-                        <svg class="transport__icon" width="19" height="21">
+                      <li class="profile-card__transport-item transport__item transport__item--catalog transport__item--walking">
+                        <svg class="profile-card__transport-icon transport__icon transport__icon--walking" width="15" height="17">
                           <use xlink:href="img/sprite.svg#icon-run"></use>
                         </svg>
                         <span class="visually-hidden">Пешком</span>
@@ -1234,13 +1208,16 @@
                     </ul>
                   </div>
                   <div class="profile-card__level level level--catalog level--50">
-                    <svg class="level__round">
-                      <use xlink:href="img/sprite.svg#icon-level"></use>
-                    </svg>
-                    <div class="level__content level__content--catalog">
-                      <div class="level__name level__name--catalog">
-                        <span class="level__number level__number--catalog">50</span>
-                        <span class="level__text level__text--catalog">level</span>
+                    <p class="profile-card__level-title level__title">левел</p>
+                    <div class="profile-card__level-wrap">
+                      <svg class="level__round">
+                        <use xlink:href="img/sprite.svg#icon-level"></use>
+                      </svg>
+                      <div class="level__content level__content--catalog">
+                        <div class="level__name level__name--catalog">
+                          <span class="level__number level__number--catalog">50</span>
+                          <span class="level__text level__text--catalog">level</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1261,7 +1238,7 @@
           </ul>
         </div>
         <div class="results__show show container">
-          <button class="show__button button" type="button">Показать ещё</button>
+          <a class="show__button button" href="#">Показать ещё</a>
           <ul class="show__list">
             <li class="show__item show__item  show__item--page">
               <a href="#" class="show__link show__link--active button" aria-label="Первая страница каталога">1</a>
@@ -1276,12 +1253,10 @@
               <a href="#" class="show__link button" aria-label="Третья страница каталога">4</a>
             </li>
             <li class="show__item show__item--next">
-              <a href="#" class="show__link show__link--switch show__link--next button"
-                aria-label="Перейти на следующую страницу каталога"></a>
+              <a href="#" class="show__link show__link--switch show__link--next button"  aria-label="Перейти на следующую страницу каталога"></a>
             </li>
             <li class="show__item show__item--previous">
-              <a href="#" class="show__link show__link--switch show__link--previous button"
-                aria-label="Перейти на следующую страницу каталога"></a>
+              <a href="#" class="show__link show__link--switch show__link--previous button" aria-label="Перейти на следующую страницу каталога"></a>
             </li>
           </ul>
         </div>
@@ -1290,36 +1265,33 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__container container">
-      <div class="page-footer__logo">
+      <a class="page-footer__logo" href="index.html">
         <picture>
-          <source media="(min-width: 1440px)"
-            srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x"
-            type="image/webp">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x" type="image/webp">
           <source srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x" type="image/webp">
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
-            alt="Логотип компании">
+          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Логотип компании">
         </picture>
-      </div>
+      </a>
       <ul class="page-footer__socials-list socials-list">
-        <li class="socials-list__item">
-          <a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук">
+        <li class="socials-list__item socials-list__item--round">
+          <a class="socials-list__link socials-list__link--round socials-list__link--fb" href="#" aria-label="Фейсбук">
             <svg class="socials-list__icon socials-list__icon--fb" width="11" height="21">
               <use xlink:href="img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
-        <li class="socials-list__item">
-          <a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте">
+        <li class="socials-list__item socials-list__item--round">
+          <a class="socials-list__link socials-list__link--round socials-list__link--vk" href="#" aria-label="ВКонтакте">
             <svg class="socials-list__icon socials-list__icon--vk" width="23" height="12">
               <use xlink:href="img/sprite.svg#icon-vk"></use>
             </svg>
           </a>
         </li>
-        <li class="socials-list__item">
-          <a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм">
+        <li class="socials-list__item socials-list__item--round">
+          <a class="socials-list__link socials-list__link--round socials-list__link--instagram" href="#" aria-label="Инстаграм">
             <svg class="socials-list__icon socials-list__icon--inst" width="18" height="18">
               <use xlink:href="img/sprite.svg#icon-instagram"></use>
             </svg>
@@ -1336,6 +1308,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/no-js.min.js"></script>
   <script src="js/menu.min.js"></script>
   <script src="js/country-filters.min.js"></script>
   <script src="js/country-choice.min.js"></script>

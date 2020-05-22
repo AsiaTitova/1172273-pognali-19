@@ -145,6 +145,7 @@
     &--three {
       @include border-top-radius (0, 0);
       width: 379px;
+      padding-right: 162px;
     }
 
     &--three::before {
@@ -203,6 +204,7 @@
 
     &--three {
       width: 385px;
+      padding-right: 168px;
     }
 
     &--three::before {

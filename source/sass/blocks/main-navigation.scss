@@ -9,7 +9,7 @@
   &--open {
     position: absolute;
     top: 0;
-    z-index: 2;
+    z-index: 5;
     display: block;
     background-color: $white;
   }
@@ -31,24 +31,40 @@
 
 
   @media (min-width: $tablet-width) {
-    padding: 42px 0;
+    padding-top: 42px;
+    padding-bottom: 30px;
+
+    &--open {
+      padding-bottom: 74px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    display: block;
+    display: flex;
     padding: 0;
 
     &--open {
       position: unset;
       top: unset;
       z-index: unset;
+      background-color: $dark-blue-grey;
     }
 
-    &--open .site-list__link {
-      color: $dark-blue-grey;
+    &--open .main-navigation__site-link {
+      color: $white;
     }
 
-    &--open .site-list::before {
+    &--open .main-navigation__site-list::before {
+      background-color: $white;
+    }
+
+    &--fixed {
+      position: fixed;
+      padding: 0;
+      background-color: $white;
+    }
+
+    &--fixed .main-navigation__site-list::before {
       background-color: $dark-blue-grey;
     }
   }
@@ -74,6 +90,7 @@
     height: 100%;
     background-image: url("../img/logo-mobile-blue@1x.png");
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/logo-mobile-blue@2x.png");
@@ -96,6 +113,18 @@
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/logo-desktop-blue@2x.png");
+      }
+    }
+  }
+}
+
+.main-navigation--open .main-navigation__logo {
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-image: url("../img/logo-desktop-white@1x.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/logo-desktop-white@2x.png");
       }
     }
   }
@@ -154,7 +183,7 @@
   &::after {
     height: 2px;
     border-radius: 0;
-    background-color: black;
+    background-color: $pinkish-grey;
   }
 
   &::before {
@@ -206,11 +235,14 @@
   @media (min-width: $tablet-width) {
     padding-left: 58px;
     order: 3;
+    padding-top: 87px;
+    padding-bottom: 118px;
   }
 
   @media (min-width: $desktop-width) {
     order: 2;
     display: flex;
+    padding-top: 60px;
     padding-left: 145px;
     padding-bottom: 10px;
   }
@@ -254,7 +286,7 @@
 .main-navigation__login {
   display: none;
   margin-top: 0;
-  margin-bottom: 55px;
+  margin-bottom: 51px;
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -267,6 +299,7 @@
     @include vertical-paddings (50px, 10px);
     order: 4;
     margin-left: unset;
+    display: flex;
   }
 }
 
@@ -280,8 +313,22 @@
   }
 }
 
-.main-navigation .contacts {
+.main-navigation__contacts {
   @media (min-width: $desktop-width) {
     display: none;
   }
+}
+
+.main-navigation__socials {
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    margin-left: 60px;
+    transform: translateX(0);
+  }
+}
+
+.main-navigation--fixed .main-navigation__site-link {
+  color: $dark-blue-grey;
 }

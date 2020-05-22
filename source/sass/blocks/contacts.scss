@@ -1,5 +1,4 @@
 .contacts {
-  margin: 0;
   padding: 0;
   list-style-type: none;
   position: relative;
@@ -8,13 +7,11 @@
     padding-left: 30px;
 
     &--navigation {
-      padding: 0;
+      padding-left: 57px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
     padding: 0;
   }
 }
@@ -110,7 +107,7 @@
   margin-right: 16px;
 
   &--navigation {
-    margin-right: 38px;
+    margin-right: 16px;
   }
 
   @media (min-width: $tablet-width) {
@@ -118,6 +115,10 @@
     margin-right: 30px;
     width: 67px;
     height: 67px;
+
+    &--navigation {
+      margin-right: 24px;
+    }
   }
 
   @media (min-width: $desktop-width) {

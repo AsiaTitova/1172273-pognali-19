@@ -297,12 +297,12 @@
   }
 }
 
-.traveler-search__control + .traveler-search__label:not(.traveler-search__label--transport):hover::before,
-.traveler-search__control + .traveler-search__label:not(.traveler-search__label--transport):focus::before {
+.traveler-search__control + .traveler-search__label:hover::before,
+.traveler-search__control + .traveler-search__label:focus::before {
   opacity: 0.6;
 }
 
-.traveler-search__control + .traveler-search__label:not(.traveler-search__label--transport):active::before {
+.traveler-search__control + .traveler-search__label:active::before {
   opacity: 0.3;
 }
 
@@ -319,17 +319,21 @@
   }
 }
 
-.traveler-search__control:checked + .traveler-search__label:not(.traveler-search__label--transport):hover::before,
-.traveler-search__control:checked + .traveler-search__label:not(.traveler-search__label--transport):focus::before {
+.traveler-search__control:checked + .traveler-search__label:hover,
+.traveler-search__control:checked + .traveler-search__label:focus {
   opacity: 0.6;
 }
 
-.traveler-search__control:checked + .traveler-search__label:not(.traveler-search__label--transport):active::before {
+.traveler-search__control:checked + .traveler-search__label:active {
   opacity: 0.3;
 }
 
-.traveler-search__transport .transport__item {
-  padding: 0;
+.traveler-search__control:focus + .traveler-search__label {
+  outline: 2px solid  #81b3d2;
+}
+
+.traveler-search__control:checked:focus + .traveler-search__label {
+  outline: 2px solid  #81b3d2;
 }
 
 .traveler-search__level-range {
@@ -339,19 +343,12 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    margin-left: 16px;
     display: flex;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
     display: none;
-  }
-}
-
-.traveler-search__fieldset--open .level-range {
-  @media (min-width: $desktop-width) {
-    display: block;
   }
 }
 
@@ -384,12 +381,14 @@
     padding-right: 266px;
     font-size: 20px;
     border-radius: 30px;
+    margin-top: 74px;
   }
 
   @media (min-width: $desktop-width) {
     @include vertical-paddings (9px, 10px);
     padding-left: 50px;
     padding-right: 56px;
+    margin-top: 26px;
 
     &::before {
       display: none;

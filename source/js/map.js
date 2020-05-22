@@ -3,12 +3,12 @@ ymaps.ready(function () {
     center: [59.938239, 30.323872],
     zoom: 16
   }, {
-    searchControlProvider: 'yandex#search',
+    searchControlProvider: "yandex#search",
 
 }),
 
 MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    "<div style='color: #FFFFFF; font-weight: bold;'>$[properties.iconContent]</div>"
 ),
 
 myPlacemarkWithContent = new ymaps.Placemark([59.938635, 30.323118], {
@@ -29,5 +29,5 @@ myMap.geoObjects
 
 .add(myPlacemarkWithContent);
 
-myMap.behaviors.disable('scrollZoom');
+myMap.behaviors.disable("scrollZoom");
 });

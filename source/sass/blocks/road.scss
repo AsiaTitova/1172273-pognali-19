@@ -152,7 +152,7 @@
   font-size: 15px;
   font-weight: 500;
   line-height: 13.5px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
@@ -169,17 +169,37 @@
   &::before {
     content: "";
     position: absolute;
+    z-index: 3;
+    width: 43px;
+    height: 43px;
+    top: 0;
+    right: 0;
+    background-image: url("../img/month-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 7px 14px;
+    background-position: 18px 12px;
+    transform: rotate(90deg);
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
     z-index: 2;
     width: 43px;
     height: 43px;
     top: 0;
     right: 0;
-    background-image: url("../img/month-arrow-right.svg"), linear-gradient(to top, transparent 10%, $white 40%);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 7px 14px, 43px 43px;
-    background-position: 18px 12px, 0 0;
-    transform: rotate(90deg);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 10%, $white 40%);
+    background-repeat: no-repeat;
+    background-size: 43px 43px;
+    background-position: 0 0;
   }
+
+  &:hover::before {
+    opacity: 0.6;
+  }
+
 
   &--select,
   &--add,
@@ -354,7 +374,7 @@
   }
 }
 
-.road__wrap .alphabet--modal {
+.road__alphabet {
   padding: 0;
   width: 220px;
 
@@ -374,7 +394,7 @@
   }
 }
 
-.road__wrap .alphabet__button {
+.road__alphabet-button {
   @media (min-width: $tablet-width) {
     width: 52px;
     height: 69px;
@@ -397,30 +417,30 @@
   }
 }
 
-.road__wrap .alphabet__button--top {
+.road__alphabet-button--top {
   @media (min-width: $tablet-width) {
     border-top: solid 1px $cloudy-blue;
   }
 }
 
-.road__wrap .alphabet__button--left {
+.road__alphabet-button--left {
   @media (min-width: $tablet-width) {
     border-left: solid 1px $cloudy-blue;
   }
 }
 
-.road__wrap .alphabet__button:hover,
-.road__wrap .alphabet__button:focus {
+.road__alphabet-button:hover,
+.road__alphabet-button:focus {
   border: 1px solid $blue-grey;
 }
 
-.road__wrap .alphabet__button:active {
+.road__alphabet-button:active {
   border: none;
   color: $white;
   background-color: $dark-slate-blue;
 }
 
-.road__wrap .alphabet__button--current {
+.road__alphabet-button--current {
   background-color: $pale-grey;
   color: $dark-slate-blue;
 
@@ -430,7 +450,7 @@
   }
 }
 
-.road__wrap .country-choice--modal {
+.road__country-choice {
   @include border-bottom-radius (10px, 10px);
   @include vertical-paddings (12px, 15px);
   padding-left: 20px;
@@ -449,12 +469,12 @@
   }
 }
 
-.road__wrap .country-choice__name:hover,
-.road__wrap .country-choice__name:focus {
+.road__country-choice-name:hover,
+.road__country-choice-name:focus {
   color: $dark-slate-blue;
 }
 
-.road__wrap .country-choice__name:active {
+.road__country-choice-name:active {
   color: $dark-slate-blue-opacity30;
 }
 

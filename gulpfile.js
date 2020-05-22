@@ -21,6 +21,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -51,7 +52,7 @@ var svgstore = require("gulp-svgstore");
 
 gulp.task("sprite", function () {
   return gulp.src(
-    "source/img/icon-*.svg"
+    "source/icon-sprite/icon-*.svg"
   )
     .pipe(svgstore({
       inlineSvg: true

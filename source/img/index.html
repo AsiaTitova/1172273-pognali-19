@@ -7,10 +7,36 @@
     <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=3af5e619-ec2b-46f6-86a1-de81e51463fa&lang=ru_RU"></script>
+      <!-- Pixel Glass -->
+<style>
+  html {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* Mobile layout by default */
+    background-image: url( "preview/pognali-index-mobile-menu.png");
+  }
+  /* Tablet */
+  @media ( min-width: 768px ) {
+    html {
+      /* Tablet layout */
+      background-image: url("preview/pognali-index-tablet-menu.png");
+    }
+  }
+  /* Desktop */
+  @media ( min-width: 1440px ) {
+    html {
+      /* Desktop layout */
+      background-image: url("preview/pognali-index-desktop.png");
+    }
+  }
+</style>
+<link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+    <script src="https://yoksel.github.io/pixel-glass-js/script.js" ></script>
+<!-- // Pixel Glass -->
   </head>
   <body class="no-js">
-    <header class="page-header page-header--index no-js__page-header">
-      <nav class="page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--index no-js__main-navigation">
+    <header class="page-header page-header--index">
+      <nav class="page-header__main-navigation main-navigation main-navigation--cross main-navigation--open main-navigation--index">
         <div class="main-navigation__container container">
           <div class="main-navigation__logo-wrapper">
             <a class="main-navigation__logo logo" href="index.html">
@@ -28,9 +54,9 @@
             </button>
           </div>
           <ul class="main-navigation__site-list site-list">
-            <li class="site-list__item main-navigation__site-item"><a class="site-list__link site-list__link--current button main-navigation__site-link" href="#" aria-label="О сервисе"><span data-hover="О сервисе">О сервисе</span></a></li>
-            <li class="site-list__item main-navigation__site-item"><a class="site-list__link button main-navigation__site-link" href="form.html" aria-label="Направления"><span data-hover="Направления">Направления</span></a></li>
-            <li class="site-list__item main-navigation__site-item"><a class="site-list__link button main-navigation__site-link" href="catalog.html" aria-label="Попутчики"><span data-hover="Попутчики">Попутчики</span></a></li>
+            <li class="site-list__item"><a class="site-list__link button" href="#" aria-label="О сервисе"><span data-hover="О сервисе">О сервисе</span></a></li>
+            <li class="site-list__item"><a class="site-list__link button" href="form.html" aria-label="Направления"><span data-hover="Направления">Направления</span></a></li>
+            <li class="site-list__item"><a class="site-list__link button" href="catalog.html" aria-label="Попутчики"><span data-hover="Попутчики">Попутчики</span></a></li>
           </ul>
           <ul class="main-navigation__login login">
             <li class="login__item">
@@ -76,7 +102,7 @@
                 </a>
               </li>
             </ul>
-            <ul class="main-navigation__socials socials-list socials-list--navigation">
+            <ul class="main-navigation__socials socials-list">
               <li class="socials-list__item socials-list__item--navigation">
                 <a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук">
                   <svg class="socials-list__icon socials-list__icon--fb socials-list__icon--navigation" width="11" height="21">
@@ -102,7 +128,7 @@
           </div>
         </div>
       </nav>
-      <section class="page-header__promo no-js__promo promo promo__container container">
+      <section class="page-header__promo promo promo__container container">
         <h1 class="visually-hidden">Главная страница</h1>
         <div class="promo__main">
           <p class="promo__slogan">В путешествие с крутыми попутчиками!</p>
@@ -134,10 +160,10 @@
         <div class="promo__steps steps">
           <h2 class="visually-hidden">Последовательность действий</h2>
           <ol class="steps__list">
-            <li class="steps__item steps__item--one">Выберите направление</li>
-            <li class="steps__item steps__item--two">Изучите идеи путешественников</li>
-            <li class="steps__item steps__item--three">Находите тех, кто похож на вас</li>
-            <li class="steps__item steps__item--four">Путешествуйте вместе!</li>
+            <li class="steps__item steps__item--one">Выберите <br> направление</li>
+            <li class="steps__item steps__item--two">Изучите идеи <br> путешественников</li>
+            <li class="steps__item steps__item--three">Находите тех,<br> кто похож на вас</li>
+            <li class="steps__item steps__item--four">Путешествуйте <br> вместе!</li>
           </ol>
         </div>
       </section>
@@ -245,43 +271,43 @@
                 <p class="card__interests">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <ul class="card__flag-list flag-list">
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--srilanka">
+                    <div class="flag-list__flag flag flag--srilanka">
                       <img class="flag__img" src="img/flag-sri-lanka.svg" alt="флаг шри-ланка">
                     </div>
                   </li>
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--thailand">
+                    <div class="flag-list__flag flag flag--thailand">
                       <img class="flag__img" src="img/flag-thailand.svg" alt="флаг тайланда">
                     </div>
                   </li>
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--seychelles">
+                    <div class="flag-list__flag flag flag--seychelles">
                       <img class="flag__img" src="img/flag-seychelles.svg" alt="флаг сейшелльских островов">
                     </div>
                   </li>
                 </ul>
                 <div class="card__transport transport">
-                  <p class="card__transport-title transport__title transport__title--index">Транспорт</p>
+                  <p class="transport__title transport__title--index">Транспорт</p>
                   <ul class="transport__list transport__list--index">
-                    <li class=" transport__item transport__item--index transport__item--plane transport__item--on">
+                    <li class="transport__item transport__item--plane transport__item--on">
                       <svg class="transport__icon" width="19" height="21">
                         <use xlink:href="img/sprite.svg#icon-plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
                     </li>
-                    <li class="transport__item transport__item--index transport__item--train">
+                    <li class="transport__item transport__item--train">
                       <svg class="transport__icon" width="17" height="21">
                         <use xlink:href="img/sprite.svg#icon-bus"></use>
                       </svg>
                       <span class="visually-hidden">Автотранспорт</span>
                     </li>
-                    <li class="transport__item transport__item--index transport__item--bicycle">
+                    <li class="transport__item transport__item--bicycle">
                       <svg class="transport__icon" width="24" height="21">
                         <use xlink:href="img/sprite.svg#icon-bike"></use>
                       </svg>
                       <span class="visually-hidden">Велосипед</span>
                     </li>
-                    <li class="transport__item transport__item--index transport__item--walking">
+                    <li class="transport__item transport__item--walking">
                       <svg class="transport__icon" width="19" height="21">
                         <use xlink:href="img/sprite.svg#icon-run"></use>
                       </svg>
@@ -312,37 +338,38 @@
                 <p class="card__interests">#бургер #бар #футбол #концерт #крафт</p>
                 <ul class="card__flag-list card__flag-list--twoflags flag-list">
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--belgium">
+                    <div class="flag-list__flag flag flag--belgium">
                       <img class="flag__img" src="img/flag-belgium.svg" alt="флаг бельгии">
                     </div>
                   </li>
                   <li class="flag-list__item">
-                    <div class="flag-list__flag flag flag-list__flag--czech">
+                    <div class="flag-list__flag flag flag--czech">
                       <img class="flag__img" src="img/flag-czech.svg" alt="флаг чехии">
                     </div>
                   </li>
                 </ul>
                 <div class="card__transport transport">
+                  <p class="transport__title transport__title--index">Транспорт</p>
                   <ul class="transport__list transport__list--index">
-                    <li class="transport__item transport__item--index transport__item--plane transport__item--on">
+                    <li class="transport__item transport__item--plane transport__item--on">
                       <svg class="transport__icon" width="19" height="21">
                         <use xlink:href="img/sprite.svg#icon-plane"></use>
                       </svg>
                       <span class="visually-hidden">Авиаперелет</span>
                     </li>
-                    <li class="transport__item transport__item--index transport__item--train transport__item--on">
+                    <li class="transport__item transport__item--train transport__item--on">
                       <svg class="transport__icon" width="17" height="21">
                         <use xlink:href="img/sprite.svg#icon-bus"></use>
                       </svg>
                       <span class="visually-hidden">Автотранспорт</span>
                     </li>
-                    <li class="transport__item transport__item--index transport__item--bicycle">
+                    <li class="transport__item transport__item--bicycle">
                       <svg class="transport__icon" width="24" height="21">
                         <use xlink:href="img/sprite.svg#icon-bike"></use>
                       </svg>
                       <span class="visually-hidden">Велосипед</span>
                     </li>
-                    <li class="transport__item transport__item--index transport__item--walking transport__item--on">
+                    <li class="transport__item transport__item--walking transport__item--on">
                       <svg class="transport__icon" width="19" height="21">
                         <use xlink:href="img/sprite.svg#icon-run"></use>
                       </svg>
@@ -385,7 +412,30 @@
               <p class="price-list__cost">59 руб./мес</p>
             </li>
           </ol>
-          <a class="tariffs__link button" href="tariffs.html" aria-label="Показать тарифы для бизнеса">Показать тарифы для бизнеса</a>
+          <a class="tariffs__link button" href="tariffs.html" aria-label="Показать тарифы для бизнеса">Показать тарифы для
+          бизнеса</a>
+          <div class="tariffs__tariffs-modal tariffs-modal">
+            <h2 class="tariffs-modal__title">Бизнес-тарифы</h2>
+            <ul class="tariffs-modal__list">
+              <li class="tariffs-modal__item">
+                <p class="tariffs-modal__offers">Реклама у блоггера</p>
+                <p class="tariffs-modal__cost">300 000 руб./пост</p>
+              </li>
+              <li class="tariffs-modal__item">
+                <p class="tariffs-modal__offers">Накрутка подписчиков</p>
+                <p class="tariffs-modal__cost">от 1 руб./шт.</p>
+              </li>
+              <li class="tariffs-modal__item">
+                <p class="tariffs-modal__offers">Лайки от ботов</p>
+                <p class="tariffs-modal__cost">от 20 коп./лайк</p>
+              </li>
+              <li class="tariffs-modal__item">
+                <p class="tariffs-modal__offers">Ваш продакт-плейсмент</p>
+                <p class="tariffs-modal__cost">Индивидуально</p>
+              </li>
+            </ul>
+            <button class="tariffs-modal__close button" aria-label="закрыть окно с тарифами">Закрыть окно</button>
+          </div>
         </div>
       </section>
       <section class="questions">
@@ -397,7 +447,7 @@
           </p>
           <form class="questions__form form-email" method="post" action="https://echo.htmlacademy.ru">
             <label class="form-email__label visually-hidden" for="email">Введите e-mail</label>
-            <input class="form-email__email" type="email" name="email" id="email" placeholder="E-mail">
+            <input class="form-email__email" type="email" name="email" id="email">
             <button class="form-email__button" type="submit" aria-label="Отправить e-mail"></button>
           </form>
           <p class="questions__text questions__text--answer">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
@@ -460,22 +510,22 @@
           </picture>
         </a>
         <ul class="page-footer__socials-list socials-list">
-          <li class="socials-list__item socials-list__item--round">
-            <a class="socials-list__link socials-list__link--round socials-list__link--fb" href="#" aria-label="Фейсбук">
+          <li class="socials-list__item">
+            <a class="socials-list__item socials-list__item--fb" href="#" aria-label="Фейсбук">
               <svg class="socials-list__icon socials-list__icon--fb" width="11" height="21">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
-          <li class="socials-list__item socials-list__item--round">
-            <a class="socials-list__link socials-list__link--round socials-list__link--vk" href="#" aria-label="ВКонтакте">
+          <li class="socials-list__item">
+            <a class="socials-list__item socials-list__item--vk" href="#" aria-label="ВКонтакте">
               <svg class="socials-list__icon socials-list__icon--vk" width="23" height="12">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
-          <li class="socials-list__item socials-list__item--round">
-            <a class="socials-list__link socials-list__link--round socials-list__link--instagram" href="#" aria-label="Инстаграм">
+          <li class="socials-list__item">
+            <a class="socials-list__item socials-list__item--instagram" href="#" aria-label="Инстаграм">
               <svg class="socials-list__icon socials-list__icon--inst" width="18" height="18">
                 <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
@@ -492,29 +542,6 @@
         </div>
       </div>
     </footer>
-    <div class="tariffs-modal">
-      <h2 class="tariffs-modal__title">Бизнес-тарифы</h2>
-      <ul class="tariffs-modal__list">
-        <li class="tariffs-modal__item">
-          <p class="tariffs-modal__offers">Реклама у блоггера</p>
-          <p class="tariffs-modal__cost">300 000 руб./пост</p>
-        </li>
-        <li class="tariffs-modal__item">
-          <p class="tariffs-modal__offers">Накрутка подписчиков</p>
-          <p class="tariffs-modal__cost">от 1 руб./шт.</p>
-        </li>
-        <li class="tariffs-modal__item">
-          <p class="tariffs-modal__offers">Лайки от ботов</p>
-          <p class="tariffs-modal__cost">от 20 коп./лайк</p>
-        </li>
-        <li class="tariffs-modal__item">
-          <p class="tariffs-modal__offers">Ваш продакт-плейсмент</p>
-          <p class="tariffs-modal__cost">Индивидуально</p>
-        </li>
-      </ul>
-      <button class="tariffs-modal__close button" aria-label="закрыть окно с тарифами">Закрыть окно</button>
-    </div>
-    <script src="js/no-js.min.js"></script>
     <script src="js/menu.min.js"></script>
     <script src="js/tariffs.min.js"></script>
     <script src="js/map.min.js"></script>

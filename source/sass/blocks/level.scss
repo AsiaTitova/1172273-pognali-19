@@ -43,6 +43,10 @@
   fill: transparent;
   stroke: $mango;
   stroke-dasharray: 80, 100;
+
+  &--form {
+    cursor: pointer;
+  }
 }
 
 .level--99 .level__round {
@@ -148,6 +152,7 @@
     font-size: 38px;
     line-height: 38px;
     padding-bottom: 3px;
+    cursor: pointer;
   }
 
   @media (min-width: $desktop-width) {

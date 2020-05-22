@@ -33,8 +33,8 @@
   }
 }
 
-.plan-steps .button--arrow::before,
-.plan-steps .button--back::before {
+.plan-steps__link--arrow::before,
+.plan-steps__link--back::before {
   display: none;
 
   @media (min-width: $tablet-width) {
@@ -43,28 +43,38 @@
 }
 
 .plan-steps__title {
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    margin-bottom: 29px;
+  }
+}
+
+.plan-steps__step:first-child {
+  @media (min-width: $desktop-width) {
+    padding-right: 8px;
+  }
+}
+
+.plan-steps__step {
   @include title (20px, bold, $dark-slate-blue);
   line-height: 20px;
   margin: 0;
-  margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
     order: 1;
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
     line-height: 50px;
-    padding-right: 250px;
-    margin-bottom: 29px;
-  }
-}
-
-.plan-steps__br {
-  @media (min-width: $desktop-width) {
-    display: none;
   }
 }
 
@@ -135,7 +145,7 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 0;
-    margin-bottom: 53px;
+    margin-bottom: 57px;
   }
 }
 
@@ -224,7 +234,7 @@
 }
 
 .plan-steps__actions {
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 
   @media (min-width: $tablet-width) {
     order: 3;
@@ -233,7 +243,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 50px;
+    margin-bottom: 56px;
   }
 }
 

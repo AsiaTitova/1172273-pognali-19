@@ -1,34 +1,51 @@
-.no-js .main-navigation--open {
+.no-js .no-js__main-navigation {
   position: relative;
+  color: $dark-grey;
 }
 
-.no-js .toggler--close::before,
-.no-js .toggler--close::after {
+.no-js .no-js__toggler--close::before,
+.no-js .no-js__toggler--close::after {
   display: block;
 }
 
-.no-js .toggler--open::before {
+.no-js .no-js__toggler--open::before {
   display: none;
 }
 
-.no-js .country-filters__show {
+.no-js .no-js__country-filters {
   display: block;
 }
 
-.no-js .toggler__text--close {
+.no-js .no-js__text--close {
   @media (min-width: $tablet-width) {
     display: block;
   }
 }
 
-.no-js .toggler__text--open {
+.no-js .no-js__text--open {
   display: none;
 }
 
-.no-js .page-header {
-  background-position: 0 232px, 60% 731px, 50% 461px;
+.no-js .no-js__page-header {
+  background-position: 50% 461px;
 
   @media (min-width: $tablet-width) {
-    background-position: 60% 956px, 50% 981px;
+    background-position: 50% 1230px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: 50% 0;
+  }
+}
+
+.no-js .no-js__promo {
+  background-position: 0 0, 105px 145px;
+
+  @media (min-width: $tablet-width) {
+    background-position: 284px 284px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: 604px, 110px;
   }
 }

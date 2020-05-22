@@ -1,4 +1,4 @@
-.slider-button {
+.slider-marker {
   display: none;
 
   @media (min-width: $desktop-width) {
@@ -9,11 +9,14 @@
   }
 }
 
-.slider-button__button:not(:first-child) {
+.slider-marker__step:not(:first-child) {
   margin-top: 21px;
 }
 
-.slider-button__button {
+.slider-marker__step {
+  margin: 0;
+  position: relative;
+
   @media (min-width: $desktop-width) {
     padding: 5px;
     padding-left: 42px;
@@ -22,7 +25,12 @@
     font-size: 20px;
     line-height: 13.8px;
     letter-spacing: 2px;
+    text-transform: uppercase;
     color: $black-opacity30;
+  }
+
+  &--active {
+    color: $dark-slate-blue;
   }
 
   &::before {
@@ -34,10 +42,6 @@
     top: 10px;
     border-radius: 50%;
     background-color: $steel-grey;
-  }
-
-  &--active {
-    color: $dark-slate-blue;
   }
 
   &--active::before {
