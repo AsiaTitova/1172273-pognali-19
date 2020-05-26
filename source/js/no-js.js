@@ -1,8 +1,12 @@
 var body = document.querySelector("body");
-var nav = document.querySelector("nav")
-var togg = document.querySelector(".country-filters__toggler")
+var nav = document.querySelector("nav");
+var button = document.querySelector(".no-js__toggler");
+
   body.classList.remove("no-js");
   nav.classList.remove("main-navigation--cross");
   nav.classList.remove("main-navigation--open");
-  togg.classList.remove("toggler--close");
-  togg.classList.add("toggler--open");
+
+  if (button) {
+    button.classList.remove("toggler--close");
+    button.classList.add("toggler--open");
+  }

@@ -56,15 +56,15 @@
     }
 
     &::before {
-      @include border-right-radius (20px, 20px);
       content: "";
       position: absolute;
       left: 40px;
-      top: 236px;
+      top: 297px;
       z-index: -1;
       width: 688px;
       height: 213px;
       background-color: $darker-blue-grey;
+      border-radius: 20px;
     }
   }
 

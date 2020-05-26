@@ -9,8 +9,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="no-js">
-  <header class="page-header no-js__page-header">
-    <nav class="page-header__main-navigation main-navigation main-navigation--catalog no-js__main-navigation">
+  <header class="page-header page-header--catalog no-js__page-header">
+    <nav class="page-header__main-navigation main-navigation main-navigation--cross main-navigation--open no-js__main-navigation">
       <div class="main-navigation__container container">
         <div class="main-navigation__logo-wrapper">
           <a class="main-navigation__logo logo" href="index.html">
@@ -24,13 +24,13 @@
             </picture>
           </a>
           <button class="main-navigation__toggler" type="button">
-            <span class="visually-hidden">переключатель меню</span>
+          <span class="visually-hidden">переключатель меню</span>
           </button>
         </div>
         <ul class="main-navigation__site-list site-list">
-          <li class="main-navigation__site-item site-list__item"><a class="main-navigation__site-link site-list__link button" href="#" aria-label="О сервисе"><span data-hover="О сервисе">О сервисе</span></a></li>
-          <li class="main-navigation__site-item site-list__item"><a class="main-navigation__site-link site-list__link button" href="form.html" aria-label="Направления"><span data-hover="Направления">Направления</span></a></li>
-          <li class="main-navigation__site-item site-list__item"><a class="main-navigation__site-link site-list__link site-list__link--current button" href="#" aria-label="Попутчики"><span data-hover="Попутчики">Попутчики</span></a></li>
+          <li class="site-list__item main-navigation__site-item"><a class="site-list__link button main-navigation__site-link" href="#" aria-label="О сервисе"><span data-hover="О сервисе">О сервисе</span></a></li>
+          <li class="site-list__item main-navigation__site-item"><a class="site-list__link button main-navigation__site-link" href="form.html" aria-label="Направления"><span data-hover="Направления">Направления</span></a></li>
+          <li class="site-list__item main-navigation__site-item"><a class="site-list__link site-list__link--current button main-navigation__site-link" href="#" aria-label="Попутчики"><span data-hover="Попутчики">Попутчики</span></a></li>
         </ul>
         <ul class="main-navigation__login login">
           <li class="login__item">
@@ -50,15 +50,14 @@
             </a>
           </li>
           <li class="login__item">
-            <a class="login__link login__link--login button button--bg" href="#"
-              aria-label="Авторизация">Авторизация</a>
+            <a class="login__link login__link--login button button--bg" href="#" aria-label="Авторизация">Авторизация</a>
           </li>
         </ul>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__contacts contacts contacts--navigation">
             <li class="contacts__item contacts__item--navigation">
               <a class="contacts__link contacts__link--navigation button" href="tel:+78005558628" aria-label="Позвонить">
-                <div class="contacts__wrapper">
+                <div class="contacts__wrapper contacts__wrapper--navigation">
                   <svg class="contacts__icon" width="18" height="18">
                     <use xlink:href="img/sprite.svg#icon-contacts-phone"></use>
                   </svg>
@@ -68,7 +67,7 @@
             </li>
             <li class="contacts__item contacts__item--navigation">
               <a class="contacts__link contacts__link--navigation button" href="#" aria-label="Написать">
-                <div class="contacts__wrapper">
+                <div class="contacts__wrapper contacts__wrapper--navigation">
                   <svg class="contacts__icon" width="18" height="14">
                     <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
                   </svg>
@@ -118,7 +117,7 @@
           <span class="toggler__text toggler__text--open no-js__text no-js__text--open">Показать все</span>
           <span class="toggler__text toggler__text--close no-js__text no-js__text--close">Свернуть</span>
         </button>
-        <ul class="country-filters__part-world part-world">
+        <ul class="country-filters__part-world no-js__part-world part-world">
           <li class="part-world__item"><button class="part-world__button part-world__button--current button"
               type="button" aria-label="Европа">Европа</button></li>
           <li class="part-world__item">

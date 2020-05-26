@@ -307,9 +307,11 @@
 .profile-card__transport-item {
   width: 33px;
   height: 33px;
+  background-color: $pale-grey;
 
   @media (min-width: $tablet-width) {
     padding: 4px 5px;
+    background-color: $white;
   }
 }
 

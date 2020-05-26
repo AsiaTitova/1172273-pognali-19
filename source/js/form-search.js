@@ -15,7 +15,7 @@ var x = function (popup, toggler) {
   });
 }
 
-for (i = 0; i <= popup.length; i++) {
+for (i = 0; i < popup.length; i++) {
   y(popup[i]);
   x(popup[i], toggler[i]);
 }

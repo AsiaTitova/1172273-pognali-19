@@ -38,6 +38,7 @@
         width: 77px;
         height: 69px;
         border: solid 4px $orange-red;
+        border-radius: 2px;
       }
     }
   }
@@ -143,6 +144,7 @@
       top: -3px;
       left: -3px;
       border: solid 4px $orange-red;
+      border-radius: 2px;
     }
 
     &--focus::before {
@@ -151,6 +153,7 @@
       top: -3px;
       left: -3px;
       border: solid 4px $orange-red;
+      border-radius: 2px;
     }
   }
 
